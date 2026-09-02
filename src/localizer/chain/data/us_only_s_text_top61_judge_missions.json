@@ -1,0 +1,2416 @@
+{
+ "_public_note": "Public build manifest. Verbatim retail source strings are stored as SHA-256 digests (fields ending in _sha256); the builder recomputes them from the user's own ROM. Japanese text in this file is written by this project.",
+ "milestone": "us_only_s_text_top61_judge_missions",
+ "description": "Editorial localization of s_text 61/16, the six US-only judge missions of the top-61 mission-battle dialogue table (JP 61/16 holds 150 empty records). 144 lines: 54 with no aligned JP entry (visible editorial scope) and 90 that the index-based transfer had overwritten with an empty JP record. Every other top-61 sub-page has JP originals and is produced by source transfer after the stride correction in CONF['text']['align']['s_text'].",
+ "baseline_production_sha256": "A6C533D06EE9EB237860F410A1B0FDF949257F0B9CF5EC3CDD3B5F1D055CBE9D",
+ "count": 144,
+ "translated_count": 144,
+ "no_change_required_count": 0,
+ "in_editorial_scope_count": 54,
+ "empty_jp_record_transfer_count": 90,
+ "block_layout": "24 lines per mission: intro (judge), 6 race variants (Marche/hume/bangaa/nu mou/viera/moogle), 5 special variants (Ezel/Babus/Ritz/Shara/Cid), judge defeat, the same 11 variants for the post-battle line",
+ "voice_authorities": {
+  "種族variant": "JP s_text/61/2..12 same table: slot1=ぼく(マーシュ), slot2=オレ/だぜ(ヒュム), slot3=ン/ねぇ(バンガ), slot4=私/です・ます(ン・モウ), slot5=わたし/わ・の(ヴィエラ), slot6=クポ/モグ(モーグリ)",
+  "エゼル": "JP s_text/8/17-62, 18/2-20 -- オレ/おまえ, 「〜だぜ」「〜さ」「〜な」",
+  "バブズ": "data/us_only_s_text_special_scenes.json -- 対少年で率直な常体; 対悪徳ジャッジも常体で威厳",
+  "リッツ": "JP s_text/1 -- あたし/アンタ",
+  "シャアラ": "data/us_only_s_text_special_scenes.json -- 簡潔な常体, 女性語尾なし; マーシュへ報告=[400]",
+  "シド": "data/us_only_s_text_judge_ezel.json -- 私/きみ/「〜かね」「〜まい」",
+  "悪徳ジャッジ": "新規 -- 私, 常体; 各missionのlawに合わせた性格 (武器コレクター/キス/なぐり合い/書類ぎらい/答え禁止/ダメダメ)"
+ },
+ "terminology": {
+  "law / laws": "ロウ (JP s_text/6/99 ロウがない)",
+  "antilaw": "アンチロウ (JP s_text/8/9)",
+  "JudgeWatch": "[5117]ウォッチ (data/us_only_fx_text_translations.json 8/58)",
+  "blank card": "ブランクカード (words:battle/178 editorial)",
+  "prison": "プリズン / プリズン送り (JP s_text/8/47)",
+  "palace": "宮廷 (JP s_text/19/62)",
+  "engage / engagement": "エンゲージ (JP s_text/27/40, 61/5/137)",
+  "mission": "クエスト",
+  "dragoon": "竜騎士 (JP job name)",
+  "juggler": "ジャグラー (JP moogle job name)",
+  "official(s)": "ジャッジ (the corrupt judges themselves) / 役人 (Cid, 61/16/71, JP s_text judge_ezel 役人)"
+ },
+ "kanji_codes": {
+  "一": {
+   "jp_glyph_code": "0x0122",
+   "attested_at": "fx_text/1/31",
+   "source": "reused:us_only_fx_text"
+  },
+  "不": {
+   "jp_glyph_code": "0x0A46",
+   "attested_at": "fx_text/4/102",
+   "source": "reused:us_only_fx_text"
+  },
+  "世": {
+   "jp_glyph_code": "0x0142",
+   "attested_at": "s_text/1/98",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "中": {
+   "jp_glyph_code": "0x0125",
+   "attested_at": "s_text/1/38",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "了": {
+   "jp_glyph_code": "0x0BCC",
+   "attested_at": "fx_text/1/27",
+   "source": "reused:us_only_fx_text"
+  },
+  "事": {
+   "jp_glyph_code": "0x01A5",
+   "attested_at": "fx_text/8/19",
+   "source": "reused:us_only_fx_text"
+  },
+  "人": {
+   "jp_glyph_code": "0x01A9",
+   "attested_at": "fx_text/2/9",
+   "source": "reused:us_only_fx_text"
+  },
+  "今": {
+   "jp_glyph_code": "0x0528",
+   "attested_at": "s_text/1/1",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "仕": {
+   "jp_glyph_code": "0x059D",
+   "attested_at": "fx_text/2/11",
+   "source": "reused:us_only_fx_text"
+  },
+  "任": {
+   "jp_glyph_code": "0x096B",
+   "attested_at": "fx_text/21/278",
+   "source": "reused:us_only_fx_text"
+  },
+  "低": {
+   "jp_glyph_code": "0x08A8",
+   "attested_at": "s_text/1/31",
+   "source": "jp_corpus_attestation"
+  },
+  "何": {
+   "jp_glyph_code": "0x014E",
+   "attested_at": "s_text/2/64",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "作": {
+   "jp_glyph_code": "0x0570",
+   "attested_at": "fx_text/4/138",
+   "source": "reused:us_only_fx_text"
+  },
+  "使": {
+   "jp_glyph_code": "0x05A0",
+   "attested_at": "fx_text/1/4",
+   "source": "reused:us_only_fx_text"
+  },
+  "信": {
+   "jp_glyph_code": "0x06D2",
+   "attested_at": "fx_text/1/12",
+   "source": "reused:us_only_fx_text"
+  },
+  "入": {
+   "jp_glyph_code": "0x0967",
+   "attested_at": "fx_text/1/16",
+   "source": "reused:us_only_fx_text"
+  },
+  "公": {
+   "jp_glyph_code": "0x04CE",
+   "attested_at": "s_text/8/45",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "出": {
+   "jp_glyph_code": "0x013F",
+   "attested_at": "fx_text/1/33",
+   "source": "reused:us_only_fx_text"
+  },
+  "分": {
+   "jp_glyph_code": "0x0126",
+   "attested_at": "s_text/4/8",
+   "source": "reused:us_only_system_battle"
+  },
+  "別": {
+   "jp_glyph_code": "0x01D9",
+   "attested_at": "fx_text/4/19",
+   "source": "reused:us_only_fx_text"
+  },
+  "前": {
+   "jp_glyph_code": "0x01AA",
+   "attested_at": "fx_text/4/88",
+   "source": "reused:us_only_fx_text"
+  },
+  "力": {
+   "jp_glyph_code": "0x0182",
+   "attested_at": "s_text/2/51",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "動": {
+   "jp_glyph_code": "0x018A",
+   "attested_at": "fx_text/4/104",
+   "source": "reused:us_only_fx_text"
+  },
+  "勝": {
+   "jp_glyph_code": "0x0670",
+   "attested_at": "fx_text/4/179",
+   "source": "reused:us_only_fx_text"
+  },
+  "友": {
+   "jp_glyph_code": "0x0B6A",
+   "attested_at": "fx_text/8/76",
+   "source": "reused:us_only_fx_text"
+  },
+  "反": {
+   "jp_glyph_code": "0x0139",
+   "attested_at": "s_text/2/80",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "合": {
+   "jp_glyph_code": "0x0513",
+   "attested_at": "s_text/1/3",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "名": {
+   "jp_glyph_code": "0x0B2E",
+   "attested_at": "s_text/1/10",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "告": {
+   "jp_glyph_code": "0x051B",
+   "attested_at": "fx_text/17/11",
+   "source": "reused:us_only_fx_text"
+  },
+  "味": {
+   "jp_glyph_code": "0x015A",
+   "attested_at": "fx_text/8/5",
+   "source": "reused:us_only_fx_text"
+  },
+  "和": {
+   "jp_glyph_code": "0x0C27",
+   "attested_at": "s_text/29/34",
+   "source": "jp_corpus_attestation"
+  },
+  "喜": {
+   "jp_glyph_code": "0x0370",
+   "attested_at": "s_text/1/52",
+   "source": "jp_corpus_attestation"
+  },
+  "器": {
+   "jp_glyph_code": "0x0371",
+   "attested_at": "fx_text/4/122",
+   "source": "reused:us_only_fx_text"
+  },
+  "困": {
+   "jp_glyph_code": "0x0529",
+   "attested_at": "s_text/8/2",
+   "source": "jp_corpus_attestation"
+  },
+  "地": {
+   "jp_glyph_code": "0x01D5",
+   "attested_at": "s_text/10/1",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "域": {
+   "jp_glyph_code": "0x01B3",
+   "attested_at": "fx_text/6/28",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "報": {
+   "jp_glyph_code": "0x0AB4",
+   "attested_at": "fx_text/1/31",
+   "source": "reused:us_only_fx_text"
+  },
+  "士": {
+   "jp_glyph_code": "0x0133",
+   "attested_at": "fx_text/4/117",
+   "source": "reused:us_only_fx_text"
+  },
+  "変": {
+   "jp_glyph_code": "0x015E",
+   "attested_at": "s_text/1/3",
+   "source": "reused:us_only_system_battle"
+  },
+  "外": {
+   "jp_glyph_code": "0x02E9",
+   "attested_at": "s_text/1/109",
+   "source": "jp_corpus_attestation"
+  },
+  "大": {
+   "jp_glyph_code": "0x0801",
+   "attested_at": "fx_text/4/61",
+   "source": "reused:us_only_fx_text"
+  },
+  "女": {
+   "jp_glyph_code": "0x0669",
+   "attested_at": "s_text/1/6",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "好": {
+   "jp_glyph_code": "0x01C0",
+   "attested_at": "fx_text/2/3",
+   "source": "reused:us_only_fx_text"
+  },
+  "子": {
+   "jp_glyph_code": "0x0132",
+   "attested_at": "s_text/2/75",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "学": {
+   "jp_glyph_code": "0x01B9",
+   "attested_at": "s_text/1/76",
+   "source": "jp_corpus_attestation"
+  },
+  "守": {
+   "jp_glyph_code": "0x060A",
+   "attested_at": "fx_text/6/1",
+   "source": "reused:us_only_fx_text"
+  },
+  "完": {
+   "jp_glyph_code": "0x0339",
+   "attested_at": "fx_text/8/6",
+   "source": "reused:us_only_fx_text"
+  },
+  "実": {
+   "jp_glyph_code": "0x01C8",
+   "attested_at": "fx_text/1/37",
+   "source": "reused:us_only_fx_text"
+  },
+  "宮": {
+   "jp_glyph_code": "0x03B8",
+   "attested_at": "s_text/6/27",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "少": {
+   "jp_glyph_code": "0x067D",
+   "attested_at": "s_text/4/36",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "平": {
+   "jp_glyph_code": "0x0A87",
+   "attested_at": "s_text/1/21",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "度": {
+   "jp_glyph_code": "0x08F1",
+   "attested_at": "s_text/2/86",
+   "source": "reused:us_only_system_battle"
+  },
+  "廷": {
+   "jp_glyph_code": "0x08B0",
+   "attested_at": "s_text/6/27",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "当": {
+   "jp_glyph_code": "0x090D",
+   "attested_at": "s_text/1/30",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "役": {
+   "jp_glyph_code": "0x0B58",
+   "attested_at": "fx_text/4/114",
+   "source": "reused:us_only_fx_text"
+  },
+  "心": {
+   "jp_glyph_code": "0x013B",
+   "attested_at": "fx_text/4/120",
+   "source": "reused:us_only_fx_text"
+  },
+  "念": {
+   "jp_glyph_code": "0x0977",
+   "attested_at": "s_text/2/69",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "思": {
+   "jp_glyph_code": "0x01C5",
+   "attested_at": "fx_text/6/24",
+   "source": "reused:us_only_fx_text"
+  },
+  "悪": {
+   "jp_glyph_code": "0x01F2",
+   "attested_at": "s_text/1/12",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "意": {
+   "jp_glyph_code": "0x0215",
+   "attested_at": "s_text/5/29",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "成": {
+   "jp_glyph_code": "0x0725",
+   "attested_at": "fx_text/4/83",
+   "source": "reused:us_only_fx_text"
+  },
+  "戻": {
+   "jp_glyph_code": "0x0B4A",
+   "attested_at": "s_text/5/31",
+   "source": "reused:us_only_system_battle"
+  },
+  "手": {
+   "jp_glyph_code": "0x060B",
+   "attested_at": "fx_text/1/16",
+   "source": "reused:us_only_fx_text"
+  },
+  "持": {
+   "jp_glyph_code": "0x05C9",
+   "attested_at": "s_text/1/52",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "捕": {
+   "jp_glyph_code": "0x0AA4",
+   "attested_at": "s_text/5/11",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "新": {
+   "jp_glyph_code": "0x01A8",
+   "attested_at": "fx_text/1/31",
+   "source": "reused:us_only_fx_text"
+  },
+  "方": {
+   "jp_glyph_code": "0x013A",
+   "attested_at": "s_text/2/58",
+   "source": "reused:us_only_system_battle"
+  },
+  "時": {
+   "jp_glyph_code": "0x0166",
+   "attested_at": "fx_text/2/12",
+   "source": "reused:us_only_fx_text"
+  },
+  "書": {
+   "jp_glyph_code": "0x0666",
+   "attested_at": "s_text/1/51",
+   "source": "jp_corpus_attestation"
+  },
+  "最": {
+   "jp_glyph_code": "0x01C3",
+   "attested_at": "s_text/1/31",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "本": {
+   "jp_glyph_code": "0x0144",
+   "attested_at": "s_text/1/45",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "来": {
+   "jp_glyph_code": "0x014F",
+   "attested_at": "s_text/1/38",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "査": {
+   "jp_glyph_code": "0x053E",
+   "attested_at": "s_text/10/0",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "格": {
+   "jp_glyph_code": "0x02FE",
+   "attested_at": "s_text/1/6",
+   "source": "jp_corpus_attestation"
+  },
+  "楽": {
+   "jp_glyph_code": "0x01BA",
+   "attested_at": "fx_text/8/0",
+   "source": "reused:us_only_fx_text"
+  },
+  "止": {
+   "jp_glyph_code": "0x012D",
+   "attested_at": "s_text/1/38",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "武": {
+   "jp_glyph_code": "0x0A5F",
+   "attested_at": "fx_text/4/122",
+   "source": "reused:us_only_fx_text"
+  },
+  "残": {
+   "jp_glyph_code": "0x059C",
+   "attested_at": "s_text/6/5",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "気": {
+   "jp_glyph_code": "0x0384",
+   "attested_at": "s_text/1/21",
+   "source": "reused:us_only_system_battle"
+  },
+  "汚": {
+   "jp_glyph_code": "0x0284",
+   "attested_at": "fx_text/25/16",
+   "source": "jp_corpus_attestation"
+  },
+  "決": {
+   "jp_glyph_code": "0x0468",
+   "attested_at": "fx_text/1/8",
+   "source": "reused:us_only_fx_text"
+  },
+  "法": {
+   "jp_glyph_code": "0x0ABF",
+   "attested_at": "fx_text/4/90",
+   "source": "reused:us_only_fx_text"
+  },
+  "泣": {
+   "jp_glyph_code": "0x03BF",
+   "attested_at": "s_text/14/2",
+   "source": "jp_corpus_attestation"
+  },
+  "無": {
+   "jp_glyph_code": "0x0174",
+   "attested_at": "s_text/4/19",
+   "source": "reused:us_only_system_battle"
+  },
+  "物": {
+   "jp_glyph_code": "0x0A74",
+   "attested_at": "s_text/1/51",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "状": {
+   "jp_glyph_code": "0x06BB",
+   "attested_at": "s_text/19/32",
+   "source": "jp_corpus_attestation"
+  },
+  "理": {
+   "jp_glyph_code": "0x0BB2",
+   "attested_at": "s_text/2/33",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "由": {
+   "jp_glyph_code": "0x0B74",
+   "attested_at": "fx_text/4/96",
+   "source": "reused:us_only_fx_text"
+  },
+  "痛": {
+   "jp_glyph_code": "0x0893",
+   "attested_at": "s_text/8/24",
+   "source": "jp_corpus_attestation"
+  },
+  "白": {
+   "jp_glyph_code": "0x09B8",
+   "attested_at": "fx_text/4/121",
+   "source": "reused:us_only_fx_text"
+  },
+  "相": {
+   "jp_glyph_code": "0x01AB",
+   "attested_at": "fx_text/4/186",
+   "source": "reused:us_only_fx_text"
+  },
+  "矢": {
+   "jp_glyph_code": "0x0198",
+   "attested_at": "fx_text/17/292",
+   "source": "jp_corpus_attestation"
+  },
+  "知": {
+   "jp_glyph_code": "0x0842",
+   "attested_at": "fx_text/8/56",
+   "source": "reused:us_only_fx_text"
+  },
+  "禁": {
+   "jp_glyph_code": "0x0407",
+   "attested_at": "s_text/2/25",
+   "source": "jp_corpus_attestation"
+  },
+  "私": {
+   "jp_glyph_code": "0x05B3",
+   "attested_at": "fx_text/8/68",
+   "source": "reused:us_only_fx_text"
+  },
+  "立": {
+   "jp_glyph_code": "0x0181",
+   "attested_at": "s_text/19/62",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "竜": {
+   "jp_glyph_code": "0x0BC6",
+   "attested_at": "s_text/61/3/99",
+   "source": "jp_corpus_attestation"
+  },
+  "笑": {
+   "jp_glyph_code": "0x069C",
+   "attested_at": "s_text/29/1",
+   "source": "jp_corpus_attestation"
+  },
+  "答": {
+   "jp_glyph_code": "0x0911",
+   "attested_at": "s_text/13/22",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "紙": {
+   "jp_glyph_code": "0x05B5",
+   "attested_at": "s_text/35/0",
+   "source": "jp_corpus_attestation"
+  },
+  "終": {
+   "jp_glyph_code": "0x0628",
+   "attested_at": "fx_text/1/27",
+   "source": "reused:us_only_fx_text"
+  },
+  "罪": {
+   "jp_glyph_code": "0x0564",
+   "attested_at": "fx_text/4/93",
+   "source": "reused:us_only_fx_text"
+  },
+  "考": {
+   "jp_glyph_code": "0x04FB",
+   "attested_at": "s_text/1/98",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "者": {
+   "jp_glyph_code": "0x015B",
+   "attested_at": "fx_text/4/91",
+   "source": "reused:us_only_fx_text"
+  },
+  "自": {
+   "jp_glyph_code": "0x05D3",
+   "attested_at": "s_text/2/42",
+   "source": "reused:us_only_system_battle"
+  },
+  "落": {
+   "jp_glyph_code": "0x0BA4",
+   "attested_at": "s_text/26/43",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "行": {
+   "jp_glyph_code": "0x0149",
+   "attested_at": "fx_text/1/37",
+   "source": "reused:us_only_fx_text"
+  },
+  "街": {
+   "jp_glyph_code": "0x02F1",
+   "attested_at": "s_text/2/33",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "裁": {
+   "jp_glyph_code": "0x055E",
+   "attested_at": "fx_text/8/70",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "裏": {
+   "jp_glyph_code": "0x0BB5",
+   "attested_at": "s_text/26/6",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "見": {
+   "jp_glyph_code": "0x0150",
+   "attested_at": "s_text/1/83",
+   "source": "reused:us_only_system_battle"
+  },
+  "言": {
+   "jp_glyph_code": "0x0154",
+   "attested_at": "fx_text/4/180",
+   "source": "reused:us_only_fx_text"
+  },
+  "話": {
+   "jp_glyph_code": "0x0C28",
+   "attested_at": "s_text/2/47",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "認": {
+   "jp_glyph_code": "0x096E",
+   "attested_at": "s_text/2/75",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "読": {
+   "jp_glyph_code": "0x093B",
+   "attested_at": "s_text/1/83",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "調": {
+   "jp_glyph_code": "0x087D",
+   "attested_at": "s_text/4/20",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "責": {
+   "jp_glyph_code": "0x074A",
+   "attested_at": "pages:quest/0/119",
+   "source": "reused:us_only_fx_text"
+  },
+  "資": {
+   "jp_glyph_code": "0x05BF",
+   "attested_at": "fx_text/13/39",
+   "source": "jp_corpus_attestation"
+  },
+  "送": {
+   "jp_glyph_code": "0x07BB",
+   "attested_at": "s_text/1/109",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "遅": {
+   "jp_glyph_code": "0x084C",
+   "attested_at": "s_text/1/75",
+   "source": "jp_corpus_attestation"
+  },
+  "道": {
+   "jp_glyph_code": "0x092E",
+   "attested_at": "fx_text/4/97",
+   "source": "reused:us_only_fx_text"
+  },
+  "違": {
+   "jp_glyph_code": "0x0221",
+   "attested_at": "s_text/2/80",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "重": {
+   "jp_glyph_code": "0x063D",
+   "attested_at": "fx_text/4/50",
+   "source": "jp_corpus_attestation"
+  },
+  "間": {
+   "jp_glyph_code": "0x035A",
+   "attested_at": "fx_text/2/9",
+   "source": "reused:us_only_fx_text"
+  },
+  "集": {
+   "jp_glyph_code": "0x0124",
+   "attested_at": "s_text/2/55",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "頭": {
+   "jp_glyph_code": "0x0920",
+   "attested_at": "s_text/23/17",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "頼": {
+   "jp_glyph_code": "0x0180",
+   "attested_at": "s_text/4/6",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "願": {
+   "jp_glyph_code": "0x036C",
+   "attested_at": "s_text/2/63",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "騎": {
+   "jp_glyph_code": "0x017E",
+   "attested_at": "fx_text/6/20",
+   "source": "reused:us_only_fx_text"
+  },
+  "魔": {
+   "jp_glyph_code": "0x0AFC",
+   "attested_at": "fx_text/4/118",
+   "source": "reused:us_only_fx_text"
+  }
+ },
+ "entries": [
+  {
+   "us_logical_path": "s_text/61/16/24",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 24,
+   "mission": "judge_weapon_collector",
+   "speaker": "ジャッジ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "251aaa039f2c1c89ce7c18c23e650fd1845754f164057999910d7f0cd3492376",
+   "japanese": "何者だ!?{4D}{4D}{4F}{42}私の武器集めを{4D}ジャマする者は{4D}プリズン送りだ!{4F}{42}…しまった!新しい{4D}ロウはエンゲージでは{4D}使えんのか。たたかうぞ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/25",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 25,
+   "mission": "judge_weapon_collector",
+   "speaker": "マーシュ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "109f9db73fa642f767cccbd7e288e9bbfb9eeb374d4033895a191ee51dd921fe",
+   "japanese": "ウワサは本当だった!{4D}ジャッジがこんな{4D}勝手をするなんて!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/26",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 26,
+   "mission": "judge_weapon_collector",
+   "speaker": "ヒュム",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "11de7c1f1923e25ea35dcb0cdf984501cddb37a0aa146ef805ebd39ea2adae61",
+   "japanese": "気まぐれなロウ作りは{4D}やめてもらうぜ。{4D}いやならたたかうまでだ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/27",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 27,
+   "mission": "judge_weapon_collector",
+   "speaker": "バンガ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "b212891ddd91db33739b56226125c5853d2582eec7599623135e0509c9a9a55e",
+   "japanese": "ジャッジの名が泣くぜ。{4D}はずかしくねぇのか!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/28",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 28,
+   "mission": "judge_weapon_collector",
+   "speaker": "ン・モウ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "dd897286ce7110291e1deed520b654ba1acec161b3f4bf134020945272230ba6",
+   "japanese": "ようやく見つけました。{4D}話してもらいましょう。{4D}裏にいるのはだれです?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/29",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 29,
+   "mission": "judge_weapon_collector",
+   "speaker": "ヴィエラ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "3f0beadd7af3d7aaab4cdd53522323c83794b23015ddab0c7db88d46081990e8",
+   "japanese": "気まぐれでロウを{4D}変えるなんて{4D}信じられないわ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/30",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 30,
+   "mission": "judge_weapon_collector",
+   "speaker": "モーグリ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "851a46ba5b447480ddb4b321b55a7618fd0fe61ecb3d2a5e0846cbfa7a6f7966",
+   "japanese": "{103}ロウはおまえのものじゃ{4D}ないクポ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/31",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 31,
+   "mission": "judge_weapon_collector",
+   "speaker": "エゼル",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "3485d6e8a3e4f26388816eb3cdde25951739b6d616de4291816a1932c6eb643a",
+   "japanese": "おまえみたいなのが{4D}いるから、オレの{4D}アンチロウがいるのさ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/32",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 32,
+   "mission": "judge_weapon_collector",
+   "speaker": "バブズ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "f061f458679ccae9b761f93172569245e866dec2d54bc69fcb26a35aac0cafee",
+   "japanese": "宮廷の名を汚したな。{4D}その報いは{4D}うけてもらうぞ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/33",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 33,
+   "mission": "judge_weapon_collector",
+   "speaker": "リッツ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "ffb3c75179b1cb79b398683f9300bc16370b10d55fab9670f40600cf27017677",
+   "japanese": "勝手にロウを{4D}作るなんて{4D}信じられない!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/34",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 34,
+   "mission": "judge_weapon_collector",
+   "speaker": "シャアラ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "c2d902111087d1dec39d62a73e41952d2c059bfa483289af66b1504e0a82bd0f",
+   "japanese": "悪は悪。{4D}裁かれるのが道理だ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/35",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 35,
+   "mission": "judge_weapon_collector",
+   "speaker": "シド",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "4d96f676807d3dacfe35fc4a03d915f932d2026c2c76829bd9e71ca93e7ede00",
+   "japanese": "きみに味方する{4D}ジャッジはいない。{4D}わかっているのかね?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/36",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 36,
+   "mission": "judge_weapon_collector",
+   "speaker": "ジャッジ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "45deb58e53908c7c78189ae53773e19f7fe8c9aa733f6f093941f570f8af33ab",
+   "japanese": "そんな…そんな…{4D}私の武器が!{4D}私のかわいい武器が…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/37",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 37,
+   "mission": "judge_weapon_collector",
+   "speaker": "マーシュ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "04d18eafd19b14f1f7ba5bb7da5e6c8723ca0e4350129d527ad39e63b79d530f",
+   "japanese": "ロウはあなたが{4D}決めていいものじゃ{4D}ない!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/38",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 38,
+   "mission": "judge_weapon_collector",
+   "speaker": "ヒュム",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "d12bce026bbb46dc99262d78061105e14705ed335bd9be281ad35e51a444b1a5",
+   "japanese": "プリズンで少しは{4D}頭をひやすんだな!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/39",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 39,
+   "mission": "judge_weapon_collector",
+   "speaker": "バンガ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "231f9beadab95f5c8d88f67679d3ebad94ca21b92b7cce3496f8818acd0561cd",
+   "japanese": "フン。もともと{4D}おまえのもんじゃ{4D}ねぇだろうが!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/40",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 40,
+   "mission": "judge_weapon_collector",
+   "speaker": "ン・モウ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "7ec5d36df7cf26ab42907d02704808341fcd04c431734c065d73ad7074b1981c",
+   "japanese": "そのブランクカードは{4D}どこで手に入れたのか、{4D}話してもらいますよ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/41",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 41,
+   "mission": "judge_weapon_collector",
+   "speaker": "ヴィエラ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "3424b082547c58e435e6a0e6d016f464a4f920a4b5c74385c73b0dde492945dc",
+   "japanese": "自分がどれだけ{4D}めいわくをかけたか、{4D}プリズンで考えなさい!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/42",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 42,
+   "mission": "judge_weapon_collector",
+   "speaker": "モーグリ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "be09e20a0bbf82466dfbc19e78d26cfbf256ca3461e08bba8a014a588271ec09",
+   "japanese": "{103}おまえのたくらみは{4D}おしまいクポ!{4D}これで世の中平和クポ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/43",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 43,
+   "mission": "judge_weapon_collector",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "dc6e3036dcd420c2ffbf15dbf0c60b85579334d9ff87f71fba92c3d34d67cb6a",
+   "japanese": "こういうヤツは{4D}いつの世にもいる。{4D}かなしいことだぜ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/44",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 44,
+   "mission": "judge_weapon_collector",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "c2e815aef5dfc4a2ca902229a6c3f02f3d8f97d5bb1b2c793156f4398a09378c",
+   "japanese": "プリズンでつぐなうのだ。{4D}やりなおすのに{4D}遅すぎることはない。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/45",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 45,
+   "mission": "judge_weapon_collector",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "01f40f2e3677084be8b5639a1cee61a8187bd300f7ef6c5187c2f809692f5f5d",
+   "japanese": "アンタみたいなの、{4D}ほんとムカつく!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/46",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 46,
+   "mission": "judge_weapon_collector",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "814f2fbcd8206f84541f2025a8414c1cbbcd4ed12bba2c49ed06c695938ca2dc",
+   "japanese": "クエスト完了…。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/47",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 47,
+   "mission": "judge_weapon_collector",
+   "speaker": "シド",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "aa29df36cb9064c671e16c3437e9e8a15168d6e471cb6be92d01dbbb28543899",
+   "japanese": "そのブランクカードを{4D}どこで手に入れたか、{4D}話してもらおうか。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/48",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 48,
+   "mission": "judge_kissing_law",
+   "speaker": "ジャッジ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "ea75f41533a677f527ceee93c5152860b66d972dbc7e3fcbb02447b61f57158e",
+   "japanese": "{5117}ウォッチだと!?{4D}私は無実だ!{4D}キスのなにが悪い?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/49",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 49,
+   "mission": "judge_kissing_law",
+   "speaker": "マーシュ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "587fa1f872eb3bfb92121929159cb69488e82255790abac74bf1702fef121b46",
+   "japanese": "キスはいいけど、{4D}ロウにするのは{4D}おかしいよ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/50",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 50,
+   "mission": "judge_kissing_law",
+   "speaker": "ヒュム",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "de5374503c8696dcf2d674506607065245b20bec6c525afd5697efe21acff9ff",
+   "japanese": "そういう考えが{4D}みんなをこまらせて{4D}いるんだぜ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/51",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 51,
+   "mission": "judge_kissing_law",
+   "speaker": "バンガ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "3da9db2a66ee117e4629b140b6e7522b3ecd6a0e1da4bd2c48bd010a67ac0554",
+   "japanese": "キスする相手くらい{4D}自分で決めさせろ{4D}ってンだ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/52",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 52,
+   "mission": "judge_kissing_law",
+   "speaker": "ン・モウ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "aadd5d2e5c496b40d27fa4c23a1de22521d5780ab6c8f528150a3e3404f56648",
+   "japanese": "キスをすすめるにしても{4D}もっとほかにやり方が{4D}あったでしょうに。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/53",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 53,
+   "mission": "judge_kissing_law",
+   "speaker": "ヴィエラ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "1ef4d6eb36ab8164f1ba15105bf53d54dfdd40849d7485d646497576bb603a08",
+   "japanese": "ムリヤリさせられる{4D}キスに{4D}なんの意味があるの?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/54",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 54,
+   "mission": "judge_kissing_law",
+   "speaker": "モーグリ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "8b0b845bca6fe1a23d32216ffc930e9bc973a75005393e3d00e178ee8f4ed8fa",
+   "japanese": "{103}ロウなんかなくても{4D}キスくらいするクポ!{4D}{4F}{42}{104}でも、あれこれ{4D}言われるのは{4D}ごめんだクポ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/55",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 55,
+   "mission": "judge_kissing_law",
+   "speaker": "エゼル",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "4d6cd904f2827bc106339dfdd6cd22e0933b82ac2135e502c45cc45452b6b1b8",
+   "japanese": "頼むから、そんな{4D}くだらねぇことで{4D}ロウを作るなよ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/56",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 56,
+   "mission": "judge_kissing_law",
+   "speaker": "バブズ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "eddab0f1951bbd0d418ffa96d7ce2f6df10734983597112eca072314bbf3bb18",
+   "japanese": "おこった女たちには{4D}気をつけることだな。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/57",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 57,
+   "mission": "judge_kissing_law",
+   "speaker": "リッツ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "e28178613dcd68cdb6b39c4fe0c60d2bdd12747de7dcdd5da0651fadd4b5f68f",
+   "japanese": "言いたいことは{4D}わかるけど、もっと{4D}いいやり方があるでしょ?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/58",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 58,
+   "mission": "judge_kissing_law",
+   "speaker": "シャアラ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "28b7c7aca8810057497281aecdc1e6d9bb7387a2d8a2544b01985a5dc64697e0",
+   "japanese": "キスは悪くない。{4D}だがロウは{4D}もう作らせない。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/59",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 59,
+   "mission": "judge_kissing_law",
+   "speaker": "シド",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "1176c1f1440d950ea40f364ba3368cd77d0557be52818bd468fe9398572318b3",
+   "japanese": "ほかのジャッジが{4D}認めないかぎり、{4D}それは違法だ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/60",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 60,
+   "mission": "judge_kissing_law",
+   "speaker": "ジャッジ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "be0c9f12e1e4f952a3e7e0a92e7414903a8114029cb6fbb167e8f3501b7c4aa4",
+   "japanese": "私はただ…{4D}みんなと友だちに{4D}なりたかっただけだ…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/61",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 61,
+   "mission": "judge_kissing_law",
+   "speaker": "マーシュ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "1baf800222aaf5605e3184a4ee4fb547bc8089f65443387ce0860cffb960818e",
+   "japanese": "(キスをロウにしても{4D}友だちは{4D}できないと思うな…){40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/62",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 62,
+   "mission": "judge_kissing_law",
+   "speaker": "ヒュム",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "38ec931fe84be52227c00a19cb05fd873fb28c4e600e1bd18e4ddcf9e40f0765",
+   "japanese": "友だちがほしいなら{4D}クランにでも{4D}頼めばいいだろ?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/63",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 63,
+   "mission": "judge_kissing_law",
+   "speaker": "バンガ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "ba8308850517a1e217442e26f1296adc5f522d774ad973fe0f015b5a6f513ddb",
+   "japanese": "自分の手でなンとか{4D}しなきゃならねぇ時も{4D}あるってことだ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/64",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 64,
+   "mission": "judge_kissing_law",
+   "speaker": "ン・モウ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "b398cce0b0f35177351db08f86a0f0efd6648cbcfdfb59ce8b7bbb0b7265462f",
+   "japanese": "ばかげたロウより、{4D}きちんと話し合うほうが{4D}よほど役に立ちますよ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/65",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 65,
+   "mission": "judge_kissing_law",
+   "speaker": "ヴィエラ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "cacf6fcacd1e4475feef068ac2be77f2bbff2a2693dbac1f2473c74dddc6fc84",
+   "japanese": "だったら外に出て{4D}友だちをたくさん{4D}作りなさい!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/66",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 66,
+   "mission": "judge_kissing_law",
+   "speaker": "モーグリ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "8e429a263e9e9990e9958b8932dc014881858bbabc59b64cef95c12608c26c76",
+   "japanese": "{101}ジャグラーになったら{4D}どうクポ?{4D}{4F}{42}ジャグラーは{4D}みんなに人気クポ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/67",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 67,
+   "mission": "judge_kissing_law",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "caecd32703939868316989da264b9fb85bff1de69a1ce9741ffdd7b81c1262b1",
+   "japanese": "ムリヤリ友だちにさせて{4D}なにが楽しいんだ?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/68",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 68,
+   "mission": "judge_kissing_law",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "23fa527d465da085919974040725b7dae6a45f0469be3dfb89060990a26776e0",
+   "japanese": "自分の行いが{4D}なにをまねくか、{4D}よく考えることだ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/69",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 69,
+   "mission": "judge_kissing_law",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "e427612c82141d429c60f78b02acfc6825fced37723781a8565fcf62614f86c6",
+   "japanese": "思ったことを{4D}そのまま言えばいいのよ。{4D}あたしはそうしてる。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/70",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 70,
+   "mission": "judge_kissing_law",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "984577291070dfa51b63ecc23ccc753e8165dc97386bf412926a1514df0e44ca",
+   "japanese": "…終わった。{4D}報告に戻ろう。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/71",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 71,
+   "mission": "judge_kissing_law",
+   "speaker": "シド",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "62d4f94b226c6713d16afa470425c04592591629ac2d35ee937966070152e595",
+   "japanese": "役人たるもの、{4D}公私のけじめは{4D}つけねばなるまい。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/96",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 96,
+   "mission": "judge_hitting_law",
+   "speaker": "ジャッジ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "244c1aa8563411a3833f8ee19c84b530ba08a478d7ee12e79c0255b129fc56eb",
+   "japanese": "ヤーッハッハ!{4D}みんながなぐり合うのを{4D}見るのは楽しいだろ?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/97",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 97,
+   "mission": "judge_hitting_law",
+   "speaker": "マーシュ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "f3307a56dc2853432512c8a01eca3f99f1a430909595b041b248d7005ba199ff",
+   "japanese": "なぐり合いを{4D}すすめるなんて、{4D}笑いごとじゃないよ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/98",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 98,
+   "mission": "judge_hitting_law",
+   "speaker": "ヒュム",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "523ade4b6f752412fa26db20e0d9ef004f4e05cb79ff22000e5f5bc295125d88",
+   "japanese": "どうしようもないヤツだな。{4D}自分でも痛みを{4D}味わってみろ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/99",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 99,
+   "mission": "judge_hitting_law",
+   "speaker": "バンガ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "a27fd50fd755ba33b922c76064e5de7450b9de8d22f50f5f3ee4580fd486a1ec",
+   "japanese": "オレがなぐったら{4D}どれだけ笑えるか{4D}ためしてやるぜ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/100",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 100,
+   "mission": "judge_hitting_law",
+   "speaker": "ン・モウ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "88b3531291537b222cc23baee5868e9d441d539586e3f6aa9d4dde40295c05d7",
+   "japanese": "人をきずつけて{4D}喜ぶなど、{4D}まちがっています。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/101",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 101,
+   "mission": "judge_hitting_law",
+   "speaker": "ヴィエラ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "ca2934b41d5525e3a60a26685b09a0899263ea7c9711894a62a7acc3fbf667ab",
+   "japanese": "おもしろがって{4D}人をきずつけるなんて、{4D}最低ね!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/102",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 102,
+   "mission": "judge_hitting_law",
+   "speaker": "モーグリ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "d1fed309e1d13c9ee85fc4f2299e47ab5cb60ad0c572feca975a095ae5b8ee65",
+   "japanese": "{103}そんなに楽しいなら{4D}自分をなぐってみる{4D}クポ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/103",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 103,
+   "mission": "judge_hitting_law",
+   "speaker": "エゼル",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "675cb1ac38c3dda3085effc6370925000e97aee1d4b565c19889d40a57ccae6d",
+   "japanese": "なら、今度はおまえが{4D}なぐられてみな。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/104",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 104,
+   "mission": "judge_hitting_law",
+   "speaker": "バブズ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "47fc657e82c6f619ba0bf95290f6a6da43401d0ac2ac375df37e25b33075ec45",
+   "japanese": "そんなことを楽しむとは{4D}おどろいた!{4D}その報いをうけるがいい!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/105",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 105,
+   "mission": "judge_hitting_law",
+   "speaker": "リッツ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "46afc86e6bc4fd313bc29c200115401482f75415e8809270adb79fdd052717fb",
+   "japanese": "本当の痛みを知ってたら、{4D}そんなこと{4D}言えるわけないでしょ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/106",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 106,
+   "mission": "judge_hitting_law",
+   "speaker": "シャアラ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "bd3b68cdc8e7871313602d9e11f625ca2b2cc90ae5703b46c973336a0ad9370d",
+   "japanese": "なにがおかしい?{4D}人をきずつけて{4D}いるだけだ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/107",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 107,
+   "mission": "judge_hitting_law",
+   "speaker": "シド",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "045d32742d9c1b1d82843e67ffb3c4bf99087071530a46ac368ca6c7327893b8",
+   "japanese": "きみにはジャッジの{4D}資格がないようだな。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/108",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 108,
+   "mission": "judge_hitting_law",
+   "speaker": "ジャッジ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "d565408781d047b005c8d80dcb01d76807828f236432fe1299b8cc3fc9531c67",
+   "japanese": "痛い痛い!たのむ、{4D}やめてくれ!痛いぃぃ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/109",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 109,
+   "mission": "judge_hitting_law",
+   "speaker": "マーシュ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "df1ff099cb6a673355b95f2705037c4a489c28a9af7ea0c460717dd092138cd6",
+   "japanese": "これであなたの地域の{4D}みんなの気持ちが{4D}わかったでしょ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/110",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 110,
+   "mission": "judge_hitting_law",
+   "speaker": "ヒュム",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "6a805ad96d0fb5c1a4eb610bd4cbf91554d0040a5f47da5ccc07fe8dff4f27f2",
+   "japanese": "自分で味わってみないと{4D}わからないことも{4D}あるってことだな。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/111",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 111,
+   "mission": "judge_hitting_law",
+   "speaker": "バンガ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "c96e2b9819c9f6376c93ce3666b7360eebb695936eb2ba8abd40343022b4b329",
+   "japanese": "なンだ、{4D}楽しくなかったのか?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/112",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 112,
+   "mission": "judge_hitting_law",
+   "speaker": "ン・モウ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "b77ebeb655ccd09da92ec4f427e2fffdc98385eff970597e24d7fc65d07d6a0e",
+   "japanese": "いつも人にやさしい{4D}心を持つことです。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/113",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 113,
+   "mission": "judge_hitting_law",
+   "speaker": "ヴィエラ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "089fa038423412b75d7184548cf2dd5b7d37a9b7873605d390e4f4ffb55ddd5a",
+   "japanese": "痛いのは当たり前よ。{4D}なぐったんだもの!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/114",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 114,
+   "mission": "judge_hitting_law",
+   "speaker": "モーグリ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "887f9ed4fde8c71c440936e3d3315cb20b94bb5f5ddee6acbefd4a4f340f0370",
+   "japanese": "{102}で、ロウを{4D}考えなおす気に{4D}なったクポ?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/115",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 115,
+   "mission": "judge_hitting_law",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "e7e433d8a3227eb319adfc8be6122e1ada9fb7fc41b0f13693a482d266efe64b",
+   "japanese": "ジャッジってのは{4D}みんなこんなに{4D}バカなのか!?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/116",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 116,
+   "mission": "judge_hitting_law",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "c338a603ffb8ff03abfab7bbf2acbe294fe97967fd34690d786e34b577b05c90",
+   "japanese": "プリズンで{4D}罪をつぐなうがいい。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/117",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 117,
+   "mission": "judge_hitting_law",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "118d252bc6782118e470056625bd3c7c1498d8c131b584a85e21801062a13268",
+   "japanese": "人をきずつけるヤツ、{4D}あたし大キライ!{4D}このイジメっ子!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/118",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 118,
+   "mission": "judge_hitting_law",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "cb281b3aa9f0ddab32d0003fcf9fd0e11e5ac670a8fea618f9e7df11421db7f1",
+   "japanese": "痛みから学ぶことは{4D}たくさんある。{4D}もう一度いくか?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/119",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 119,
+   "mission": "judge_hitting_law",
+   "speaker": "シド",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "e2a9b28c6738abf509de38444956c130f02f53e50912f312afde7077f20bf222",
+   "japanese": "ジャッジがここまで{4D}落ちるとは…。{4D}私の責任だな。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/120",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 120,
+   "mission": "judge_paperwork_ban",
+   "speaker": "ジャッジ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "9cc04a62e35ed7240baf9267e4e247c6dea9cd526f09d7b6be68adff3959d137",
+   "japanese": "読み書きは禁止だ!{4D}つくえ仕事はもう{4D}ウンザリなのだ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/121",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 121,
+   "mission": "judge_paperwork_ban",
+   "speaker": "マーシュ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "d5d88fce301f4938de699b4db00efb54398b5d2bcb687ae0bf52cad66f7b0fb2",
+   "japanese": "そんなにいやなら、{4D}仕事をやめれば{4D}いいのに…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/122",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 122,
+   "mission": "judge_paperwork_ban",
+   "speaker": "ヒュム",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "c492eec0bf8acecb5da746456bfe0f4495a838f74a3f102713eb7d4feeeb8510",
+   "japanese": "オレだってつくえ仕事は{4D}好きじゃないが、{4D}ロウにするか、ふつう!?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/123",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 123,
+   "mission": "judge_paperwork_ban",
+   "speaker": "バンガ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "5873a3b61dbb2fc096f3264a5d209f465e717f45c887b71d40d62e2be59561be",
+   "japanese": "おもしろい本や{4D}ラブレターは{4D}どうなるンだ?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/124",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 124,
+   "mission": "judge_paperwork_ban",
+   "speaker": "ン・モウ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "ae636db62b1b9b58cceb41a1fa00b52f57201a5391fe80f490ca6f1053764f49",
+   "japanese": "学びのジャマをする{4D}ロウなど、{4D}認められません。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/125",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 125,
+   "mission": "judge_paperwork_ban",
+   "speaker": "ヴィエラ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "a0c3a6ac109397ebf7156fe2df5007fa8a9fc35e7bb5501ffb56987980ba263b",
+   "japanese": "自分がいやなものを{4D}禁止するなんて{4D}ダメでしょ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/126",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 126,
+   "mission": "judge_paperwork_ban",
+   "speaker": "モーグリ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "6400330c36f085a14f1a545b04d9698c29cdf5415a707cfe1ccf06da0e46c8b5",
+   "japanese": "{103}気持ちはよくわかるクポ!{4D}でもこれはクエスト{4D}なんだクポ。ごめんクポ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/127",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 127,
+   "mission": "judge_paperwork_ban",
+   "speaker": "エゼル",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "6a0e516392ef6dd4aa7586b9e4cfcac427442e1164a4695ac210355c20ed5f42",
+   "japanese": "つくえ仕事なんて{4D}サボっちまえよ。{4D}なにをさわいでるんだ?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/128",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 128,
+   "mission": "judge_paperwork_ban",
+   "speaker": "バブズ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "75b69ff21d9d76484348acfc44aa3fb1ce3f5240322a4fb98544b9f61e1d7a98",
+   "japanese": "それがきみの仕事だろう。{4D}仕事をなまけるのは{4D}まちがっている。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/129",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 129,
+   "mission": "judge_paperwork_ban",
+   "speaker": "リッツ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "a00c3b85d65e2a0faa5f8f4a51e2cb13ec61af5d4a4ff70f4358ce693ceb1a41",
+   "japanese": "たしかにタイクツだけど、{4D}もっとマシなロウは{4D}なかったの?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/130",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 130,
+   "mission": "judge_paperwork_ban",
+   "speaker": "シャアラ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "e15f34a731f3a8447e6b47a16798ffcdb3782fe83c20eaf70461957351c756a7",
+   "japanese": "あたしの好みのロウじゃ{4D}ないな。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/131",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 131,
+   "mission": "judge_paperwork_ban",
+   "speaker": "シド",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "c2ebebadfd3dd1377ec74d4a7dd875b39cadd32b8550177f0b0352e56a2cbadd",
+   "japanese": "きみは自分の罪の重さを{4D}わかっていないようだな。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/132",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 132,
+   "mission": "judge_paperwork_ban",
+   "speaker": "ジャッジ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "1e7c357a6a23907bbf520cb82279a5c07b44c654e5eb27a1d3c7ef149c2ca359",
+   "japanese": "す、すまない。{4D}仕事はちゃんとやる。{4D}ちゃんとやるから!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/133",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 133,
+   "mission": "judge_paperwork_ban",
+   "speaker": "マーシュ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "507ec72aa2465223e6b23072afd8345a9db47a2cd9a3ae11cfc357f031e979eb",
+   "japanese": "これでひとつ{4D}かたづいたね。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/134",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 134,
+   "mission": "judge_paperwork_ban",
+   "speaker": "ヒュム",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "aab29e7397c1690302255f212ed1fcf7e02fbf665232b52cc1b0b7de105019c4",
+   "japanese": "まあ、悪かったって{4D}わかったんならいいさ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/135",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 135,
+   "mission": "judge_paperwork_ban",
+   "speaker": "バンガ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "9254c70d05699ada51593c933bf0938cc2445a40e6810adcebcb27dd52cd99b2",
+   "japanese": "みんなにあやまるンだな。{4D}…もちろん、{4D}紙に書いてな!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/136",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 136,
+   "mission": "judge_paperwork_ban",
+   "speaker": "ン・モウ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "7a7c4a9f6ee101963527c2c30203ae95750e28c8ffe58f36f55e16479cd0b70d",
+   "japanese": "そうです。仕事に{4D}はげむのがあなたには{4D}いちばんですよ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/137",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 137,
+   "mission": "judge_paperwork_ban",
+   "speaker": "ヴィエラ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "26eff134506dc08155737daa89929f00ed62b1fea29f9968fe0b2e3e038199a7",
+   "japanese": "もう自分ひとりで{4D}ロウを作ったりしちゃ{4D}ダメよ、いい?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/138",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 138,
+   "mission": "judge_paperwork_ban",
+   "speaker": "モーグリ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "a5c9e876f76d59e5ea7182b7747b928586b7e8524967672dc600322539fe4869",
+   "japanese": "いいアイデアだったクポ!{4D}本物のロウに{4D}してくれるといいクポ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/139",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 139,
+   "mission": "judge_paperwork_ban",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "a500fcaca68631a61c0178e7732327a47d9c0194ca69afc277e2fe817dd9ae47",
+   "japanese": "仕事にマジメすぎたのさ。{4D}力をぬけよ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/140",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 140,
+   "mission": "judge_paperwork_ban",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "a231f43bcd3f8df1215535af2ce6b2369f68490e7777a4f0dc3b0a822f5fb1c6",
+   "japanese": "つねに仕事に{4D}はげむことだ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/141",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 141,
+   "mission": "judge_paperwork_ban",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "f7737fe364d36fe0f46c6c8bb8566d8d71bfe06ce58227e2c2e9d74ca33459af",
+   "japanese": "みんなが喜ぶロウだって{4D}きっとあるはずよ…。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/142",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 142,
+   "mission": "judge_paperwork_ban",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "276ef2f2352b5c361f22806f0e130003b485429f4800a72f2c7bc27dc39623be",
+   "japanese": "これでいい。{4D}{400}に報告だ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/143",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 143,
+   "mission": "judge_paperwork_ban",
+   "speaker": "シド",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "9e47a0e525f44e00cc07f48d22126594fb433fd316af6a9bb48ae5e89fa3f229",
+   "japanese": "ロウをおもちゃにする者は{4D}私がとめねばならん!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/168",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 168,
+   "mission": "judge_no_answers_law",
+   "speaker": "ジャッジ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "60619baea204dbd23889c02be7668cebe631f02409e0fedd2802c4ae829b591c",
+   "japanese": "な、なにものだ?{4D}ここでなにを{4D}している?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/169",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 169,
+   "mission": "judge_no_answers_law",
+   "speaker": "マーシュ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "99c4a69a125d998b0133e61e83383231bcee701b7c4820f3e8f578d358b5b129",
+   "japanese": "……。{4D}(あ、ロウは{4D}「答え禁止」だった!){40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/170",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 170,
+   "mission": "judge_no_answers_law",
+   "speaker": "ヒュム",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "3bb01e9ce4beba4c201f6a5fa0ca14051bd19d0ee25d837a42954c6404390ec8",
+   "japanese": "そう言われても、{4D}どう答えれば{4D}いいんだよ?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/171",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 171,
+   "mission": "judge_no_answers_law",
+   "speaker": "バンガ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "6e198f115dac5b5257b688cd4867f9c40d8fce2ad5aae234763388ebc210145f",
+   "japanese": "{403}だ!{4D}…しまった!{4D}答えちゃいけねぇンだった!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/172",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 172,
+   "mission": "judge_no_answers_law",
+   "speaker": "ン・モウ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "ef31a980a23427d033efc83cad3104736a81c04ca890a56d951805cf58fcd74b",
+   "japanese": "……。{4D}(あなたなどに{4D}答える気はありません){40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/173",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 173,
+   "mission": "judge_no_answers_law",
+   "speaker": "ヴィエラ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "53fdfb1978425537245ec335df3e8b29cdcaced1f1da4e9a63efc013a6777b53",
+   "japanese": "ごめんなさい…{4D}ここって「答え禁止」{4D}じゃなかった?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/174",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 174,
+   "mission": "judge_no_answers_law",
+   "speaker": "モーグリ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "ab30734ba38230862b7758f3f1d259da919738e845cdf9969040be59dbd6ce6d",
+   "japanese": "…クポ。{4D}(答えちゃダメなん{4D}だよね、クポ?){40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/175",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 175,
+   "mission": "judge_no_answers_law",
+   "speaker": "エゼル",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "c8be01d9f5038554c53a81d88ac7d05409754525b09e5390779afaca5fdfb9ef",
+   "japanese": "悪いが、答えられねえ。{4D}どこかのバカが作った{4D}ロウのせいでな…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/176",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 176,
+   "mission": "judge_no_answers_law",
+   "speaker": "バブズ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "733748dfdd7ddc21245a8461dae3ce26e2322171af7db54d20c628fa8da6aa41",
+   "japanese": "{403}だ!{4D}不当なロウの{4D}調査に来た!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/177",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 177,
+   "mission": "judge_no_answers_law",
+   "speaker": "リッツ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "b382133a031ad4791d46ea98cc76eae4015f31f2c20942f8a5fa6805dd0a0731",
+   "japanese": "答えられないわ。{4D}それってロウ違反{4D}でしょ?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/178",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 178,
+   "mission": "judge_no_answers_law",
+   "speaker": "シャアラ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "6a5b42d68fd9961066607c98b31a9b0fe858a5bc2ad7069af187d8fb96f584a9",
+   "japanese": "{403}…。{4D}エンゲージだ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/179",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 179,
+   "mission": "judge_no_answers_law",
+   "speaker": "シド",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "75b3ab859e8dbd7c2554d90afc5c608bfdc1fbdd543065ed58b5d54adf639e80",
+   "japanese": "私はジャッ…いや。{4D}{403}の{4D}者だ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/180",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 180,
+   "mission": "judge_no_answers_law",
+   "speaker": "ジャッジ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "76b57a8cdceba9ea28375bb6a6f9f3b7bb1874845383dcb933bcde7522098255",
+   "japanese": "ぐぬぬ…。{4D}なんで私だけ{4D}捕まるんだ?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/181",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 181,
+   "mission": "judge_no_answers_law",
+   "speaker": "マーシュ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "b0c7e94bf0f943c669e751f49576c7f0c35a72c0b59ef46505e22d4f985f06de",
+   "japanese": "……。{4D}(悪いことをすれば{4D}捕まるんだよ!){40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/182",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 182,
+   "mission": "judge_no_answers_law",
+   "speaker": "ヒュム",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "e7a7c2871860f24a8384e867c4f3b718be3ceb0b96e003520cea0d9be931a972",
+   "japanese": "答えが知りたいのか?{4D}おっと、残念!{4D}それはナシだ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/183",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 183,
+   "mission": "judge_no_answers_law",
+   "speaker": "バンガ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "c055f0a19b38854db2819c3663b6ee74f7346a3c94aab7393f209471bc77ce25",
+   "japanese": "おまえだけじゃねぇよ。{4D}おとなしく{4D}ついてくるンだな。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/184",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 184,
+   "mission": "judge_no_answers_law",
+   "speaker": "ン・モウ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "5339db1431487c9bcc3de77e2b1a8970580d8a87404f5439b0de724d3a3f887d",
+   "japanese": "答えはきらいなのでは?{4D}自分で考えることです。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/185",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 185,
+   "mission": "judge_no_answers_law",
+   "speaker": "ヴィエラ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "da7ff99ab8943d7fcc764054b4a47d21db6498c9c1460b56bb25c4f8a537712e",
+   "japanese": "…。{4D}(悪いことをしたから、{4D}それだけよ!){40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/186",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 186,
+   "mission": "judge_no_answers_law",
+   "speaker": "モーグリ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "34eee662abafb0e074a366fcf1e699e500fc2a1a134e637cea329e05139bb661",
+   "japanese": "{102}答えるの禁止クポ!{4D}だから言わないクポ!{4D}残念クポ~!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/187",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 187,
+   "mission": "judge_no_answers_law",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "0fc80586408443a888221eb25d3ee9995c0ff9d0b954a1adef1ae80316e7032d",
+   "japanese": "自分で考えな。{4D}答えはきらい{4D}なんだろ?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/188",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 188,
+   "mission": "judge_no_answers_law",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "e4e29f5b85a32d3035998d22d88311399d9e7d6253ae86874a0e1a592dff80dc",
+   "japanese": "悪事をはたらけば{4D}裁かれる。{4D}それだけのことだ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/189",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 189,
+   "mission": "judge_no_answers_law",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "50966570f1a4ef2dc646be1e9a170eb4d392ec6fa8f9c01f84696406ecef6565",
+   "japanese": "アンタのロウのせいで{4D}街のみんなが{4D}困ってるのよ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/190",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 190,
+   "mission": "judge_no_answers_law",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "dac7feee00c4e467d071f41ed9326a8989a3861aa28e893cc4702ea6297de9ce",
+   "japanese": "さてな。{4D}自分で考えてみたら{4D}どうだ?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/191",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 191,
+   "mission": "judge_no_answers_law",
+   "speaker": "シド",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "62dd66253b126fe8879be7a48bab4eab24b750fed00e692c36f5dfd9748cb130",
+   "japanese": "なぜきみだけ、だと?{4D}ほかにもいるのか?{4D}話せ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/192",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 192,
+   "mission": "judge_no_no_no_law",
+   "speaker": "ジャッジ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "d3fea2d029bf920495190637ce0ce4367fadd100850d57bb6e55bbf58c4aa8c2",
+   "japanese": "ジャンプも禁止!{4D}のぼるのも禁止!{4D}ダメダメダメ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/193",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 193,
+   "mission": "judge_no_no_no_law",
+   "speaker": "マーシュ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "62eba9072519c6aa56d79721bd2520febe9add75b3f87db9c086b31b3ce26b9b",
+   "japanese": "かんべんしてよ!{4D}そんなロウじゃ{4D}エンゲージできないよ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/194",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 194,
+   "mission": "judge_no_no_no_law",
+   "speaker": "ヒュム",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "7f88f79e5e6232f7a1e8083f8060f882e3a789506b624baf7e68a4e289ea518d",
+   "japanese": "ロウブックを見てみな。{4D}そんなロウは{4D}どこにも書いてないぜ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/195",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 195,
+   "mission": "judge_no_no_no_law",
+   "speaker": "バンガ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "c0e34c2834758c7a51fdaa91a240b3573570b66f8908042be8cf4ae15066cafc",
+   "japanese": "竜騎士になにか{4D}うらみでもあるのか?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/196",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 196,
+   "mission": "judge_no_no_no_law",
+   "speaker": "ン・モウ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "fd5f0504ddb124953dd45a283d7c73f06dc8dbb916e19866c40e5fab15a0dfcd",
+   "japanese": "それはブランクカード?{4D}完成しないことを{4D}願うばかりです。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/197",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 197,
+   "mission": "judge_no_no_no_law",
+   "speaker": "ヴィエラ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "ffafd1959d685b24d7756e6d8f5d623fc2140bca71da0076094b0a7e17416408",
+   "japanese": "意味のわからないロウに{4D}したがう気はないわ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/198",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 198,
+   "mission": "judge_no_no_no_law",
+   "speaker": "モーグリ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "575bdce461ea528f700a0df50c86626320304ff3f0b86db6a8973e9893760364",
+   "japanese": "{101}じゃあ、魔法と矢なら{4D}いいクポ?{4D}わかったクポ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/199",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 199,
+   "mission": "judge_no_no_no_law",
+   "speaker": "エゼル",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "c66f7f7e5be02c3b239180abe552b3085609d96ec38323af78d0526d6b0c78c8",
+   "japanese": "ダメダメダメ?ふーん…。{4D}オレからもダメを{4D}ひとつ。アンチロウだ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/200",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 200,
+   "mission": "judge_no_no_no_law",
+   "speaker": "バブズ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "d4e7c7b77587b3e9d386afa21794eaea8872efee26892c8e820213511d164752",
+   "japanese": "なにもかも禁止して{4D}なんの意味がある?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/201",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 201,
+   "mission": "judge_no_no_no_law",
+   "speaker": "リッツ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "28ab671a2cef1069a0c2662268389d9f61cca76c08691dc08a765030ee3a8f84",
+   "japanese": "ダメダメって、{4D}いいかげんにして!{4D}ニセのロウはもうたくさん!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/202",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 202,
+   "mission": "judge_no_no_no_law",
+   "speaker": "シャアラ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "70b96f2fd30bf41634f5d32172cfb1476a6b580dd64229ec8cfc2567d6ecea88",
+   "japanese": "動かずに勝てるか{4D}ためしてみるか。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/203",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 203,
+   "mission": "judge_no_no_no_law",
+   "speaker": "シド",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "41c026d04054b8c7b723c726ae239b1677772d3aa9876a6d6cd590cacae92cf0",
+   "japanese": "ジャッジが気まぐれで{4D}ロウを作るなど{4D}もってのほかだ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/204",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 204,
+   "mission": "judge_no_no_no_law",
+   "speaker": "ジャッジ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "3d49cadb1fd0fac1778411c9495b423c9260405759f8e30187a07eecf74c63f2",
+   "japanese": "ダメ…ダメ…{4D}ぐああぁ…。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/205",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 205,
+   "mission": "judge_no_no_no_law",
+   "speaker": "マーシュ",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "42087d7e8ef9873c497df5237fb5fe3c5ec32effaa2ecfbbf6c94c79010c7bcb",
+   "japanese": "人をしばりつけても{4D}自由にはなれないよ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/206",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 206,
+   "mission": "judge_no_no_no_law",
+   "speaker": "ヒュム",
+   "scope": "EMPTY_JP_RECORD_TRANSFER",
+   "original_english_sha256": "c02669a288db6a98e3f0c4f51098d490a492143cafc8903891e3cc77124f1e24",
+   "japanese": "おまえのために{4D}新しいロウを作ってやる。{4D}「ダメ」は禁止だ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/207",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 207,
+   "mission": "judge_no_no_no_law",
+   "speaker": "バンガ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "022122c1e0bf50520af4910746f44cf8355734379596e21fc7d9b90e5f04551e",
+   "japanese": "ひとりの人間が{4D}ロウを好きにできちゃ{4D}いけねぇンだよ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/208",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 208,
+   "mission": "judge_no_no_no_law",
+   "speaker": "ン・モウ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "802f4ea3bdc8af9617a913c9118f252a05cff97d7e9d639f7158ee32a83bbf25",
+   "japanese": "ロウを作るのは{4D}宮廷にまかせるべきだと{4D}私は思いますよ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/209",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 209,
+   "mission": "judge_no_no_no_law",
+   "speaker": "ヴィエラ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "4ec56dcf371610a280c84dcacdc6f8fcca4b41815e045ac5892870d75ce928f9",
+   "japanese": "みんなが喜ぶロウだって{4D}作れたはずなのに…。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/210",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 210,
+   "mission": "judge_no_no_no_law",
+   "speaker": "モーグリ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "bd6a9758b6430a8907f16f23eda3f5a875f12a554252808e1a0d0b68d2b3077d",
+   "japanese": "{103}いっそ「ロウ禁止」って{4D}言えばよかったクポ!?{4D}なんてね、クポ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/211",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 211,
+   "mission": "judge_no_no_no_law",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "f2470c8d5ab991e1915427ce4b290725738150cfcbdb5e0fe17c927acf23a781",
+   "japanese": "力を好むヤツほど、{4D}力を使いこなせない{4D}もんだ。{4F}{42}もちろん、{4D}オレは別だがな。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/212",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 212,
+   "mission": "judge_no_no_no_law",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "149aa0c138092d4e4f158f0c18264309eb18b112273f1cfe77ac57049d8e59c6",
+   "japanese": "きみのねらいもやり方も、{4D}宮廷が認めるものでは{4D}ない。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/213",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 213,
+   "mission": "judge_no_no_no_law",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "393bf726d86e38873c14da7a75226dead37604db23a3bd0e6c110c430c51a897",
+   "japanese": "守るべきロウもあるけど、{4D}アンタのはやりすぎよ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/214",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 214,
+   "mission": "judge_no_no_no_law",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "c72d68f8f30697845c98cee25a977b7254686d7cb4270c50574a28b6c4d0c45e",
+   "japanese": "ダメダメ言われすぎて{4D}頭が痛い。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/61/16/215",
+   "us_top": 61,
+   "us_sub": 16,
+   "us_line": 215,
+   "mission": "judge_no_no_no_law",
+   "speaker": "シド",
+   "scope": "EDITORIAL_557",
+   "original_english_sha256": "c1e8a8077f045a222a06fbb74c1d63cb2ca5fb857fd21edec464d6ead417e185",
+   "japanese": "そのブランクカードを{4D}だれにもらった!{4D}白状してもらうぞ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  }
+ ]
+}

@@ -1,0 +1,100 @@
+name: public-ci
+
+# Everything here runs WITHOUT a ROM.
+#
+# No ROM is ever placed in this repository, in a secret, in a cache or in an
+# artifact, and nothing here downloads one.  The checks that need a ROM are
+# local-only by design -- see docs/LOCAL_ROM_QA.md.
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    name: public release audit (no ROM)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip -r requirements-dev.txt
+
+      - name: Public release audit
+        run: python tools/public_audit.py
+
+      - name: Public test suite
+        run: python -m pytest tests/public -q
+
+  compile:
+    name: syntax and import surface
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.11", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Byte-compile every module
+        run: python -m compileall -q build.py tools src tests
+
+      - name: Builder CLI works without a ROM
+        run: |
+          python build.py --print-hashes
+          python build.py --help
+
+  forbidden:
+    name: forbidden content gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: No ROM-shaped file has ever been committed
+        # History as well as the working tree: a file removed in a later commit
+        # is still published with the repository.
+        run: |
+          set -e
+          bad=$(git log --all --diff-filter=A --name-only --pretty=format: \
+                | sort -u \
+                | grep -Ei '\.(gba|gb|gbc|agb|nds|smc|sfc|bin|rom|bps|ips|ups|sav|srm|state|sps|zip|7z|rar)$' \
+                || true)
+          if [ -n "$bad" ]; then
+            echo "Forbidden files found in history:"
+            echo "$bad"
+            exit 1
+          fi
+          echo "No forbidden file has ever been committed."
+
+      - name: No large blob in history
+        run: |
+          set -e
+          big=$(git rev-list --objects --all \
+                | git cat-file --batch-check='%(objecttype) %(objectname) %(objectsize) %(rest)' \
+                | awk '$1=="blob" && $3>2000000 {print $3, $4}' \
+                | sort -rn || true)
+          if [ -n "$big" ]; then
+            echo "Blobs larger than 2 MB found in history:"
+            echo "$big"
+            exit 1
+          fi
+          echo "No oversized blob in history."

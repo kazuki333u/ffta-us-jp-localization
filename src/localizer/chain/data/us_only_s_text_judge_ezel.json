@@ -1,0 +1,3728 @@
+{
+ "_public_note": "Public build manifest. Verbatim retail source strings are stored as SHA-256 digests (fields ending in _sha256); the builder recomputes them from the user's own ROM. Japanese text in this file is written by this project.",
+ "milestone": "us_only_s_text_judge_ezel",
+ "description": "Editorial localization of the US-only judge-corruption arc and the Ezel mediator scene: s_text tops 47 (Cid and the corrupt judge, Cid recruit), 51 (Cyril judge, seals of immunity), 52 (Baguba judge, donations), 53 (Sprohm judge assembly, the prison judge), 55 (Ezel mediates the resistance/palace talks, Ezel recruit). Whole leaves: 219 entries of the exact 776 editorial scope plus the 5 line-0 scene openers, which the aligner excludes only because the JP side at those tops is a page-level repeat marker -- they have no JP original either.",
+ "baseline_production_sha256": "1A37D0E231172AA027BF169C1260672C0AAAC058E0F61F771228B842FC08142C",
+ "count": 224,
+ "translated_count": 224,
+ "no_change_required_count": 0,
+ "in_editorial_scope_count": 219,
+ "scene_completion_count": 5,
+ "voice_authorities": {
+  "シド": "JP s_text 19/5-72, 8/45-48, 18/39-46 -- 一人称私, 「〜かね」「〜まい」「〜だな」, 部下には命令形, マーシュを「きみ」",
+  "マーシュ": "JP s_text 8/37, 18/3-19, 19/3-36 -- 一人称ぼく, 大人には敬語, エゼルを「エゼルさん」",
+  "エゼル": "JP s_text 8/17-62, 18/2-20, 28/27 -- 一人称オレ, 「〜だぜ」「〜さ」「〜な」「〜だろ」, マーシュを「おまえ」, 軽妙で自称天才",
+  "ジャッジの部下": "JP s_text 18/38-40, 19/84 -- ジャッジマスターへは「〜様」敬語 (report register)",
+  "悪徳ジャッジ": "新規 -- 部下にはぞんざいな常体、シドには慇懃な敬語に切り替える",
+  "プリズンのジャッジ": "新規 -- 冷徹な常体「〜までだ」「〜ぞ?」"
+ },
+ "terminology": {
+  "Judgemaster": "ジャッジマスター (JP s_text/19/48) / [5117]マスター (JP s_text/28/1, 8/44)",
+  "palace": "宮廷 (JP s_text/19/62, 8/1)",
+  "Bervenia Palace": "ベルベニア王宮 (JP fx_text/8/11, /8/18)",
+  "prison / sent to prison": "プリズン / プリズン送り (JP s_text/8/47, 18/25)",
+  "seal of immunity": "免罪の印 (新規; 免罪 = JP words:battle/25, fx_text/4/93; 印 = JP s_text/14/26. 符 has no JP glyph)",
+  "blank card": "ブランクカード (words:battle/178 editorial, fx_text/8/59 editorial)",
+  "red card / yellow card": "レッドカード (JP fx_text/8/67) / イエローカード (JP pages:battle/34)",
+  "judge sword": "ジャッジソード (words:battle/535 editorial)",
+  "JudgeWatch board": "[5117]ウォッチ (fx_text/8/58 editorial)",
+  "engagement": "エンゲージ (JP s_text/27/40)",
+  "mission": "クエスト (JP words:system: Mission Cleared = クエストクリア)",
+  "Cyril / Baguba / Sprohm": "シリル (JP s_text/2/33) / バクーバ (JP words:content/723 貿易港バクーバ) / スプロム (JP s_text/2/84 山岳都市スプロム)",
+  "resistance": "レジスタンス (JP words:clan/42, pages:quest/113)",
+  "antilaw": "アンチロウ (JP s_text/8/9)",
+  "mediator": "仲裁役 (新規; 仲 JP s_text/1/69, 裁 JP s_text/61/9/45)",
+  "non-action treaty": "不干渉の協定 (新規)",
+  "corruption": "腐敗 (JP words:battle/121) / 不正 (JP fx_text/4/102)",
+  "play favorites": "えこひいき (かな)",
+  "donations": "寄付 (JP s_text/28/22, 2/87)"
+ },
+ "kanji_codes": {
+  "一": {
+   "jp_glyph_code": "0x0122",
+   "attested_at": "fx_text/1/31",
+   "source": "reused:us_only_fx_text"
+  },
+  "上": {
+   "jp_glyph_code": "0x0135",
+   "attested_at": "fx_text/1/32",
+   "source": "reused:us_only_fx_text"
+  },
+  "不": {
+   "jp_glyph_code": "0x0A46",
+   "attested_at": "fx_text/4/102",
+   "source": "reused:us_only_fx_text"
+  },
+  "世": {
+   "jp_glyph_code": "0x0142",
+   "attested_at": "s_text/1/98",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "中": {
+   "jp_glyph_code": "0x0125",
+   "attested_at": "s_text/1/38",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "主": {
+   "jp_glyph_code": "0x0608",
+   "attested_at": "s_text/7/23",
+   "source": "jp_corpus_attestation"
+  },
+  "乗": {
+   "jp_glyph_code": "0x06B0",
+   "attested_at": "fx_text/7/9",
+   "source": "jp_corpus_attestation"
+  },
+  "乱": {
+   "jp_glyph_code": "0x0151",
+   "attested_at": "fx_text/6/28",
+   "source": "reused:us_only_fx_text"
+  },
+  "了": {
+   "jp_glyph_code": "0x0BCC",
+   "attested_at": "fx_text/1/27",
+   "source": "reused:us_only_fx_text"
+  },
+  "事": {
+   "jp_glyph_code": "0x01A5",
+   "attested_at": "fx_text/8/19",
+   "source": "reused:us_only_fx_text"
+  },
+  "亡": {
+   "jp_glyph_code": "0x0AD2",
+   "attested_at": "s_text/19/58",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "交": {
+   "jp_glyph_code": "0x04CA",
+   "attested_at": "s_text/15/6",
+   "source": "jp_corpus_attestation"
+  },
+  "人": {
+   "jp_glyph_code": "0x01A9",
+   "attested_at": "fx_text/2/9",
+   "source": "reused:us_only_fx_text"
+  },
+  "今": {
+   "jp_glyph_code": "0x0528",
+   "attested_at": "s_text/1/1",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "仕": {
+   "jp_glyph_code": "0x059D",
+   "attested_at": "fx_text/2/11",
+   "source": "reused:us_only_fx_text"
+  },
+  "他": {
+   "jp_glyph_code": "0x07DF",
+   "attested_at": "s_text/2/37",
+   "source": "jp_corpus_attestation"
+  },
+  "付": {
+   "jp_glyph_code": "0x0145",
+   "attested_at": "s_text/2/87",
+   "source": "jp_corpus_attestation"
+  },
+  "令": {
+   "jp_glyph_code": "0x0BEF",
+   "attested_at": "s_text/30/20",
+   "source": "jp_corpus_attestation"
+  },
+  "以": {
+   "jp_glyph_code": "0x0147",
+   "attested_at": "fx_text/4/2",
+   "source": "reused:us_only_fx_text"
+  },
+  "仲": {
+   "jp_glyph_code": "0x0859",
+   "attested_at": "s_text/1/69",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "任": {
+   "jp_glyph_code": "0x096B",
+   "attested_at": "fx_text/21/278",
+   "source": "reused:us_only_fx_text"
+  },
+  "会": {
+   "jp_glyph_code": "0x02CF",
+   "attested_at": "s_text/2/84",
+   "source": "jp_corpus_attestation"
+  },
+  "伝": {
+   "jp_glyph_code": "0x08DB",
+   "attested_at": "s_text/2/64",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "位": {
+   "jp_glyph_code": "0x020C",
+   "attested_at": "s_text/19/20",
+   "source": "jp_corpus_attestation"
+  },
+  "作": {
+   "jp_glyph_code": "0x0570",
+   "attested_at": "fx_text/4/138",
+   "source": "reused:us_only_fx_text"
+  },
+  "使": {
+   "jp_glyph_code": "0x05A0",
+   "attested_at": "fx_text/1/4",
+   "source": "reused:us_only_fx_text"
+  },
+  "依": {
+   "jp_glyph_code": "0x020D",
+   "attested_at": "s_text/4/14",
+   "source": "jp_corpus_attestation"
+  },
+  "信": {
+   "jp_glyph_code": "0x06D2",
+   "attested_at": "fx_text/1/12",
+   "source": "reused:us_only_fx_text"
+  },
+  "働": {
+   "jp_glyph_code": "0x0923",
+   "attested_at": "pages:quest/0/167",
+   "source": "jp_corpus_attestation"
+  },
+  "像": {
+   "jp_glyph_code": "0x07C0",
+   "attested_at": "s_text/10/0",
+   "source": "jp_corpus_attestation"
+  },
+  "元": {
+   "jp_glyph_code": "0x0492",
+   "attested_at": "s_text/2/58",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "先": {
+   "jp_glyph_code": "0x075A",
+   "attested_at": "s_text/1/13",
+   "source": "jp_corpus_attestation"
+  },
+  "免": {
+   "jp_glyph_code": "0x0B36",
+   "attested_at": "s_text/2/15",
+   "source": "jp_corpus_attestation"
+  },
+  "入": {
+   "jp_glyph_code": "0x0967",
+   "attested_at": "fx_text/1/16",
+   "source": "reused:us_only_fx_text"
+  },
+  "公": {
+   "jp_glyph_code": "0x04CE",
+   "attested_at": "s_text/8/45",
+   "source": "jp_corpus_attestation"
+  },
+  "典": {
+   "jp_glyph_code": "0x08D2",
+   "attested_at": "fx_text/21/266",
+   "source": "jp_corpus_attestation"
+  },
+  "処": {
+   "jp_glyph_code": "0x065F",
+   "attested_at": "fx_text/1/0",
+   "source": "jp_corpus_attestation"
+  },
+  "出": {
+   "jp_glyph_code": "0x013F",
+   "attested_at": "fx_text/1/33",
+   "source": "reused:us_only_fx_text"
+  },
+  "刃": {
+   "jp_glyph_code": "0x06ED",
+   "attested_at": "fx_text/21/24",
+   "source": "reused:us_only_fx_text"
+  },
+  "分": {
+   "jp_glyph_code": "0x0126",
+   "attested_at": "s_text/4/8",
+   "source": "reused:us_only_system_battle"
+  },
+  "切": {
+   "jp_glyph_code": "0x013C",
+   "attested_at": "fx_text/4/19",
+   "source": "reused:us_only_fx_text"
+  },
+  "判": {
+   "jp_glyph_code": "0x09DB",
+   "attested_at": "fx_text/8/57",
+   "source": "reused:us_only_fx_text"
+  },
+  "別": {
+   "jp_glyph_code": "0x01D9",
+   "attested_at": "fx_text/4/19",
+   "source": "reused:us_only_fx_text"
+  },
+  "前": {
+   "jp_glyph_code": "0x01AA",
+   "attested_at": "fx_text/4/88",
+   "source": "reused:us_only_fx_text"
+  },
+  "剣": {
+   "jp_glyph_code": "0x0475",
+   "attested_at": "fx_text/8/52",
+   "source": "reused:us_only_fx_text"
+  },
+  "割": {
+   "jp_glyph_code": "0x0314",
+   "attested_at": "s_text/19/28",
+   "source": "jp_corpus_attestation"
+  },
+  "力": {
+   "jp_glyph_code": "0x0182",
+   "attested_at": "s_text/2/51",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "加": {
+   "jp_glyph_code": "0x02A5",
+   "attested_at": "fx_text/1/17",
+   "source": "reused:us_only_fx_text"
+  },
+  "助": {
+   "jp_glyph_code": "0x0667",
+   "attested_at": "s_text/2/24",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "効": {
+   "jp_glyph_code": "0x04D0",
+   "attested_at": "s_text/8/10",
+   "source": "reused:us_only_system_battle"
+  },
+  "動": {
+   "jp_glyph_code": "0x018A",
+   "attested_at": "fx_text/4/104",
+   "source": "reused:us_only_fx_text"
+  },
+  "勝": {
+   "jp_glyph_code": "0x0670",
+   "attested_at": "fx_text/4/179",
+   "source": "reused:us_only_fx_text"
+  },
+  "十": {
+   "jp_glyph_code": "0x0131",
+   "attested_at": "fx_text/21/56",
+   "source": "jp_corpus_attestation"
+  },
+  "協": {
+   "jp_glyph_code": "0x03DD",
+   "attested_at": "s_text/2/89",
+   "source": "jp_corpus_attestation"
+  },
+  "印": {
+   "jp_glyph_code": "0x0230",
+   "attested_at": "s_text/14/26",
+   "source": "jp_corpus_attestation"
+  },
+  "反": {
+   "jp_glyph_code": "0x0139",
+   "attested_at": "s_text/2/80",
+   "source": "jp_corpus_attestation"
+  },
+  "収": {
+   "jp_glyph_code": "0x061D",
+   "attested_at": "fx_text/4/107",
+   "source": "jp_corpus_attestation"
+  },
+  "取": {
+   "jp_glyph_code": "0x0609",
+   "attested_at": "s_text/1/30",
+   "source": "jp_corpus_attestation"
+  },
+  "各": {
+   "jp_glyph_code": "0x02FB",
+   "attested_at": "fx_text/6/6",
+   "source": "jp_corpus_attestation"
+  },
+  "合": {
+   "jp_glyph_code": "0x0513",
+   "attested_at": "s_text/1/3",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "同": {
+   "jp_glyph_code": "0x0924",
+   "attested_at": "fx_text/4/203",
+   "source": "reused:us_only_fx_text"
+  },
+  "名": {
+   "jp_glyph_code": "0x0B2E",
+   "attested_at": "s_text/1/10",
+   "source": "jp_corpus_attestation"
+  },
+  "告": {
+   "jp_glyph_code": "0x051B",
+   "attested_at": "fx_text/17/11",
+   "source": "reused:us_only_fx_text"
+  },
+  "呼": {
+   "jp_glyph_code": "0x04A2",
+   "attested_at": "fx_text/8/11",
+   "source": "reused:us_only_fx_text"
+  },
+  "命": {
+   "jp_glyph_code": "0x015D",
+   "attested_at": "s_text/7/23",
+   "source": "jp_corpus_attestation"
+  },
+  "品": {
+   "jp_glyph_code": "0x0A3D",
+   "attested_at": "s_text/15/13",
+   "source": "jp_corpus_attestation"
+  },
+  "商": {
+   "jp_glyph_code": "0x0675",
+   "attested_at": "s_text/4/15",
+   "source": "jp_corpus_attestation"
+  },
+  "問": {
+   "jp_glyph_code": "0x01DE",
+   "attested_at": "fx_text/6/8",
+   "source": "reused:us_only_fx_text"
+  },
+  "回": {
+   "jp_glyph_code": "0x014A",
+   "attested_at": "fx_text/4/121",
+   "source": "reused:us_only_fx_text"
+  },
+  "国": {
+   "jp_glyph_code": "0x0158",
+   "attested_at": "s_text/2/33",
+   "source": "jp_corpus_attestation"
+  },
+  "地": {
+   "jp_glyph_code": "0x01D5",
+   "attested_at": "s_text/10/1",
+   "source": "jp_corpus_attestation"
+  },
+  "坊": {
+   "jp_glyph_code": "0x0AD5",
+   "attested_at": "s_text/2/25",
+   "source": "jp_corpus_attestation"
+  },
+  "域": {
+   "jp_glyph_code": "0x01B3",
+   "attested_at": "fx_text/6/28",
+   "source": "jp_corpus_attestation"
+  },
+  "報": {
+   "jp_glyph_code": "0x0AB4",
+   "attested_at": "fx_text/1/31",
+   "source": "reused:us_only_fx_text"
+  },
+  "境": {
+   "jp_glyph_code": "0x03E2",
+   "attested_at": "s_text/25/4",
+   "source": "jp_corpus_attestation"
+  },
+  "売": {
+   "jp_glyph_code": "0x09AA",
+   "attested_at": "s_text/4/15",
+   "source": "jp_corpus_attestation"
+  },
+  "変": {
+   "jp_glyph_code": "0x015E",
+   "attested_at": "s_text/1/3",
+   "source": "reused:us_only_system_battle"
+  },
+  "多": {
+   "jp_glyph_code": "0x07E0",
+   "attested_at": "s_text/2/57",
+   "source": "jp_corpus_attestation"
+  },
+  "大": {
+   "jp_glyph_code": "0x0801",
+   "attested_at": "fx_text/4/61",
+   "source": "reused:us_only_fx_text"
+  },
+  "失": {
+   "jp_glyph_code": "0x05E2",
+   "attested_at": "fx_text/1/28",
+   "source": "reused:us_only_fx_text"
+  },
+  "字": {
+   "jp_glyph_code": "0x014D",
+   "attested_at": "fx_text/8/16",
+   "source": "jp_corpus_attestation"
+  },
+  "守": {
+   "jp_glyph_code": "0x060A",
+   "attested_at": "fx_text/6/1",
+   "source": "reused:us_only_fx_text"
+  },
+  "定": {
+   "jp_glyph_code": "0x0186",
+   "attested_at": "fx_text/1/8",
+   "source": "reused:us_only_fx_text"
+  },
+  "宮": {
+   "jp_glyph_code": "0x03B8",
+   "attested_at": "s_text/6/27",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "容": {
+   "jp_glyph_code": "0x0B86",
+   "attested_at": "s_text/13/24",
+   "source": "jp_corpus_attestation"
+  },
+  "寄": {
+   "jp_glyph_code": "0x0375",
+   "attested_at": "s_text/28/22",
+   "source": "jp_corpus_attestation"
+  },
+  "密": {
+   "jp_glyph_code": "0x0B1E",
+   "attested_at": "s_text/8/3",
+   "source": "jp_corpus_attestation"
+  },
+  "対": {
+   "jp_glyph_code": "0x07EF",
+   "attested_at": "fx_text/4/137",
+   "source": "reused:us_only_fx_text"
+  },
+  "専": {
+   "jp_glyph_code": "0x075E",
+   "attested_at": "s_text/8/62",
+   "source": "jp_corpus_attestation"
+  },
+  "少": {
+   "jp_glyph_code": "0x067D",
+   "attested_at": "s_text/4/36",
+   "source": "jp_corpus_attestation"
+  },
+  "屋": {
+   "jp_glyph_code": "0x01B6",
+   "attested_at": "s_text/1/88",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "山": {
+   "jp_glyph_code": "0x012F",
+   "attested_at": "s_text/2/84",
+   "source": "jp_corpus_attestation"
+  },
+  "帰": {
+   "jp_glyph_code": "0x0382",
+   "attested_at": "s_text/1/40",
+   "source": "jp_corpus_attestation"
+  },
+  "干": {
+   "jp_glyph_code": "0x033B",
+   "attested_at": "fx_text/8/22",
+   "source": "jp_corpus_attestation"
+  },
+  "平": {
+   "jp_glyph_code": "0x0A87",
+   "attested_at": "s_text/1/21",
+   "source": "jp_corpus_attestation"
+  },
+  "広": {
+   "jp_glyph_code": "0x04DF",
+   "attested_at": "fx_text/6/3",
+   "source": "reused:us_only_fx_text"
+  },
+  "店": {
+   "jp_glyph_code": "0x08D6",
+   "attested_at": "s_text/8/60",
+   "source": "jp_corpus_attestation"
+  },
+  "度": {
+   "jp_glyph_code": "0x08F1",
+   "attested_at": "s_text/2/86",
+   "source": "reused:us_only_system_battle"
+  },
+  "廷": {
+   "jp_glyph_code": "0x08B0",
+   "attested_at": "s_text/6/27",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "式": {
+   "jp_glyph_code": "0x05D8",
+   "attested_at": "fx_text/8/3",
+   "source": "jp_corpus_attestation"
+  },
+  "引": {
+   "jp_glyph_code": "0x019F",
+   "attested_at": "fx_text/4/10",
+   "source": "reused:us_only_fx_text"
+  },
+  "当": {
+   "jp_glyph_code": "0x090D",
+   "attested_at": "s_text/1/30",
+   "source": "jp_corpus_attestation"
+  },
+  "役": {
+   "jp_glyph_code": "0x0B58",
+   "attested_at": "fx_text/4/114",
+   "source": "reused:us_only_fx_text"
+  },
+  "彼": {
+   "jp_glyph_code": "0x09FC",
+   "attested_at": "fx_text/8/42",
+   "source": "reused:us_only_fx_text"
+  },
+  "待": {
+   "jp_glyph_code": "0x01D3",
+   "attested_at": "fx_text/1/31",
+   "source": "reused:us_only_fx_text"
+  },
+  "得": {
+   "jp_glyph_code": "0x0933",
+   "attested_at": "s_text/23/47",
+   "source": "jp_corpus_attestation"
+  },
+  "徳": {
+   "jp_glyph_code": "0x0934",
+   "attested_at": "fx_text/17/351",
+   "source": "jp_corpus_attestation"
+  },
+  "心": {
+   "jp_glyph_code": "0x013B",
+   "attested_at": "fx_text/4/120",
+   "source": "reused:us_only_fx_text"
+  },
+  "必": {
+   "jp_glyph_code": "0x0141",
+   "attested_at": "s_text/2/64",
+   "source": "jp_corpus_attestation"
+  },
+  "忘": {
+   "jp_glyph_code": "0x0AD8",
+   "attested_at": "fx_text/4/84",
+   "source": "reused:us_only_fx_text"
+  },
+  "念": {
+   "jp_glyph_code": "0x0977",
+   "attested_at": "s_text/2/69",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "思": {
+   "jp_glyph_code": "0x01C5",
+   "attested_at": "fx_text/6/24",
+   "source": "reused:us_only_fx_text"
+  },
+  "性": {
+   "jp_glyph_code": "0x0724",
+   "attested_at": "fx_text/17/150",
+   "source": "reused:us_only_fx_text"
+  },
+  "悟": {
+   "jp_glyph_code": "0x04C0",
+   "attested_at": "s_text/4/33",
+   "source": "jp_corpus_attestation"
+  },
+  "悪": {
+   "jp_glyph_code": "0x01F2",
+   "attested_at": "s_text/1/12",
+   "source": "jp_corpus_attestation"
+  },
+  "情": {
+   "jp_glyph_code": "0x06B6",
+   "attested_at": "s_text/3/13",
+   "source": "jp_corpus_attestation"
+  },
+  "想": {
+   "jp_glyph_code": "0x07A2",
+   "attested_at": "s_text/10/0",
+   "source": "jp_corpus_attestation"
+  },
+  "態": {
+   "jp_glyph_code": "0x07F3",
+   "attested_at": "fx_text/1/29",
+   "source": "jp_corpus_attestation"
+  },
+  "慮": {
+   "jp_glyph_code": "0x0BC9",
+   "attested_at": "s_text/15/3",
+   "source": "jp_corpus_attestation"
+  },
+  "我": {
+   "jp_glyph_code": "0x0156",
+   "attested_at": "s_text/7/15",
+   "source": "jp_corpus_attestation"
+  },
+  "手": {
+   "jp_glyph_code": "0x060B",
+   "attested_at": "fx_text/1/16",
+   "source": "reused:us_only_fx_text"
+  },
+  "拠": {
+   "jp_glyph_code": "0x03CC",
+   "attested_at": "s_text/18/34",
+   "source": "jp_corpus_attestation"
+  },
+  "持": {
+   "jp_glyph_code": "0x05C9",
+   "attested_at": "s_text/1/52",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "捕": {
+   "jp_glyph_code": "0x0AA4",
+   "attested_at": "s_text/5/11",
+   "source": "jp_corpus_attestation"
+  },
+  "敗": {
+   "jp_glyph_code": "0x099A",
+   "attested_at": "fx_text/1/28",
+   "source": "reused:us_only_fx_text"
+  },
+  "数": {
+   "jp_glyph_code": "0x016F",
+   "attested_at": "s_text/7/28",
+   "source": "jp_corpus_attestation"
+  },
+  "料": {
+   "jp_glyph_code": "0x0BD2",
+   "attested_at": "s_text/3/13",
+   "source": "jp_corpus_attestation"
+  },
+  "断": {
+   "jp_glyph_code": "0x083B",
+   "attested_at": "s_text/8/6",
+   "source": "jp_corpus_attestation"
+  },
+  "新": {
+   "jp_glyph_code": "0x01A8",
+   "attested_at": "fx_text/1/31",
+   "source": "reused:us_only_fx_text"
+  },
+  "方": {
+   "jp_glyph_code": "0x013A",
+   "attested_at": "s_text/2/58",
+   "source": "reused:us_only_system_battle"
+  },
+  "日": {
+   "jp_glyph_code": "0x01D8",
+   "attested_at": "s_text/1/1",
+   "source": "jp_corpus_attestation"
+  },
+  "早": {
+   "jp_glyph_code": "0x01D1",
+   "attested_at": "s_text/8/48",
+   "source": "jp_corpus_attestation"
+  },
+  "易": {
+   "jp_glyph_code": "0x0217",
+   "attested_at": "s_text/15/6",
+   "source": "jp_corpus_attestation"
+  },
+  "時": {
+   "jp_glyph_code": "0x0166",
+   "attested_at": "fx_text/2/12",
+   "source": "reused:us_only_fx_text"
+  },
+  "最": {
+   "jp_glyph_code": "0x01C3",
+   "attested_at": "s_text/1/31",
+   "source": "jp_corpus_attestation"
+  },
+  "月": {
+   "jp_glyph_code": "0x046E",
+   "attested_at": "fx_text/8/53",
+   "source": "jp_corpus_attestation"
+  },
+  "期": {
+   "jp_glyph_code": "0x037E",
+   "attested_at": "fx_text/1/29",
+   "source": "reused:us_only_fx_text"
+  },
+  "本": {
+   "jp_glyph_code": "0x0144",
+   "attested_at": "s_text/1/45",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "材": {
+   "jp_glyph_code": "0x0563",
+   "attested_at": "s_text/61/4/137",
+   "source": "jp_corpus_attestation"
+  },
+  "束": {
+   "jp_glyph_code": "0x07CD",
+   "attested_at": "s_text/8/17",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "来": {
+   "jp_glyph_code": "0x014F",
+   "attested_at": "s_text/1/38",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "果": {
+   "jp_glyph_code": "0x02AD",
+   "attested_at": "s_text/8/52",
+   "source": "jp_corpus_attestation"
+  },
+  "査": {
+   "jp_glyph_code": "0x053E",
+   "attested_at": "s_text/10/0",
+   "source": "jp_corpus_attestation"
+  },
+  "様": {
+   "jp_glyph_code": "0x017B",
+   "attested_at": "s_text/1/116",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "欠": {
+   "jp_glyph_code": "0x0467",
+   "attested_at": "fx_text/8/3",
+   "source": "jp_corpus_attestation"
+  },
+  "次": {
+   "jp_glyph_code": "0x05CA",
+   "attested_at": "fx_text/4/111",
+   "source": "reused:us_only_fx_text"
+  },
+  "正": {
+   "jp_glyph_code": "0x072C",
+   "attested_at": "s_text/17/15",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "死": {
+   "jp_glyph_code": "0x05AF",
+   "attested_at": "s_text/1/68",
+   "source": "jp_corpus_attestation"
+  },
+  "残": {
+   "jp_glyph_code": "0x059C",
+   "attested_at": "s_text/6/5",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "殿": {
+   "jp_glyph_code": "0x08DC",
+   "attested_at": "fx_text/18/12",
+   "source": "jp_corpus_attestation"
+  },
+  "気": {
+   "jp_glyph_code": "0x0384",
+   "attested_at": "s_text/1/21",
+   "source": "reused:us_only_system_battle"
+  },
+  "氷": {
+   "jp_glyph_code": "0x0A2D",
+   "attested_at": "fx_text/17/64",
+   "source": "jp_corpus_attestation"
+  },
+  "永": {
+   "jp_glyph_code": "0x025B",
+   "attested_at": "fx_text/24/10",
+   "source": "jp_corpus_attestation"
+  },
+  "求": {
+   "jp_glyph_code": "0x03BD",
+   "attested_at": "s_text/8/30",
+   "source": "jp_corpus_attestation"
+  },
+  "決": {
+   "jp_glyph_code": "0x0468",
+   "attested_at": "fx_text/1/8",
+   "source": "reused:us_only_fx_text"
+  },
+  "法": {
+   "jp_glyph_code": "0x0ABF",
+   "attested_at": "fx_text/4/90",
+   "source": "reused:us_only_fx_text"
+  },
+  "渉": {
+   "jp_glyph_code": "0x0690",
+   "attested_at": "fx_text/8/22",
+   "source": "jp_corpus_attestation"
+  },
+  "然": {
+   "jp_glyph_code": "0x077F",
+   "attested_at": "s_text/1/30",
+   "source": "jp_corpus_attestation"
+  },
+  "照": {
+   "jp_glyph_code": "0x0694",
+   "attested_at": "s_text/35/0",
+   "source": "jp_corpus_attestation"
+  },
+  "物": {
+   "jp_glyph_code": "0x0A74",
+   "attested_at": "s_text/1/51",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "特": {
+   "jp_glyph_code": "0x01D7",
+   "attested_at": "s_text/16/3",
+   "source": "jp_corpus_attestation"
+  },
+  "犯": {
+   "jp_glyph_code": "0x09E5",
+   "attested_at": "s_text/14/11",
+   "source": "jp_corpus_attestation"
+  },
+  "独": {
+   "jp_glyph_code": "0x093A",
+   "attested_at": "s_text/19/62",
+   "source": "jp_corpus_attestation"
+  },
+  "王": {
+   "jp_glyph_code": "0x0137",
+   "attested_at": "s_text/2/33",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "用": {
+   "jp_glyph_code": "0x013E",
+   "attested_at": "s_text/4/45",
+   "source": "jp_corpus_attestation"
+  },
+  "由": {
+   "jp_glyph_code": "0x0B74",
+   "attested_at": "fx_text/4/96",
+   "source": "reused:us_only_fx_text"
+  },
+  "申": {
+   "jp_glyph_code": "0x06DE",
+   "attested_at": "fx_text/21/186",
+   "source": "jp_corpus_attestation"
+  },
+  "界": {
+   "jp_glyph_code": "0x015F",
+   "attested_at": "s_text/1/98",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "番": {
+   "jp_glyph_code": "0x09F2",
+   "attested_at": "s_text/1/118",
+   "source": "jp_corpus_attestation"
+  },
+  "白": {
+   "jp_glyph_code": "0x09B8",
+   "attested_at": "fx_text/4/121",
+   "source": "reused:us_only_fx_text"
+  },
+  "的": {
+   "jp_glyph_code": "0x0159",
+   "attested_at": "s_text/2/83",
+   "source": "jp_corpus_attestation"
+  },
+  "監": {
+   "jp_glyph_code": "0x034B",
+   "attested_at": "s_text/2/76",
+   "source": "jp_corpus_attestation"
+  },
+  "目": {
+   "jp_glyph_code": "0x0143",
+   "attested_at": "s_text/2/75",
+   "source": "jp_corpus_attestation"
+  },
+  "直": {
+   "jp_glyph_code": "0x0886",
+   "attested_at": "s_text/1/91",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "相": {
+   "jp_glyph_code": "0x01AB",
+   "attested_at": "fx_text/4/186",
+   "source": "reused:us_only_fx_text"
+  },
+  "礼": {
+   "jp_glyph_code": "0x0BF7",
+   "attested_at": "s_text/7/47",
+   "source": "jp_corpus_attestation"
+  },
+  "私": {
+   "jp_glyph_code": "0x05B3",
+   "attested_at": "fx_text/8/68",
+   "source": "reused:us_only_fx_text"
+  },
+  "秘": {
+   "jp_glyph_code": "0x0A07",
+   "attested_at": "s_text/11/13",
+   "source": "jp_corpus_attestation"
+  },
+  "立": {
+   "jp_glyph_code": "0x0181",
+   "attested_at": "s_text/19/62",
+   "source": "jp_corpus_attestation"
+  },
+  "答": {
+   "jp_glyph_code": "0x0911",
+   "attested_at": "s_text/13/22",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "約": {
+   "jp_glyph_code": "0x0B59",
+   "attested_at": "s_text/8/17",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "終": {
+   "jp_glyph_code": "0x0628",
+   "attested_at": "fx_text/1/27",
+   "source": "reused:us_only_fx_text"
+  },
+  "結": {
+   "jp_glyph_code": "0x046B",
+   "attested_at": "s_text/6/27",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "絶": {
+   "jp_glyph_code": "0x0756",
+   "attested_at": "s_text/5/44",
+   "source": "jp_corpus_attestation"
+  },
+  "続": {
+   "jp_glyph_code": "0x07D4",
+   "attested_at": "s_text/19/69",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "緒": {
+   "jp_glyph_code": "0x01CC",
+   "attested_at": "s_text/1/1",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "罪": {
+   "jp_glyph_code": "0x0564",
+   "attested_at": "fx_text/4/93",
+   "source": "reused:us_only_fx_text"
+  },
+  "義": {
+   "jp_glyph_code": "0x039E",
+   "attested_at": "s_text/26/69",
+   "source": "jp_corpus_attestation"
+  },
+  "考": {
+   "jp_glyph_code": "0x04FB",
+   "attested_at": "s_text/1/98",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "者": {
+   "jp_glyph_code": "0x015B",
+   "attested_at": "fx_text/4/91",
+   "source": "reused:us_only_fx_text"
+  },
+  "耳": {
+   "jp_glyph_code": "0x05D2",
+   "attested_at": "s_text/22/0",
+   "source": "jp_corpus_attestation"
+  },
+  "胸": {
+   "jp_glyph_code": "0x03EE",
+   "attested_at": "fx_text/21/289",
+   "source": "jp_corpus_attestation"
+  },
+  "腐": {
+   "jp_glyph_code": "0x0A55",
+   "attested_at": "s_text/35/83",
+   "source": "reused:us_only_fx_text"
+  },
+  "自": {
+   "jp_glyph_code": "0x05D3",
+   "attested_at": "s_text/2/42",
+   "source": "reused:us_only_system_battle"
+  },
+  "苦": {
+   "jp_glyph_code": "0x0419",
+   "attested_at": "s_text/4/9",
+   "source": "jp_corpus_attestation"
+  },
+  "葉": {
+   "jp_glyph_code": "0x0172",
+   "attested_at": "s_text/1/90",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "行": {
+   "jp_glyph_code": "0x0149",
+   "attested_at": "fx_text/1/37",
+   "source": "reused:us_only_fx_text"
+  },
+  "街": {
+   "jp_glyph_code": "0x02F1",
+   "attested_at": "s_text/2/33",
+   "source": "jp_corpus_attestation"
+  },
+  "衛": {
+   "jp_glyph_code": "0x017C",
+   "attested_at": "words:battle/118",
+   "source": "jp_corpus_attestation"
+  },
+  "裁": {
+   "jp_glyph_code": "0x055E",
+   "attested_at": "fx_text/8/70",
+   "source": "jp_corpus_attestation"
+  },
+  "裏": {
+   "jp_glyph_code": "0x0BB5",
+   "attested_at": "s_text/26/6",
+   "source": "jp_corpus_attestation"
+  },
+  "要": {
+   "jp_glyph_code": "0x017F",
+   "attested_at": "s_text/2/64",
+   "source": "jp_corpus_attestation"
+  },
+  "見": {
+   "jp_glyph_code": "0x0150",
+   "attested_at": "s_text/1/83",
+   "source": "reused:us_only_system_battle"
+  },
+  "視": {
+   "jp_glyph_code": "0x05BA",
+   "attested_at": "s_text/2/76",
+   "source": "jp_corpus_attestation"
+  },
+  "覚": {
+   "jp_glyph_code": "0x01B8",
+   "attested_at": "s_text/4/33",
+   "source": "jp_corpus_attestation"
+  },
+  "角": {
+   "jp_glyph_code": "0x0304",
+   "attested_at": "s_text/30/12",
+   "source": "jp_corpus_attestation"
+  },
+  "解": {
+   "jp_glyph_code": "0x02D0",
+   "attested_at": "s_text/1/40",
+   "source": "jp_corpus_attestation"
+  },
+  "言": {
+   "jp_glyph_code": "0x0154",
+   "attested_at": "fx_text/4/180",
+   "source": "reused:us_only_fx_text"
+  },
+  "記": {
+   "jp_glyph_code": "0x038C",
+   "attested_at": "fx_text/4/119",
+   "source": "reused:us_only_fx_text"
+  },
+  "証": {
+   "jp_glyph_code": "0x06A6",
+   "attested_at": "s_text/18/34",
+   "source": "jp_corpus_attestation"
+  },
+  "話": {
+   "jp_glyph_code": "0x0C28",
+   "attested_at": "s_text/2/47",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "誉": {
+   "jp_glyph_code": "0x0B80",
+   "attested_at": "words:quest/170",
+   "source": "jp_corpus_attestation"
+  },
+  "認": {
+   "jp_glyph_code": "0x096E",
+   "attested_at": "s_text/2/75",
+   "source": "jp_corpus_attestation"
+  },
+  "読": {
+   "jp_glyph_code": "0x093B",
+   "attested_at": "s_text/1/83",
+   "source": "jp_corpus_attestation"
+  },
+  "調": {
+   "jp_glyph_code": "0x087D",
+   "attested_at": "s_text/4/20",
+   "source": "jp_corpus_attestation"
+  },
+  "護": {
+   "jp_glyph_code": "0x01BF",
+   "attested_at": "fx_text/4/124",
+   "source": "reused:us_only_fx_text"
+  },
+  "責": {
+   "jp_glyph_code": "0x074A",
+   "attested_at": "pages:quest/0/119",
+   "source": "reused:us_only_fx_text"
+  },
+  "買": {
+   "jp_glyph_code": "0x09A9",
+   "attested_at": "s_text/1/45",
+   "source": "jp_corpus_attestation"
+  },
+  "貸": {
+   "jp_glyph_code": "0x07FC",
+   "attested_at": "s_text/7/33",
+   "source": "jp_corpus_attestation"
+  },
+  "賞": {
+   "jp_glyph_code": "0x06AA",
+   "attested_at": "s_text/16/1",
+   "source": "jp_corpus_attestation"
+  },
+  "贈": {
+   "jp_glyph_code": "0x07C5",
+   "attested_at": "s_text/23/52",
+   "source": "jp_corpus_attestation"
+  },
+  "身": {
+   "jp_glyph_code": "0x06E8",
+   "attested_at": "s_text/2/29",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "辞": {
+   "jp_glyph_code": "0x05D5",
+   "attested_at": "fx_text/24/66",
+   "source": "jp_corpus_attestation"
+  },
+  "辺": {
+   "jp_glyph_code": "0x0A99",
+   "attested_at": "fx_text/6/1",
+   "source": "jp_corpus_attestation"
+  },
+  "追": {
+   "jp_glyph_code": "0x0891",
+   "attested_at": "s_text/8/15",
+   "source": "jp_corpus_attestation"
+  },
+  "送": {
+   "jp_glyph_code": "0x07BB",
+   "attested_at": "s_text/1/109",
+   "source": "jp_corpus_attestation"
+  },
+  "逃": {
+   "jp_glyph_code": "0x091C",
+   "attested_at": "s_text/1/15",
+   "source": "jp_corpus_attestation"
+  },
+  "連": {
+   "jp_glyph_code": "0x012A",
+   "attested_at": "s_text/4/44",
+   "source": "jp_corpus_attestation"
+  },
+  "違": {
+   "jp_glyph_code": "0x0221",
+   "attested_at": "s_text/2/80",
+   "source": "jp_corpus_attestation"
+  },
+  "遠": {
+   "jp_glyph_code": "0x027F",
+   "attested_at": "s_text/15/3",
+   "source": "jp_corpus_attestation"
+  },
+  "邪": {
+   "jp_glyph_code": "0x05FB",
+   "attested_at": "s_text/10/19",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "部": {
+   "jp_glyph_code": "0x01B1",
+   "attested_at": "s_text/4/19",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "配": {
+   "jp_glyph_code": "0x09A1",
+   "attested_at": "s_text/5/19",
+   "source": "reused:us_only_system_battle"
+  },
+  "酬": {
+   "jp_glyph_code": "0x0632",
+   "attested_at": "s_text/4/8",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "金": {
+   "jp_glyph_code": "0x040F",
+   "attested_at": "s_text/4/3",
+   "source": "jp_corpus_attestation"
+  },
+  "録": {
+   "jp_glyph_code": "0x0C24",
+   "attested_at": "fx_text/4/79",
+   "source": "reused:us_only_fx_text"
+  },
+  "隊": {
+   "jp_glyph_code": "0x01D4",
+   "attested_at": "fx_text/8/40",
+   "source": "jp_corpus_attestation"
+  },
+  "集": {
+   "jp_glyph_code": "0x0124",
+   "attested_at": "s_text/2/55",
+   "source": "jp_corpus_attestation"
+  },
+  "頼": {
+   "jp_glyph_code": "0x0180",
+   "attested_at": "s_text/4/6",
+   "source": "jp_corpus_attestation"
+  },
+  "題": {
+   "jp_glyph_code": "0x0804",
+   "attested_at": "fx_text/8/56",
+   "source": "reused:us_only_fx_text"
+  },
+  "願": {
+   "jp_glyph_code": "0x036C",
+   "attested_at": "s_text/2/63",
+   "source": "jp_corpus_attestation"
+  },
+  "首": {
+   "jp_glyph_code": "0x0614",
+   "attested_at": "s_text/16/1",
+   "source": "jp_corpus_attestation"
+  },
+  "高": {
+   "jp_glyph_code": "0x050E",
+   "attested_at": "s_text/11/3",
+   "source": "jp_corpus_attestation"
+  },
+  "魔": {
+   "jp_glyph_code": "0x0AFC",
+   "attested_at": "fx_text/4/118",
+   "source": "reused:us_only_fx_text"
+  }
+ },
+ "entries": [
+  {
+   "us_logical_path": "s_text/47/0",
+   "us_top": 47,
+   "us_line": 0,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "ジャッジ",
+   "scope": "SCENE_COMPLETION",
+   "original_english_sha256": "2c8ffe94360457d4c657a0203df53dcff97612ea1e631b9aea2b8d4584dd5c79",
+   "japanese": "ご報告いたします、{4D}ジャッジマスター{5106}様!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/1",
+   "us_top": 47,
+   "us_line": 1,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "8df2694b99fa3a2c3a6ef0bfff6f27ac01ddffa647edcf9ab01441060740c62b",
+   "japanese": "どうだ?{4D}不正の証拠は{4D}見つかったかね?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/2",
+   "us_top": 47,
+   "us_line": 2,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "ジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "d10ef8a73ce5f94719e2a67a5ace0d68710e22d7e610d2d35977353e43249f0f",
+   "japanese": "いいえ。{4D}相手はよほど{4D}かくすのがうまいようで。{4F}{42}身をかくすジャッジを{4D}捕まえるのは{4D}容易ではありません…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/3",
+   "us_top": 47,
+   "us_line": 3,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "dc0d4c3f63ff321b18d2d13579ac7b59bd7da6020593ab0589038cfebfadb99b",
+   "japanese": "宮廷からの独立は{4D}もろ刃の剣だった{4D}ということか。{4F}{42}これは私の{4D}責任だな。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/4",
+   "us_top": 47,
+   "us_line": 4,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "ジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "4ac4514abaf74fc7e2292cf9aeb28da08034e80e32d8f25a6d7372c164d4a7f0",
+   "japanese": "ジャッジマスター{4D}{5106}様…。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/5",
+   "us_top": 47,
+   "us_line": 5,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "8880e077bd41765ae0bea2a43707aa7f3f8411016140d62adf9781b61da840ca",
+   "japanese": "我々の手がたりぬと{4D}いうのなら…。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/6",
+   "us_top": 47,
+   "us_line": 6,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "ジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "828e5815e735bc937120ac65b62b9e0212fc6f2fca465a48cd3657e06fb23a4a",
+   "japanese": "クランを…ですか?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/7",
+   "us_top": 47,
+   "us_line": 7,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "6e01018ff4f3651efecd19fbde7b9ff34d12b63f5b3690efd889db6e12de5a19",
+   "japanese": "悪徳ジャッジに{4D}もっとも苦しめられて{4D}いるのは彼らだ。{4F}{42}協力は{4D}おしまないだろう。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/8",
+   "us_top": 47,
+   "us_line": 8,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "ジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "50678e70bf6df48a5212140066fbb7869273bc39bccc318c6eedf9aed77aef26",
+   "japanese": "信用できますか?{4D}ジャッジに買収{4D}されでもしたら…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/9",
+   "us_top": 47,
+   "us_line": 9,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "14bf1023d552ad9a3fbb83cc91a1f47abcb7e4f2c403c615e5b70adf8f7d6202",
+   "japanese": "心配はいらん。{4D}信頼できるクランが{4D}ひとつはある。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/10",
+   "us_top": 47,
+   "us_line": 10,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "悪徳ジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "b520ddc59dce50e375e12ef7b5d5b667fbdb11522bb21cc1ef36eb9bf5984e3a",
+   "japanese": "おまえに「正義」を{4D}さずけよう…{4D}レッドカードの免罪だ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/11",
+   "us_top": 47,
+   "us_line": 11,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "9e2cc5c95ee74f205b395e7753686d2525e305bfac2f92812e12b670f8f81963",
+   "japanese": "そこでなにをしている?{4D}法を守ると{4D}ちかったはずだぞ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/12",
+   "us_top": 47,
+   "us_line": 12,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "悪徳ジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "1e6bba0ec888073409f3b34a5aef0542a4e12fb70fad31d4539900f7c41079e7",
+   "japanese": "ジャッジマスター{4D}{5106}様!{4D}私はなにも…。{4F}{42}この者に判決を{4D}くだしていた{4D}だけです。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/13",
+   "us_top": 47,
+   "us_line": 13,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "556bdbc940fcd01ae5706174102a13baee4812a64b7bd6306966bdcb993f3159",
+   "japanese": "本当かね、{4D}{400}?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/14",
+   "us_top": 47,
+   "us_line": 14,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "7075b98710855190f74ca8855cf2fd113ae04e85615933c7cdc6cc4f0ede1751",
+   "japanese": "レッドカードの{4D}免罪をくれると{4D}言われました。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/15",
+   "us_top": 47,
+   "us_line": 15,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "66f311b226dba4d01c6ec79e1b2279757d4fe6db00fbe43f0c4905c38456d0c7",
+   "japanese": "勝手に免罪を{4D}あたえるとはな。{4D}それは違法だぞ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/16",
+   "us_top": 47,
+   "us_line": 16,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "悪徳ジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "99dcc6e9459a3a568b8b14bcf9200136e6f1f95911b7b3025b1ecc3556373828",
+   "japanese": "私は不正を{4D}あばくよう{4D}頼まれたのです…。{4F}{42}{5117}ウォッチの{4D}役人からの{4D}依頼だったのです!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/17",
+   "us_top": 47,
+   "us_line": 17,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "悪徳ジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "f07ceea4dc86b5766879d1bd30fd0f76e91e7610b7cf26d9fecd46f53c1cbb78",
+   "japanese": "待て…{4D}おまえたち、はじめから{4D}グルだったのか!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/18",
+   "us_top": 47,
+   "us_line": 18,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "092b79ef32ff474f79cd9d8e12977a0ba693367678f25dce8c6a51ab5e354b07",
+   "japanese": "そのとおり。{4D}私の調査だけでは{4D}捕まえられなくてな。{4F}{42}それでクランに{4D}協力を頼んだのだ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/19",
+   "us_top": 47,
+   "us_line": 19,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "悪徳ジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "106fc06003efd8b61b142aa42406da48f3aeae882f427604528b8568ac9eff21",
+   "japanese": "おのれ…!{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/20",
+   "us_top": 47,
+   "us_line": 20,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "a102f9c5e6e76949e157d1fd929bf4bc7b065a7263e5f0fffa043193a8f5b427",
+   "japanese": "今のは自白と{4D}うけとろう。{4D}処分は覚悟しておけ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/21",
+   "us_top": 47,
+   "us_line": 21,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "悪徳ジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "302a1aecb53645bfa4d92d9ee9ad4f228485ccee18bdc8f5ed76754d85d644e2",
+   "japanese": "それが答えか?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/22",
+   "us_top": 47,
+   "us_line": 22,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "437bd1d8db930c239a1e67acee4c69d81753dc16644d677b63e8674c5fede34e",
+   "japanese": "{5117}マスター!?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/23",
+   "us_top": 47,
+   "us_line": 23,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "1d4212fd41d42d18cf8be13d4b59bb28df40537468e06a3f6d5745a8909581ec",
+   "japanese": "今回は私も{4D}加わろう。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/24",
+   "us_top": 47,
+   "us_line": 24,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "悪徳ジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "5381ea32d4349da34a8d42807d6cf218fd32abf31195ca61d5e13811ab8548de",
+   "japanese": "は…ははは!{4D}こいつはけっさくだ!{4D}{4F}{42}ロウは守って{4D}いただけますよね、{4D}{5117}マスター殿!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/25",
+   "us_top": 47,
+   "us_line": 25,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "cdc253db389545e4b0ceb609cbe4cd4a91ffabff400ed66ee328922d26e4f8c9",
+   "japanese": "当然だ。{4D}公平な裁定を{4D}期待しているよ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/26",
+   "us_top": 47,
+   "us_line": 26,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "9b85dcfba22783fe5ed415859ddead9c8d94059df01564a182c0bcd1a9d0ac19",
+   "japanese": "{5117}の力は絶対だ。{4D}だからこそ{4D}乱用はゆるされん!{4F}{42}自分がなにをしたか{4D}わかっているだろうな?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/27",
+   "us_top": 47,
+   "us_line": 27,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "悪徳ジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "eb09895a32e9e9a7b8da1284d057793e14c55961d4565ca8bfbcb5081e104ca3",
+   "japanese": "……。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/28",
+   "us_top": 47,
+   "us_line": 28,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "d31d2c44e983076508e12b7e2da8d97945c5d9ad31e60bf3a2411f09e6227ae2",
+   "japanese": "助かったよ、{4D}{400}。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/29",
+   "us_top": 47,
+   "us_line": 29,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "c220084bafe3524d10c7d65b489d2554f3d02d1c4b5246c938d0d448edcf533f",
+   "japanese": "悪いジャッジを{4D}捕まえられて{4D}よかったです。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/30",
+   "us_top": 47,
+   "us_line": 30,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "a4b7afe16556081c51e5d68152adc6afd1365cbb90033bb644458d621e15ac44",
+   "japanese": "ああ…。{4D}{4D}{4F}{42}だが、これは{4D}氷山の一角に{4D}すぎないだろう。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/31",
+   "us_top": 47,
+   "us_line": 31,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "8fe53ab5e89e0c508e2e5b5ee97de4314dde53665b82e5f4160044f00568199c",
+   "japanese": "独立以来、{4D}ジャッジの世界は{4D}乱れている…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/32",
+   "us_top": 47,
+   "us_line": 32,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "d4384879fbc15d502f5c495b61243da252181e5331002c62295aaa5c1743fcda",
+   "japanese": "宮廷のおさえが{4D}なくなったぶん、{4D}力を持ちすぎたのだ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/33",
+   "us_top": 47,
+   "us_line": 33,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "fd9adc49c53a40ce11fec5ffce9b9b9aaa0c31b06ad19a9d3cecddcc19f95ee4",
+   "japanese": "街は監視できても{4D}辺境までは{4D}目がとどかん…。{4F}{42}私自身が{4D}見回れればよいのだが!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/34",
+   "us_top": 47,
+   "us_line": 34,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "a67abdaae2a4b6ca635158eb2b60b773728bbfac5e4da9c0a18b7d7c1129b73b",
+   "japanese": "ぼくにできることは{4D}ありませんか?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/35",
+   "us_top": 47,
+   "us_line": 35,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "264429fbebb2b32f5be76fc7c880799bbb4543a426b1139e7370122c6ba0e899",
+   "japanese": "ふむ…。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/36",
+   "us_top": 47,
+   "us_line": 36,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "175c5be207849e9047054dad20472137266055b1cdd8d67eeb231f465d5dc6b4",
+   "japanese": "しばらくきみのクランに{4D}やっかいになっても{4D}かまわんかね?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/37",
+   "us_top": 47,
+   "us_line": 37,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "9dde939b7fa290c4205f6eb3e1eb000bae63ba1e1a0b3efac542c0fca4cb22c0",
+   "japanese": "えっ!?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/38",
+   "us_top": 47,
+   "us_line": 38,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "7221e71eb7acd9be4fbc6fb5a4b320bf6f81d4a8f1aacf02db45dec54e652fb4",
+   "japanese": "クランに入れば{4D}国じゅうを見回るのに{4D}うってつけだ。{4F}{42}身分をかくして{4D}調査に専念できる{4D}というわけだ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/39",
+   "us_top": 47,
+   "us_line": 39,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "76c610b3b500b28795e406b6d1c193ed7a5b693836b63f5e263b438a02be4039",
+   "japanese": "うーん…{4D}できそうな気は{4D}しますけど。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/40",
+   "us_top": 47,
+   "us_line": 40,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "a1a76d4806276f801042b9a6b3a6361d67e5bdcc751c2d5bb0f2ac47db2631ab",
+   "japanese": "調査が終わるまでで{4D}いいのだが、{4D}どうかね?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/41",
+   "us_top": 47,
+   "us_line": 41,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "c513d1c7306f8d2d30ac96eabf90938291483f7b778caedc82303b5e61790ac7",
+   "japanese": "も、もちろんです!{4D}よろしくお願いします!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/42",
+   "us_top": 47,
+   "us_line": 42,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "b4a26443a7a91c208606459e404a9fb426ba404291b5b38531e2e050822fa49c",
+   "japanese": "では、世話になるよ。{4D}{4D}{4F}{42}あつかいは{4D}他の新入りと{4D}同じでかまわん。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/43",
+   "us_top": 47,
+   "us_line": 43,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "1e590f3c420241628fefb0560cac46f76f09a35258d7f14ae589ddd543524e16",
+   "japanese": "うーん…{4D}ジャッジマスターに{4D}命令なんてしにくいな。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/44",
+   "us_top": 47,
+   "us_line": 44,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "11580c5a7efdc88da7bdfb8dfb2c549c9ec1f1fe5a7ff46bb1a5150bfc4f7472",
+   "japanese": "はは!では、きみが{4D}命令せずにすむよう{4D}はげむとしよう!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/45",
+   "us_top": 47,
+   "us_line": 45,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "9cc896c9e40ab5694275265011ed98aa189fc21a0e95db480250b77911cccb24",
+   "japanese": "は、はい!{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/46",
+   "us_top": 47,
+   "us_line": 46,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "1cd52674703742eadf76defd37cea9bda28923fae847d8ed7e6d4978332267b6",
+   "japanese": "ぼくは…{4D}いえ、すみません。{4D}やめておいた方が…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/47",
+   "us_top": 47,
+   "us_line": 47,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "2af1db53243fb72bdf0b0f3709a53d7c662bf25c228c11a7d246702257b97f57",
+   "japanese": "そう言うだろうと{4D}思っていたよ。{4D}{4F}{42}私がいては{4D}きみのクランの{4D}自由がなくなるからな。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/48",
+   "us_top": 47,
+   "us_line": 48,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "bd6583a97aa5cb9a13e35842516ed7b3e9652549e71a19ce69ad66c18c0e0f1c",
+   "japanese": "ごめんなさい。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/49",
+   "us_top": 47,
+   "us_line": 49,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "89dcd8327a535c090e93949767d004ef3e8ad095442d0f2dcd4fa925f85bd868",
+   "japanese": "気にするな。{4D}{4D}{4F}{42}これは我々ジャッジが{4D}解決すべき{4D}問題なのだ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/50",
+   "us_top": 47,
+   "us_line": 50,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "e726fc7e1f545f3196247929ea625b152cc0b756ea6b7798d8441d23851ec2e4",
+   "japanese": "ときどき別の仕事を{4D}頼んでも{4D}かまわんかね?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/47/51",
+   "us_top": 47,
+   "us_line": 51,
+   "scene": "judge_corruption_cid_recruit",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "497c2234422ea3725bf352f3180861fd9bd157b46962ff92bae5727ee2f0fc0b",
+   "japanese": "もちろんです!{4D}いつでも{4D}呼んでください!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/0",
+   "us_top": 51,
+   "us_line": 0,
+   "scene": "judge_corruption_cyril",
+   "speaker": "ジャッジの部下",
+   "scope": "SCENE_COMPLETION",
+   "original_english_sha256": "b97d4deffed98063ef078765c938cd6148d1c4259de60312c003de05b3c3119d",
+   "japanese": "収入は先月より{4D}1割ふえました。{4D}{4F}{42}もちろん{4D}「ブランクカード」の{4D}ロウのおかげですが…{4F}{42}「免罪の印」も{4D}効いているようです。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/1",
+   "us_top": 51,
+   "us_line": 1,
+   "scene": "judge_corruption_cyril",
+   "speaker": "シリルのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "5697f6914eee9fe25693d47e4a3f0c69369c0961d54e8dad42d4820ee0bc96f6",
+   "japanese": "いい数字だ。{4D}他の地方は{4D}どうなっている?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/2",
+   "us_top": 51,
+   "us_line": 2,
+   "scene": "judge_corruption_cyril",
+   "speaker": "ジャッジの部下",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "3f86bc9e447de6389cd2d17a3307f6bc44c0e697a96d2abf4530231c82d7f637",
+   "japanese": "一部の地域をのぞいて{4D}広まっています…。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/3",
+   "us_top": 51,
+   "us_line": 3,
+   "scene": "judge_corruption_cyril",
+   "speaker": "シリルのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "84bf9d044c9d30c055c7bb7cce9b996a8e24985c2e744d5868bb9783211d7efc",
+   "japanese": "一部の地域?{4D}どういうことだ?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/4",
+   "us_top": 51,
+   "us_line": 4,
+   "scene": "judge_corruption_cyril",
+   "speaker": "ジャッジの部下",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "dd06dcde8620b2209707446967e76bb251063467f163cd238984cff1b0409324",
+   "japanese": "うわさにすぎませんが…{4D}{4D}{4F}{42}ジャッジマスターが{4D}とりしまりに{4D}乗り出したとか。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/5",
+   "us_top": 51,
+   "us_line": 5,
+   "scene": "judge_corruption_cyril",
+   "speaker": "シリルのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "12187c529d8970754ae6bdd4b4cb59e6877a21184ee2f5f6d4a8f00bbc5b4a31",
+   "japanese": "ジャッジマスターが?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/6",
+   "us_top": 51,
+   "us_line": 6,
+   "scene": "judge_corruption_cyril",
+   "speaker": "ジャッジの部下",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "fb6298777b47e3fa806a5669b52da46bb4c3c8fb41fe462aa7108d9b6dbf9521",
+   "japanese": "はい。クランを{4D}使っているようです。{4D}{4F}{42}免罪の印や{4D}ブランクカードが{4D}おさえられています…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/7",
+   "us_top": 51,
+   "us_line": 7,
+   "scene": "judge_corruption_cyril",
+   "speaker": "ジャッジの部下",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "3c24b5a2bfefdfcec0d65e1b37fe492429b93d51555a248712c47cbd2e8a5038",
+   "japanese": "印を作るのを{4D}ひかえましょうか?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/8",
+   "us_top": 51,
+   "us_line": 8,
+   "scene": "judge_corruption_cyril",
+   "speaker": "シリルのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "750fab4399f017ff8e28562ea4967f4f9d9f72f96ccbc1f0b95431c9e1735c3f",
+   "japanese": "いや、今のやり方を{4D}変える必要はない。{4D}{4F}{42}秘密さえ{4D}守られていれば…。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/9",
+   "us_top": 51,
+   "us_line": 9,
+   "scene": "judge_corruption_cyril",
+   "speaker": "ジャッジの部下",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "5462c311105f6bf3ea7dcc8b369cee82b589de4f885c582412ba30608a61e076",
+   "japanese": "わかりました。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/10",
+   "us_top": 51,
+   "us_line": 10,
+   "scene": "judge_corruption_cyril",
+   "speaker": "シリルのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "d8efab8aba8a9eff827071ea94beff4378c3bdef963c3f06b78a00aace4c5ca3",
+   "japanese": "そうか…{4D}{5117}マスター{5106}が{4D}ついに動き出したか…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/11",
+   "us_top": 51,
+   "us_line": 11,
+   "scene": "judge_corruption_cyril",
+   "speaker": "ジャッジの部下",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "7f44738bd8a00b5567964fadbfafca5cd26c5b98808779d112077c2c5ceca328",
+   "japanese": "大変です!{4D}「免罪の印」の取引が{4D}ばれました!{4F}{42}すぐにここを{4D}はなれてください!{4D}あとは我々が…{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/12",
+   "us_top": 51,
+   "us_line": 12,
+   "scene": "judge_corruption_cyril",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "435adbf3d68a193bfb15d8e6eed75a062e277118c5db5b3b747ebcac8f0a8a7a",
+   "japanese": "おお、ここのジャッジか。{4D}ちょうど{4D}さがしていたところだ。{4F}{42}私が来たとたんに{4D}どこかへ{4D}出かけるのかね?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/13",
+   "us_top": 51,
+   "us_line": 13,
+   "scene": "judge_corruption_cyril",
+   "speaker": "シリルのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "fd1f356663f9e15334b45eafa28ab3dd3051bffbb1d2ae27690d6684ae98ad52",
+   "japanese": "こ、これは…{4D}おいでとはつゆしらず{4D}失礼しました!{4F}{42}もちろん、{4D}ここにおります!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/14",
+   "us_top": 51,
+   "us_line": 14,
+   "scene": "judge_corruption_cyril",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "d6cd04076d9562b35ad9ef6ed9a991f8279a18ea914fe155a3d02cad1c3d6b44",
+   "japanese": "じつは手配中の犯人を{4D}追ってここまで{4D}来たのだ。{4F}{42}少し調べさせて{4D}もらいたいのだが、{4D}かまわんかね?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/15",
+   "us_top": 51,
+   "us_line": 15,
+   "scene": "judge_corruption_cyril",
+   "speaker": "シリルのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "eb09895a32e9e9a7b8da1284d057793e14c55961d4565ca8bfbcb5081e104ca3",
+   "japanese": "……。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/16",
+   "us_top": 51,
+   "us_line": 16,
+   "scene": "judge_corruption_cyril",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "33e91439fc160b145fc76bad9ce1ecb5414acf328dee2d6ad43f332cfa2e7767",
+   "japanese": "{400}?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/17",
+   "us_top": 51,
+   "us_line": 17,
+   "scene": "judge_corruption_cyril",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "7140fc99336f9cc85470bdc2046c375061f2b564275930081b627a8193638960",
+   "japanese": "ジャッジマスター{4D}{5106}!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/18",
+   "us_top": 51,
+   "us_line": 18,
+   "scene": "judge_corruption_cyril",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "4e4570fcdfde1e7b6a272462c6453b5775dd5e92c19e3b012c6b225206934d0c",
+   "japanese": "なにか{4D}問題でもあるのかね?{4D}{4F}{42}まさか「免罪の印」を{4D}かくしてなど{4D}いないだろうな?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/19",
+   "us_top": 51,
+   "us_line": 19,
+   "scene": "judge_corruption_cyril",
+   "speaker": "シリルのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "4d414fedfcd2f394e08ffa2b8598c8b88c88bc9a0a716e7bc9c0e9b2ddb312a1",
+   "japanese": "もう{4D}しっていたのか!?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/20",
+   "us_top": 51,
+   "us_line": 20,
+   "scene": "judge_corruption_cyril",
+   "speaker": "シリルのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "ebae8d85f15c75bb4038458f0a374dd92dac143ace2a275326abd5c5f0a20aa7",
+   "japanese": "ならば{4D}{5117}マスター{5106}、{4D}死んでもらおう!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/21",
+   "us_top": 51,
+   "us_line": 21,
+   "scene": "judge_corruption_cyril",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "362d6d80f142923e3fb8b9daa5cf6562e7b0a554b45cb17c22b96ecb1adf9d7d",
+   "japanese": "とつぜんおしかけて{4D}すみません。{4D}{4F}{42}ぼくたちは{4D}クラン{403}です。{4D}{4F}{42}{5117}マスター{5106}の{4D}依頼で{4D}うかがいました。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/22",
+   "us_top": 51,
+   "us_line": 22,
+   "scene": "judge_corruption_cyril",
+   "speaker": "シリルのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "db845578e0ea8026785d39e6aba5e609851609c3dc229a4456c5f3dd4ee5a9cf",
+   "japanese": "なんの用だね?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/23",
+   "us_top": 51,
+   "us_line": 23,
+   "scene": "judge_corruption_cyril",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "441a244034fcc0d5636f897087c7577bed52c2c6a64c519129390d321e26e7b2",
+   "japanese": "ここに逃亡犯が{4D}かくれていると{4D}きいたんです。{4F}{42}すみませんが、{4D}少し調べさせて{4D}ください…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/24",
+   "us_top": 51,
+   "us_line": 24,
+   "scene": "judge_corruption_cyril",
+   "speaker": "シリルのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "d0fb6aa6628b8b1542fbde7055053b5cfd6d3d35b6d418f7679045128f496bbf",
+   "japanese": "本当に{4D}ジャッジマスターの{4D}使いだという証拠は?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/25",
+   "us_top": 51,
+   "us_line": 25,
+   "scene": "judge_corruption_cyril",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "1ccdaabf6686dbcc22da0f5d4b9565f15a391dc1889730e8248734212b3c7dea",
+   "japanese": "パブに{4D}ジャッジマスターの{4D}依頼の記録があります。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/26",
+   "us_top": 51,
+   "us_line": 26,
+   "scene": "judge_corruption_cyril",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "318a4c91b9dbc3eda288e06054611a6c72c2e14580bf36a4d650be0a6ce231a3",
+   "japanese": "では調べさせて{4D}いただきます。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/27",
+   "us_top": 51,
+   "us_line": 27,
+   "scene": "judge_corruption_cyril",
+   "speaker": "シリルのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "01fb81678db01852f1fdf393bc883a359e9beed7958fa50b576b5161b9af52fc",
+   "japanese": "待て!{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/28",
+   "us_top": 51,
+   "us_line": 28,
+   "scene": "judge_corruption_cyril",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "2435a7f4d08d371af43c4ef108f89a0af8af431b4fb1e11e929210d46c4fcf35",
+   "japanese": "なにか問題でも?{4D}{4D}{4F}{42}まさか「免罪の印」を{4D}かくしていたり{4D}しませんよね?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/29",
+   "us_top": 51,
+   "us_line": 29,
+   "scene": "judge_corruption_cyril",
+   "speaker": "シリルのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "0a5b1c7ec241dc7a7a3d0245e1b86aa60c2254b4274060afe2e29a735cdc131e",
+   "japanese": "悪いが{4D}死んでもらう。{4D}{4F}{42}クエストはやめたと{4D}パブに伝えておこう!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/30",
+   "us_top": 51,
+   "us_line": 30,
+   "scene": "judge_corruption_cyril",
+   "speaker": "シリルのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "b681678d809fd8a5bbe4a7d0e53e71203b92b8f4a1b03e55eb6c228980e91104",
+   "japanese": "ぐっ…{4D}わ、私ひとりの{4D}話ではないのだ…!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/31",
+   "us_top": 51,
+   "us_line": 31,
+   "scene": "judge_corruption_cyril",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "a68e64e1d70b443bbbd5b0951b4e909d0f18faa49ec0815a25d04cdcacf6b780",
+   "japanese": "これで終わりだなどと{4D}思ってはおらんよ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/51/32",
+   "us_top": 51,
+   "us_line": 32,
+   "scene": "judge_corruption_cyril",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "8df1bb6898ac614169a63284f3da2275f4ca53bfaab4eaebb165cb478d994c3f",
+   "japanese": "ジャッジなのに{4D}あんなふうにロウを{4D}やぶるなんて…!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/0",
+   "us_top": 52,
+   "us_line": 0,
+   "scene": "judge_corruption_baguba",
+   "speaker": "ジャッジの部下",
+   "scope": "SCENE_COMPLETION",
+   "original_english_sha256": "4e9a0e627c2092388d0b1b56515f5431751817eacdfab498accb2041959ba2b2",
+   "japanese": "ご報告します。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/1",
+   "us_top": 52,
+   "us_line": 1,
+   "scene": "judge_corruption_baguba",
+   "speaker": "バクーバのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "349780af20b4aba66c3be8016a61d3dbe0ee4e51e8b468779c77b69cf089a106",
+   "japanese": "なんだ?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/2",
+   "us_top": 52,
+   "us_line": 2,
+   "scene": "judge_corruption_baguba",
+   "speaker": "ジャッジの部下",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "2365011e0de10b931b0a18f50b9aae87cad9fdbafca187d32762797835dbd723",
+   "japanese": "まもなく{4D}ジャッジマスターが{4D}おいでになります。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/3",
+   "us_top": 52,
+   "us_line": 3,
+   "scene": "judge_corruption_baguba",
+   "speaker": "バクーバのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "c8431fde8fa6a51cf181e3b07403f52861795a1e65f25449efe127562546dbff",
+   "japanese": "そうか。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/4",
+   "us_top": 52,
+   "us_line": 4,
+   "scene": "judge_corruption_baguba",
+   "speaker": "ジャッジの部下",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "2318f5ee1c99799f5a81316041cbcb010318c8ec9e5c37648f74d8b21162fca3",
+   "japanese": "シリルのジャッジは{4D}プリズン送りに{4D}なりました…。{4F}{42}どうなさる{4D}おつもりですか?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/5",
+   "us_top": 52,
+   "us_line": 5,
+   "scene": "judge_corruption_baguba",
+   "speaker": "バクーバのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "bae56dae6b72f979eda74c81b2742a292b9806c842b4e0c97f68f618f1b96612",
+   "japanese": "シリルのやつとちがい{4D}私は免罪の印など{4D}売ってはいない。{4F}{42}エンゲージを{4D}裁くだけだ。{4D}それが仕事だからな。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/6",
+   "us_top": 52,
+   "us_line": 6,
+   "scene": "judge_corruption_baguba",
+   "speaker": "ジャッジの部下",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "c9de26f84d2de9bd365053b1ab69fa3e1b74528ae5e73462c33edba48ec29b62",
+   "japanese": "失礼します。{4D}今月の寄付が{4D}とどきました。{4F}{42}いつもの7クランと{4D}新たに2クランから{4D}気前よく。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/7",
+   "us_top": 52,
+   "us_line": 7,
+   "scene": "judge_corruption_baguba",
+   "speaker": "バクーバのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "58949c7840a3b7d50485e4953ae9071bcba410cd5341c62d3474148259a05704",
+   "japanese": "よし。{4D}新しいクランの名を{4D}おしえろ…。{4F}{42}ロウの特典リストに{4D}加えておくのだ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/8",
+   "us_top": 52,
+   "us_line": 8,
+   "scene": "judge_corruption_baguba",
+   "speaker": "バクーバのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "154b7db2635681e2ab3a0ad205f479001af1bed1dc6d7840ba1b27f113d01d50",
+   "japanese": "これはこれは{4D}ジャッジマスター{4D}{5106}様!{4F}{42}ようこそ{4D}おいでくださいました。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/9",
+   "us_top": 52,
+   "us_line": 9,
+   "scene": "judge_corruption_baguba",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "fade23242ff85cace316de0f244bc2f6a724eab7ea7766ed48d16bc03f5ed0a8",
+   "japanese": "なぜ私が来たか{4D}わかっているだろう。{4D}{4F}{42}きみの裁定が{4D}不公平だという{4D}報告があったのだ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/10",
+   "us_top": 52,
+   "us_line": 10,
+   "scene": "judge_corruption_baguba",
+   "speaker": "バクーバのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "23b230703d94c861fe2b35530dc51dd51927c7975eab1c9c01c1db3eb8ebeeb2",
+   "japanese": "まさか!{4D}この私が{4D}えこひいきを?{4F}{42}エンゲージを{4D}ねじまげて{4D}なんの得があります?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/11",
+   "us_top": 52,
+   "us_line": 11,
+   "scene": "judge_corruption_baguba",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "db1f1dc2fa6bd7bfa801fefd2869d2daab1eccccff678f7c2da64f19bac2159e",
+   "japanese": "さて…{4D}なんの得だろうな?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/12",
+   "us_top": 52,
+   "us_line": 12,
+   "scene": "judge_corruption_baguba",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "584252af7783c5956efdac0c09b811281aa75b55c4e70ab7113bb0765f961bcf",
+   "japanese": "{5117}マスター!{4D}ありました!{4D}{4F}{42}クランからの{4D}「寄付」のリストです!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/13",
+   "us_top": 52,
+   "us_line": 13,
+   "scene": "judge_corruption_baguba",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "b0a08d675bd4c45ed9f50cfe66071281169cfe5df90710a244e32199319c2828",
+   "japanese": "うむ。{4D}ごくろうだった。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/14",
+   "us_top": 52,
+   "us_line": 14,
+   "scene": "judge_corruption_baguba",
+   "speaker": "バクーバのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "8948e69a28f1c765c4b8d47f881b1814cd88799510c4d444fc10b046b7890b0d",
+   "japanese": "!!{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/15",
+   "us_top": 52,
+   "us_line": 15,
+   "scene": "judge_corruption_baguba",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "64156b8d6b6f97f968458ec3e7688658f95143085a653a972869f947677ec8cd",
+   "japanese": "さっきなんと{4D}言ったかね?{4D}ああ…なんの得か、と。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/16",
+   "us_top": 52,
+   "us_line": 16,
+   "scene": "judge_corruption_baguba",
+   "speaker": "バクーバのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "784aacf4cd13e5bf1a8df26a7126716c443b3498704753aecdbba60daf8f18b1",
+   "japanese": "ぐぬぬ…{4D}もうがまんならん!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/17",
+   "us_top": 52,
+   "us_line": 17,
+   "scene": "judge_corruption_baguba",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "49a32426f6998e04cf72cb758c003010c4f4153543518db8a3f38b98c3df422c",
+   "japanese": "ぼくたちは{4D}クラン{403}です。{4D}{4F}{42}クエストで{4D}来ました。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/18",
+   "us_top": 52,
+   "us_line": 18,
+   "scene": "judge_corruption_baguba",
+   "speaker": "バクーバのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "33dce236731871e52664525944c91a6c3306e003227e8e367d7e50f9608a1d71",
+   "japanese": "クエスト?{4D}どんな用だ?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/19",
+   "us_top": 52,
+   "us_line": 19,
+   "scene": "judge_corruption_baguba",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "3900e4d41d7d81bef7011e003c19b0763d70d7c96004f2bcd278d9e53c6cdec3",
+   "japanese": "あなたの裁定が{4D}不公平かどうか{4D}調べるよう頼まれて。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/20",
+   "us_top": 52,
+   "us_line": 20,
+   "scene": "judge_corruption_baguba",
+   "speaker": "バクーバのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "45ef7b6de0a8b80918bfeb06d31f34ba98a9a1483ecf5382a45f5bc734218bd1",
+   "japanese": "私がえこひいきを{4D}しているという{4D}あのうわさか?ばかな!{4F}{42}エンゲージを{4D}ねじまげて{4D}なんの得がある?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/21",
+   "us_top": 52,
+   "us_line": 21,
+   "scene": "judge_corruption_baguba",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "295cf7e00bea6aff266bb42a28da9208c27bcc26e435f60860463ab8e4a1d075",
+   "japanese": "それは…{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/22",
+   "us_top": 52,
+   "us_line": 22,
+   "scene": "judge_corruption_baguba",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "8c8ff7aca810ee0d41ec4910b8fe588ccd237510584ed7b0759cd61a0db677b4",
+   "japanese": "ギルしだいでロウを{4D}ゆるめてくれるなら…{4D}{4F}{42}取引したいクランは{4D}たくさんあると{4D}思います。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/23",
+   "us_top": 52,
+   "us_line": 23,
+   "scene": "judge_corruption_baguba",
+   "speaker": "バクーバのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "9cfbc685d27d89a09db372ded178bb4d1d8a8adf2f725c12a0c047fe23bec3a2",
+   "japanese": "私が金をもらって{4D}不正な裁定を{4D}していると言うのか!?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/24",
+   "us_top": 52,
+   "us_line": 24,
+   "scene": "judge_corruption_baguba",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "426a7c3bec305dccc89472ff2b120037f25d328f95ea80aca0da47164ad94139",
+   "japanese": "「寄付」をしている{4D}クランから{4D}話をききました。{4F}{42}ジャッジマスター{4D}{5106}のところまで{4D}来てもらいます。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/25",
+   "us_top": 52,
+   "us_line": 25,
+   "scene": "judge_corruption_baguba",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "c75c11cfbca8fb9b407a591c5777097d3262776602d7ed1be38eb6a4e6bfb1da",
+   "japanese": "「免罪の印」の次は{4D}「ブランクカード」に{4D}寄付ときたか!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/52/26",
+   "us_top": 52,
+   "us_line": 26,
+   "scene": "judge_corruption_baguba",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "ddf771fdd4e05a271260a9c3d8f4592118b2c40eac059d83fd627f4002dce2bd",
+   "japanese": "{5117}は法の番人だ。{4D}えこひいきなど{4D}ゆるされん!{4F}{42}プリズンの中で{4D}自分のしたことを{4D}考えるのだな!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/0",
+   "us_top": 53,
+   "us_line": 0,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "シド",
+   "scope": "SCENE_COMPLETION",
+   "original_english_sha256": "5a8da31c09948da5d073e6c27d96f14246eb50636cfc354993aa6ab2d2b39e28",
+   "japanese": "しってのとおり{4D}シリルとバクーバの{4D}ジャッジは…{4F}{42}プリズン送りと{4D}なった。{4D}{4F}{42}ジャッジの力を{4D}乱用したのだ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/1",
+   "us_top": 53,
+   "us_line": 1,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "ジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "cd4b18fbd8bb70d0cb483198cef8bdb3e9f0b9279c193cb43b57eca75d799e7a",
+   "japanese": "免罪の印に{4D}「ブランクカード」、{4D}それに裁定の買収!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/2",
+   "us_top": 53,
+   "us_line": 2,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "ジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "ba26c50ee5ed3d140142ba6b19cb8a3072962de07588c8a872b35e65a4b7ae7d",
+   "japanese": "宮廷からの独立は{4D}我々のためになる{4D}はずだった…{4F}{42}だがジャッジの腐敗は{4D}かつてなく{4D}ひどくなっている!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/3",
+   "us_top": 53,
+   "us_line": 3,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "2bb0789b73f85543c8d01201fe1153006177cd7cae4714bec36ac164e694d186",
+   "japanese": "そのとおりだ。{4D}{4D}{4F}{42}宮廷からの独立は{4D}あやまった判断{4D}だったようだな。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/4",
+   "us_top": 53,
+   "us_line": 4,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "ジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "836f87a09e60265ed150f76bffcc6004d06a4d426258685835b8281adecffe5d",
+   "japanese": "私もジャッジは{4D}独立すべきだと{4D}信じていました。{4F}{42}ですが、時期が{4D}早すぎたのでは?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/5",
+   "us_top": 53,
+   "us_line": 5,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "3ca0d2cb18634cfef8000a729694a87d99fb95577d04e692ee4bc3c46db5debc",
+   "japanese": "時期の問題ではない。{4D}{4D}{4F}{42}ジャッジ自身の{4D}品性の問題なのだ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/6",
+   "us_top": 53,
+   "us_line": 6,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "ジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "5f482389324ae6929200216c6b1fd45812f95cc82b8faa8ba51d35d47c32bd34",
+   "japanese": "なんと!?{4D}我々ジャッジの品性が{4D}欠けていると?{4F}{42}そ、それは{4D}ききずてなりません!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/7",
+   "us_top": 53,
+   "us_line": 7,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "fddf15bb1f98a5dc136fe727f65675ba13b5391a58957ce9a2ff972acbff9aaf",
+   "japanese": "では、我々の品性は{4D}申し分ないと{4D}言うのかね?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/8",
+   "us_top": 53,
+   "us_line": 8,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "ジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "8671022713308e05acdb6c1152f8812828aef3683f9b6da7ea36244da78b9f44",
+   "japanese": "ジャッジマスターの{4D}お言葉とは{4D}思えませんな!{4F}{42}それとも{4D}ご自身の失態を{4D}お認めですか?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/9",
+   "us_top": 53,
+   "us_line": 9,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "0d640255a13aff5bb13257a31f6f36d84daad2c1dde8e0f440600534dbab60d9",
+   "japanese": "この事態の責任は{4D}私にあると{4D}思っている。{4F}{42}今の調査を終えたら{4D}辞任する{4D}覚悟だ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/10",
+   "us_top": 53,
+   "us_line": 10,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "ジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "e05472f476870ab0a17de2bcec78b6de111f9307b9b1bca2d0d57ca57ea1cab5",
+   "japanese": "…!{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/11",
+   "us_top": 53,
+   "us_line": 11,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "3e9834a99224a2ee3e317fa56208fbb856ccab749140002ea51c452cf7a64f66",
+   "japanese": "だが、すでに{4D}わかったことがある。{4D}{4F}{42}これまでに捕らえた{4D}2人のジャッジは{4D}どちらも…{4F}{42}上からの命令で{4D}動いていたのだ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/12",
+   "us_top": 53,
+   "us_line": 12,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "25f9ec045f45de8dfeb265724c982f14a54b4653cdc84252b9c9ab29383b11ac",
+   "japanese": "ジャッジとロウ、{4D}そしてプリズンを{4D}しりつくした者だ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/13",
+   "us_top": 53,
+   "us_line": 13,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "1c9c218cc35318b2fd2aab8ce3a250c416d6b549bb72bc7ecb263a79467f4209",
+   "japanese": "なにか情報があれば{4D}私にしらせてくれ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/14",
+   "us_top": 53,
+   "us_line": 14,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "プリズンのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "e80ca118ed3ab3e1bf9b44071a64381502d3cdc34aa100602f7c67bb9f1fbe77",
+   "japanese": "辞任する覚悟、{4D}ですか。ふむ…。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/15",
+   "us_top": 53,
+   "us_line": 15,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "e96bfa8893fc57c97b425f1b41b1040d58bc394ddf4d04b9640e52bc2620bb07",
+   "japanese": "言え。{4D}この腐敗の元は{4D}だれだ?{4F}{42}しっているのだろう?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/16",
+   "us_top": 53,
+   "us_line": 16,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "捕らえられたジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "60842d32e6e1e9768f45a7d32991c1aa59e0a83167ab1bee8a3f420b2dd94882",
+   "japanese": "それは…{4D}ここスプロムの{4D}ジャッジですよ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/17",
+   "us_top": 53,
+   "us_line": 17,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "136c30dfbc35c927f5b85f400f5e200f47ab2a116b55f448a165847aedd6637e",
+   "japanese": "プリズンを{4D}まかされている{4D}ジャッジが!?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/18",
+   "us_top": 53,
+   "us_line": 18,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "388877dcac55797a4890430be420ca2c62dd3a42022c2df64fbb24f19a8db275",
+   "japanese": "……。{4D}ヤツの目的はなんだ?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/19",
+   "us_top": 53,
+   "us_line": 19,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "捕らえられたジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "ad56ac2cbaedb4da89c36a541a7abd81de42a83425ed72c0657cdf3d08fdad37",
+   "japanese": "ジャッジマスターの{4D}地位です。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/20",
+   "us_top": 53,
+   "us_line": 20,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "98f38907e83aa0a515b05df5c32b9d1ee3d42d16004a85561b6a299b4bf3cb54",
+   "japanese": "{5117}マスターの?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/21",
+   "us_top": 53,
+   "us_line": 21,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "b86a1eb8e1ecd08afe5532a4c52cbc6b36a52b2664ac66c2f09b4bbc3dededc2",
+   "japanese": "ねらいが読めたぞ。{4D}{4D}{4F}{42}各地のジャッジが{4D}不正をすれば、{4D}責任は私にくる。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/22",
+   "us_top": 53,
+   "us_line": 22,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "d95bae4ffa37a47545a46a6e4d73c805045a3db26dc45179a298bf53a19c28ca",
+   "japanese": "{5117}マスター{5106}を{4D}辞任に{4D}追いこむつもりか!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/23",
+   "us_top": 53,
+   "us_line": 23,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "プリズンのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "0e03f674aac1f67e824861d3f7e70f6723bb3a9e721b62f98f6ddec9a8960c07",
+   "japanese": "辞任をお考えとは{4D}しりませんでしたよ…。{4D}{4F}{42}まあいい。{4D}結果は同じことだ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/24",
+   "us_top": 53,
+   "us_line": 24,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "707c8a0be0c507240adf9cd82b550966a862eced384ce116529edae0a7e762b3",
+   "japanese": "きさまのような者に{4D}ジャッジソードを{4D}ゆずるものか!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/25",
+   "us_top": 53,
+   "us_line": 25,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "プリズンのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "6b118ee894f879556d9873fb654b8561cdbddc88b70b5dc44945cc3ee00c0f91",
+   "japanese": "ゆずってもらう{4D}必要などない。{4D}うばいとるまでだ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/26",
+   "us_top": 53,
+   "us_line": 26,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "0cb962192a2a6e22a9ef57198e169ba30992a49d16f785c59fc451788861a67f",
+   "japanese": "おしえてください。{4D}この腐敗の元は{4D}だれなんですか?{4F}{42}しっているんでしょう?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/27",
+   "us_top": 53,
+   "us_line": 27,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "捕らえられたジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "60842d32e6e1e9768f45a7d32991c1aa59e0a83167ab1bee8a3f420b2dd94882",
+   "japanese": "それは…{4D}ここスプロムの{4D}ジャッジですよ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/28",
+   "us_top": 53,
+   "us_line": 28,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "2ca17a1efc2c7380adb5aa0b4d9c543e24380c20a3fc9a35c811fa93be8b1550",
+   "japanese": "プリズンの{4D}ジャッジが!?{4D}目的はなんですか?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/29",
+   "us_top": 53,
+   "us_line": 29,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "捕らえられたジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "327940ffafea1801de7cf757eb49b7e3b6ec2696a57c3a95c0dab648fd37e4c6",
+   "japanese": "ジャッジマスターの{4D}地位ですよ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/30",
+   "us_top": 53,
+   "us_line": 30,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "1efdf1fd44e78e2551caeb8a1cbe7b9fc14e2f5a4fa9065d44b5f6066f371069",
+   "japanese": "そうか…{4D}{4D}{4F}{42}各地のジャッジが{4D}腐敗すれば、責任は{4D}{5106}さんにくる。{4F}{42}ジャッジマスター{4D}{5106}さんを{4D}辞任させる気なんだ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/31",
+   "us_top": 53,
+   "us_line": 31,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "プリズンのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "97d9f936431c4310c2ec5aa5ff20ff7b61dc4468897c567e0cedc287347490c1",
+   "japanese": "おまえも私につく{4D}という手もあるぞ?{4D}{4F}{42}多くのジャッジが{4D}そうしたようにな。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/32",
+   "us_top": 53,
+   "us_line": 32,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "c9ab2b1650ed88664612487374f21f87c6ca2f553fa57ab5e8cdd811bba5e383",
+   "japanese": "いやだ!{4D}{5117}マスター{5106}の{4D}信頼は裏切らない!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/33",
+   "us_top": 53,
+   "us_line": 33,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "プリズンのジャッジ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "eb9c51dbe67bef58c9a598262424e34756b33c203b4e512440fffc394afc780d",
+   "japanese": "残念だ。{4D}ならば{4D}死んでもらおう!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/34",
+   "us_top": 53,
+   "us_line": 34,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "69b2de4d95cc0658369d4ca18a04067f5387fded5841729c88fcc9160434c079",
+   "japanese": "ロウをやぶって{4D}地位を得ようとする{4D}{5117}か…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/35",
+   "us_top": 53,
+   "us_line": 35,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "581f64bf0f9555420271e2fbf07cf76090e6cb933534328b85ce1eb572d75cb3",
+   "japanese": "ぼくにだってわかる。{4D}守るべきロウを{4D}やぶるような人は{4F}{42}ジャッジマスターに{4D}なれっこない!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/36",
+   "us_top": 53,
+   "us_line": 36,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "3376a8a7f1a54b60560ba9368005735f2fc961318f27ccfdf46734d4471eabd6",
+   "japanese": "終わりだ。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/37",
+   "us_top": 53,
+   "us_line": 37,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "a5ef47c1160f308109bf624138740de7612e858bded1a431e99d4adc6b4f95b0",
+   "japanese": "ありがとう、{4D}{400}。{4D}{4F}{42}きみは期待以上の{4D}働きをしてくれた。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/38",
+   "us_top": 53,
+   "us_line": 38,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "3e72319aab58c54cbd16acaca55c1355a461139c7ef55713a0b4374439963384",
+   "japanese": "いえ!{4D}お役に立てて{4D}うれしいです!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/39",
+   "us_top": 53,
+   "us_line": 39,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "fc37eee3fc96e196c2da3f10246669aa0ea74ac0c45ccd01ca0425ba38cf94eb",
+   "japanese": "ところで…{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/40",
+   "us_top": 53,
+   "us_line": 40,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "dc2655f96f654eebdb9163497207ea4d9906911a6c6026ba09086c3720e4620d",
+   "japanese": "なんですか?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/41",
+   "us_top": 53,
+   "us_line": 41,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "47eeb1e69243b040a293d917961b96a4eed6f0cda5f519eb26967e503d57cf5b",
+   "japanese": "きみになら{4D}ジャッジソードを{4D}ゆずってもいい。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/42",
+   "us_top": 53,
+   "us_line": 42,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "9dde939b7fa290c4205f6eb3e1eb000bae63ba1e1a0b3efac542c0fca4cb22c0",
+   "japanese": "ええっ!?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/43",
+   "us_top": 53,
+   "us_line": 43,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "c2f42881c024ebbee40657e4380b854b85b5e5865e583241b43bbff4ad053ce7",
+   "japanese": "はっはっは。{4D}そんなに{4D}おどろいたかね?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/44",
+   "us_top": 53,
+   "us_line": 44,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "a387cb6c373d04c25c2ff1e7d2817a2da63d096de74bb21cbd6f1163e190c110",
+   "japanese": "だ、だって…{4D}ぼくが!?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/45",
+   "us_top": 53,
+   "us_line": 45,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "シド",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "2f6bd9d7c4dc9c5c10fb819a7165d832649c01e9701bb8ad00797d4a4dc4faae",
+   "japanese": "ゆずってもいい、と{4D}言っただけだ。{4D}ゆずるとは言ってない。{4F}{42}だが、大人になっても{4D}今のように{4D}正しい心でいられたら、{4F}{42}そのときは{4D}きみにふさわしい{4D}ものになるだろう。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/53/46",
+   "us_top": 53,
+   "us_line": 46,
+   "scene": "judge_corruption_sprohm",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "4298da4b2d033cad4e659ca894fd0fcb26aeb84e5a86fa813911b64cc115b14a",
+   "japanese": "…ありがとう{4D}ございます。{4D}{4F}{42}がんばります。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/0",
+   "us_top": 55,
+   "us_line": 0,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "SCENE_COMPLETION",
+   "original_english_sha256": "bf92b7a2a006d34779916bdbf396df824ca119eb8947816b04a7558b478e5031",
+   "japanese": "よぉ。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/1",
+   "us_top": 55,
+   "us_line": 1,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "ff9c58408a671ec333df029e4dcad18cfba1b6d7c3eb7ec91a17d7e4d19a5e09",
+   "japanese": "おっ、ちょうどいい!{4D}待ってたんだぜ、{4D}{400}。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/2",
+   "us_top": 55,
+   "us_line": 2,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "9930c4215491454708f3c226708ae6313c9d07de0f7953e5d5a53731c4f5f27c",
+   "japanese": "え?{4D}ぼくを、ですか?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/3",
+   "us_top": 55,
+   "us_line": 3,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "deb99db6c5f329ba125a27c75ba4ae52053a60a82082763743b8fd2958f8e1f5",
+   "japanese": "そうさ!{4D}おまえをな!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/4",
+   "us_top": 55,
+   "us_line": 4,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "9228728b9d5bb0efd5176898db5ac79657cff42c7fc795efba0571478c7c6dcd",
+   "japanese": "ええと…{4D}なにか{4D}手伝いですか?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/5",
+   "us_top": 55,
+   "us_line": 5,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "f8135a86e29455bc301068db58bc6f24507e0142436cddbd27e86eb1251e3e79",
+   "japanese": "ご名答!{4D}あいかわらず{4D}カンがいいな、坊主!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/6",
+   "us_top": 55,
+   "us_line": 6,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "5d145c183f444607dc50ad701263b52fdb6a3d6fc7d83c810b9dbfeb674b56c4",
+   "japanese": "アンチロウの材料を{4D}集めてこい、{4D}とか?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/7",
+   "us_top": 55,
+   "us_line": 7,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "c8f975ddcb8e8f4fe67303f56ca3cf49b437a7817f9fd141d4d1014bea6b2cf3",
+   "japanese": "いやいや、{4D}そんなんじゃない。{4D}{4F}{42}オレと一緒に{4D}仲裁役を{4D}やってほしいのさ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/8",
+   "us_top": 55,
+   "us_line": 8,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "22f2fe850987f81ec5ab866d063a288201218ec84dfd9650a7c27fa2dcabb99a",
+   "japanese": "はい?{4D}ちゅ、仲裁役?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/9",
+   "us_top": 55,
+   "us_line": 9,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "e28bdcbdc4d23d8a4e56dc57b32849bffd708fa33104314ae6760e6166f75ff7",
+   "japanese": "じつは、レジスタンスと{4D}宮廷が話し合いを{4D}することになってな。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/10",
+   "us_top": 55,
+   "us_line": 10,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "6b8e703405c1a024b54cc127eae9b86891b2ac6b11925b2d1fdea5f63b319cf6",
+   "japanese": "えっ!{4D}あの2つが同じ部屋に{4D}いるなんて…{4F}{42}話し合いなんて{4D}想像もつきません!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/11",
+   "us_top": 55,
+   "us_line": 11,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "636e65141b0084712310e85b4d8a9e6027d7e2c893008218929bb8e0446f8950",
+   "japanese": "おどろきだろうが、{4D}話す気になったのさ。{4D}{4F}{42}それで{4D}仲裁役が必要になった。{4D}{4F}{42}オレは逃げようと{4D}したんだが、{4D}どうしてもってな。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/12",
+   "us_top": 55,
+   "us_line": 12,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "90e0bbb436cfe7ec52b1044840ea6038282dd9066367b045a0140ab5f4b6ccc6",
+   "japanese": "それで{4D}おしつけられた{4D}わけですね?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/13",
+   "us_top": 55,
+   "us_line": 13,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "0e14ff4e071d783ad3c4fe1f74a82a8f4b135947e5a8974aca58fd2ab875427b",
+   "japanese": "あの…ぼくは{4D}どこで出てくるんです?{4D}{4F}{42}仲裁役は{4D}あなたひとりで{4D}十分では?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/14",
+   "us_top": 55,
+   "us_line": 14,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "d0d5128e37597c0742fa5ea5223fe6f5635998ad702c869b58e30586b9b6cb5d",
+   "japanese": "ま、よくある話さ。{4D}話し合いに反対する{4D}連中がいてな…{4F}{42}邪魔が入らないよう{4D}護衛が{4D}必要ってわけだ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/15",
+   "us_top": 55,
+   "us_line": 15,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "8909b770a0ace94e01995a7bd84a2734e25c7f09fcc2dca1c6fe672c41d2f9a4",
+   "japanese": "なるほど。{4D}それなら別に…{4D}あ。あー…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/16",
+   "us_top": 55,
+   "us_line": 16,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "66339b4f5f406a14a51180abc176961b073fbf26160b0de15af3185f3cf22ede",
+   "japanese": "どうした?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/17",
+   "us_top": 55,
+   "us_line": 17,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "54d81d9a509654e50331dd2f922e36db00c3d0e852c2134ef815c0e891e54e01",
+   "japanese": "忘れてました。{4D}ぼく、まだ宮廷から{4D}賞金をかけられてて…。{4F}{42}行ったら{4D}きっとプリズンに{4D}入れられちゃいます。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/18",
+   "us_top": 55,
+   "us_line": 18,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "242b06ff96a7c5a35bb234e12fb0fc42b2376bdfbe623bab442a1607526b846d",
+   "japanese": "心配いらねぇよ。{4D}オレを仲裁役に{4D}したくらいだぜ?{4F}{42}この国で{4D}2番目くらいの{4D}賞金首のオレをな!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/19",
+   "us_top": 55,
+   "us_line": 19,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "eb09895a32e9e9a7b8da1284d057793e14c55961d4565ca8bfbcb5081e104ca3",
+   "japanese": "……。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/20",
+   "us_top": 55,
+   "us_line": 20,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "fbbbf658905d6e6f112d9c22cdd3fc0573ccf0679662be1749e143032ad0f580",
+   "japanese": "そう心配するなって!{4D}{4D}{4F}{42}ヤバくなったら{4D}さっさと逃げりゃいい!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/21",
+   "us_top": 55,
+   "us_line": 21,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "d5f0be8e8e0a556b5a9b4e007abb95ec5b9a485b583cab5ce136927d759f142d",
+   "japanese": "はあ…{4D}まあ、そうですね。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/22",
+   "us_top": 55,
+   "us_line": 22,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "c88fd5726a38e5165c3c81ff58b5f1e1d1ab8327d23e9f20d04ce00ee1a50e6e",
+   "japanese": "正式な依頼として{4D}パブに出しておくぜ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/23",
+   "us_top": 55,
+   "us_line": 23,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "6683658ad69ea69afd00c81edbbf4c893e06d6f7c6204e21a3ff80e62a1b873e",
+   "japanese": "あ、はい。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/24",
+   "us_top": 55,
+   "us_line": 24,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "e977e5703c7998ce25206a77ef06206fb2827c1adc6eaeb00b0b618608894a91",
+   "japanese": "{510A}さんって{4D}ほんとに{4D}度胸があるなぁ…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/25",
+   "us_top": 55,
+   "us_line": 25,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "bd23c3a15d89305abc15549bbf5b4fd8aae5acc12f69625e8c33035e39118291",
+   "japanese": "うまくいってる{4D}みたいですね。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/26",
+   "us_top": 55,
+   "us_line": 26,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "f7407a9b96cd70f4f11708844dbae96f09d7c6e0eafd2105db571b376f5e5f33",
+   "japanese": "そうだと{4D}いいんだがな!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/27",
+   "us_top": 55,
+   "us_line": 27,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "45f56e69e84fe9753198ad9775c893e8f47db578cba8e83e131df5fc2eb9ccba",
+   "japanese": "で、不干渉の協定に{4D}サインするんだな?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/28",
+   "us_top": 55,
+   "us_line": 28,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "70c0905436dd399daa7d49766a3489c81499dfe5da2e71cda04bc5e9d9916354",
+   "japanese": "一部のアンチロウの{4D}使用も{4D}認めるんだな…{4F}{42}元レジスタンスを{4D}追わないとも{4D}約束するんだな?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/29",
+   "us_top": 55,
+   "us_line": 29,
+   "scene": "ezel_mediator",
+   "speaker": "宮廷の使者",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "057087a23b479c7455144117e5a88edb17fbba829abdf3f02544bbfac9d56532",
+   "japanese": "ベルベニア王宮は{4D}その2つの要求を{4D}うけ入れる。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/30",
+   "us_top": 55,
+   "us_line": 30,
+   "scene": "ezel_mediator",
+   "speaker": "襲撃者",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "c7edc79b1f3964a35c3e824eb85dd2680066275c2b117c4142e582546071c1fa",
+   "japanese": "うおおおっ!{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/31",
+   "us_top": 55,
+   "us_line": 31,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "fb549610ae45ecc1d6b776b87550f152949ec9c898295ef0f65985b7ca5c3851",
+   "japanese": "来た。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/32",
+   "us_top": 55,
+   "us_line": 32,
+   "scene": "ezel_mediator",
+   "speaker": "襲撃者",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "5cbf8cf9e413b72ca03710863c03fb7cd47f70bdeb690af3b90439b395134239",
+   "japanese": "耳を貸すな、{4D}やつらに{4D}だまされてるぞ!{4F}{42}宮廷はいつだって{4D}ウソをついてきた!{4D}なぜ信じられる?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/33",
+   "us_top": 55,
+   "us_line": 33,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "21bc902b5cb598a9fa3333ddfdcceb10f87a6102a930b8fb8d05ce8623a8c38d",
+   "japanese": "信じる信じないは別さ。{4D}協定を結ぶために{4D}集まったんだ。{4F}{42}オレはその{4D}立会人ってわけだ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/34",
+   "us_top": 55,
+   "us_line": 34,
+   "scene": "ezel_mediator",
+   "speaker": "襲撃者",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "aa35b0cc60813185e5303220364d1adec9646ef1f89d74de778ad0cae408951e",
+   "japanese": "ならば、そんな協定{4D}もろとも{4D}つぶしてやる!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/35",
+   "us_top": 55,
+   "us_line": 35,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "45eddfc959ad1032383ab221b69e898ca7a1b29240caf771ea9ec55ec4694a57",
+   "japanese": "{510A}さん、{4D}エンゲージです!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/36",
+   "us_top": 55,
+   "us_line": 36,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "3005a23a9fd67221e96a235c800c4bba2378363915abdd7eb78e70e7627f619e",
+   "japanese": "まだかくれてる{4D}やつはいるか?{4D}{4F}{42}エンゲージは{4D}1日1回で{4D}十分だぜ、まったく!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/37",
+   "us_top": 55,
+   "us_line": 37,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "bf5a3a9c5a305deb23e19f8a59eebc386312bcf1e94543cdbe5ff188af07c9af",
+   "japanese": "もう{4D}いないみたいです。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/38",
+   "us_top": 55,
+   "us_line": 38,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "23fba33da18b403fb00bd504ca1098bf7c2ddf3d26424aecf1f022c018310e07",
+   "japanese": "じゃあ話し合いを{4D}続けようぜ。{4D}{4F}{42}さっさとすませて{4D}帰りたいんだ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/39",
+   "us_top": 55,
+   "us_line": 39,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "b53d95d89600eb88fb7581622e4266e2e4f27e64f2637e8d4691d87488530e31",
+   "japanese": "ここで交わした言葉が{4D}永遠に守られんことを。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/40",
+   "us_top": 55,
+   "us_line": 40,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "d6d8ee5a6df0be5b5b78f56a1ad46a3aeb2cf7ecc6c50d7f2f44b36668ca1970",
+   "japanese": "終わった!やっとだ!{4D}あ~、かたがこったぜ…。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/41",
+   "us_top": 55,
+   "us_line": 41,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "7ffb8edc64a20c303c7e9493c81bb978ea2ac6a85761c068ebfba7c572bde307",
+   "japanese": "宮廷と{4D}仲直りできて{4D}よかったですね。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/42",
+   "us_top": 55,
+   "us_line": 42,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "d3643a8cbcd0361e4c02f66f5c0759b8cfbcfbd0fe9a6042d0a7b8d548b90a5d",
+   "japanese": "ああ。おかげでオレも{4D}ヒマになりそうだ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/43",
+   "us_top": 55,
+   "us_line": 43,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "5fe37519ae8ae8023459164d837a3dac47aeb8ac759f5ec4ef4284a4d303833d",
+   "japanese": "どうしてですか?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/44",
+   "us_top": 55,
+   "us_line": 44,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "6ee00d41f69a196be2bb06b12388999991ebb560b82b6afe9f82d2a204a2ea3c",
+   "japanese": "アンチロウが{4D}合法になったんだぜ!{4D}{4F}{42}もうかくれたり{4D}逃げまわったりしなくて{4D}いいのさ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/45",
+   "us_top": 55,
+   "us_line": 45,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "c1ec1ec27bf8ec0ef6c8764f8fb2a2f59acbcc5dff63b90fe835f16726b8cca4",
+   "japanese": "それはよかった!{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/46",
+   "us_top": 55,
+   "us_line": 46,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "d6ce22df6fdeb3ed257db4d2e3bec327cb10dce1b325508d5328bd8a286e0880",
+   "japanese": "おまえのおかげだよ、{4D}坊主。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/47",
+   "us_top": 55,
+   "us_line": 47,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "5473d3000e91b918775fb84835d598c4dc2aece1decd04d3c79e620d95635afc",
+   "japanese": "そんな、{4D}たいしたことじゃ…。{4D}{4F}{42}えへへ…{4D}なんだか{4D}照れちゃうな…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/48",
+   "us_top": 55,
+   "us_line": 48,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "030079eda10a83f33ec0be9f1fa6b712f5f783409f2ad129a6f3609506f9fbfd",
+   "japanese": "で、手伝ってくれた{4D}お礼はなにが{4D}いいかな?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/49",
+   "us_top": 55,
+   "us_line": 49,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "0ed3c36d10b6523b4cc7b36b0256cc1fc96751a8d5a2d127ff8daff2e68482ca",
+   "japanese": "お礼なんて{4D}いいですよ、{4D}ほんとに。{4F}{42}クエストの報酬は{4D}もらってますから。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/50",
+   "us_top": 55,
+   "us_line": 50,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "b782d36d84353a759df4cc6f5db81df7c6d9a0e125a3e2c60a5e3206351c6fbe",
+   "japanese": "そうは言っても、{4D}なにかやらないと{4D}気がすまなくてな。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/51",
+   "us_top": 55,
+   "us_line": 51,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "432328d480b2efa7ffbc4aac9ba164d0a99497289804d2c16d4edfd63a01e21a",
+   "japanese": "ええと、{4D}それじゃあ…{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/52",
+   "us_top": 55,
+   "us_line": 52,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "64f6e1afaf08d42d037181fbf90d99e44512e754f4d06c041c59c6a952725dfc",
+   "japanese": "そうだ!{4D}最高の贈り物を{4D}やろう…オレ自身だ!{4F}{42}おまえのクランに{4D}入ってやるよ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/53",
+   "us_top": 55,
+   "us_line": 53,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "3717e6206da991c362bde2dc540820517b88517f796effc725fa43048271f60e",
+   "japanese": "ええっ!?{4D}本気ですか!?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/54",
+   "us_top": 55,
+   "us_line": 54,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "6ffb59f26b02f381179ddde07c96220b611c5a71957a249e5d4526a08b54fa50",
+   "japanese": "もっとも、ふだんは{4D}店でいそがしいから…{4D}{4F}{42}名誉メンバーって{4D}ところかな?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/55",
+   "us_top": 55,
+   "us_line": 55,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "ea568a4d091db40af5c67fc189c2603d6b33a394244f406d57491be9b2a3d50d",
+   "japanese": "というわけで、{4D}{510A}、入隊するぜ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/56",
+   "us_top": 55,
+   "us_line": 56,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "f5a5c60216ed095d2a0dfe278e3a4e1b26dbc006d5d06130274869732b1b1c7f",
+   "japanese": "ようこそクランへ、{4D}{510A}さん!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/57",
+   "us_top": 55,
+   "us_line": 57,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "67caefec3878ca93309d1baea3ab98b3710c6cad3c96c476a9a64a97a832ac3a",
+   "japanese": "ただ…{4D}ひとつだけ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/58",
+   "us_top": 55,
+   "us_line": 58,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "4fa72945e833a3dc31dd72c94439a474f2e67bf47a375809268738aefbd9e5cb",
+   "japanese": "なんですか?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/59",
+   "us_top": 55,
+   "us_line": 59,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "771589c44e3866df4f869e1845475ab594998026e8715d11be6aff40d3119e52",
+   "japanese": "店での特別あつかいは{4D}期待するなよ!{4D}{4F}{42}商売は商売だからな。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/60",
+   "us_top": 55,
+   "us_line": 60,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "26eae8fb9f5b4e1659eeeb4e44d7d34a56dbdc2fff03980717029800c2744998",
+   "japanese": "了解です!{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/61",
+   "us_top": 55,
+   "us_line": 61,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "82fcc2e06e26e1a49f5e74de333300b158d4824f97f438c4f5fab2f551deefc3",
+   "japanese": "せっかくですけど{4D}遠慮しておきます。{4D}{4F}{42}だって、{4D}いそがしいんでしょう?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/62",
+   "us_top": 55,
+   "us_line": 62,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "5bdf7be6750ecc02b7a60d66c7275b8d4145ba09731a3aeb0c558864100df475",
+   "japanese": "まあ、めいわくは{4D}かけたくないしな…。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/63",
+   "us_top": 55,
+   "us_line": 63,
+   "scene": "ezel_mediator",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "4ef6dfae3e1f01239a938be21c07086c0e4b16f9511ecbc4fbe1781ce63edb59",
+   "japanese": "ふむ。じゃあ{4D}別のものを{4D}考えておくよ。{4F}{42}とりあえず{4D}メシでもどうだ?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/55/64",
+   "us_top": 55,
+   "us_line": 64,
+   "scene": "ezel_mediator",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_776",
+   "original_english_sha256": "4bcc5d39db93ce31e402ea10444172ac71aca116efda8ed842367479ac561217",
+   "japanese": "はは!{4D}いいですね!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  }
+ ]
+}

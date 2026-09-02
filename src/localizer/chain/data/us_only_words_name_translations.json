@@ -1,0 +1,5411 @@
+{
+ "_public_note": "Public build manifest. Verbatim retail source strings are stored as SHA-256 digests (fields ending in _sha256); the builder recomputes them from the user's own ROM. Japanese text in this file is written by this project.",
+ "_authority": "Tracked production authority for the words:name US-only editorial batch. The builder ffta_jp_us_only_words_name.py consumes this file; it is the translation decision of record.",
+ "family": "words:name",
+ "scope": "genuine US-only visible entries with no JP original wording (class 5 editorial)",
+ "us_index_range": [
+  128,
+  724
+ ],
+ "count": 597,
+ "jp_original_authority": {
+  "reference": "JP words:name indices 0..127, already produced into US 0..127 by the CHR_HALF layers",
+  "script": "half-width katakana only (CHR_HALF tokens)",
+  "observed_jp_length_half_chars": {
+   "min": 2,
+   "max": 7
+  },
+  "style": "standard Japanese katakana transliteration; duplicated English spellings are given distinct readings, as the JP original does for Gilbert (ギルバート / ジルベール)"
+ },
+ "character_table": {
+  "rule": "CHR_HALF token value v is the same charset index the CHR_FULL lane uses; katakana occupy 81..162 and the長音符 ー is 165",
+  "reference": "charset_us.json (tracked)",
+  "derivation": "validated against the 128 JP/US words:name AUTO_MATCH pairs, e.g. US \"Arthur\" = JP 82,165,101,165 = アーサー"
+ },
+ "glyph_policy": {
+  "new_glyphs_required": 0,
+  "reason": "every katakana slot in 81..165 except 0xA5 is byte-identical between JP and US (84 universal slots); 0xA5 (ー) is the one divergent slot and is handled by the shipped A5 hookless FULL route pointing at slot 0x06D9"
+ },
+ "entries": [
+  {
+   "us_logical_path": "words:name/128",
+   "us_index": 128,
+   "original_english_sha256": "7aa6314a025e091c51ae37221500d2424c6c09164369d17044f5e43cc9a4d1e4",
+   "japanese": "チェルニー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/129",
+   "us_index": 129,
+   "original_english_sha256": "fa1d60f53503f2f978ddebaf7e99078011e1d5d76b01f8a7bed485d681bab63f",
+   "japanese": "チタ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/130",
+   "us_index": 130,
+   "original_english_sha256": "3964d1bc019e67179fb805d956180ee5c8ca58d2f4d7bb51f12639bd8bc22ae7",
+   "japanese": "チボット",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/131",
+   "us_index": 131,
+   "original_english_sha256": "007e75f556ea3d8e560fcb5736bc2f15db46319a1cb0d3befdab58f1d2d5f962",
+   "japanese": "チャカ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/132",
+   "us_index": 132,
+   "original_english_sha256": "4256e512fcfb03cad0ee741589ec9ea9d525dc2af0ebb1d5db1ffa9eb4cc3f49",
+   "japanese": "チャド",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/133",
+   "us_index": 133,
+   "original_english_sha256": "fd563b0073e68d30f4239377ee7026fa2955d33ba9cf641315302fe6ec5cbfcc",
+   "japanese": "チャンドラー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/134",
+   "us_index": 134,
+   "original_english_sha256": "a532a914a1072684183066dd7cd36ffbccb18d2f19a25283995c62cde6d4d101",
+   "japanese": "チョーサー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/135",
+   "us_index": 135,
+   "original_english_sha256": "357993c40fa449ef921fc2c01b5a62acaae627260d66b95586b03cdcc9675825",
+   "japanese": "ツヴィングリー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/136",
+   "us_index": 136,
+   "original_english_sha256": "3a01a1ba1509105d8358fd0891cce7ee6ebfc3f512385e21238c3dede2da1327",
+   "japanese": "ディーゼル",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/137",
+   "us_index": 137,
+   "original_english_sha256": "0b1c9a5b588d33d3a1c191488619894b22fd629308052ba5369db69c9f1d0b15",
+   "japanese": "ディーテル",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/138",
+   "us_index": 138,
+   "original_english_sha256": "ad8a123d8d1936f7063246ced1f310e0aa8ce0794acc84e1561219f693cdb08c",
+   "japanese": "ディーン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/139",
+   "us_index": 139,
+   "original_english_sha256": "a16c4ced7aaf9a1db9ba6784deb97873e264cf4d98e8ca4d9104a40f9abf9bdf",
+   "japanese": "ディケンズ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/140",
+   "us_index": 140,
+   "original_english_sha256": "6fb86a981cf3ed052b5105f2f35fc645da00b54f975448d2a4c346fbcaa9a46f",
+   "japanese": "ディーノ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/141",
+   "us_index": 141,
+   "original_english_sha256": "f787b4f6eed17c53306a36063b0561aee3c3fee000843450ff9cf8eee18005aa",
+   "japanese": "ティモシー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/142",
+   "us_index": 142,
+   "original_english_sha256": "59dc21891acaa104f641be0fd378344ce1f4d321de7f75e0d2faa9a60db81843",
+   "japanese": "デヴァンジェ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/143",
+   "us_index": 143,
+   "original_english_sha256": "809a721743350c0c49a7b444ad3aeaf1341fdd48d1bf510e08b008edab72dc70",
+   "japanese": "デーヴ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/144",
+   "us_index": 144,
+   "original_english_sha256": "71cdd1b9b53bf44f491cbca41da75b190745beee2116815ee67c6436419b4754",
+   "japanese": "テオドール",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/145",
+   "us_index": 145,
+   "original_english_sha256": "9965f8673db3a4a60160975dfb3314677fe9b0a5ddddb2a9715e6063b5d53e67",
+   "japanese": "テナルディ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/146",
+   "us_index": 146,
+   "original_english_sha256": "320a9e33f595ba89b2c82f6b999787d833ad335dfd5d2da72da56cb8168974d9",
+   "japanese": "テネシー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/147",
+   "us_index": 147,
+   "original_english_sha256": "41d52582868cd56c3a06b549a7f39115f034cc09647439b58168122b510deb33",
+   "japanese": "デボー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/148",
+   "us_index": 148,
+   "original_english_sha256": "6d6573ec2775760e004e8987863dd3302a97864e19bbf00bf5fe818b0e7f234a",
+   "japanese": "デュラー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/149",
+   "us_index": 149,
+   "original_english_sha256": "86b4c4510b01eed5f8477e4a22f72f2b0bf68a4a294fe5ff8ab0ceedffbec67d",
+   "japanese": "ディラン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/150",
+   "us_index": 150,
+   "original_english_sha256": "2df613d2d057c9204b775a6eb5d74293eb5c13773a4f387ace609469cac11740",
+   "japanese": "トインビー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/151",
+   "us_index": 151,
+   "original_english_sha256": "4a5d3356ec77e084da1a2c8dc2e34a95b582e31e3693e3f043c58bb153dea3be",
+   "japanese": "ドーミー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/152",
+   "us_index": 152,
+   "original_english_sha256": "c5a8d95238cd3ee8c28a86b7ef8553a7c27ac016577c7717b52c69fa4f721b7f",
+   "japanese": "トニー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/153",
+   "us_index": 153,
+   "original_english_sha256": "a63ca31f89850f70775962379547fb289cfa699bb01606eea913ec39494e546c",
+   "japanese": "トニオ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/154",
+   "us_index": 154,
+   "original_english_sha256": "5f36ba9f4bd5b29498ca100e2cc01395fd45dd19ee89d926a03f4c4c551f8ab5",
+   "japanese": "トビー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/155",
+   "us_index": 155,
+   "original_english_sha256": "98d67bb462fa27a26097ab6aca52b113d82346a06e782adf487627995ff408ce",
+   "japanese": "トムソン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/156",
+   "us_index": 156,
+   "original_english_sha256": "a7affdbba3c2f5a764962619dca91b59b7e8d797bdf8a22ad525935eafef6449",
+   "japanese": "ドメニク",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/157",
+   "us_index": 157,
+   "original_english_sha256": "3660c18448108c3715515dfb32955905e0e51034b56b1786998d4e9c26360b0b",
+   "japanese": "トラヴィス",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/158",
+   "us_index": 158,
+   "original_english_sha256": "81ed14995c022b89db9149acab9fa6a6db26d3109b83987e49058f2cdfdd196e",
+   "japanese": "トレヴァー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/159",
+   "us_index": 159,
+   "original_english_sha256": "15c4f98506682d0f1bed1a4bcc762db77df111faf4366bbe797fdfdece0d6cd4",
+   "japanese": "ドワイト",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/160",
+   "us_index": 160,
+   "original_english_sha256": "3d1917aa425fd7059394e1413a9cf36a1304374e10ea4b88200fd2d34ce749d4",
+   "japanese": "ナット",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/161",
+   "us_index": 161,
+   "original_english_sha256": "aeedbe3854d59ea504d554bb5f2fed8e9e03da05cfaf319c3d613cb77f7917ad",
+   "japanese": "ナブコフ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/162",
+   "us_index": 162,
+   "original_english_sha256": "9d96f1802551c769272b2d44b38989320c90ab300a21a1c605bad9261d882415",
+   "japanese": "ナンセン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/163",
+   "us_index": 163,
+   "original_english_sha256": "087dc7896b97911a582702b45ff1d41ffa3e142d0b000b0fbb11058188293cfc",
+   "japanese": "ニコライ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/164",
+   "us_index": 164,
+   "original_english_sha256": "c90d6727e8f963c1f5acd5be8c510c68f1e6cffa7baf78668c7404aa407cc256",
+   "japanese": "ニューマン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/165",
+   "us_index": 165,
+   "original_english_sha256": "49a4e298a7f3bee4bf4d5f978a219550e93d3d6d01cc2b9967f1d04514e34438",
+   "japanese": "ニルス",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/166",
+   "us_index": 166,
+   "original_english_sha256": "522ad9b11d8040e73fbf97de5356514e230a9f83def7906216acffbfcb4727e2",
+   "japanese": "ヌスラット",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/167",
+   "us_index": 167,
+   "original_english_sha256": "582ee8efec80e56421c29aa409444c9d002ac69f35c1bcab2292d01d9e202d1a",
+   "japanese": "ヌメ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/168",
+   "us_index": 168,
+   "original_english_sha256": "277be9ed203a00efa509d18d165a79e8d91216bc5bc7b56e3358a80667583f7e",
+   "japanese": "ネイト",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/169",
+   "us_index": 169,
+   "original_english_sha256": "f9571f234cb00a735cf3f8aceca66f11f3ade7e020068a37d88b8c59aa61ccd3",
+   "japanese": "ネヴィル",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/170",
+   "us_index": 170,
+   "original_english_sha256": "1dfaa5ab44b3980e2282ad14362fafb2f3af2eb14f53992989368abe576e48c3",
+   "japanese": "ネクス",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/171",
+   "us_index": 171,
+   "original_english_sha256": "c4e139e31d9f0c8dc22ce4bd43e0d6b0d525577b2b7c6eacaee620838f44a6f1",
+   "japanese": "ネッディ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/172",
+   "us_index": 172,
+   "original_english_sha256": "d03448b7e7294d4aa2bfbc45b21bd1b32891ae5de5c0d3dd84e1bf4244d12ad2",
+   "japanese": "ネリン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/173",
+   "us_index": 173,
+   "original_english_sha256": "818d0e5ffae3c30dfbe68dbb57896728bc1598d0094467bb378db4cb21a1774c",
+   "japanese": "ネルソン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/174",
+   "us_index": 174,
+   "original_english_sha256": "28478dc6a693227c4004382c2b0932bea5bd94e1f89643ed29b6b4edbd351c2f",
+   "japanese": "ネロ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/175",
+   "us_index": 175,
+   "original_english_sha256": "df7323952284a859c6a5a37200c28f5f3fefae43c40057b08ad16ae1410fb1fc",
+   "japanese": "ノースクリフ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/176",
+   "us_index": 176,
+   "original_english_sha256": "554aa135e9b5f58db8eb0b43b4d5a9aafe9449c47ea3d5fd8fdfbb34eb29ff74",
+   "japanese": "ノルベルト",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/177",
+   "us_index": 177,
+   "original_english_sha256": "a6b775358c36e43729c12a9bb32014d2908a2b05bd55021a463d871784bc54c6",
+   "japanese": "ノーベル",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/178",
+   "us_index": 178,
+   "original_english_sha256": "c3296220b8ae2d765c360e5006e6bfa32327b481fc22a4c5f0ea39734dd4676e",
+   "japanese": "ノーマン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/179",
+   "us_index": 179,
+   "original_english_sha256": "e3bb90b1fd5285aa49e1196f9881935cd7b744cdf50b595369eeb3a7bd275f78",
+   "japanese": "ノル",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/180",
+   "us_index": 180,
+   "original_english_sha256": "f3c19b4122504f8585bdadc7810e03fe7208052c94d10ee7267aae8298291c62",
+   "japanese": "ハーディ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/181",
+   "us_index": 181,
+   "original_english_sha256": "a3ef49d473eec07b75d8a7a93a71b1f46b0b7573aa35e4789b7572c52acff793",
+   "japanese": "バジル",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/182",
+   "us_index": 182,
+   "original_english_sha256": "c6fcb8c1b253b876428aed7fda470f9dc19fe36a5c1b5664c3819d39d156b4f0",
+   "japanese": "パブロ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/183",
+   "us_index": 183,
+   "original_english_sha256": "45ab6979040cfe7f0e2175190b405d9e995a451fd199478f313810920bb17089",
+   "japanese": "パリッシュ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/184",
+   "us_index": 184,
+   "original_english_sha256": "857af9744d72b6754a92c0e44cea37cd4c29b55add5a0da137cb9fc54dd529f1",
+   "japanese": "バルドウィン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/185",
+   "us_index": 185,
+   "original_english_sha256": "b904432b6de55a66c7f785bb5c62f8827df5ca7023eaf8b2941254fc7c9dbb94",
+   "japanese": "バーリー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/186",
+   "us_index": 186,
+   "original_english_sha256": "fe7a26f92564ccf64a7ff908765b7d819ee4f0bd0e3f7d7bd9c27b20ff776fb3",
+   "japanese": "ハンス",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/187",
+   "us_index": 187,
+   "original_english_sha256": "1ac7b11fdc01a819eefbb8e450995085e03abf1e76d220e5ab418f45f703fd58",
+   "japanese": "ヒース",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/188",
+   "us_index": 188,
+   "original_english_sha256": "effcbe98321bc96a73b2a41c382f484b8dff087098d323f4a277e00e9f804be4",
+   "japanese": "ピート",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/189",
+   "us_index": 189,
+   "original_english_sha256": "dcd0e2aa45b55bc0c1a876402998802277f8ed40fd61c11e9f447ec30a29dc86",
+   "japanese": "ヒギンズ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/190",
+   "us_index": 190,
+   "original_english_sha256": "6c00e6ff6ea6bcc6ac122ec314eb16749ca88f03760adfb71a9de657527c6396",
+   "japanese": "ヴィクトル",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/191",
+   "us_index": 191,
+   "original_english_sha256": "e65900061e11e87963749b4cae431950d1b252107981c560040b0832153b26ed",
+   "japanese": "ヴィスコンティ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/192",
+   "us_index": 192,
+   "original_english_sha256": "44d43b282f955acd91e5412c7d91632364cc8419a76065b70ee251383bc0328c",
+   "japanese": "ビスマルク",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/193",
+   "us_index": 193,
+   "original_english_sha256": "a09834ca0dbec5adaaf55ba15fe35e1884b8889acaf4829c45f68967a78ab98b",
+   "japanese": "ビョルン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/194",
+   "us_index": 194,
+   "original_english_sha256": "56d7e1ca4f66c7e499cb4ca4877d505be16c2d878b419d91ebff961411179413",
+   "japanese": "ビングリー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/195",
+   "us_index": 195,
+   "original_english_sha256": "621776614e7c2361c7e2bd95c8022c9e7e29401230cd9cd193c34e21eb1f339e",
+   "japanese": "フィナガン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/196",
+   "us_index": 196,
+   "original_english_sha256": "a7543250c8ef8c36453731269873b604f4eaea43e9818a2120851d709485c941",
+   "japanese": "フィル",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/197",
+   "us_index": 197,
+   "original_english_sha256": "e811818f80d9c3c22d577ba83d6196788e553bb408535bb42105cdff726a60ab",
+   "japanese": "フーバー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/198",
+   "us_index": 198,
+   "original_english_sha256": "1aa4f3d6ea5b4c9305a7efe7d06b31e9763177119afb0604a237dd7fa36e7d82",
+   "japanese": "フォード",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/199",
+   "us_index": 199,
+   "original_english_sha256": "18f285592896ec8ead1b69d90ee4080300ba8dc31665a6ad97550c8f81b15502",
+   "japanese": "ブラウン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/200",
+   "us_index": 200,
+   "original_english_sha256": "235ef92dd4f1a0ba18813a4b32889e720261c058ba25ca680cfebc68fa7b4048",
+   "japanese": "フランツ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/201",
+   "us_index": 201,
+   "original_english_sha256": "d8eb6ff1bdc2878ef99dbb7f2ff8ba8823aaa518894537fa0dc3b03e913228f6",
+   "japanese": "ブリーン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/202",
+   "us_index": 202,
+   "original_english_sha256": "7c30d775fe4a5cb51306b309bbe53e82260b6d8137821dffa6e808f849d8ed76",
+   "japanese": "ブリッシュ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/203",
+   "us_index": 203,
+   "original_english_sha256": "c5b80d30c02305df10c8505fda19b224b8d7ecb57338c9e6382102b947fae636",
+   "japanese": "ヘイスティング",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/204",
+   "us_index": 204,
+   "original_english_sha256": "a432d817e884eb8bd3953177b68c747b64d8d6a705b79787445750bf80fe55b6",
+   "japanese": "ペドロ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/205",
+   "us_index": 205,
+   "original_english_sha256": "20244053adfbf5ae74affc6395129cd3251277a1a4bb66c7e8a429131f19a7fc",
+   "japanese": "ベラスケス",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/206",
+   "us_index": 206,
+   "original_english_sha256": "90df3f2adbe241aac6993dbdb6470b70cf9fe3ed51f6a0fec82c7a6c29db24d1",
+   "japanese": "ベルトラン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/207",
+   "us_index": 207,
+   "original_english_sha256": "bed1f8891424cd749d22a3166b11f00418631f2c280580f6a81b3e08cf561e89",
+   "japanese": "ベルナルド",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/208",
+   "us_index": 208,
+   "original_english_sha256": "c3547d7c07ed886f108cbefe2ffe19d1de7d5605e1c08027b23f5cc7f82cb1ec",
+   "japanese": "ベルニーニ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/209",
+   "us_index": 209,
+   "original_english_sha256": "9b912197f7133c0212e391566418ee03c8dbba7d2e1ab3dbccd251032aa44921",
+   "japanese": "ブルンハルト",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/210",
+   "us_index": 210,
+   "original_english_sha256": "2c4f9458d7c7522b3905cc953519e5749a2d7b5cafee547fc408ff1db0a4c50d",
+   "japanese": "ベンクマン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/211",
+   "us_index": 211,
+   "original_english_sha256": "5a0ee25bc46e1c8b2e742f75f0bf6b841d667e06deb65de942f8a50212516747",
+   "japanese": "ベンソン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/212",
+   "us_index": 212,
+   "original_english_sha256": "f3c7769dd45d51cbd33a2105124274b75dfb43ecc028d899c2313a4f2f0f95ce",
+   "japanese": "ベンジャミン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/213",
+   "us_index": 213,
+   "original_english_sha256": "11319db1fd3e143d2f3e96ca1a68d2bf9798111d87a70fa2db9b7a31f9b1ea3e",
+   "japanese": "ベントン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/214",
+   "us_index": 214,
+   "original_english_sha256": "ff69e6555c40008fb266006f18f719e4cff90900bc3f6f2bc83ef24c26791201",
+   "japanese": "ホーマー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/215",
+   "us_index": 215,
+   "original_english_sha256": "9fa2957ab2d9a8fb22e644c6b3cc2f8db1d49216c7e717577e2f908ddb8b8135",
+   "japanese": "ホッジズ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/216",
+   "us_index": 216,
+   "original_english_sha256": "4e61bf4653c3f91f5c0ea3dc6497acb3bef3296ab60c9f97991fb2b75541587a",
+   "japanese": "ホッパー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/217",
+   "us_index": 217,
+   "original_english_sha256": "80942c291f40ee0667921008a3a14c4e92b0fccd0221af377978cbeb996c23c9",
+   "japanese": "ホフマン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/218",
+   "us_index": 218,
+   "original_english_sha256": "85de850a787985d9b02943387232bf172a460b620ccdf23243ca46a446883b8c",
+   "japanese": "ホルビン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/219",
+   "us_index": 219,
+   "original_english_sha256": "bb3e39f0990ac1ed917fecec7a408488ed852610b5b25df7d0c21f51190f73af",
+   "japanese": "ホレス",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/220",
+   "us_index": 220,
+   "original_english_sha256": "a1161f6445c68707092f5c86b611b6ed8660aedeb846638c4b37fb1c88b33817",
+   "japanese": "マイルズ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/221",
+   "us_index": 221,
+   "original_english_sha256": "ad15718873cf9cb19694d9699c49dfb4bf10bb96af2cc4a24d1288cbcb85bf48",
+   "japanese": "マウリッツ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/222",
+   "us_index": 222,
+   "original_english_sha256": "402ccfacd78484dea5743421f23ad67c2cc5eb2eb1abf6693428c51dfa792276",
+   "japanese": "マック",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/223",
+   "us_index": 223,
+   "original_english_sha256": "b4bcb055ae49e2c730410a5839251c76424309de70732a9d59961678680a07d4",
+   "japanese": "マクレガー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/224",
+   "us_index": 224,
+   "original_english_sha256": "af11205043f66fa4770fbf9b03dd861a90c6a2ae049d7b8b759fa5e78d20e3ff",
+   "japanese": "マティアス",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/225",
+   "us_index": 225,
+   "original_english_sha256": "be8bfd0231386432e79d61991bfcf50b1faab6702db9ac6f93d06171b5ce8871",
+   "japanese": "マッケンロー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/226",
+   "us_index": 226,
+   "original_english_sha256": "96feebe9d10c8ba4d29f7afa6e8213e8cc8da2bbcffc2017604a41146d24baad",
+   "japanese": "マーティ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/227",
+   "us_index": 227,
+   "original_english_sha256": "f115f284ba8ff17d061edb8751ae2eae093b1a53cea7cc5e82b1c6a0aed96f47",
+   "japanese": "マリウス",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/228",
+   "us_index": 228,
+   "original_english_sha256": "e34a2e6548d14ecc3160ba757cad7cd1865a894df46a165c091f0b781bc4f83b",
+   "japanese": "マルチェロ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/229",
+   "us_index": 229,
+   "original_english_sha256": "1cd8e5f4826e1e694b14ca74ea2f39975dbdfc9ab93b47a7ae7889144c5bc36b",
+   "japanese": "マルティネス",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/230",
+   "us_index": 230,
+   "original_english_sha256": "2f42054c9bc6365e7ad7913975bf1ae3554f6ad3694533c7ffae2c0a85a9d898",
+   "japanese": "ミック",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/231",
+   "us_index": 231,
+   "original_english_sha256": "1866a986daaa5efecfcd0e94552b62785796187af01303b509570898ccda4f62",
+   "japanese": "ミハイロフ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/232",
+   "us_index": 232,
+   "original_english_sha256": "f089eaef57aba315bc0e1455985c0c8e40c247f073ce1f4c5a1f8ffde8773176",
+   "japanese": "ミハエル",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/233",
+   "us_index": 233,
+   "original_english_sha256": "8856d174978691a21f99f822bba5c8ae7fe1d25678f0e758d7be35f30bd79088",
+   "japanese": "ミルトン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/234",
+   "us_index": 234,
+   "original_english_sha256": "5fae369c68ee0a35749a8fe440d3db413d9837c6a3e1dea9972b60dcd464c498",
+   "japanese": "ミレイ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/235",
+   "us_index": 235,
+   "original_english_sha256": "0ea47987b63664b1a789451e0bf86fadb5d60ffd60b75b1b2258a36957be2cce",
+   "japanese": "ムジカ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/236",
+   "us_index": 236,
+   "original_english_sha256": "d65e61efc24a0ab46b508b09fc1e7066bbce69371a8fdd48a1023969558d1d47",
+   "japanese": "ムラト",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/237",
+   "us_index": 237,
+   "original_english_sha256": "893e0e0f94baa723fa0a2a02d3dcc01bd7fec743e79bec662b857263f38b9a9f",
+   "japanese": "ムグリオ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/238",
+   "us_index": 238,
+   "original_english_sha256": "2bc58fcc412bdf84ecfa0aca03b6926960d926045c915718239d40e9c345c435",
+   "japanese": "メイジャー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/239",
+   "us_index": 239,
+   "original_english_sha256": "5bd1da9a6e94fd30ca4dfb34644f10ce6af801026b6948ac96e6b1cf06010a7a",
+   "japanese": "メイヨー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/240",
+   "us_index": 240,
+   "original_english_sha256": "95fe6f9fd2fdebb08863efb2195343d692fd746a70f70f535998a603055b922e",
+   "japanese": "メッサーラ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/241",
+   "us_index": 241,
+   "original_english_sha256": "2ab83ee053578c608e69c51c7cb70985101d7ee588ba0e3420d086fafc0c08a9",
+   "japanese": "メラノール",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/242",
+   "us_index": 242,
+   "original_english_sha256": "053c8714516dced29c62894d7cdafc680b38ff7c5eaa88b95b38850f4741a7a5",
+   "japanese": "メンドーサ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/243",
+   "us_index": 243,
+   "original_english_sha256": "01069a90f7449ddd0fe3a2f1cc0f9ce9742bbb2aba8bd087dfe6bcdacddc0fa8",
+   "japanese": "モニド",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/244",
+   "us_index": 244,
+   "original_english_sha256": "2d33edc82d1891488dee7ff255f8e7e79cd8ebab47e393faaa870b510c42d6b9",
+   "japanese": "モズリー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/245",
+   "us_index": 245,
+   "original_english_sha256": "e1faa8799acdc95aef0a5600db7dbc67f0426966a2fc3e3d5ff4a7e1fdd18530",
+   "japanese": "モビー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/246",
+   "us_index": 246,
+   "original_english_sha256": "38c7259e35ab6a1c59558a4fd5fbd042376f2602c4c540453392fb7b2a385d49",
+   "japanese": "モリッツ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/247",
+   "us_index": 247,
+   "original_english_sha256": "263a888a0ea77bfbd2b8b94e9345c5940454842f6cfc997f0c06baed91ee2784",
+   "japanese": "モーリー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/248",
+   "us_index": 248,
+   "original_english_sha256": "1df36cd648e4398c12e77706e07ec28758d75045d8b2b73aea3cf8f8eeb81321",
+   "japanese": "モンテ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/249",
+   "us_index": 249,
+   "original_english_sha256": "b866aacead67658ddc52ceced9ae2fcb07b8a243f0c428a61418c538ca985934",
+   "japanese": "モンド",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/250",
+   "us_index": 250,
+   "original_english_sha256": "cd20b63393318193c349ef9b3e6ea10bb82f6e855c7ca98a72df2ef4ef0bc26d",
+   "japanese": "ヤヴェット",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/251",
+   "us_index": 251,
+   "original_english_sha256": "8ebffb9da39023fc21d646be022f01cae49e25f76ad1eef9c85b30f3e53ada00",
+   "japanese": "ヤラム",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/252",
+   "us_index": 252,
+   "original_english_sha256": "da5e0c4cd292d3a98a135f4f1fd24382a3e6321e4998ae05a2b8fef8fdd7b30a",
+   "japanese": "ヤング",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/253",
+   "us_index": 253,
+   "original_english_sha256": "07365210096e0684244795d7b4661d2f65cdaa718ca49511763e73f7c7c7464c",
+   "japanese": "ユーウェイン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/254",
+   "us_index": 254,
+   "original_english_sha256": "9b1e8a94fcdb88c8391ec1200718b3ddd73fb631b9c6b5d56619852a47833665",
+   "japanese": "ユージン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/255",
+   "us_index": 255,
+   "original_english_sha256": "59b8cddebc8172a6b46327ff21535a4667050a9bc32eaced0b489a400c173753",
+   "japanese": "ユーヴェル",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/256",
+   "us_index": 256,
+   "original_english_sha256": "5af45e38fe555dd5985c04274c00012c3e9ff3360b91ae06ff90bc7183b78144",
+   "japanese": "ユーリ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/257",
+   "us_index": 257,
+   "original_english_sha256": "303b1dca491ab27b43ec5709e2dbea703d3caeb4bb107bebf4f20449dd38c390",
+   "japanese": "ユトリオ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/258",
+   "us_index": 258,
+   "original_english_sha256": "0c6ba3af93b54a4d6b328bebbf2a83a80b9945dbe5d7d3d5c17c95bee796f2d9",
+   "japanese": "ユリス",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/259",
+   "us_index": 259,
+   "original_english_sha256": "78a1a1dae4e56fb0aba67dadc5ab5ab808f505137efedecfb7c2f12a4195c58b",
+   "japanese": "ヨセフ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/260",
+   "us_index": 260,
+   "original_english_sha256": "5f39b51ae9a4dacbb8d9538229d726bfb7e1a03633e37d64598c32989a8c1277",
+   "japanese": "ヨン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/261",
+   "us_index": 261,
+   "original_english_sha256": "cb14bf5073ebaf6d9d04b63164b7017b2011d3558fb2f80f9450c9f5de6f6de8",
+   "japanese": "ヨシュア",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/262",
+   "us_index": 262,
+   "original_english_sha256": "45a7858c4b0a81f29716931ab1098c0d077b92163fd16ed2f1eeab15193f40fa",
+   "japanese": "ヨナ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/263",
+   "us_index": 263,
+   "original_english_sha256": "d3b6f29040c773ff35bfd3c3e1454f179cbe3e990d5e80523723d2c372eb2f19",
+   "japanese": "ヨハネス",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/264",
+   "us_index": 264,
+   "original_english_sha256": "bf41e3255e80bd184443488757a50d92adf08670d6f396eb3aa4626202887ca3",
+   "japanese": "ヨランド",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/265",
+   "us_index": 265,
+   "original_english_sha256": "80e22fb0e9dbfc05236961cff3e4f394da87b1585153c36e81e9fc662eaa2cb1",
+   "japanese": "ラヴェル",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/266",
+   "us_index": 266,
+   "original_english_sha256": "e6d3883c24777fe70fcf291a762a74da4eaf44dceb367bcae216671583a84811",
+   "japanese": "ラウル",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/267",
+   "us_index": 267,
+   "original_english_sha256": "d47d2405e27ef5eebd464d07a05f0d1e6989fbef9edd90e0430059526a3b1a49",
+   "japanese": "レザフォード",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED",
+   "terminology_note": "Lezaford is a story character, but no JP counterpart exists anywhere in the JP ROM (no AUTO_MATCH occurrence), so this is a new reading."
+  },
+  {
+   "us_logical_path": "words:name/268",
+   "us_index": 268,
+   "original_english_sha256": "7fa6141c35e213bf7d0cffcc3edce0dc9a03cdde6648891e4578457ad6136e46",
+   "japanese": "ラムゼイ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/269",
+   "us_index": 269,
+   "original_english_sha256": "675177ad430a03e7edf22e8abda2ad2b481c576cdaf56bd3a5e472f29792dc6a",
+   "japanese": "ラムセス",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/270",
+   "us_index": 270,
+   "original_english_sha256": "060bda593b21b9601a9a84e8887aa1338ed3ed4a6447bf805a43be632dd77328",
+   "japanese": "ラルゴ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/271",
+   "us_index": 271,
+   "original_english_sha256": "1075536b72a4b7ccc4890d98c80232a85d2489a7fee94d77edd805e69a3dc6da",
+   "japanese": "ランドルフ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/272",
+   "us_index": 272,
+   "original_english_sha256": "5d6ac6693542a6ea636ee927b19ad56a2d9ba29e54541cd7ef992cb652744eba",
+   "japanese": "ランバード",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/273",
+   "us_index": 273,
+   "original_english_sha256": "2c7b6821719d1bcebf550baaea32f9856c356b6b91e0303281d2e641ca91ed3b",
+   "japanese": "リアム",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/274",
+   "us_index": 274,
+   "original_english_sha256": "cba86b17d63fa15c0718083cd22f5a8fc9269da0f3aa2ae16476beb20003e037",
+   "japanese": "リデンボック",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/275",
+   "us_index": 275,
+   "original_english_sha256": "5bc426e8d81e2f4136a562fac893c2229e3faa99d97df09ab604a2f8a0c0a60c",
+   "japanese": "レオ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/276",
+   "us_index": 276,
+   "original_english_sha256": "6568e1158933296b86cdc3472474c883d9bac7b5b14092313cdc2aabdd8d4e79",
+   "japanese": "リカルド",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/277",
+   "us_index": 277,
+   "original_english_sha256": "bb6b6eaa78c35be3f7056b68cf3055160dc61e4ef2f30243ea9743875a57195d",
+   "japanese": "リッツォ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/278",
+   "us_index": 278,
+   "original_english_sha256": "57701efe8073e7dae126ba892e61e91163cad277ca15181d41c274d91445e538",
+   "japanese": "リックマン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/279",
+   "us_index": 279,
+   "original_english_sha256": "8830a9209fa845d9c0d640b49663c2afbaf02aa702e3ba605eeb30dc827588ef",
+   "japanese": "リドリー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/280",
+   "us_index": 280,
+   "original_english_sha256": "baed2690016ac353beeac751fc127dab943f805c939c3a22f43f8147c1e42ee5",
+   "japanese": "リーフ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/281",
+   "us_index": 281,
+   "original_english_sha256": "e054bd687e31b4c25474e508130c6e8ae2e8ad86916dc115072ed05ad867d332",
+   "japanese": "ルロイ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/282",
+   "us_index": 282,
+   "original_english_sha256": "100d53089407ab424fbded14908dafc689b749c1f1d127a4d52307a496b49abd",
+   "japanese": "ルアン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/283",
+   "us_index": 283,
+   "original_english_sha256": "f8ff42a78305dd64997ff6cd9e064f367a63a6a49ba7a11256d5506fd855d905",
+   "japanese": "ルーイ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/284",
+   "us_index": 284,
+   "original_english_sha256": "6ee0bf793e8adef594b6a13dddca1c94b8686c5bf7840ca33ff67498175b8978",
+   "japanese": "ルースター",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/285",
+   "us_index": 285,
+   "original_english_sha256": "899ba9a4c90c0baa6f12309f70477200075dd19e58176333acb9fb3bd168ff4c",
+   "japanese": "ベリーニ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/286",
+   "us_index": 286,
+   "original_english_sha256": "52d7d8604bf71e968bf07d468c7d394bff7cb0bb142fd4da7a85dd6f8056a940",
+   "japanese": "ルーカス",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/287",
+   "us_index": 287,
+   "original_english_sha256": "02c1c42c01397057d3aaca97df419c1b882f33b0c090bac6d7398f99c50d5bad",
+   "japanese": "ルキーノ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/288",
+   "us_index": 288,
+   "original_english_sha256": "cf788d824bccb1e6db852204c56b258527dda459bb31e35868c0128255d6c365",
+   "japanese": "ルナイス",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/289",
+   "us_index": 289,
+   "original_english_sha256": "d8005a6f9726eb7ee9dd85fcbbafa7c410b03d15c5f8a5647ec0aa9ce5b4a1af",
+   "japanese": "レイトン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/290",
+   "us_index": 290,
+   "original_english_sha256": "21b752d9d737dbb785b8fdf28d8dec01d3cd320dda6cc38d70821d319751618d",
+   "japanese": "レイフ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/291",
+   "us_index": 291,
+   "original_english_sha256": "a6d20aa6a4c73f0d2eb57088f6d57ff3e8ef6fa0c4e726b6a6b7d31a2e587662",
+   "japanese": "レイン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/292",
+   "us_index": 292,
+   "original_english_sha256": "1f43ca92e76ab25c659f0b29432e2f13776e044165ace94d718a3cfb20fb1c20",
+   "japanese": "レナード",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/293",
+   "us_index": 293,
+   "original_english_sha256": "70a92ab066d054cb5f896a6c59ff8e674d60de4a17f744ddce87e17d052080ba",
+   "japanese": "レスター",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/294",
+   "us_index": 294,
+   "original_english_sha256": "1eb1cf7c147ea9f46d43a3ea8b35431e05b3d02aa84592e2d65ff346ad61876d",
+   "japanese": "レックス",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/295",
+   "us_index": 295,
+   "original_english_sha256": "5c490a6eeb88a68a8b5c936e2fb6df71b2bb5391390c92eef26e5a3e45ac0510",
+   "japanese": "レニー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/296",
+   "us_index": 296,
+   "original_english_sha256": "1c24c61dbd1ee3a4093ea995c4b4f3562e63403c05ffe47a1e3c2f7daabaed86",
+   "japanese": "レンドル",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/297",
+   "us_index": 297,
+   "original_english_sha256": "a1ef7bf9b9098c49c8aa4e6e8b42b199762a55f85ec6ad215a76045088276fcc",
+   "japanese": "ローラン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/298",
+   "us_index": 298,
+   "original_english_sha256": "f3e93c9bfb03942a8a2ce7138e1b5828c5e8a5988208de9c6882d9cf501d7d0e",
+   "japanese": "ロックウェル",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/299",
+   "us_index": 299,
+   "original_english_sha256": "d7202b1530bbef4afa8a7b5b33df78af1fb3c6cbd1d42fda5a4e033e6dfde736",
+   "japanese": "ロドリゴ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/300",
+   "us_index": 300,
+   "original_english_sha256": "e5a45924264e169e204361d92e2a8253b34b2413c7b5e15b77d214f3425f6a24",
+   "japanese": "ロベール",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/301",
+   "us_index": 301,
+   "original_english_sha256": "2c2e70532c230a48342156a5ce6cd2515be906e6f46c91573d421c53ca8a124c",
+   "japanese": "ロラン",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/302",
+   "us_index": 302,
+   "original_english_sha256": "b7813498dbd4eb4e95653a2bbd1f6abb0e4dd9245223a5a647ff32be7cbf660a",
+   "japanese": "ロルフ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/303",
+   "us_index": 303,
+   "original_english_sha256": "6216ffe06a5939cc4c73594b49e2be50a5d4bcfe63d0cca15b8d21de55625d94",
+   "japanese": "ローレク",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/304",
+   "us_index": 304,
+   "original_english_sha256": "405904590ac6b01ca7ac45172a242a4cf37fb99c871c1a95cb9b20cb4742be17",
+   "japanese": "ローカー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/305",
+   "us_index": 305,
+   "original_english_sha256": "cdf091a5806fe57c59ea6639f5d90ff65b50008c9d8d6690a571cc3fb16ff415",
+   "japanese": "ワーグナー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/306",
+   "us_index": 306,
+   "original_english_sha256": "e5f37c96f55bac52675da5b76ab591c242aa4f7b4bcea8e0447bf2b1208dce00",
+   "japanese": "ウィリー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/307",
+   "us_index": 307,
+   "original_english_sha256": "8cba9e8dc2bb4eb3d145c52b4f67842b9dd6a792638a27ef6cee0d5080a7def9",
+   "japanese": "ワイルダー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/308",
+   "us_index": 308,
+   "original_english_sha256": "eb50310652907978a6d3ef3d224401c77d229206fad1397dd04857086794caaf",
+   "japanese": "ワッツ",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/309",
+   "us_index": 309,
+   "original_english_sha256": "7cdd785a489dc5d2b6ea57c58d0d00a6fceb17d52c2dd84a3eb15f31ffd427f6",
+   "japanese": "ワトー",
+   "family": "words:name",
+   "context": "male_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/310",
+   "us_index": 310,
+   "original_english_sha256": "509f6b903c7bf97eaecee8366d03eb9a7e9da41f30704711148fbe2014217d3a",
+   "japanese": "アニー",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/311",
+   "us_index": 311,
+   "original_english_sha256": "439455c61e4b9876a23ef90682e1f58d4b4747d74cf2fc30480a837391c73bc6",
+   "japanese": "アガサ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/312",
+   "us_index": 312,
+   "original_english_sha256": "4aab343d1d20f888667d2101bd6e3e96c78a41a02483c236f2c44f5cace3edb0",
+   "japanese": "アデレイド",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/313",
+   "us_index": 313,
+   "original_english_sha256": "3ab854ae0a2473e6b5618cdc8f8bf271bb13c2cff9eae5eea4c63ec1cbe57325",
+   "japanese": "アメリア",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/314",
+   "us_index": 314,
+   "original_english_sha256": "de0fb64d8ded93b920c86188c71137670e28a852904c8985389488e04905f20b",
+   "japanese": "アリソン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/315",
+   "us_index": 315,
+   "original_english_sha256": "ba7e308efe6572abe4227d46c24ab45608fe911d067e607069bad44426e896c1",
+   "japanese": "アンジェリン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/316",
+   "us_index": 316,
+   "original_english_sha256": "9a474836482002bd0e9ff757d8e4dace8efd6775469561c2cded129d5d21e7fe",
+   "japanese": "アン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/317",
+   "us_index": 317,
+   "original_english_sha256": "71f3f49d0db0721de059756793707d2a4e5dfc492b9c7115cd73b60cfeadcd01",
+   "japanese": "アネット",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/318",
+   "us_index": 318,
+   "original_english_sha256": "12429c0e78e0ab0765977c737fe781d8c9869b08b9171a97db8ab8537d6d873c",
+   "japanese": "イオナ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/319",
+   "us_index": 319,
+   "original_english_sha256": "4085b4015bce6af90a9738eeb3c4ef355a211eb3ad9811e294765e881c354ead",
+   "japanese": "イリアナ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/320",
+   "us_index": 320,
+   "original_english_sha256": "175e7ab6ca7022d9691aad6e043f66a39d8eca94bc6706454cdbb01467ad3b5a",
+   "japanese": "イルマ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED",
+   "terminology_note": "\"Erma\" rendered イルマ to keep it distinct from \"Elma\" (329, エルマ)."
+  },
+  {
+   "us_logical_path": "words:name/321",
+   "us_index": 321,
+   "original_english_sha256": "db84d08b2e117f2a814e69e066a52f4c8d881f4324d42e2e52cbfd9a1322ed7b",
+   "japanese": "エレーヌ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED",
+   "terminology_note": "\"Elaine\" rendered エレーヌ to keep it distinct from \"Elayne\" (330, エレイン)."
+  },
+  {
+   "us_logical_path": "words:name/322",
+   "us_index": 322,
+   "original_english_sha256": "eeb4745a3575ce57db6589d329afb7d073a352d6386c40dae3bc1a00b3ebe35f",
+   "japanese": "イングリッド",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/323",
+   "us_index": 323,
+   "original_english_sha256": "0ee033b5f7f9fc3a7e571c03892bcc3e3dc4a3bde64e6e439cef20bf22cdb54f",
+   "japanese": "ヴァージニア",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/324",
+   "us_index": 324,
+   "original_english_sha256": "caeda42e92f6e40a8001764bb3a2f9b23d6c1efe8abb1c922b4931f0c4bc0b8b",
+   "japanese": "ヴィオラ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/325",
+   "us_index": 325,
+   "original_english_sha256": "14464d02465fc87a749c14def64075c0843476f95002b127579348f22b16c034",
+   "japanese": "エッダ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/326",
+   "us_index": 326,
+   "original_english_sha256": "4c2091a997854e3ebb7faf777a0ae63225471870bcce4b818a0bfe9afd611ee9",
+   "japanese": "エトワール",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/327",
+   "us_index": 327,
+   "original_english_sha256": "f00b425a0a419be479e6e0192404966cb4075c4905ef02bf5f74285c7ccdd36b",
+   "japanese": "エポニーヌ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/328",
+   "us_index": 328,
+   "original_english_sha256": "fd3924930cd1b1e35ddfd7c34fe175652ebe22bead094f7532cb42772e3f81c4",
+   "japanese": "エリカ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/329",
+   "us_index": 329,
+   "original_english_sha256": "ab026591b44188d5665d93fa6fcd3c45b09f7988a029cc9cadf974add170f3e6",
+   "japanese": "エルマ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/330",
+   "us_index": 330,
+   "original_english_sha256": "9f4c28f1e7e9e2d44b8d9e54cfadad0b267ffd3f29c96cc6f82405bdcd6acaef",
+   "japanese": "エレイン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/331",
+   "us_index": 331,
+   "original_english_sha256": "63704e5863b0e3771b881338cb7d0f5cd889a0f7d4acd08178b80664b198cd89",
+   "japanese": "エレナ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/332",
+   "us_index": 332,
+   "original_english_sha256": "e79e0f2c555c02cd5749c0eb49278ab8189a5479c10d469b54b2dd824eb94fd3",
+   "japanese": "オーレリー",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/333",
+   "us_index": 333,
+   "original_english_sha256": "c1ca189964105fb83a28ab8ac685eb0af1dae9213efe7626fe176851ef76eab4",
+   "japanese": "オデット",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/334",
+   "us_index": 334,
+   "original_english_sha256": "a557d48c9ee22c4911090a9566e6506eb3d76b442dae72a40259a5278f0a191f",
+   "japanese": "ウンディーネ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/335",
+   "us_index": 335,
+   "original_english_sha256": "83a6b92970673a405c7d9ad73db1ec9c29bc3740f855f55a0c6e827717c63fc0",
+   "japanese": "ゲルトルード",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/336",
+   "us_index": 336,
+   "original_english_sha256": "bec3edacc0089f86f2be01c0e83eee906d8fc08e48d1c28139421cb0d11899da",
+   "japanese": "カタリナ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/337",
+   "us_index": 337,
+   "original_english_sha256": "e3297e400dff12fe3f696f70a6c42c1104e870c7b22410af512d7a504270131b",
+   "japanese": "カサンドラ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/338",
+   "us_index": 338,
+   "original_english_sha256": "0e7ba1c1a960f6da5a9567b6c25f49c61dff0ad7be4a8c1008f097926c47ec06",
+   "japanese": "カティ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED",
+   "terminology_note": "US repeats \"Katie\" (also index 353). Differentiated as カティ / ケイティ."
+  },
+  {
+   "us_logical_path": "words:name/339",
+   "us_index": 339,
+   "original_english_sha256": "101ae75bd532b229ad1a3aed948e6e7bf817db908f9d6e2deabd34f4ef1a5182",
+   "japanese": "カテジーナ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/340",
+   "us_index": 340,
+   "original_english_sha256": "22b77d6c0d9d61881b865856d03dbcc717fe1cdb860b9ecff69d9bb387cf477c",
+   "japanese": "カトリーヌ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/341",
+   "us_index": 341,
+   "original_english_sha256": "5711b578d1d9f4382833d3157270fb0164fe29283f904a777a950f8f08cd74c5",
+   "japanese": "カミラ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/342",
+   "us_index": 342,
+   "original_english_sha256": "739061d73d65dcdeb755aa28da4fea16a02b9c99b4c2735f2ebfa016f3e7fded",
+   "japanese": "キャロライン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/343",
+   "us_index": 343,
+   "original_english_sha256": "e04f4fcc53b78f6b9130be9eaec7aa89d4d5c65f0de26723cfb88fc9d8556b57",
+   "japanese": "キアナ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/344",
+   "us_index": 344,
+   "original_english_sha256": "d25949ef9e762fe7cfb9cc5d125e8a7bbca56662abc51b9d0dc0d2265aa28dce",
+   "japanese": "キム",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/345",
+   "us_index": 345,
+   "original_english_sha256": "96f12b28d735c75378017acc8db6e1881cef8f6c8a8ef38666951f69b6738933",
+   "japanese": "キャサリン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/346",
+   "us_index": 346,
+   "original_english_sha256": "006952514fe555f137977959868b97fd530ec3a825015e54da95675ac040ca17",
+   "japanese": "カリン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/347",
+   "us_index": 347,
+   "original_english_sha256": "4b9212dcd279696bc85f232da59434308efa021b49214e40630a2d02c88a3320",
+   "japanese": "キャンディス",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/348",
+   "us_index": 348,
+   "original_english_sha256": "d072fa099aefac790b124ec5587be9cd339ad72622ff2025d7d57ce0f9ae3364",
+   "japanese": "グウィネス",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/349",
+   "us_index": 349,
+   "original_english_sha256": "d89d0339eea52aa40a28774a82d23742b504ffbdf44da600fc9b8948ca22b779",
+   "japanese": "ゲラゼラ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/350",
+   "us_index": 350,
+   "original_english_sha256": "98826126700a7a6c71506a7465da371f7e959b6d3fcfa5d0259b58388a88c9cc",
+   "japanese": "グリザンベラ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/351",
+   "us_index": 351,
+   "original_english_sha256": "723f3a69c178df08e5d5216166aac8cca3ca901294d7745278c0985a34c99a50",
+   "japanese": "クリスティン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/352",
+   "us_index": 352,
+   "original_english_sha256": "cf22b623dd100be72105e7a692697e1152bfcc3895e713e4ae5b92012f34aff3",
+   "japanese": "クレメンティナ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/353",
+   "us_index": 353,
+   "original_english_sha256": "0e7ba1c1a960f6da5a9567b6c25f49c61dff0ad7be4a8c1008f097926c47ec06",
+   "japanese": "ケイティ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED",
+   "terminology_note": "US repeats \"Katie\" (also index 338). Differentiated as カティ / ケイティ."
+  },
+  {
+   "us_logical_path": "words:name/354",
+   "us_index": 354,
+   "original_english_sha256": "a226a2084c6d83e72278aa2c0544817a6b22f4b76cfbf502178c6364abadc75f",
+   "japanese": "ケリー",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/355",
+   "us_index": 355,
+   "original_english_sha256": "117ec61f3e951678c1bcd284f9475b590c4fc2389c24fe0a65ecc4ee2390e4e7",
+   "japanese": "ゲルダ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/356",
+   "us_index": 356,
+   "original_english_sha256": "16367420b8630a39ea6ffdda05b613e021608ce94d8229a83aa8e56a3905f9bc",
+   "japanese": "コーラリー",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/357",
+   "us_index": 357,
+   "original_english_sha256": "83b8d6537937f10ae21ea288d14f7daa1f893569e7e9e82321d91a255f89d84d",
+   "japanese": "コリーン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/358",
+   "us_index": 358,
+   "original_english_sha256": "a00dedb74e56c6c66748cb4c3cae1c1afc849475f88d1819617501e294f3d938",
+   "japanese": "コレット",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/359",
+   "us_index": 359,
+   "original_english_sha256": "857a9e1a73d45a7f4e9546fe22d240288b757a189658455acf099ac097f979ec",
+   "japanese": "コンチェッタ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/360",
+   "us_index": 360,
+   "original_english_sha256": "186d3212ceed960e1806718f772c529c0f8003a9a20e3f4de9f4e9f3b38eb623",
+   "japanese": "サスキア",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/361",
+   "us_index": 361,
+   "original_english_sha256": "e948b44dd9cdf678c58c09528da04b433b263c3000a5d301108603098fcb9313",
+   "japanese": "サビーナ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/362",
+   "us_index": 362,
+   "original_english_sha256": "b9db5ecaed71889a71736565cc4158be5c9d5f887ef218a01b4bccec5bd10641",
+   "japanese": "シア",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/363",
+   "us_index": 363,
+   "original_english_sha256": "57a17ae985757aaf25be146f948dec5cec5e25a802c4a90a5162761d1f27ac55",
+   "japanese": "ジャンヌ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/364",
+   "us_index": 364,
+   "original_english_sha256": "5ddecf6ba17a57f06829995e0e7a1f48cc3923a7d1326e368151a3285831e0a9",
+   "japanese": "シェリー",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/365",
+   "us_index": 365,
+   "original_english_sha256": "b59ce4a7b63356f60930350c32edb6c6a2de30dce89cdddbdb87d8ac322b1c79",
+   "japanese": "シェリル",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/366",
+   "us_index": 366,
+   "original_english_sha256": "553e7cf02d99f2429ae2a8068234af47200be7969bba0e99ea52f5f886f905c8",
+   "japanese": "シャロン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/367",
+   "us_index": 367,
+   "original_english_sha256": "d3fc0d4ab3e21ecf30f27bf3a428109d22e0ae4806188d586ac856b8d63202f2",
+   "japanese": "シシー",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/368",
+   "us_index": 368,
+   "original_english_sha256": "694bc67af3ecf0158cfb37f8b1babe1a6d5ce8a7dd692d5eae246e36e1dcea38",
+   "japanese": "セシール",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/369",
+   "us_index": 369,
+   "original_english_sha256": "354176899aadcde0b35d98cbaa9884099ff8ad50fd9ee8aa21922fcca673b051",
+   "japanese": "シス",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/370",
+   "us_index": 370,
+   "original_english_sha256": "39d7cbc38268174b030dcf0aa2a319911f3526039ea25699209e10a828920f30",
+   "japanese": "シビル",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/371",
+   "us_index": 371,
+   "original_english_sha256": "80dc7a97aa982e0df17f1a506e69ba62731181151e3fefe855724e4438418d3e",
+   "japanese": "ジャクリーン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/372",
+   "us_index": 372,
+   "original_english_sha256": "a989616fd10f9b2413dc712251f06124fb8c3d4cc794c185768d19ffb8350c13",
+   "japanese": "ジャネス",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/373",
+   "us_index": 373,
+   "original_english_sha256": "7e86fbb78773236a5a79480e35d16810c45c70468af6e093f1f670bf8299f084",
+   "japanese": "シャノン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/374",
+   "us_index": 374,
+   "original_english_sha256": "e898ddab3ace81040e77d11601bbfcf524f01bcb22f2f684c540906472dbdc34",
+   "japanese": "ジョシー",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/375",
+   "us_index": 375,
+   "original_english_sha256": "a36fb2ccf8d14d4269625ff1421d9822a0c82d09b1a5b3814aa3c514aaec7dec",
+   "japanese": "ジリアン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/376",
+   "us_index": 376,
+   "original_english_sha256": "a16bef0652bba4dfedc80ff284f6053251cba7a84ebdd840993d6b77847b93ea",
+   "japanese": "スウェナ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/377",
+   "us_index": 377,
+   "original_english_sha256": "19606a5186c759d0e7a4afcd3c421904251f5e69292a0cdd22b186fcc5bf8b87",
+   "japanese": "スザンナ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/378",
+   "us_index": 378,
+   "original_english_sha256": "930a34e3f98b6edeba457420cbaf809c82d659a65a1ff6d09dd0e7e8075a3467",
+   "japanese": "セシリー",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/379",
+   "us_index": 379,
+   "original_english_sha256": "530445d89aa28127c85acc61ecb7acfe05b0108ef6b8073705ae7a36525e121d",
+   "japanese": "セシル",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/380",
+   "us_index": 380,
+   "original_english_sha256": "72c393aff380c87931b7d960acbcc9e8ce7ca491ffacfa51ed104fdddefa7f4e",
+   "japanese": "セリーナ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/381",
+   "us_index": 381,
+   "original_english_sha256": "3fa16aeca87a7b5eb49d3e2475066998aeb7df95f39eab809ca184da684db653",
+   "japanese": "セルマ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/382",
+   "us_index": 382,
+   "original_english_sha256": "c43bff0b9fafeaf38f834b715cd521589f84900dcc760ca8d6ce39ff0d7402c7",
+   "japanese": "ソーニャ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/383",
+   "us_index": 383,
+   "original_english_sha256": "9908ace8072ec4f5502729217e8bc503deedbdf73c60096a22f1ade54e86ae4d",
+   "japanese": "ソニア",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/384",
+   "us_index": 384,
+   "original_english_sha256": "cc6016b62f25d56507033c48b04517ba40b3490b1e9b01f1c485371311ed42c4",
+   "japanese": "ソラヤ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/385",
+   "us_index": 385,
+   "original_english_sha256": "1b4e1e1b1c2e23399cdaa18d5f45c01b60778561ee85fe728d587ec4386c2698",
+   "japanese": "ダイアン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/386",
+   "us_index": 386,
+   "original_english_sha256": "09fb9ff32c5aa81bf3cd060e82f8bdfe6fa40b933c00a3b83094a4a6a9c1db24",
+   "japanese": "ダナ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/387",
+   "us_index": 387,
+   "original_english_sha256": "3af7596fe853da9ae0755e6d9171d42c92d6427256038348f92f254f8b07bbb7",
+   "japanese": "タマラ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/388",
+   "us_index": 388,
+   "original_english_sha256": "9ee1c0a700324ae0ada0c16ba4819f06c8a7066796630087e35b118df54cc14f",
+   "japanese": "ダリア",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/389",
+   "us_index": 389,
+   "original_english_sha256": "5adbc497a2fa3f03ca4d9c0505ae9a787f783d8c6599dd66ea6ec325ebbd5cd7",
+   "japanese": "ダリル",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/390",
+   "us_index": 390,
+   "original_english_sha256": "be499fcfdff1cfc74e693d889d4f4aefe3d3252bd58d6a78b20253db5881313d",
+   "japanese": "ダーシィ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED",
+   "terminology_note": "US has both \"Darcy\" (index 120, JP original ダーシー) and \"Darcie\"; differentiated as ダーシィ so the pool holds no duplicate reading."
+  },
+  {
+   "us_logical_path": "words:name/391",
+   "us_index": 391,
+   "original_english_sha256": "b3817594c024ef54349357bf30d8545161c286300916f0d0574e23f1d7b760f9",
+   "japanese": "チコ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/392",
+   "us_index": 392,
+   "original_english_sha256": "3961b77bef90e89f22b4c3dddb0de24587a54a3cabbc0e370a9eac4258bc5221",
+   "japanese": "チャリーン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/393",
+   "us_index": 393,
+   "original_english_sha256": "85b773cd763589b109794477bd645630129c970ed3afb835d2b2edab29dbba33",
+   "japanese": "チェチーリア",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/394",
+   "us_index": 394,
+   "original_english_sha256": "b554d1a66d41abf7b0bc1dd22c9f1ffb3b7592920253e4b8a058f8d884296bc3",
+   "japanese": "ディアナ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/395",
+   "us_index": 395,
+   "original_english_sha256": "0fd1eb2e0012f222178d93e9166dfe47bf570c855bf61a5202360d84da2296af",
+   "japanese": "ティナ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/396",
+   "us_index": 396,
+   "original_english_sha256": "2de9418904a34fb10c9aeab652d71f259e98fc00e258e61c02a78ded4c12dd23",
+   "japanese": "ティフォーネ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/397",
+   "us_index": 397,
+   "original_english_sha256": "38c1d1966b3e8376ea9635952600c3700b9521cc75b2c149c667a0fdbb79f5d5",
+   "japanese": "ティファニー",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/398",
+   "us_index": 398,
+   "original_english_sha256": "8a771bad122eeccbacce29e7aa91acbfe3b1e215fe03f5fda3803af436abd9ca",
+   "japanese": "ティア",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/399",
+   "us_index": 399,
+   "original_english_sha256": "ddb912deb896feb4261e974356ac7e597a9958be72e83615c2d8f4ce6f55c7aa",
+   "japanese": "デラ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/400",
+   "us_index": 400,
+   "original_english_sha256": "cf18914b752fe6a54016f7c24ac480689c74fcaa921486d777df63052dc0b033",
+   "japanese": "デリア",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/401",
+   "us_index": 401,
+   "original_english_sha256": "332662390483642caa3365d61fcafacc2aa6e3e73eacd73cd2203c2111e6da8b",
+   "japanese": "デルフィーヌ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/402",
+   "us_index": 402,
+   "original_english_sha256": "dd16c0c4191f69d88f74de104a8a0c738e9d4621a42535a17a790d1d97c52d53",
+   "japanese": "テルマ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/403",
+   "us_index": 403,
+   "original_english_sha256": "1e4ff70959d8b8c554ef4cca42e51362a955c7df8bcc9f0f6af85ad126cfe744",
+   "japanese": "テレジア",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/404",
+   "us_index": 404,
+   "original_english_sha256": "e3a50979eafaf306a7bc341eed17f0f7b67dede8f83f6f5ca9de454739abc1c8",
+   "japanese": "ドゥーシャ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/405",
+   "us_index": 405,
+   "original_english_sha256": "5e30754c3c1a4adb8e756bcc772cd0e8981d0fc5d5a35d5dd93bbdad7337ea1f",
+   "japanese": "トーニャ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/406",
+   "us_index": 406,
+   "original_english_sha256": "3174efdaff7d059b46c35cdd556908c72d2317293c479751f4995844a5ccc93d",
+   "japanese": "ドーラ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/407",
+   "us_index": 407,
+   "original_english_sha256": "5edc82da843198d097c83352152e562d01e045d6cbdd9168a4da2b5b843e4d23",
+   "japanese": "トスカ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/408",
+   "us_index": 408,
+   "original_english_sha256": "ffde59736d4bb742c752814fcdaafbd247d6c286063fd9fe232aad6ce6d0a6a6",
+   "japanese": "トリクシー",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/409",
+   "us_index": 409,
+   "original_english_sha256": "8fabb3b5c9c623c30abfcb0a10ec36f3f9b961cfb63872cfbf0041221d1afd4f",
+   "japanese": "トルーディ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/410",
+   "us_index": 410,
+   "original_english_sha256": "10d1e10ca1161172ef145c03cd8f300072439dbb8373563ec794805cfbd47f99",
+   "japanese": "ナタリア",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/411",
+   "us_index": 411,
+   "original_english_sha256": "e88b2fc6d24e692070793cd7f3a09ea42e11c925c817365cb345440ebc99f1e3",
+   "japanese": "ナナ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/412",
+   "us_index": 412,
+   "original_english_sha256": "5c2db111d834bc7b6b2e906087fed6b35d983f52c9a46c1d03708bc4f9c28cec",
+   "japanese": "ナネット",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/413",
+   "us_index": 413,
+   "original_english_sha256": "5d47146ea29bd98696892e2f9edacdd9c880adb8ff5be4ec7645320050717884",
+   "japanese": "ナン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/414",
+   "us_index": 414,
+   "original_english_sha256": "8f8d9e9e073589690afe0a029550031c73f31638f4ae9dff23541645b3013411",
+   "japanese": "ニーヴ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/415",
+   "us_index": 415,
+   "original_english_sha256": "e03112b3005d969f7623b240ef9d385c5c0e078ede08720f66e78c85ad73f3a3",
+   "japanese": "ニコル",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/416",
+   "us_index": 416,
+   "original_english_sha256": "675fc69c860d25e14fcf1889b9f2728db8c9215fcf3166cecd51b54cf7453348",
+   "japanese": "ニーナ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/417",
+   "us_index": 417,
+   "original_english_sha256": "35bfdf65c705f454159c6d84e368245c7e1c0787c9e60d63da36a54b6f99df79",
+   "japanese": "ネリー",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/418",
+   "us_index": 418,
+   "original_english_sha256": "8280c851dc8685a948ccc7efc891f18e4190d1f7d5d85d16b28c3286c555bc61",
+   "japanese": "ノルマ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/419",
+   "us_index": 419,
+   "original_english_sha256": "93b4ac660dad684687d481058434186e4cc2d222cc41145ed7b3eab9c390d74c",
+   "japanese": "ノリーン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/420",
+   "us_index": 420,
+   "original_english_sha256": "65529743720f4fc2c930157903e8ff3d6006fc394686845de4a6fa49a89dcd33",
+   "japanese": "バーサ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/421",
+   "us_index": 421,
+   "original_english_sha256": "b1cbff20928021f25f474ea5f74d483b9be39f54d8f1573f4a79284efc95a376",
+   "japanese": "パット",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/422",
+   "us_index": 422,
+   "original_english_sha256": "09b71d09549ed4f22e5c17b0e9487c358965f4302bc4d3133f0702b1396b1bae",
+   "japanese": "バベット",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/423",
+   "us_index": 423,
+   "original_english_sha256": "be9e1b5b203acd99b23b87e7462c3ee07591f84ccd54839d326c6f0c27892d2a",
+   "japanese": "ハリエット",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/424",
+   "us_index": 424,
+   "original_english_sha256": "459d2d577fb6ae6702d4211889d34fbce5dc6eaedc734e4a08a59cd3362d4ae3",
+   "japanese": "ビアンカ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/425",
+   "us_index": 425,
+   "original_english_sha256": "2f7caf725fb93a456e84100bdf98b91405e62f6e7ca99bc4e0b4a1993bf9e5c0",
+   "japanese": "ヴィヴィアン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/426",
+   "us_index": 426,
+   "original_english_sha256": "2f4064688f4d525b0a41f15a101a38728eab4d5c1e1cbbfa8c0cfa2cf8bb4e18",
+   "japanese": "ヒラリー",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/427",
+   "us_index": 427,
+   "original_english_sha256": "6320678ea1bed32ba8286063cee75e948052d15ab02d919cb0645a2a487c9be8",
+   "japanese": "ヒルデガルド",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/428",
+   "us_index": 428,
+   "original_english_sha256": "83c12268b8f08b2ffda324473c6edaab10cb81c9fbcd7535d394af650f24ff1e",
+   "japanese": "ビアナ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/429",
+   "us_index": 429,
+   "original_english_sha256": "cb1edcc41379a7917002a9919f77f7950537cffacb76789846cba2bc20a6ab24",
+   "japanese": "フィービー",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/430",
+   "us_index": 430,
+   "original_english_sha256": "e1b6f06b995e781fd68fbf09fe036c30290509e8af75100c0093d94651860731",
+   "japanese": "フィオ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/431",
+   "us_index": 431,
+   "original_english_sha256": "4f36608fd82f3c828936627f9150d6db447d79fee662a20c5e28bf884d51fb9b",
+   "japanese": "ブランシュ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/432",
+   "us_index": 432,
+   "original_english_sha256": "7bbbddc270a9781bfb38f266a7547a29a9e67fae60b8e742dbd27fc2642d541c",
+   "japanese": "フランチェスカ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/433",
+   "us_index": 433,
+   "original_english_sha256": "6e2b9a49e87c87cad718567c48dcf2d8cf72dca4abc8ca77793f07c0eef682a3",
+   "japanese": "フリーダ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/434",
+   "us_index": 434,
+   "original_english_sha256": "96ec398dcf23599c63cae6aa84bfe97700b7e7d04bd3e52cd9ca7411d6a4d997",
+   "japanese": "プリーシャ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/435",
+   "us_index": 435,
+   "original_english_sha256": "69bd9530f6bfa3fe64a323d1e2d9c45689e2f050d8f83b713e63680d119d494a",
+   "japanese": "フローラ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/436",
+   "us_index": 436,
+   "original_english_sha256": "1075bbd8b99ffc4f7392d08031e6d50389395a43a7d4cf7c5a992c2df5ade9fe",
+   "japanese": "ベアトリス",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/437",
+   "us_index": 437,
+   "original_english_sha256": "d996414cd84c41dd032d0e41ad1533312ae685d91ee5c5a6b34d593f72e2eb5d",
+   "japanese": "ヘイゼル",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/438",
+   "us_index": 438,
+   "original_english_sha256": "0f0d3052693b166c0b545b425f9f1e352190f213d3285a507f6f03ad9c0840eb",
+   "japanese": "ベシル",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/439",
+   "us_index": 439,
+   "original_english_sha256": "9934197a80514a2578a6c5d2080815093764f2988192a0aa207bbfa59fb83a97",
+   "japanese": "ベティ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/440",
+   "us_index": 440,
+   "original_english_sha256": "5144486815168f807b82963662bcbb7211a82cf529f6667facbebfdf8dc8b353",
+   "japanese": "ベラ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/441",
+   "us_index": 441,
+   "original_english_sha256": "2ea2eba335f25008a7dd6cb444ea8d8a3a5155743420f3e3f5cc4642c4f79fb1",
+   "japanese": "ボニータ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/442",
+   "us_index": 442,
+   "original_english_sha256": "3e13715a02fbe15f89903746a41dd1e884c583d9c9043993a3e6d29a912f5c4e",
+   "japanese": "ポリー",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/443",
+   "us_index": 443,
+   "original_english_sha256": "85209162cfd3df84dae0a616de007fbaca45b1a4903d0a22e6674331547808a8",
+   "japanese": "ポーリーン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/444",
+   "us_index": 444,
+   "original_english_sha256": "019bfd9cb0e4dc49521440e9450f1060bea0e60194c6330a271e17a483c3e897",
+   "japanese": "マーサ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/445",
+   "us_index": 445,
+   "original_english_sha256": "68ebd4a0fcdfed4bdd6a6953156d107a002d7171979ee82c96537c20fe395dab",
+   "japanese": "マーシー",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/446",
+   "us_index": 446,
+   "original_english_sha256": "ea880ac1099950bea7f39136e86065f537b0060f5e816731baf7f4dd83796da1",
+   "japanese": "マージョリー",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/447",
+   "us_index": 447,
+   "original_english_sha256": "9e18f9c9f910841b5d708749f600a3ea272a2438b5b54a561277c2bc35b95820",
+   "japanese": "ミラ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/448",
+   "us_index": 448,
+   "original_english_sha256": "314598c67958322fbcfe7363d94870d82a9677225a41218ba875d5aee27b2a0e",
+   "japanese": "マドレーヌ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/449",
+   "us_index": 449,
+   "original_english_sha256": "c5a66f9235da97f3e4f9d3c82977e0f65dbb88767aae9e1c542970615a52208b",
+   "japanese": "マドリン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/450",
+   "us_index": 450,
+   "original_english_sha256": "3eb634e987bbcfcbed16b5a6c0132f25ff406458d455d884f9b8e2c25a294601",
+   "japanese": "マリエット",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/451",
+   "us_index": 451,
+   "original_english_sha256": "9629cd6a6160dbe0482ccdaef7eff8ca1e8abafe13422eba56c588090d80a279",
+   "japanese": "マリエル",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/452",
+   "us_index": 452,
+   "original_english_sha256": "3417cfdf67c51b20fe0424bc47d5692e8759fb06b36d4828a6ad1c654a9dc367",
+   "japanese": "マリオン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/453",
+   "us_index": 453,
+   "original_english_sha256": "2d3c916192943e172179b887ac2f0061c4b13cee37228730d97d924795b8a349",
+   "japanese": "マリサ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/454",
+   "us_index": 454,
+   "original_english_sha256": "71e9eb10755c8232974d186a560f7658a1ccbdd3097877dfa1ad3436af90d46a",
+   "japanese": "マルタ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/455",
+   "us_index": 455,
+   "original_english_sha256": "c24b249f3e6dcb99c83a1d7dea778a932c597263e5337d70610b82e822b2f061",
+   "japanese": "マリーン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/456",
+   "us_index": 456,
+   "original_english_sha256": "941e7c6118a143bc3c2eab0708f9a5ffb7d387b84c21ccd05443877511e7ee72",
+   "japanese": "マロリー",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/457",
+   "us_index": 457,
+   "original_english_sha256": "f5445b521b7ee3b06dfb99662447496ad6cdc681818c89b6a8e8887a938cc02f",
+   "japanese": "ミケラ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/458",
+   "us_index": 458,
+   "original_english_sha256": "6e1a7568fc0237e5ddcdb46adbf847087a477a2f7cebb441d22dd78f0c00d7e9",
+   "japanese": "ミゼリー",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/459",
+   "us_index": 459,
+   "original_english_sha256": "ddef973ee0e6b6f81bb67ed8b4fd266cfd57ef920299ccaf815e892c7dc70b00",
+   "japanese": "ミリアム",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/460",
+   "us_index": 460,
+   "original_english_sha256": "0f5263414d96c400c18690717aa863fb2dac5ac06bfc387ea77bfc9b8b29e32f",
+   "japanese": "ミリー",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/461",
+   "us_index": 461,
+   "original_english_sha256": "c86bcdaa94c7ddd48c5ff9041224eaadfc03293989c2a7cc4ea839333ec87a99",
+   "japanese": "ムア",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/462",
+   "us_index": 462,
+   "original_english_sha256": "aafb2c31c4461616e4751db7fc6db252d55d0514a600d7520fea19b73ab96a8d",
+   "japanese": "メアリアン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/463",
+   "us_index": 463,
+   "original_english_sha256": "3fa72d13a8c74a75c6fba8e98c526fedc05ac2ea9f265b7c270405f460b104ca",
+   "japanese": "メリッサ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/464",
+   "us_index": 464,
+   "original_english_sha256": "b92e5accec61adf7bf9c466ac3879c81150da097803037a57bfc647e4b3acfac",
+   "japanese": "メリル",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/465",
+   "us_index": 465,
+   "original_english_sha256": "77cdd2206289c0439491b44d234b7cb287fda79b2ca0e5641cd62ee3ed8727b6",
+   "japanese": "メル",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/466",
+   "us_index": 466,
+   "original_english_sha256": "8ca762a2bbcfcc57ba70b806f000801cd02cf8653ab213d2b81cca9ba41d5870",
+   "japanese": "メローラ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/467",
+   "us_index": 467,
+   "original_english_sha256": "5fed45ddd0b4de3ae71a6fa6ff75454bc29128e5983abb093ac591d8e587b088",
+   "japanese": "モード",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/468",
+   "us_index": 468,
+   "original_english_sha256": "2683d9b5359f8fb2c5dd4588d50d7f027e816a23d6f70c9d081b5c16f6bfcc6d",
+   "japanese": "モリー",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/469",
+   "us_index": 469,
+   "original_english_sha256": "289bb7bc952c32ba38c409959e53f82b6d2fde49c5e0a5e6fa8d8ce11a633283",
+   "japanese": "ユーニス",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/470",
+   "us_index": 470,
+   "original_english_sha256": "a1a21fdea5c723c894eec28752218616210a9cdc9697945eaa075aac812966d6",
+   "japanese": "ユーフェム",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/471",
+   "us_index": 471,
+   "original_english_sha256": "6ab836e4e168e01487295073adb278235cb04949c9af75c0d72fe4ade90e25b8",
+   "japanese": "ユーディト",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/472",
+   "us_index": 472,
+   "original_english_sha256": "632536278bfb07ea91364cdedf06b15faf447af25118459d5317ca54b31b1c00",
+   "japanese": "ユースティン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/473",
+   "us_index": 473,
+   "original_english_sha256": "34319f1a4605d720d39c5db165524e8747a969ad04ac331d5af3447d7dcab427",
+   "japanese": "ユリアンヌ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/474",
+   "us_index": 474,
+   "original_english_sha256": "f0b8649dbd8cc269a6a9f57166490602cb5e17344007e29c1591f6cdad29aa37",
+   "japanese": "ラウラ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/475",
+   "us_index": 475,
+   "original_english_sha256": "6d43984578928e877eeb869b8392fe0a725a7274ab755ba6b43091047da87eda",
+   "japanese": "ラナ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/476",
+   "us_index": 476,
+   "original_english_sha256": "ce09089b37a39e1fc507f0a731d9d47583ea4ca185eb7cb5446f742b5c1cb3f4",
+   "japanese": "ラビーニャ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/477",
+   "us_index": 477,
+   "original_english_sha256": "565d9b884308b7e425a8369192ca12cc43a8fe109104763b31494fbc8c1fd8d3",
+   "japanese": "ラリサ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/478",
+   "us_index": 478,
+   "original_english_sha256": "864282b76c39e6748fa8b9accb2953bc89a3ec4f6c5ca1627624d6a58edd5619",
+   "japanese": "リサ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/479",
+   "us_index": 479,
+   "original_english_sha256": "ce59116024f7f4a62099327d516e999fee3c985b2cc714d808e22ca928c42124",
+   "japanese": "リザ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/480",
+   "us_index": 480,
+   "original_english_sha256": "a421d5705f0a1e4e7e3bf9f46d893db4b157977f4086a51d639d5f4bedd60985",
+   "japanese": "リシャーヌ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/481",
+   "us_index": 481,
+   "original_english_sha256": "fe82a2110fa3f07f8e0663aa69c09ee108474028518d87ccadf814aff5c583e5",
+   "japanese": "リタ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/482",
+   "us_index": 482,
+   "original_english_sha256": "d06f6b5d144b876f093b755965876baf02725dcd6c6c9c1515c7f9cd9ce2c079",
+   "japanese": "リリラ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/483",
+   "us_index": 483,
+   "original_english_sha256": "6653426a60a467eef3aa08c808ee0f1b91657b699ba4bf77a776d27d2e926e70",
+   "japanese": "ルイーズ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/484",
+   "us_index": 484,
+   "original_english_sha256": "9a128644ced5724fbaaff530f7c56091b745aa6d890a6d8e0343afb9e6126c18",
+   "japanese": "ルイーゼ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/485",
+   "us_index": 485,
+   "original_english_sha256": "e194a7f53f137d81b052e09dfd31d1c1d5c1d84198f8827616fa59477aa0bb79",
+   "japanese": "ルクレツィア",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/486",
+   "us_index": 486,
+   "original_english_sha256": "9de6b19dd8b5d6929ffd17e4d92008c4ac073a2c692ba641462984867d13df3a",
+   "japanese": "ルティア",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/487",
+   "us_index": 487,
+   "original_english_sha256": "ac32bd27d1e19ef298c1f1c9671515bacfb80f3239a8a1d307d42b593e15cac7",
+   "japanese": "ルーネ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/488",
+   "us_index": 488,
+   "original_english_sha256": "2b8bf06582253fd6ecaf7f6b3318140c66336e5eb8ff411396065c52b4feb339",
+   "japanese": "レオナ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/489",
+   "us_index": 489,
+   "original_english_sha256": "b7827bb0cb3da2b3de356e5f786740f072481408f694058608d7b97a80a5cb45",
+   "japanese": "レジーナ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/490",
+   "us_index": 490,
+   "original_english_sha256": "12dcac5504d66b063cee1019d9ad07a9c4c72ffb532f50922a1cb4b9403df8e8",
+   "japanese": "レスリー",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/491",
+   "us_index": 491,
+   "original_english_sha256": "6757c3d225498ee9ba8d1b79b54c475189b3f8f272b663ee0fbef09aab0b17e4",
+   "japanese": "レティシア",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/492",
+   "us_index": 492,
+   "original_english_sha256": "c93b277e89d0c1f05ffec4ad69f3f276be0a81e4f7472d95bf816e7b96741d28",
+   "japanese": "ロクサーヌ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/493",
+   "us_index": 493,
+   "original_english_sha256": "e9f4c095e10364c589c91472cee07085cc923aedfab717f6fe8822ea0c6d1284",
+   "japanese": "ロザリン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/494",
+   "us_index": 494,
+   "original_english_sha256": "2b296928d083bdfab1cb54a878c52b7980cb78521d37baa628bb8015511a6a3c",
+   "japanese": "ロゼッタ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/495",
+   "us_index": 495,
+   "original_english_sha256": "b6ec599a4076c95dcdcc1d1b85b716fe9c445dd7535a92e723e3cedc80977f7f",
+   "japanese": "ロッテ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/496",
+   "us_index": 496,
+   "original_english_sha256": "a2deb1bf65ccb647ad308ff65fc36ca56e6f410828c2965bb85e1e23faf16435",
+   "japanese": "ロレイン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/497",
+   "us_index": 497,
+   "original_english_sha256": "6151b2e8e53bfbf177efbd944e82ff0a7fce9221c811bfc674f4276ddf265a18",
+   "japanese": "ローレン",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/498",
+   "us_index": 498,
+   "original_english_sha256": "19c77a0d214c02503303f09b708735361cff4cd2035953ce758b324e2382984f",
+   "japanese": "ロレッタ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/499",
+   "us_index": 499,
+   "original_english_sha256": "950fada6496e0a4b034a3ea5aeaa9394c2e21047ba615c6d4f68b18a3d4421b0",
+   "japanese": "ワンダ",
+   "family": "words:name",
+   "context": "female_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/500",
+   "us_index": 500,
+   "original_english_sha256": "55d8be3a0db3960922249fda75eab255ac166e81eba64216fecc7ee81f97f661",
+   "japanese": "アサルルイ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/501",
+   "us_index": 501,
+   "original_english_sha256": "9d2b377ae0b9840835713fe748dff0be53821b16a68125cdacdb393c5c960185",
+   "japanese": "アシュヴィン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/502",
+   "us_index": 502,
+   "original_english_sha256": "740eae66633db2c78b5eaa217b17bb3ab5007abf5d6e4418736c151b80decf9d",
+   "japanese": "アスナン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/503",
+   "us_index": 503,
+   "original_english_sha256": "3d71db700ac5f2c98cda5f57fb3d03872ed8f81639ca9bb0bf3ebc1bb063cfba",
+   "japanese": "アスタルテ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/504",
+   "us_index": 504,
+   "original_english_sha256": "e1f2765d85e79869655cb40c66e5e80ad11b3ccd8fdf463f4915d3ecd64132e8",
+   "japanese": "アタグラ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/505",
+   "us_index": 505,
+   "original_english_sha256": "179188ab0025201fa7e18f889f18ff186bd401a2a4cfed3c1a8c7f819b788dc4",
+   "japanese": "アタルカイス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/506",
+   "us_index": 506,
+   "original_english_sha256": "73e5b5352aeeb228a326283e89d4fdc26640a136c1a6236ba72ffecaed65ae1e",
+   "japanese": "アテナ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/507",
+   "us_index": 507,
+   "original_english_sha256": "7c52b93c0e19a092982a10b589f88e60e72e567c152d842d74f9e257b00def6d",
+   "japanese": "アドロア",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/508",
+   "us_index": 508,
+   "original_english_sha256": "fad448561fb10cb84926b005e3a0bdda6969aa8ab5f8396d5de5bbea403da874",
+   "japanese": "ベンシア",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/509",
+   "us_index": 509,
+   "original_english_sha256": "ea148ceb3d8d26513841dc9eca8f8d85308384713adf1b5bf77c8084fa2a354e",
+   "japanese": "アモッテン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/510",
+   "us_index": 510,
+   "original_english_sha256": "337e6388cc2acc98b988e5d62b6207f26c8d728877720d94abf625f371963264",
+   "japanese": "アラウネ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/511",
+   "us_index": 511,
+   "original_english_sha256": "70c0996b197cd997513f03c6ed124e566425fc12d512f36b14e4474ea08cf6d4",
+   "japanese": "アリガン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/512",
+   "us_index": 512,
+   "original_english_sha256": "3770bd5e0e5ec335959ddbea1501de4d609474db675cac5de809a3e385b967e9",
+   "japanese": "アルラータ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/513",
+   "us_index": 513,
+   "original_english_sha256": "98153a9f2990cee1b598d2fd2c189044d9b3b927bd3759dffaf2b11ea8aee77f",
+   "japanese": "イディギナ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/514",
+   "us_index": 514,
+   "original_english_sha256": "9cd0e0774f06e6d590075a0ac6b1ce133558a80c78d59e654a1b6f91e5e70782",
+   "japanese": "イマナ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/515",
+   "us_index": 515,
+   "original_english_sha256": "42b96e77570bdc5f54865d0eef6f1d69c2b6d6cffbdd96d637738f6b5e58100e",
+   "japanese": "イラティク",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/516",
+   "us_index": 516,
+   "original_english_sha256": "566d05e285bff85bee22c666a61a2855629710f4a235ac5964a8360037065d5c",
+   "japanese": "イルカルナ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/517",
+   "us_index": 517,
+   "original_english_sha256": "e4bb823d103326d8380c5bfa53833c46919b406f8b92904645cdad860fcf0564",
+   "japanese": "ヴィクトランキ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/518",
+   "us_index": 518,
+   "original_english_sha256": "50c234385561e37e8aaf2c29a0c50721d66f95548054fa9e738510e0ce7d9a9e",
+   "japanese": "ヴィル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/519",
+   "us_index": 519,
+   "original_english_sha256": "3ac5a16fb7aed3b514e59b2bba517db17d062b1c6b738bae8ca7d11fb6c55a12",
+   "japanese": "ヴォダン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/520",
+   "us_index": 520,
+   "original_english_sha256": "93f25315fa0c226c6a71a9c74015014d26b932e079d659c518eaa5e62690c8cc",
+   "japanese": "ウォニミー",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/521",
+   "us_index": 521,
+   "original_english_sha256": "3d5615e3273bd6fb6a6ee7693d915021955ce928cc74547b4a5e30fc5cf7c1d9",
+   "japanese": "ウラシュ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/522",
+   "us_index": 522,
+   "original_english_sha256": "06a62640b07e62d7cb67524ecc5f8c6cff8625139b7e6f1f13deb4b1756ef36d",
+   "japanese": "エドボルド",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/523",
+   "us_index": 523,
+   "original_english_sha256": "117164ae584c35e40e0a7ae224f6f5d2de27aa605f6a74a7a42c528ae646f12d",
+   "japanese": "エヘカルト",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/524",
+   "us_index": 524,
+   "original_english_sha256": "c5cbc311a839b9e412caea299405928347079bd0cc8c9028a02d2b753cc5e126",
+   "japanese": "エルガレル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/525",
+   "us_index": 525,
+   "original_english_sha256": "263949bc8881967f532ad17788559c5cf081d55f6683f7cf58f0402dd21879ea",
+   "japanese": "オアネス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/526",
+   "us_index": 526,
+   "original_english_sha256": "7ba9944c046a1e7e86616af0000b560cc76b1020895d8e13f81b7deff238de88",
+   "japanese": "オキュルス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/527",
+   "us_index": 527,
+   "original_english_sha256": "2a82a26a3377d870d64805997b0ff697a30c38509cb4089db78d1655bd94c227",
+   "japanese": "オミテク",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/528",
+   "us_index": 528,
+   "original_english_sha256": "720d86a7f9b60941e11fe1e268db2f801c62e2642662c17fc37e278f2db9a7e2",
+   "japanese": "オロ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/529",
+   "us_index": 529,
+   "original_english_sha256": "ba99dc66c31b91d6d3dc5cb93085b64ac88375639c6942c9e025fdbf8bb6a324",
+   "japanese": "オロルン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/530",
+   "us_index": 530,
+   "original_english_sha256": "fef7ea78ac2b952e932b085edb7bc89b1194a5030d102028fb9221ed07b4e559",
+   "japanese": "ガウダ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/531",
+   "us_index": 531,
+   "original_english_sha256": "a2b872e57c9a7514a3b73b055d438df72754bff5e22e0fbc13af761910be5552",
+   "japanese": "カイキリス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/532",
+   "us_index": 532,
+   "original_english_sha256": "4f5f4e766fc5f679561988e197d7521666a10004010de88e5e92290fa9e09d50",
+   "japanese": "カデシュ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/533",
+   "us_index": 533,
+   "original_english_sha256": "cb392292cf170a284e27beeaee359f12e522f5cfc77843699f3e4354cc7a28ec",
+   "japanese": "ガネーシャ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/534",
+   "us_index": 534,
+   "original_english_sha256": "8f3c1252ada54b91c8716cd24806aa4cea8834aa0505865ef2e3b26f9c58ebbc",
+   "japanese": "カフラ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/535",
+   "us_index": 535,
+   "original_english_sha256": "67572cd5160718184e41d3730d35a7c93a7f8d43669676db84123e0e65cd8093",
+   "japanese": "カムソツ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/536",
+   "us_index": 536,
+   "original_english_sha256": "417d12a8875db5712f2d1cbb1eace1b2f4fcf5437061ff222a14bea6ec4b3a39",
+   "japanese": "カモセ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/537",
+   "us_index": 537,
+   "original_english_sha256": "6b5d8b5dc6803fc0a89f06c9e9464cab77a6a76d1431ed12cd72df97c2aef221",
+   "japanese": "カルス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/538",
+   "us_index": 538,
+   "original_english_sha256": "bffbb63c68d80973233ea9f4b2e8420ffc1b6a6e52482389c95e82becdb577d5",
+   "japanese": "カンタゼン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/539",
+   "us_index": 539,
+   "original_english_sha256": "f3d10301838c8ea8cfa86b3465b7de9c2d3af00551f0941a18294cbd16d3a29f",
+   "japanese": "キウン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/540",
+   "us_index": 540,
+   "original_english_sha256": "194b922cb8a313f07f4835ee5e88d5d4b430cc8e666e375b138e738b62a09946",
+   "japanese": "ギヴィル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/541",
+   "us_index": 541,
+   "original_english_sha256": "0fadeb6f764140899ba9c5087842320a7bfbbce7c34f57219c43152376747519",
+   "japanese": "キメレス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/542",
+   "us_index": 542,
+   "original_english_sha256": "41112f61a684f8260b736e6e7ab4dadb48a6dd66b788d5090ba667bc80d0073f",
+   "japanese": "キントス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/543",
+   "us_index": 543,
+   "original_english_sha256": "3628cc8ac2d0b5e51babead33403b9760a1c20379718ff6d6f74a7c4df92af7c",
+   "japanese": "クシュジル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/544",
+   "us_index": 544,
+   "original_english_sha256": "c956e8b9b5e05e636252a95bbcfc630ab1f61dc8779ee417acc166fc3de2832b",
+   "japanese": "クトレド",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/545",
+   "us_index": 545,
+   "original_english_sha256": "515de65fd76c8d14fb92faeea0a99ccafe6b7c58f29542d04077f6e663161174",
+   "japanese": "クドス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/546",
+   "us_index": 546,
+   "original_english_sha256": "12056d39f1adfb1699d445f324e39d5ab97769d786c038e722acc613a5a032d7",
+   "japanese": "グナイス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/547",
+   "us_index": 547,
+   "original_english_sha256": "596880d6df75ac32f43b369a42f244dc3cb139308d66602cd98c94921865949d",
+   "japanese": "クベラ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/548",
+   "us_index": 548,
+   "original_english_sha256": "b21ca60736af3d1f9cb213a0443e6ca5041f25631ecd3f85120abd4eec3f52a4",
+   "japanese": "クムルル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/549",
+   "us_index": 549,
+   "original_english_sha256": "835922d8f4e75fb9df32f24b734514596248972d49c20f61a599248a464f6401",
+   "japanese": "グルッサ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/550",
+   "us_index": 550,
+   "original_english_sha256": "a0cce9677bf6052895eac48ce801c07cb6e7bee2e4799f155b45059c1b124b36",
+   "japanese": "グルーデ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/551",
+   "us_index": 551,
+   "original_english_sha256": "e45a6cf36b86d59419fd93d3c5300f02978962b730e1490e9874278ba07d1550",
+   "japanese": "クンウォルフ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/552",
+   "us_index": 552,
+   "original_english_sha256": "476442bf1332386e209a5744ffb3ce8735124897de39d268020167cceb0027bf",
+   "japanese": "ゲオギオス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/553",
+   "us_index": 553,
+   "original_english_sha256": "e83f532978617ecd94e9ebbd4f887b9fec7d02445db12e9b0c29a120340b7163",
+   "japanese": "ケモシュ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/554",
+   "us_index": 554,
+   "original_english_sha256": "67396d4e2b01d14254bdf30cc92f0ecdd2554b8b3a9c8743aede96e6afeb83b7",
+   "japanese": "ケルノス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/555",
+   "us_index": 555,
+   "original_english_sha256": "285d7cdec797de16a8d38fd27323b7baf27df097cbdd992c0b0b597a40593f4c",
+   "japanese": "コヤシャルク",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/556",
+   "us_index": 556,
+   "original_english_sha256": "f923b6cbd04868134417ea36fa6bbcd4fc5947701e0b3ef9ca5debdcf1def7c2",
+   "japanese": "コリガン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/557",
+   "us_index": 557,
+   "original_english_sha256": "df8cd285f31aed67deb7cfa37bada34dea3694d19b24a4441b393ffeca723a7e",
+   "japanese": "コルクホルム",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/558",
+   "us_index": 558,
+   "original_english_sha256": "8c3604cf4e6532456275ff4ebf9d0af5faa16368ea39a292b93bfab2515e693b",
+   "japanese": "ゴルディアヌス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/559",
+   "us_index": 559,
+   "original_english_sha256": "705b19727ff680f7df89f03cbef9ca9c878a41124e1ec3f4994cb57dd8277adc",
+   "japanese": "コンツ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/560",
+   "us_index": 560,
+   "original_english_sha256": "9fcf9894b964794b8c7989e788bf264ec373127ad63b1a7cd3793ec9e27958a1",
+   "japanese": "サタラン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/561",
+   "us_index": 561,
+   "original_english_sha256": "2bb28000277ad840d124998af93cdb102ea4e8ef40c7161dd90e730a87f4458a",
+   "japanese": "サダヌ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/562",
+   "us_index": 562,
+   "original_english_sha256": "986163d7034ed3f47be81096fc75bd177eebf9bfb0db4116d21979ea1dfbcf51",
+   "japanese": "ザナハルティ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/563",
+   "us_index": 563,
+   "original_english_sha256": "0c1b3b9a6046e3cd5c80e7eeb3a6d3ef9b9a95d73d9f280d33614b69d21c09f0",
+   "japanese": "ジェダフレル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/564",
+   "us_index": 564,
+   "original_english_sha256": "835370fea4428bbb0e13f6cf4632417008ca976d1357f3ad3c7cc2ada6acade7",
+   "japanese": "シナゲルス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/565",
+   "us_index": 565,
+   "original_english_sha256": "c7469697b5fba5f2d2df3162304fcf0625d9091c19ab00e7da094715f3486fa1",
+   "japanese": "ジバルー",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/566",
+   "us_index": 566,
+   "original_english_sha256": "9d36267a1aa4c1e4b4f7c4ddf6bb76c4caf4d3a145240f52672265fa5f525503",
+   "japanese": "シャプール",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/567",
+   "us_index": 567,
+   "original_english_sha256": "9be71a9c0b4168989b1a0b2665eaed5e393238da372c9c7c239afb1163a80a1b",
+   "japanese": "ジャノワール",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/568",
+   "us_index": 568,
+   "original_english_sha256": "ac45519154ba3dee11b7a8320efa8d540331ccf1b69382f1b6f7159827ac729c",
+   "japanese": "シャフリアン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/569",
+   "us_index": 569,
+   "original_english_sha256": "14d7f621f8816891f66812424a333296573d90bf75c915bef1fa73215ce4198e",
+   "japanese": "ジャマスブ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/570",
+   "us_index": 570,
+   "original_english_sha256": "fc568fb2a3b9e06ab1837a046c168afa5b92c544da0db0ad02dd044ff834ca3e",
+   "japanese": "ジャンジャコ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/571",
+   "us_index": 571,
+   "original_english_sha256": "5abe2c40fc88f5adbd78d953be9ee287c7c81eb6b989c63a799bfa908ac2671e",
+   "japanese": "ジュナイド",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/572",
+   "us_index": 572,
+   "original_english_sha256": "aafd298bfbee25728ece7ae9866f3118e860529dd68cfaacd28821f9bed46cf0",
+   "japanese": "シュブランシュ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/573",
+   "us_index": 573,
+   "original_english_sha256": "22cfaefd7c9eae9a968be31e75a00e5c387ee3a0ebd5d116fadbb4cf3d9c7a1a",
+   "japanese": "シュマキル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/574",
+   "us_index": 574,
+   "original_english_sha256": "37019ddbd29707983e6bdd69e8e5796d3bf3f8b5e74c0e8ebf863385a63ff26c",
+   "japanese": "ジュルラト",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/575",
+   "us_index": 575,
+   "original_english_sha256": "c505d92108e6bc961023b10c6600c90c6391cc4a4898576545e532a6663cd934",
+   "japanese": "シングフェルス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/576",
+   "us_index": 576,
+   "original_english_sha256": "01422adacb0922c62488e40f4f36765881247acfc515a38d1b722e714b39c760",
+   "japanese": "スネヴィル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/577",
+   "us_index": 577,
+   "original_english_sha256": "4ee7488b93998d93d65cc8b8ead6ed989bc49441b79d734f8a728ec28b2d4fe4",
+   "japanese": "スメルディス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/578",
+   "us_index": 578,
+   "original_english_sha256": "61ecfb058d1c15e209ec256fd9921bfe6298ff1706fbbd9306046c18d53ffe6b",
+   "japanese": "セウェルス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/579",
+   "us_index": 579,
+   "original_english_sha256": "4c7e86f7da5c685470f1fd19009a8f97129cd1c7069ff7b838eea62edbf20e76",
+   "japanese": "セウリン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/580",
+   "us_index": 580,
+   "original_english_sha256": "911161cc147d391e8ae32cf3a6cf322be729a6f81e1a46327ecca6c620f0cd79",
+   "japanese": "セルレド",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/581",
+   "us_index": 581,
+   "original_english_sha256": "b7b924d9c79bef5313220d12e35b4f915e3c9425a69b85c1cd0c1ba322042bb1",
+   "japanese": "セクメト",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/582",
+   "us_index": 582,
+   "original_english_sha256": "21cead57a041cffc85952d892bca96cdb35c833fbb9cc04301526cccc79822ef",
+   "japanese": "スコンドト",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/583",
+   "us_index": 583,
+   "original_english_sha256": "280947c283c261a244d13fd88fd8892fc4752016cd9ea67a4f07ca3fd21f7ebb",
+   "japanese": "セクブフ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/584",
+   "us_index": 584,
+   "original_english_sha256": "781b8f6558e8883585296a6e1a27dee4d5f5d465e9255262702d75228bea6df1",
+   "japanese": "スマグル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/585",
+   "us_index": 585,
+   "original_english_sha256": "a4227517b7e05ab7ff03e74949697e54b1cc07cd81bb8705272c6fe39e18fd04",
+   "japanese": "セミラム",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/586",
+   "us_index": 586,
+   "original_english_sha256": "f830b0dd61dcd118bde4f83084f6411c52265e9c88ed19fbf91b10070c3331c6",
+   "japanese": "センウルフ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/587",
+   "us_index": 587,
+   "original_english_sha256": "9d75c0b83e3449c50a4dde63a7098a414c03c12312fe84736f774b2f16095724",
+   "japanese": "ソアエミス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/588",
+   "us_index": 588,
+   "original_english_sha256": "c2eff3a9a7565effc0da059e3528e2517864beb215e38645f3491337f3e1b74e",
+   "japanese": "ゾリヤ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/589",
+   "us_index": 589,
+   "original_english_sha256": "5d3378f7ce0a0e3047bd6d2528a0f655c3014f22ddbd460b2da2336740fa7596",
+   "japanese": "ゾギダヌス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/590",
+   "us_index": 590,
+   "original_english_sha256": "42820dd187dc1391b3bc7ebdf82d9524b011f81a03f13cc41ab6b73bbf0d79b7",
+   "japanese": "タウスレト",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/591",
+   "us_index": 591,
+   "original_english_sha256": "2b8a674716b49d7426bad68ce01b4bec3167fc63fe713874b808d9f363944ac0",
+   "japanese": "タフマシブ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/592",
+   "us_index": 592,
+   "original_english_sha256": "9279649c364f24d689a4ae65bfbdd89545f761c2d2f2352a41a0e57e1ec7a98c",
+   "japanese": "タミエル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/593",
+   "us_index": 593,
+   "original_english_sha256": "00edbf5dc7c49d048099571ff07f958ebeceb25983a1488e4a6dfb2281c97159",
+   "japanese": "ダンムナ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/594",
+   "us_index": 594,
+   "original_english_sha256": "aaa4dc6653ed2370d321f38f1d8ab34f9425510426646f782378c50db3fa428c",
+   "japanese": "デムキナ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/595",
+   "us_index": 595,
+   "original_english_sha256": "a8a684527d15280ade84e6ca7d346b02357d6bcf5b393e719bb7d2f3b254e8ea",
+   "japanese": "タムス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/596",
+   "us_index": 596,
+   "original_english_sha256": "816c7ce6ab7d4bf76eccf54a2a9829059735cede86712242ce1ad296af44a44f",
+   "japanese": "タラニス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/597",
+   "us_index": 597,
+   "original_english_sha256": "6ef2f30b294f7877081b0aaae81dadd6e4c75e5b12b1aa697d6c304702145335",
+   "japanese": "タンガロル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/598",
+   "us_index": 598,
+   "original_english_sha256": "d703db2628e1607d4ff6be4deaf7a6bc98ea636451c8fe5da343759fd1f406ab",
+   "japanese": "ダンドリーン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/599",
+   "us_index": 599,
+   "original_english_sha256": "4f0d1cf0b4f5dffa68e01ed006b13a299dd7b1ad2996b4a21ce5f827e04d5cff",
+   "japanese": "タンムス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/600",
+   "us_index": 600,
+   "original_english_sha256": "7952a77ce63f5bb076b37c5d7110e175307210384d7725b0ff15776d6238dfd9",
+   "japanese": "チマルマ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/601",
+   "us_index": 601,
+   "original_english_sha256": "c62e60333b696d3a8d8baa38caff4000c257d65dc032499015e31ca0f9181b4b",
+   "japanese": "チェムフェイ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/602",
+   "us_index": 602,
+   "original_english_sha256": "448a7ba7c6118c69959a52a0d3109101eda4f8b7119a3ace554dfea98ccb8d8d",
+   "japanese": "チャンティコ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/603",
+   "us_index": 603,
+   "original_english_sha256": "037b45099d32e7f870337243eab6dd0862438f7993d4e3ad0b012d080c6c6bfd",
+   "japanese": "チャクレラ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/604",
+   "us_index": 604,
+   "original_english_sha256": "64571a1915eb3a42584ff40b5c58e2dcb2314fab785680da5464b387160f4265",
+   "japanese": "タリアス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/605",
+   "us_index": 605,
+   "original_english_sha256": "cc5d47420f8201367e5969482539d771d524da8de44f4539c578e9c6829318b3",
+   "japanese": "ティトス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/606",
+   "us_index": 606,
+   "original_english_sha256": "35258d9c6bb4780c84cbb8ad56bd947820caaa2f36e30d7eb19c633f9f1f18b7",
+   "japanese": "ティリダテス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/607",
+   "us_index": 607,
+   "original_english_sha256": "631d9f299f5fc0409dc5e9b4751e64a4bd05d11445616f808d8e799557dfe47e",
+   "japanese": "ティエロ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/608",
+   "us_index": 608,
+   "original_english_sha256": "ddd2977d286fde5c22c1f6d36330e81fff3918378761f4600b1075bfed9a5f76",
+   "japanese": "デウムス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/609",
+   "us_index": 609,
+   "original_english_sha256": "48cc154b119b49edd29d69e858880b1f888c3c2f559b4b3fcd7b8ff445489680",
+   "japanese": "テショナ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/610",
+   "us_index": 610,
+   "original_english_sha256": "dbcd360682d230b56edcc00c4cc190f67471b37ac0f4dfeb3e3a6c81bc3decac",
+   "japanese": "デメンシュ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/611",
+   "us_index": 611,
+   "original_english_sha256": "06488342b1d3f65b3494070aad1d2fa9bace05a7ca788fe5c1e5cc688ecd8e3a",
+   "japanese": "ドワルティ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/612",
+   "us_index": 612,
+   "original_english_sha256": "3a1a47ae03de8328c86e03882bffb40eb669a721bbacc0544e65b7a894fff408",
+   "japanese": "ドウェゴル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/613",
+   "us_index": 613,
+   "original_english_sha256": "7e8f4450e4f809d07bda92588ddd335886f8f5a04b0e1c8c6abe23a0200f226a",
+   "japanese": "トサルク",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/614",
+   "us_index": 614,
+   "original_english_sha256": "dbf0f6831e9f5d077e9875409c229428221306814810aee2c423ac3db57fdc22",
+   "japanese": "トンティウ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/615",
+   "us_index": 615,
+   "original_english_sha256": "9316c380ff785e40ce66b7cbe04b69dba7b6889f4897651d1904640922e025e2",
+   "japanese": "ドメトラ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/616",
+   "us_index": 616,
+   "original_english_sha256": "f702056cb8deaf5f855438a6a170c227b0446ebe10615e918903141444fb8ccb",
+   "japanese": "トラマン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/617",
+   "us_index": 617,
+   "original_english_sha256": "3b185b263f687b7a97825fc76ce9580a80d12cb06d03019e3822c1c564e98860",
+   "japanese": "トルロク",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/618",
+   "us_index": 618,
+   "original_english_sha256": "f970a3df0a37c69e81a58782ba05eca8c9205d9129af8f314e55fcfad8c7cd65",
+   "japanese": "ドルグク",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/619",
+   "us_index": 619,
+   "original_english_sha256": "800b42fc092d81394da55115add5e4cbc7641975a9c896602602f45cb1a6bb64",
+   "japanese": "トレゾンド",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/620",
+   "us_index": 620,
+   "original_english_sha256": "12148b7e7350d47ae3efa5169222c4ebe8cb8911d696874ee437afcffe46ad79",
+   "japanese": "ナギータ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/621",
+   "us_index": 621,
+   "original_english_sha256": "0e591f7f07906830aa5fef2e8ea65122b3d8b56be5463a234aacfa56ead03d33",
+   "japanese": "ナタリエル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/622",
+   "us_index": 622,
+   "original_english_sha256": "7766e2334e04e8a1653b9dde30dad22e94000095e8261d5a1b9b590ecf5e698e",
+   "japanese": "ナフサ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/623",
+   "us_index": 623,
+   "original_english_sha256": "6cec91f84adf56b53d25713f91d492d97c081a2a05a38a8d1741ce0d9f26a3c2",
+   "japanese": "ナムタル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/624",
+   "us_index": 624,
+   "original_english_sha256": "702c56db9fcf0dd10f3ac789dcd101df69eea328652af2c923f3f45a2153c3da",
+   "japanese": "ナラフ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/625",
+   "us_index": 625,
+   "original_english_sha256": "d2f9caf677e6114ba15c458d288602f8245c713c3aa4d0117071f8ab698cd94f",
+   "japanese": "ネコジム",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/626",
+   "us_index": 626,
+   "original_english_sha256": "fded45f3766c7203afd23a162cd4583002bf5795c94f10e394e7bb21d3913845",
+   "japanese": "ニネリ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/627",
+   "us_index": 627,
+   "original_english_sha256": "0101a7cbda21d98998c1682d12b26ba127cca844e7b21c3e0d6f075be57d589e",
+   "japanese": "ニンギルス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/628",
+   "us_index": 628,
+   "original_english_sha256": "1d57088edd7c31fdbac8f5ebf7217a41d034ffe50a1eb8d69f226a37dcfc4604",
+   "japanese": "ヌリア",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/629",
+   "us_index": 629,
+   "original_english_sha256": "b29a9933bb6d031591a531e5746f8d13c154a29d1b91e6a7081302529af60fa4",
+   "japanese": "ヌディムト",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/630",
+   "us_index": 630,
+   "original_english_sha256": "122ae8a092d4733aed0d496efbf8971366711defe8e870bb2b3831b9a31fcdad",
+   "japanese": "ヌマシュダ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/631",
+   "us_index": 631,
+   "original_english_sha256": "5dbdb3cffc3b6fa911121845db0fd7e538e5665fc1b84bfa29c106ea124a936f",
+   "japanese": "ネストル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/632",
+   "us_index": 632,
+   "original_english_sha256": "60d046eeb64de9cafd5667b4fedfd0797d548c8ad355c8b7653ed74779ceda7f",
+   "japanese": "ネブカ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/633",
+   "us_index": 633,
+   "original_english_sha256": "0e2f88673ec97ff4c09f4e59988ee7132d8062be3418fb143939aea2802744fa",
+   "japanese": "ネルガル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/634",
+   "us_index": 634,
+   "original_english_sha256": "72dbe0e9c0c2a8f3534479deea2d5eb3296821032f4b0368947f564312a73e8c",
+   "japanese": "ノラン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/635",
+   "us_index": 635,
+   "original_english_sha256": "a679a1698bbc7dbdfc9a009fe940e51ae413324c187ba44e52c1669733fdf920",
+   "japanese": "バウル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/636",
+   "us_index": 636,
+   "original_english_sha256": "bb596544db185f4028546894fea74439060b901cd802f319155ab397931cdb32",
+   "japanese": "ハイダル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/637",
+   "us_index": 637,
+   "original_english_sha256": "9a9d3445a369f5ae1b24baf33eeee761c0e6be8fac48ad82167f2ddecc5f4ecb",
+   "japanese": "バシレウス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/638",
+   "us_index": 638,
+   "original_english_sha256": "531dd740daf966f3cb73dc7c7346008de98f6fe26b81db9ef842e328dc45cad1",
+   "japanese": "バタゼス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/639",
+   "us_index": 639,
+   "original_english_sha256": "35071bd3714cbd570c3b4845d63f331ffe175ebc3f5dfcfe4a0073d8b6605059",
+   "japanese": "ハトシェプスト",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/640",
+   "us_index": 640,
+   "original_english_sha256": "7230187268e750bd3d4c589a28cbcf527004fea9a9eeed7852dbed08b73b18b6",
+   "japanese": "ハニシュ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/641",
+   "us_index": 641,
+   "original_english_sha256": "c11145d5c10217db8e0f57524bbb77fb117a879edb1bddd40d6c483ae1eef3e4",
+   "japanese": "バフラム",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/642",
+   "us_index": 642,
+   "original_english_sha256": "7f8c4df02278de641c782ed7b7d845340ba9bad08bfd802e88f3b2118ba25076",
+   "japanese": "バルグルラ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/643",
+   "us_index": 643,
+   "original_english_sha256": "a24350283338ac800cb8b085248623dab73199bae65c384052052866350cfba3",
+   "japanese": "バルミン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/644",
+   "us_index": 644,
+   "original_english_sha256": "a3929f86e12ce8a5e199fd62170b4e956f6227fb482fb08597f21daf07abbe06",
+   "japanese": "プロレ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/645",
+   "us_index": 645,
+   "original_english_sha256": "9dc5f006ec47275357a61c6f04f0ddaa0e38c60925bd2233241b7eda92a1fcda",
+   "japanese": "ヘルプサル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/646",
+   "us_index": 646,
+   "original_english_sha256": "e6678006a509161573404b76320aadcafa084be84b379604662b11ce0d52e5a4",
+   "japanese": "ヘルバティウス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/647",
+   "us_index": 647,
+   "original_english_sha256": "448466a9c8b70f7433f3637976902069d47a4ed7e1d640e8abac83de04395b26",
+   "japanese": "ファフィラ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/648",
+   "us_index": 648,
+   "original_english_sha256": "8f287919870d421e2df83db937263e1b9d7cabb5f35ee095317a1f73e8776203",
+   "japanese": "ファルバゾス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/649",
+   "us_index": 649,
+   "original_english_sha256": "b8af6faf2280b6a6ea8775241218001606b23bc16a8a2f4bcf8f736ea745e474",
+   "japanese": "フェマク",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/650",
+   "us_index": 650,
+   "original_english_sha256": "b4668969dd2d74f52da1f72458238d63a125105de4973c4db975f4a623da77e5",
+   "japanese": "フラウトゥス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/651",
+   "us_index": 651,
+   "original_english_sha256": "d51546e0b85455663540c6ebb3ed5c0ff49e8be17e62991cdaa01f52bdde38eb",
+   "japanese": "フラカン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/652",
+   "us_index": 652,
+   "original_english_sha256": "4074c778a2b04491fa0e4700f2f059631c72e7d57bd4fc2785bd07162ee94300",
+   "japanese": "ブリギルド",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/653",
+   "us_index": 653,
+   "original_english_sha256": "11fee79e869a2b2a9cf8e71414ffacf806fc9810b47bada8483b792581cbcf9f",
+   "japanese": "プリペガ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/654",
+   "us_index": 654,
+   "original_english_sha256": "6b5f2aa7ef012102778cd5c8f8dec4312993f128bbcbca3ed555e2ff9947daa9",
+   "japanese": "フレラ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/655",
+   "us_index": 655,
+   "original_english_sha256": "3340ae93d3acadc4bfad32c67f9498e8350fa94dab19cd70c15d882fcf06546a",
+   "japanese": "プロヴァ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/656",
+   "us_index": 656,
+   "original_english_sha256": "4d454f11cd9d74771f3878d88069e976a21087b3540cda04c211515a3770992e",
+   "japanese": "プロプス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/657",
+   "us_index": 657,
+   "original_english_sha256": "30b3d352a32e5f0a710948063408f9335014a902a8758b9604240156232e14b3",
+   "japanese": "ペトルカ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/658",
+   "us_index": 658,
+   "original_english_sha256": "bbaf7151c40a3244e4a0cfb10df59cab492dad1e81b2a74d68d98388014d1574",
+   "japanese": "プラゲラ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/659",
+   "us_index": 659,
+   "original_english_sha256": "7e87ebaf1cd29b6adfd285eba8f044ac3b64b0534884bc4ae3b613ce327c5366",
+   "japanese": "ヘリシェフ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/660",
+   "us_index": 660,
+   "original_english_sha256": "e11654cc78604ba823f68c8a63836f26f307bdb7f2b687ed5865a813113a12f3",
+   "japanese": "ベルムート",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/661",
+   "us_index": 661,
+   "original_english_sha256": "9e31ed7f7cd321077472809f43db4a56afa73dea6127354d7eaafcedb346c3eb",
+   "japanese": "ホレメフ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/662",
+   "us_index": 662,
+   "original_english_sha256": "e7fe1b7f2982c59ac9d206517a133feb418b311eb686ca9d0b69d7dc515c4af4",
+   "japanese": "ホルクス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/663",
+   "us_index": 663,
+   "original_english_sha256": "d2638dc1bc3060f9917e2c78dfc1c2ce638d3e594aaec677017e138d89133714",
+   "japanese": "ホルメズド",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/664",
+   "us_index": 664,
+   "original_english_sha256": "f042b9b1134d42dabf45396a777009a3e8982e0909d162a2e4e621ac3c658be0",
+   "japanese": "ブロンティク",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/665",
+   "us_index": 665,
+   "original_english_sha256": "a450885fe52a958e34f9b477280590ea6a46ae59cbf21a3f928b87c622978825",
+   "japanese": "マンジャト",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/666",
+   "us_index": 666,
+   "original_english_sha256": "8a3e964efd64428c4fb64080e2035146f20885c814932022491c2f946b0f3260",
+   "japanese": "マレガント",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/667",
+   "us_index": 667,
+   "original_english_sha256": "4864053bb5e766d5a3684154a4e8e344def13f765997d5ff105c2aedab8964ea",
+   "japanese": "マグレニ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/668",
+   "us_index": 668,
+   "original_english_sha256": "30bd13af85dba12904915690aed33ebb27d494163452bf2d5b532f35367bc609",
+   "japanese": "マシネス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/669",
+   "us_index": 669,
+   "original_english_sha256": "d71038b5a9c1b8bac85ba5b6a8d961914dd62bd7b24d5f9e91e19d522a618a58",
+   "japanese": "ベラルブリー",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/670",
+   "us_index": 670,
+   "original_english_sha256": "fc826ccf6e2b40bb0dbffc86d0dd99a3f3c957ede37bc6614ad5b78620131b5f",
+   "japanese": "チャリーニ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/671",
+   "us_index": 671,
+   "original_english_sha256": "ce8d49a02fa355fb8b7fbd6c48504140e6127c354628ba0aa1c0f2b682561c0a",
+   "japanese": "ドリスニル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/672",
+   "us_index": 672,
+   "original_english_sha256": "0d6af232d851543ca767bb2333fbd0606b9dd3b1d60a362b669dff61ba66af43",
+   "japanese": "ファエリル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/673",
+   "us_index": 673,
+   "original_english_sha256": "119aa074239b5a648521dd28c2202b44acb6efc56f10defbafcbec4ed47db70e",
+   "japanese": "イソトリフ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/674",
+   "us_index": 674,
+   "original_english_sha256": "1c973f637e9b5f3f99b7ec8a6162c720bc131e6c3d5b6a59ebcd726d2cc15e90",
+   "japanese": "ヒャラヴァル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/675",
+   "us_index": 675,
+   "original_english_sha256": "100d53089407ab424fbded14908dafc689b749c1f1d127a4d52307a496b49abd",
+   "japanese": "ルーアン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED",
+   "terminology_note": "US repeats \"Luan\" (also index 282). Differentiated as ルーアン, following the JP original precedent that renders the duplicated \"Gilbert\" as ギルバート (55) and ジルベール (99)."
+  },
+  {
+   "us_logical_path": "words:name/676",
+   "us_index": 676,
+   "original_english_sha256": "e8e012684aa57d4951180fc3d0f0e6ca4793c872baabeb922f781ad9c3319312",
+   "japanese": "ムレジール",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/677",
+   "us_index": 677,
+   "original_english_sha256": "cb5d5789e5c911e219780e5ae74372b0f08be7a52605d952a7aa41f318452b08",
+   "japanese": "ファルネ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/678",
+   "us_index": 678,
+   "original_english_sha256": "2f366b54558979c7e610d5ce0cb2338d494f908f66aaee55485e814fb2622de5",
+   "japanese": "ロスタク",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/679",
+   "us_index": 679,
+   "original_english_sha256": "1ff958b0dfb212a5d69795c297a1ed3f1ebafc47432609206072dfadafc9a4b9",
+   "japanese": "テレンナ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/680",
+   "us_index": 680,
+   "original_english_sha256": "82176f9a5c189eff2367e6965289b579bc5cc4a46dafa3adb07d24bff31e0775",
+   "japanese": "ヴリン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/681",
+   "us_index": 681,
+   "original_english_sha256": "2f42e1c4f6abf6ddf1d19f5910d8ed1937e61d1a45ef205af5140f71d9fcf133",
+   "japanese": "ザラン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/682",
+   "us_index": 682,
+   "original_english_sha256": "c7483262628e718a44fc6fcbb1ea6580d611e62d88e9114ee38f543a9c47de29",
+   "japanese": "セルカル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/683",
+   "us_index": 683,
+   "original_english_sha256": "add2c70fd59980d765cbe5c2894958cef98510fddd85935fd503a1e9fb306b58",
+   "japanese": "エルカンティン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/684",
+   "us_index": 684,
+   "original_english_sha256": "d88e146f551578ceacea799335616320cc455559dfeb85f0be0abeac163453e6",
+   "japanese": "グルドス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/685",
+   "us_index": 685,
+   "original_english_sha256": "3c4a86b7616978d8b02799e066430de3b9d171c7baa1b12698f8827feb866856",
+   "japanese": "リルラン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/686",
+   "us_index": 686,
+   "original_english_sha256": "da7399ac19d0d0b5180db2212b7b9aa30434bba8891f4269303f81aedb53e349",
+   "japanese": "タリン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/687",
+   "us_index": 687,
+   "original_english_sha256": "f1e26f70dbd2421e9f203f9ce70761209e10af50ed11550cc19fc9813601e060",
+   "japanese": "ラエレ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/688",
+   "us_index": 688,
+   "original_english_sha256": "8d0ee500add714b0d9e5528d08d557cea29286d00eeb74144ebe565e4deaa743",
+   "japanese": "テブリン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/689",
+   "us_index": 689,
+   "original_english_sha256": "afb9b6581b90a1e8ff82e3eaf81c46f83b605345583322d2f627fef6ea53d0f8",
+   "japanese": "モラグ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/690",
+   "us_index": 690,
+   "original_english_sha256": "558b0ae8d51bd0dfa415614a4c2221a3b6159d9d2641c33932b1d6820d7fec68",
+   "japanese": "ヤラファク",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/691",
+   "us_index": 691,
+   "original_english_sha256": "8073c76b0147c05c95dfe41271dad33c02c1c6f7da8e119167376e2834451d79",
+   "japanese": "ヤスデルグ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/692",
+   "us_index": 692,
+   "original_english_sha256": "eee6d3a2905685e6d5942dd58ed9bade76c2c2b9badc5a02bd1ce5c949cc61e5",
+   "japanese": "ヤルヴォン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/693",
+   "us_index": 693,
+   "original_english_sha256": "a8b5c5d24a9726d95d81ce6be512316678d2d1fb8d27f0f4e359e860920c1762",
+   "japanese": "ヤロスラフ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/694",
+   "us_index": 694,
+   "original_english_sha256": "32e3dc2b831d0bf3a1818e93b9803bcb4f8082750c0f296e5a78660df9a8cbec",
+   "japanese": "ドゥルディナ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/695",
+   "us_index": 695,
+   "original_english_sha256": "0f83b0882875de8c4af288b6db57106362032c1e9f11909e45ec7276d8a774c0",
+   "japanese": "ユグルタ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/696",
+   "us_index": 696,
+   "original_english_sha256": "94e1e170df2e801000bdfaa17ab46633445bf67e43e7d1ece390885f5d832def",
+   "japanese": "ラナガル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/697",
+   "us_index": 697,
+   "original_english_sha256": "cb18cc67941f34f7ee74f3a18f0235af2e855cd3e32a402af09a5b9fdf9833ae",
+   "japanese": "ズラルク",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/698",
+   "us_index": 698,
+   "original_english_sha256": "10d938c71b771be0d5a1896a89a6685cdd6cace241dac0594a8517862d46f2e3",
+   "japanese": "ヨドクス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/699",
+   "us_index": 699,
+   "original_english_sha256": "6d9806ed1240987d738702d23a6bf3f9d9789eea61de4c93329000defe35d478",
+   "japanese": "ヨルカト",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/700",
+   "us_index": 700,
+   "original_english_sha256": "f1e4e0253f724f1146693df2590e642e98b6cc0a1ec64993ab9d31d8ae7502a1",
+   "japanese": "ラヴェンチー",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/701",
+   "us_index": 701,
+   "original_english_sha256": "1bae71c3c25fa0ec9d4eef2e751243ce86a445abdbe33ae857261dcffb7e1ab9",
+   "japanese": "ラキム",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/702",
+   "us_index": 702,
+   "original_english_sha256": "55993ddc1025ee12b82edafa85e83ca71ce9089e16604513d6ffde3cd1346145",
+   "japanese": "ラクササ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/703",
+   "us_index": 703,
+   "original_english_sha256": "7423969e80712aaf5f2483267847934dc205fd1c9c647a6b36c777755f065573",
+   "japanese": "ラムマン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/704",
+   "us_index": 704,
+   "original_english_sha256": "b5a414bd5cbbd574fb4a13ab86155d9aede78e4e789e6ee6f6ebdda5facf1190",
+   "japanese": "ラコネル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/705",
+   "us_index": 705,
+   "original_english_sha256": "572cbaf76204c7b1e1ebc205a6bacffe5e6652fd3f6766c7e087eda50eea1de1",
+   "japanese": "ランギ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/706",
+   "us_index": 706,
+   "original_english_sha256": "ec4dc478543723c0cbb3ff037469fc51d3b45facb7f809d8503dce028e4c197a",
+   "japanese": "リボルス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/707",
+   "us_index": 707,
+   "original_english_sha256": "fad17250085160d5fab0115110ea21e7db247c40285e6c0b21a064bf3ff33988",
+   "japanese": "レオメル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/708",
+   "us_index": 708,
+   "original_english_sha256": "9929c138ffafa33fbcb3b60a691e661dad23c185335d3da14e55664cb557cfa4",
+   "japanese": "リュドマ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/709",
+   "us_index": 709,
+   "original_english_sha256": "aef9240ef4fdabef9efdae4844a07eeb413c264d0cbbf6457d834889a74103ae",
+   "japanese": "フレス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/710",
+   "us_index": 710,
+   "original_english_sha256": "23cef352fa2aee2bad9a4b3d92d7a5d16501074eefdcfe4ab1c14fb531406074",
+   "japanese": "リュボフィ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/711",
+   "us_index": 711,
+   "original_english_sha256": "6357cf6538e80186d120c643407b7cde9efe3bc1bce02ede3761000cc6499102",
+   "japanese": "ルカラン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/712",
+   "us_index": 712,
+   "original_english_sha256": "19f9e523d8a8777a5317c221f1dba7e47df1fd8435c73073e81c38e48859d36e",
+   "japanese": "ルヴェト",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/713",
+   "us_index": 713,
+   "original_english_sha256": "11b213e89dbbaa4d1abeabce987418fe159e5021cf5be5f747899f6c8fa661f8",
+   "japanese": "ルガパンド",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/714",
+   "us_index": 714,
+   "original_english_sha256": "df6d4c436055485b8f6e25a342229d06ebfda41ea4ef84fe333185a28b052b2e",
+   "japanese": "ルティンデ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/715",
+   "us_index": 715,
+   "original_english_sha256": "42ba25fb2d6fd2adfea50a46d29bb740a016f215e71be6d8fe253cafce396191",
+   "japanese": "ルドラ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/716",
+   "us_index": 716,
+   "original_english_sha256": "05004fd681cc43f09aad68cb5b1a810ded4d472330dcd9f85046d345dad00dfa",
+   "japanese": "レイモン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/717",
+   "us_index": 717,
+   "original_english_sha256": "129c71ff96075447b7375857fddb905231c4a25f57621383aa900f5defb00d9b",
+   "japanese": "レシェフ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/718",
+   "us_index": 718,
+   "original_english_sha256": "7013637caf07a802587687d6242d1a7b4c32ab4b8a75a81f6abebbb03402f88c",
+   "japanese": "レナトス",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/719",
+   "us_index": 719,
+   "original_english_sha256": "4d5579fa751a12c5c41cd3773521584f9da30bf9836f6afb44604fa343351c90",
+   "japanese": "レネヌート",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/720",
+   "us_index": 720,
+   "original_english_sha256": "229597a0b87535037b37512d726843087260a0431e2847460d4539b3f9099ff9",
+   "japanese": "ロムエル",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/721",
+   "us_index": 721,
+   "original_english_sha256": "d2920aa3384ea82d9c9c948ce50b8c1ab88afc50d6059b0050523a4356cd84e5",
+   "japanese": "ロア",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/722",
+   "us_index": 722,
+   "original_english_sha256": "a163e8db82f85c7b41e88f03cf776e2d39d6babb1c71a91b0cb3d219dd90efc1",
+   "japanese": "ロクヴィン",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/723",
+   "us_index": 723,
+   "original_english_sha256": "2859d187dae9371200003b3c7226cff5961eb12c15968407edf6a1d16481416b",
+   "japanese": "ロシェフラ",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "words:name/724",
+   "us_index": 724,
+   "original_english_sha256": "3506b7d566905fc4105388a3e6a6bd10e4762ff6e1c6b6179f30ec2e3a359613",
+   "japanese": "ロマルク",
+   "family": "words:name",
+   "context": "exotic_given_names",
+   "status": "TRANSLATED_REVIEWED"
+  }
+ ]
+}

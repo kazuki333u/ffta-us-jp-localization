@@ -1,0 +1,9 @@
+# Runtime dependencies of the public builder.
+#
+# Pillow is required: the localization rebuilds the font sheet from your own
+# JP ROM's glyphs, and that path draws bitmaps.
+Pillow>=9.0
+
+# Optional, not needed to build:
+#   capstone  - used only by local disassembly helpers
+#   cnocr     - used only by the upstream OCR path, which this build never runs

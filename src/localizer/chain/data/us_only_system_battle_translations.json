@@ -1,0 +1,581 @@
+{
+ "_public_note": "Public build manifest. Verbatim retail source strings are stored as SHA-256 digests (fields ending in _sha256); the builder recomputes them from the user's own ROM. Japanese text in this file is written by this project.",
+ "_note": "Editorial decision of record for the US-only system/battle batch. This tracked manifest is the production authority; the ignored run directory build/us_only_system_battle_localization/ is evidence only.",
+ "milestone": "us_only_system_battle_localization",
+ "baseline_production_sha256": "1786C8A35140E4EE437516A9F259C60EA5E6FBE2BD583A854069A1368562FE3F",
+ "count": 49,
+ "translated_count": 47,
+ "no_change_required_count": 2,
+ "lane": "CHR_FULL for every written entry; kanji cannot use the CHR_HALF lane (encode_half_payload emits one byte per value), and every target family has CHR_FULL JP originals",
+ "width_policy": "every written entry is <= the widest single rendered line among the already-localized JP originals of its own family (words:system 192, words:battle 127, words:refer 74, pages:battle 192 pixels, measured with JP font advance metadata). words:ico has no JP counterpart table at all (JP tsize 0), so its bound is the widest US original, 27px (FIRE). words:rumor 106 (the widest already-localized JP original of the family, words:rumor/53).",
+ "kanji_codes": {
+  "全": {
+   "jp_glyph_code": "0x01D0",
+   "attested_at": "s_text/4/18"
+  },
+  "冷": {
+   "jp_glyph_code": "0x0BF2",
+   "attested_at": "fx_text/12/46"
+  },
+  "分": {
+   "jp_glyph_code": "0x0126",
+   "attested_at": "s_text/4/8"
+  },
+  "効": {
+   "jp_glyph_code": "0x04D0",
+   "attested_at": "s_text/8/10"
+  },
+  "化": {
+   "jp_glyph_code": "0x02A0",
+   "attested_at": "s_text/6/20"
+  },
+  "向": {
+   "jp_glyph_code": "0x04D3",
+   "attested_at": "s_text/13/1"
+  },
+  "土": {
+   "jp_glyph_code": "0x08F2",
+   "attested_at": "fx_text/8/11"
+  },
+  "変": {
+   "jp_glyph_code": "0x015E",
+   "attested_at": "s_text/1/3"
+  },
+  "度": {
+   "jp_glyph_code": "0x08F1",
+   "attested_at": "s_text/2/86"
+  },
+  "戻": {
+   "jp_glyph_code": "0x0B4A",
+   "attested_at": "s_text/5/31"
+  },
+  "方": {
+   "jp_glyph_code": "0x013A",
+   "attested_at": "s_text/2/58"
+  },
+  "暗": {
+   "jp_glyph_code": "0x0207",
+   "attested_at": "fx_text/8/44"
+  },
+  "気": {
+   "jp_glyph_code": "0x0384",
+   "attested_at": "s_text/1/21"
+  },
+  "水": {
+   "jp_glyph_code": "0x0702",
+   "attested_at": "s_text/9/2"
+  },
+  "派": {
+   "jp_glyph_code": "0x098F",
+   "attested_at": "fx_text/2/1"
+  },
+  "消": {
+   "jp_glyph_code": "0x0191",
+   "attested_at": "s_text/7/35"
+  },
+  "炎": {
+   "jp_glyph_code": "0x0277",
+   "attested_at": "fx_text/8/64"
+  },
+  "無": {
+   "jp_glyph_code": "0x0174",
+   "attested_at": "s_text/4/19"
+  },
+  "発": {
+   "jp_glyph_code": "0x09CF",
+   "attested_at": "s_text/1/7"
+  },
+  "空": {
+   "jp_glyph_code": "0x0422",
+   "attested_at": "s_text/6/29"
+  },
+  "置": {
+   "jp_glyph_code": "0x0849",
+   "attested_at": "fx_text/8/78"
+  },
+  "聖": {
+   "jp_glyph_code": "0x0732",
+   "attested_at": "s_text/30/1"
+  },
+  "自": {
+   "jp_glyph_code": "0x05D3",
+   "attested_at": "s_text/2/42"
+  },
+  "見": {
+   "jp_glyph_code": "0x0150",
+   "attested_at": "s_text/1/83"
+  },
+  "遣": {
+   "jp_glyph_code": "0x048C",
+   "attested_at": "fx_text/2/1"
+  },
+  "選": {
+   "jp_glyph_code": "0x0777",
+   "attested_at": "s_text/27/2"
+  },
+  "配": {
+   "jp_glyph_code": "0x09A1",
+   "attested_at": "s_text/5/19"
+  },
+  "雷": {
+   "jp_glyph_code": "0x0BA1",
+   "attested_at": "fx_text/17/106"
+  },
+  "風": {
+   "jp_glyph_code": "0x0A65",
+   "attested_at": "s_text/5/26"
+  },
+  "黒": {
+   "jp_glyph_code": "0x051E",
+   "attested_at": "s_text/4/10"
+  }
+ },
+ "controls": {
+  "0x441": "name reference, preserved in pages:battle/51",
+  "0x42": "record terminator, preserved in every pages:battle entry",
+  "0x52": "English word space, dropped (JP text never uses it)"
+ },
+ "entries": [
+  {
+   "family": "words:system",
+   "us_index": 73,
+   "us_logical_path": "words:system/73",
+   "original_english_sha256": "0b8f193fdff1bb114ec7909fac020b4e8f3e5a4d1a8a6f8cc0e0c42484977e7d",
+   "japanese": "クエストクリア",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "クエストクリア attested pages:condi/13,14"
+  },
+  {
+   "family": "words:system",
+   "us_index": 74,
+   "us_logical_path": "words:system/74",
+   "original_english_sha256": "2c2992fc8919dba8002dd728159ac37007a4d4f0f4aa5e5b5f6b928627780b65",
+   "japanese": "派遣したユニットが戻りました。",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "派遣 attested pages:condi/1-3"
+  },
+  {
+   "family": "words:system",
+   "us_index": 75,
+   "us_logical_path": "words:system/75",
+   "original_english_sha256": "315ab696b1fb7e4ea590db758b6e2628eb5b2af45b13ba57820c30cf4b5d2f9b",
+   "japanese": "をマスター!",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "suffix appended after an ability name; マスター attested s_text/8"
+  },
+  {
+   "family": "words:system",
+   "us_index": 76,
+   "us_logical_path": "words:system/76",
+   "original_english_sha256": "e065562340c1a1e8c6328b2f30c0567a221c7781d40a00f4bfc38f68a734d8f3",
+   "japanese": "シンボルを配置してください。",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "シンボル attested fx_text/2/3,16/18; 配置 attested fx_text/8/78"
+  },
+  {
+   "family": "words:system",
+   "us_index": 77,
+   "us_logical_path": "words:system/77",
+   "original_english_sha256": "d12cceb1e329043ace92461b2fe1395cf6fa2119fb9413571acab907110172f4",
+   "japanese": "空きスロットを選んでください。",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "空き attested fx_text/17/147; ...を選んでください。 attested words:system/60,61"
+  },
+  {
+   "family": "words:system",
+   "us_index": 78,
+   "us_logical_path": "words:system/78",
+   "original_english_sha256": "78c22b04b4a133bd4445bca45f71e9d57ed2ace9fed7f8b75293823c2bbf04c5",
+   "japanese": "……さがしています……",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "each ellipsis is the JP glyph; two per side matches the US six dots"
+  },
+  {
+   "family": "words:system",
+   "us_index": 79,
+   "us_logical_path": "words:system/79",
+   "original_english_sha256": "0286249762f7c94349cdc0ba3bb2255baf9a80036e2193ead1d77696f888582f",
+   "japanese": "オート",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "オート attested pages:battle/57,122,149"
+  },
+  {
+   "family": "words:system",
+   "us_index": 80,
+   "us_logical_path": "words:system/80",
+   "original_english_sha256": "b0b9fe24ffa9629125bdc59b122f80d605ab604eb1b74485c2f2ecfde26576ae",
+   "japanese": "マニュアル",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "standard JP loanword; no JP-original occurrence, all-kana, no new glyph"
+  },
+  {
+   "family": "words:system",
+   "us_index": 81,
+   "us_logical_path": "words:system/81",
+   "original_english_sha256": "b0ee315f4ac6af09d05f9e6f23ffb606f3b4fec1ba897bd4315592d2a2979876",
+   "japanese": "発見",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "発見 attested pages:battle/133,187"
+  },
+  {
+   "family": "words:system",
+   "us_index": 82,
+   "us_logical_path": "words:system/82",
+   "original_english_sha256": "bb7208bc9b5d7c04f1236a82a0093a5e33f40423d5ba8d4266f7092c3ba43b62",
+   "japanese": "!",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "US ships the Latin '!' (CHR_HALF 0xEB); this repoints the entry to the JP '!' glyph so the composed line is typographically Japanese"
+  },
+  {
+   "family": "words:system",
+   "us_index": 83,
+   "us_logical_path": "words:system/83",
+   "original_english_sha256": "7e79549278e883f1b048c1ea6fa392923352a4d1ce71fd2e9bed7fa550d75732",
+   "japanese": "がおそわれています!",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "suffix appended after a town name"
+  },
+  {
+   "family": "words:ico",
+   "us_index": 0,
+   "us_logical_path": "words:ico/0",
+   "original_english_sha256": "f27f17e3f0632792bbe214cd86906910e331cfe9fd9d8349d4130431d92ba1aa",
+   "japanese": "炎",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "JP element label, attested as an attribute label in fx_text"
+  },
+  {
+   "family": "words:ico",
+   "us_index": 1,
+   "us_logical_path": "words:ico/1",
+   "original_english_sha256": "0bd259d63e87990a4fa9ee5ea1e0cefbbe91b8f783190f52e6b65a7117ccd0af",
+   "japanese": "風",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "JP element label, attested as an attribute label in fx_text"
+  },
+  {
+   "family": "words:ico",
+   "us_index": 2,
+   "us_logical_path": "words:ico/2",
+   "original_english_sha256": "a63312b05b567dab5c94ef050b906ef999d1e57bdd10034cfd2cfe1efbbc5400",
+   "japanese": "土",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "JP element label, attested as an attribute label in fx_text"
+  },
+  {
+   "family": "words:ico",
+   "us_index": 3,
+   "us_logical_path": "words:ico/3",
+   "original_english_sha256": "033fe6f4aa3a10f7ea9e589131ff03417851e78b733ed3d1dda07088081e2199",
+   "japanese": "水",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "JP element label, attested as an attribute label in fx_text"
+  },
+  {
+   "family": "words:ico",
+   "us_index": 4,
+   "us_logical_path": "words:ico/4",
+   "original_english_sha256": "da6ac2e6065c5c64648f6dffd125d87a8e83be01cfd0160390cada05d5c38c66",
+   "japanese": "冷気",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "JP element label, attested as an attribute label in fx_text"
+  },
+  {
+   "family": "words:ico",
+   "us_index": 5,
+   "us_logical_path": "words:ico/5",
+   "original_english_sha256": "ed6a3bdd92f68a5eb365b3a6a70dc483303e0bf9fa749ecf18455d78e5d4a6d6",
+   "japanese": "雷",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "JP element label, attested as an attribute label in fx_text"
+  },
+  {
+   "family": "words:ico",
+   "us_index": 6,
+   "us_logical_path": "words:ico/6",
+   "original_english_sha256": "cb448cfae5433a9f37aff5954b36487e04650b6e3e1e132880f36249cc115cb4",
+   "japanese": "聖",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "JP element label, attested as an attribute label in fx_text"
+  },
+  {
+   "family": "words:ico",
+   "us_index": 7,
+   "us_logical_path": "words:ico/7",
+   "original_english_sha256": "872396800c41d7d7da63051414b22fdd01a1d12b5f901a77f8fe9b37c23d523a",
+   "japanese": "暗黒",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "JP dark-element label is 暗黒, NOT 闇: the JP attribute label set in fx_text is 炎/風/土/水/冷気/雷/聖/暗黒, and 暗黒 occurs 13 times"
+  },
+  {
+   "family": "words:ico",
+   "us_index": 8,
+   "us_logical_path": "words:ico/8",
+   "original_english": "/",
+   "japanese": null,
+   "status": "NO_CHANGE_REQUIRED",
+   "note": "pure symbol, no natural-language content; already correct for Japanese"
+  },
+  {
+   "family": "words:ico",
+   "us_index": 9,
+   "us_logical_path": "words:ico/9",
+   "original_english": "-△△○○◎",
+   "japanese": null,
+   "status": "NO_CHANGE_REQUIRED",
+   "note": "pure symbol row, no natural-language content; already correct for Japanese"
+  },
+  {
+   "family": "words:battle",
+   "us_index": 176,
+   "us_logical_path": "words:battle/176",
+   "original_english_sha256": "5c38b50fb288461e5e8b3371a211d9cc4194b34ed00d12c9ec487c8e9f154514",
+   "japanese": "アドバンスト·ロウ",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "アドバンスト·ロウ attested s_text/8/47,8/52"
+  },
+  {
+   "family": "words:battle",
+   "us_index": 177,
+   "us_logical_path": "words:battle/177",
+   "original_english_sha256": "18d3597ca7321b870805999b94b4303977f1a29cdfe6eabea08163a478156d73",
+   "japanese": "ジャッジメント",
+   "status": "TRANSLATED_REVIEWED",
+   "note": ""
+  },
+  {
+   "family": "words:battle",
+   "us_index": 178,
+   "us_logical_path": "words:battle/178",
+   "original_english_sha256": "049470e987ca0c1d86808f25d3290ecf256798915c3de72c0118f6ff4ba815e9",
+   "japanese": "ブランクカード",
+   "status": "TRANSLATED_REVIEWED",
+   "note": ""
+  },
+  {
+   "family": "words:battle",
+   "us_index": 534,
+   "us_logical_path": "words:battle/534",
+   "original_english_sha256": "74b4fb6e5aa76f1954d1f6deee4a0d12ba29843f4fa641250c6416558ef45f3a",
+   "japanese": "アベイト",
+   "status": "TRANSLATED_REVIEWED",
+   "note": ""
+  },
+  {
+   "family": "words:battle",
+   "us_index": 535,
+   "us_logical_path": "words:battle/535",
+   "original_english_sha256": "5d22b98038316de1b3b51b7fa11c0d6063fe58cb5f8193cef7ba880fa605ee03",
+   "japanese": "ジャッジソード",
+   "status": "TRANSLATED_REVIEWED",
+   "note": ""
+  },
+  {
+   "family": "words:battle",
+   "us_index": 536,
+   "us_logical_path": "words:battle/536",
+   "original_english_sha256": "56b9b63d2831804be5c23a83d6d2e4e19c3124f546890b0628e839c9806c0e00",
+   "japanese": "バインド",
+   "status": "TRANSLATED_REVIEWED",
+   "note": ""
+  },
+  {
+   "family": "words:battle",
+   "us_index": 537,
+   "us_logical_path": "words:battle/537",
+   "original_english_sha256": "dea0031a8021bf10f16632e0d354e646d3f4a986332251c2e1ac9f16058d15bf",
+   "japanese": "JPギフト",
+   "status": "TRANSLATED_REVIEWED",
+   "note": ""
+  },
+  {
+   "family": "words:battle",
+   "us_index": 538,
+   "us_logical_path": "words:battle/538",
+   "original_english_sha256": "d1f52498696307be45b7f1e35c29929dd55ba0f9dbe4b6bf5ca69a6db5ff98c8",
+   "japanese": "イエロークリップ",
+   "status": "TRANSLATED_REVIEWED",
+   "note": ""
+  },
+  {
+   "family": "words:battle",
+   "us_index": 539,
+   "us_logical_path": "words:battle/539",
+   "original_english_sha256": "5d22b98038316de1b3b51b7fa11c0d6063fe58cb5f8193cef7ba880fa605ee03",
+   "japanese": "ジャッジソード",
+   "status": "TRANSLATED_REVIEWED",
+   "note": ""
+  },
+  {
+   "family": "words:battle",
+   "us_index": 540,
+   "us_logical_path": "words:battle/540",
+   "original_english_sha256": "d5fafd22299b1fb2ad40ec70a6b200ae7f49ae68e7faa274177089d74968c619",
+   "japanese": "イエローカード",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "イエローカード attested pages:battle/34"
+  },
+  {
+   "family": "words:battle",
+   "us_index": 541,
+   "us_logical_path": "words:battle/541",
+   "original_english_sha256": "bfa1c42e9ec7db833662ff62a449e453d455eddb3c3b37091e3eb87c4b84bd19",
+   "japanese": "パライストラ",
+   "status": "TRANSLATED_REVIEWED",
+   "note": ""
+  },
+  {
+   "family": "words:battle",
+   "us_index": 542,
+   "us_logical_path": "words:battle/542",
+   "original_english_sha256": "049470e987ca0c1d86808f25d3290ecf256798915c3de72c0118f6ff4ba815e9",
+   "japanese": "ブランクカード",
+   "status": "TRANSLATED_REVIEWED",
+   "note": ""
+  },
+  {
+   "family": "pages:battle",
+   "us_index": 51,
+   "us_logical_path": "pages:battle/51",
+   "original_english_sha256": "64cd7b682f3af2b55bb04dc0adbd629617ab24d43964f350c3375c3610f1960c",
+   "japanese": "[441]はJPをゲット![42]",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "JPをゲット attested pages:battle/9; CTR_FUNC 0x441 name reference preserved"
+  },
+  {
+   "family": "pages:battle",
+   "us_index": 52,
+   "us_logical_path": "pages:battle/52",
+   "original_english_sha256": "3bbcc56169569656d5b7c78793e8989aad12c4f29f90b309ea53ad41047e54c0",
+   "japanese": "イエローカードをうち消し![42]",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "うち消し attested pages:battle/60,63"
+  },
+  {
+   "family": "pages:battle",
+   "us_index": 53,
+   "us_logical_path": "pages:battle/53",
+   "original_english_sha256": "71393790c4e8b837376fa8e59e64fa6508e191e6a035682d476c7fb93a2cb933",
+   "japanese": "イエローカード![42]",
+   "status": "TRANSLATED_REVIEWED",
+   "note": ""
+  },
+  {
+   "family": "pages:battle",
+   "us_index": 393,
+   "us_logical_path": "pages:battle/393",
+   "original_english_sha256": "a98f3bffd0c906277b7a63e852d0c14a4964d86b0e5b13282201c4cf04ac6c01",
+   "japanese": "ジャッジのターンを1度キャンセル![42]",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "1度 attested pages:battle/109; キャンセル attested pages:condi/8; だけ dropped so the line fits the 192px leaf maximum"
+  },
+  {
+   "family": "pages:battle",
+   "us_index": 394,
+   "us_logical_path": "pages:battle/394",
+   "original_english_sha256": "2e98f07cd2ab72a542369687a5ecf30b1077132b638789ebf2f0298158344bde",
+   "japanese": "JPをうばいとる+ダメージ![42]",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "JPをうばいとる attested pages:battle/63; ordered as <effect>+ダメージ! to match the 20 sibling entries with that shape (no JP sibling starts with ダメージ+)"
+  },
+  {
+   "family": "pages:battle",
+   "us_index": 395,
+   "us_logical_path": "pages:battle/395",
+   "original_english_sha256": "54de26b8ef23073a5392f646d4e440df5b12d3692d3f3e8fa4e95bad4fd8079d",
+   "japanese": "「ドンムブ」+「ドンアク」![42]",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "ドンムブ pages:battle/223, ドンアク pages:battle/224; the subject-less two-status shape is attested at pages:battle/331"
+  },
+  {
+   "family": "pages:battle",
+   "us_index": 396,
+   "us_logical_path": "pages:battle/396",
+   "original_english_sha256": "b307c66e947a791f4f12a32feb18dd0247abb2fb389ffc3128b439f218acdf2d",
+   "japanese": "自分のJPをあたえる![42]",
+   "status": "TRANSLATED_REVIEWED",
+   "note": ""
+  },
+  {
+   "family": "pages:battle",
+   "us_index": 397,
+   "us_logical_path": "pages:battle/397",
+   "original_english_sha256": "47c423f1941f8acbaccb8e5b351cceefeb7464e027d0b5013234e849ea953998",
+   "japanese": "イエローカードを無効化![42]",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "無効化 attested s_text/8/10,8/55"
+  },
+  {
+   "family": "pages:battle",
+   "us_index": 398,
+   "us_logical_path": "pages:battle/398",
+   "original_english_sha256": "fdc0595d3652eae80654814a2c2dffe97784ad3f7250c30794ccc3fc6b8cf735",
+   "japanese": "ターゲットにイエローカード![42]",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "…にイエローカード! attested pages:battle/34"
+  },
+  {
+   "family": "pages:battle",
+   "us_index": 399,
+   "us_logical_path": "pages:battle/399",
+   "original_english_sha256": "9925342e88fe5edcfe5f39b5084b5a287c8b3d33b5d074db32e7e04ada412210",
+   "japanese": "全方向にダメージ![42]",
+   "status": "TRANSLATED_REVIEWED",
+   "note": ""
+  },
+  {
+   "family": "pages:battle",
+   "us_index": 400,
+   "us_logical_path": "pages:battle/400",
+   "original_english_sha256": "cc06313235390cfd520f12fdcc5f97227cddc87c30ec25c3dc73889b415d0918",
+   "japanese": "ワールドロウをランダムに変化![42]",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "identical to the JP wording of pages:battle/379 (Change the law at random!)"
+  },
+  {
+   "family": "words:refer",
+   "us_index": 104,
+   "us_logical_path": "words:refer/104",
+   "original_english_sha256": "5844a5ece06b82ba87f9a183e85e4244fdf8d33bb8c24eda29894855dcf4b9b0",
+   "japanese": "ドレッド",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "Dredd; ドレッド matches ドレッドロード at words:refer/82"
+  },
+  {
+   "family": "words:refer",
+   "us_index": 105,
+   "us_logical_path": "words:refer/105",
+   "original_english_sha256": "4c154fd634af7577cadac425feeed1f54c2a37f7f15ee6b06c3e43ae9642ef7a",
+   "japanese": "ラインホルド",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "Judge Reinhold; the established JP rendering of that name is ラインホルド"
+  },
+  {
+   "family": "words:refer",
+   "us_index": 106,
+   "us_logical_path": "words:refer/106",
+   "original_english_sha256": "9dc415325a95c6e2558bf141a8772a175de49b08f0a027c8720ad942d6ec63f7",
+   "japanese": "マイク",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "Mike"
+  },
+  {
+   "family": "words:rumor",
+   "us_index": 59,
+   "us_logical_path": "words:rumor/59",
+   "original_english_sha256": "d189865a4133af2f698e82d29b7d5627997ef66f6040a2ac2bc79cd9ed3015ab",
+   "japanese": "ジャッジの黒いうわさ",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "US-only rumour title inserted ahead of the tutorial block; under the corrected words:rumor anchors it has no JP original. Same headline decision as its own body fx_text/8/58 ([{5117}に黒いうわさ?]); the list column writes ジャッジ literally, as the JP rumour titles do (JP words:rumor/23 ジャッジの独立). 103px of the 106px family bound."
+  },
+  {
+   "family": "words:rumor",
+   "us_index": 60,
+   "us_logical_path": "words:rumor/60",
+   "original_english_sha256": "c68bd1b288149bd495668be86512e73950c0cd386389540c43e18d68cf8e0a83",
+   "japanese": "ブランクカード",
+   "status": "TRANSLATED_REVIEWED",
+   "note": "US-only rumour title; no JP original under the corrected anchors. ブランクカード is the tracked terminology of the judge-corruption arc (data/us_only_s_text_judge_ezel.json) and the headline of its own body fx_text/8/59."
+  }
+ ]
+}

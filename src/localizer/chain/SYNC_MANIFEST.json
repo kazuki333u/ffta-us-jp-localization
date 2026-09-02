@@ -1,0 +1,354 @@
+{
+ "chain_modules": [
+  {
+   "module": "ffta_charset.py",
+   "origin": "upstream",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_font.py",
+   "origin": "upstream",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_font_generator.py",
+   "origin": "upstream",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_gfx_codec.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_action_window.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_action_window_min.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_banner_maps.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_battle_menu_geometry.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_battle_system_geometry.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_bulk_import_poc.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_chr_half_a5.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_chr_half_remaining.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_chr_half_universal_repoint.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_chr_half_ya_final.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_coverage_audit.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_fx_text_recovered.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_gameplay_gfx.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_item_job_strip.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_job_badges.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_menu_labels.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_mission_panel_leaf.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_mission_panel_templates.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_month_names.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_name_entry.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_page_leaf_repoint.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_pages_quest_recovered.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_s_text_leaf_repoint.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_s_text_recovered.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_small_matcher_recovery.py",
+   "origin": "project",
+   "rewrites": [
+    "layout comment corrected"
+   ]
+  },
+  {
+   "module": "ffta_jp_stale_literals.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_system_menu_geometry.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_ui_graphics.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_us_added_missions.py",
+   "origin": "project",
+   "rewrites": [
+    "source-gate -> digest",
+    "source-gate -> digest",
+    "evidence echo x3 -> digest",
+    "import ffta_us_source"
+   ]
+  },
+  {
+   "module": "ffta_jp_us_only_fx_text.py",
+   "origin": "project",
+   "rewrites": [
+    "source-gate -> digest",
+    "evidence echo x1 -> digest",
+    "import ffta_us_source"
+   ]
+  },
+  {
+   "module": "ffta_jp_us_only_s_text.py",
+   "origin": "project",
+   "rewrites": [
+    "source-gate -> digest",
+    "evidence echo x1 -> digest",
+    "import ffta_us_source"
+   ]
+  },
+  {
+   "module": "ffta_jp_us_only_s_text_final.py",
+   "origin": "project",
+   "rewrites": [
+    "source-gate -> digest",
+    "evidence echo x1 -> digest",
+    "import ffta_us_source"
+   ]
+  },
+  {
+   "module": "ffta_jp_us_only_s_text_judge_ezel.py",
+   "origin": "project",
+   "rewrites": [
+    "source-gate -> digest",
+    "evidence echo x1 -> digest",
+    "import ffta_us_source"
+   ]
+  },
+  {
+   "module": "ffta_jp_us_only_s_text_top61.py",
+   "origin": "project",
+   "rewrites": [
+    "source-gate -> digest",
+    "evidence echo x1 -> digest",
+    "import ffta_us_source"
+   ]
+  },
+  {
+   "module": "ffta_jp_us_only_system_battle.py",
+   "origin": "project",
+   "rewrites": [
+    "source-gate -> digest",
+    "evidence echo x2 -> digest",
+    "import ffta_us_source"
+   ]
+  },
+  {
+   "module": "ffta_jp_us_only_words_name.py",
+   "origin": "project",
+   "rewrites": [
+    "source-gate -> digest",
+    "evidence echo x1 -> digest",
+    "import ffta_us_source"
+   ]
+  },
+  {
+   "module": "ffta_jp_visual_defects.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_words_direct_repoint.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_jp_worldmap_labels.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_modifier.py",
+   "origin": "upstream",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_name_entry_kbd.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_ocr.py",
+   "origin": "upstream",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_ocr_ambi.py",
+   "origin": "upstream",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_parser.py",
+   "origin": "upstream",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_placeholder_transfer_audit.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_qa_glyphs.py",
+   "origin": "project",
+   "rewrites": []
+  },
+  {
+   "module": "ffta_sect.py",
+   "origin": "upstream",
+   "rewrites": []
+  }
+ ],
+ "shared_data": [
+  "charset_us.json",
+  "charset_cn.json"
+ ],
+ "manifests": [
+  {
+   "file": "jp_name_entry_keyboard.json",
+   "digested_fields": 0
+  },
+  {
+   "file": "s_text_recovered_pairs.json",
+   "digested_fields": 0
+  },
+  {
+   "file": "us_added_missions_translations.json",
+   "digested_fields": 42
+  },
+  {
+   "file": "us_only_fx_text_translations.json",
+   "digested_fields": 164
+  },
+  {
+   "file": "us_only_s_text_final_remainder.json",
+   "digested_fields": 166
+  },
+  {
+   "file": "us_only_s_text_judge_ezel.json",
+   "digested_fields": 224
+  },
+  {
+   "file": "us_only_s_text_special_scenes.json",
+   "digested_fields": 187
+  },
+  {
+   "file": "us_only_s_text_top61_judge_missions.json",
+   "digested_fields": 144
+  },
+  {
+   "file": "us_only_system_battle_translations.json",
+   "digested_fields": 47
+  },
+  {
+   "file": "us_only_words_name_translations.json",
+   "digested_fields": 597
+  }
+ ],
+ "upstream_modules": [
+  "ffta_charset.py",
+  "ffta_font.py",
+  "ffta_font_generator.py",
+  "ffta_modifier.py",
+  "ffta_ocr.py",
+  "ffta_ocr_ambi.py",
+  "ffta_parser.py",
+  "ffta_sect.py"
+ ],
+ "redacted_fields": 1571,
+ "skipped_outputs": [
+  "us_added_placeholder_transfer.json"
+ ]
+}

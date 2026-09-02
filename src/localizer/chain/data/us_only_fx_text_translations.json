@@ -1,0 +1,2151 @@
+{
+ "_public_note": "Public build manifest. Verbatim retail source strings are stored as SHA-256 digests (fields ending in _sha256); the builder recomputes them from the user's own ROM. Japanese text in this file is written by this project.",
+ "_note": "Editorial decision of record for the third class 5 batch: the 164 US-only fx_text entries that have no JP original anywhere. Consumed and revalidated on every build by ffta_jp_us_only_fx_text.py. Markup: {HEX} is a CTR_FUNC operand, {EOS} is a CTR_EOS separator, every other character is text. [ and ] are literal characters, which is why controls use braces.",
+ "milestone": "US-only fx_text editorial localization",
+ "baseline_production_sha256": "8BCD0FB7CB3D5AA9A0168C1EDC5EC88EABD2FC943F5FFF223EB05E98B715F14C",
+ "count": 164,
+ "translated_count": 164,
+ "no_change_required_count": 0,
+ "lane": "CHR_FULL",
+ "leaves": [
+  1,
+  8,
+  10,
+  11,
+  15,
+  17,
+  18,
+  23
+ ],
+ "terminology": {
+  "judge": "control 0x5117; the JP originals write [5117]ポイント for judge points (fx_text/17/86, /121, /211), so the bonus laws read [5117]ポイントボーナス",
+  "JP (abbreviation)": "written literally as JP, attested in fx_text/16/13 (全JPを消費します)",
+  "dark element": "暗黒, never 闇 — the JP attribute label, attested at fx_text/21/27 (属性:暗黒)",
+  "law / antilaw": "ロウ / アンチロウ, and うち消す for nullifying, per JP fx_text/23",
+  "law text shape": "the JP penalty law of the same content is the layout and wording authority; the bonus variant replaces ペナルティ with [5117]ポイントボーナス",
+  "weapon classes": "杖 / ロッド / メイス / 弓·剛弓·銃 etc., taken from the JP 分類: lines in fx_text/21 and the JP weapon laws in fx_text/23",
+  "named speakers": "[510A] エゼル, [5109] バブス, [5104] リッツ, [510C] シャラ, [5106] シド — identified from JP s_text, and each block keeps that character's register",
+  "placeholder": "ダミー, attested at words:clan/51"
+ },
+ "width_policy": {
+  "rule": "per-leaf bound = the widest single rendered line among that leaf's own JP originals, measured with the JP font advance metadata",
+  "width_reference_leaf": {
+   "10": 1
+  },
+  "width_reference_reason": "fx_text leaf 10 holds only three short JP treasure lines, which do not bound the box: its US-only entries are the lesson-mode duplicates of the leaf 1 system prompts, and the US original at fx_text/10/3 is itself 136px wide, above leaf 10's own JP maximum of 133. Leaf 1's JP originals are the correct reference for that message family.",
+  "lines_per_page": "also bounded by the same leaf's JP maximum lines per page"
+ },
+ "control_policy": {
+  "preserved": "every CTR_FUNC operand of the US original that is not a layout control — name and mission references, the yes/no selector, the CTR_EOS selector separators — reappears in the Japanese, and the trailing close sequence (0x40 / 0x56 / 0x42) is identical",
+  "dropped": "English typesetting only: word space 0x52 and the justification controls 0x1D02 / 0x1D03 / 0x1D04 / 0x1B01, which carry no meaning in Japanese",
+  "relaid_out": "line 0x4D and page 0x4F breaks are re-flowed to Japanese line lengths, following the JP original of the same message"
+ },
+ "kanji_codes": {
+  "一": {
+   "jp_glyph_code": "0x0122",
+   "attested_at": "fx_text/1/31"
+  },
+  "分": {
+   "jp_glyph_code": "0x0126",
+   "attested_at": "fx_text/1/0"
+  },
+  "攻": {
+   "jp_glyph_code": "0x0128",
+   "attested_at": "fx_text/6/12"
+  },
+  "撃": {
+   "jp_glyph_code": "0x0129",
+   "attested_at": "fx_text/6/12"
+  },
+  "士": {
+   "jp_glyph_code": "0x0133",
+   "attested_at": "fx_text/4/117"
+  },
+  "上": {
+   "jp_glyph_code": "0x0135",
+   "attested_at": "fx_text/1/32"
+  },
+  "方": {
+   "jp_glyph_code": "0x013A",
+   "attested_at": "fx_text/4/87"
+  },
+  "心": {
+   "jp_glyph_code": "0x013B",
+   "attested_at": "fx_text/4/120"
+  },
+  "切": {
+   "jp_glyph_code": "0x013C",
+   "attested_at": "fx_text/4/19"
+  },
+  "出": {
+   "jp_glyph_code": "0x013F",
+   "attested_at": "fx_text/1/33"
+  },
+  "以": {
+   "jp_glyph_code": "0x0147",
+   "attested_at": "fx_text/4/2"
+  },
+  "行": {
+   "jp_glyph_code": "0x0149",
+   "attested_at": "fx_text/1/37"
+  },
+  "回": {
+   "jp_glyph_code": "0x014A",
+   "attested_at": "fx_text/4/121"
+  },
+  "見": {
+   "jp_glyph_code": "0x0150",
+   "attested_at": "fx_text/2/3"
+  },
+  "乱": {
+   "jp_glyph_code": "0x0151",
+   "attested_at": "fx_text/6/28"
+  },
+  "言": {
+   "jp_glyph_code": "0x0154",
+   "attested_at": "fx_text/4/180"
+  },
+  "味": {
+   "jp_glyph_code": "0x015A",
+   "attested_at": "fx_text/8/5"
+  },
+  "者": {
+   "jp_glyph_code": "0x015B",
+   "attested_at": "fx_text/4/91"
+  },
+  "時": {
+   "jp_glyph_code": "0x0166",
+   "attested_at": "fx_text/2/12"
+  },
+  "異": {
+   "jp_glyph_code": "0x0170",
+   "attested_at": "fx_text/4/123"
+  },
+  "達": {
+   "jp_glyph_code": "0x0171",
+   "attested_at": "fx_text/8/88"
+  },
+  "戦": {
+   "jp_glyph_code": "0x0175",
+   "attested_at": "fx_text/4/117"
+  },
+  "敵": {
+   "jp_glyph_code": "0x0179",
+   "attested_at": "fx_text/6/15"
+  },
+  "黙": {
+   "jp_glyph_code": "0x017A",
+   "attested_at": "fx_text/8/11"
+  },
+  "騎": {
+   "jp_glyph_code": "0x017E",
+   "attested_at": "fx_text/6/20"
+  },
+  "定": {
+   "jp_glyph_code": "0x0186",
+   "attested_at": "fx_text/1/8"
+  },
+  "動": {
+   "jp_glyph_code": "0x018A",
+   "attested_at": "fx_text/4/104"
+  },
+  "消": {
+   "jp_glyph_code": "0x0191",
+   "attested_at": "fx_text/1/37"
+  },
+  "引": {
+   "jp_glyph_code": "0x019F",
+   "attested_at": "fx_text/4/10"
+  },
+  "事": {
+   "jp_glyph_code": "0x01A5",
+   "attested_at": "fx_text/8/19"
+  },
+  "新": {
+   "jp_glyph_code": "0x01A8",
+   "attested_at": "fx_text/1/31"
+  },
+  "人": {
+   "jp_glyph_code": "0x01A9",
+   "attested_at": "fx_text/2/9"
+  },
+  "前": {
+   "jp_glyph_code": "0x01AA",
+   "attested_at": "fx_text/4/88"
+  },
+  "相": {
+   "jp_glyph_code": "0x01AB",
+   "attested_at": "fx_text/4/186"
+  },
+  "楽": {
+   "jp_glyph_code": "0x01BA",
+   "attested_at": "fx_text/8/0"
+  },
+  "護": {
+   "jp_glyph_code": "0x01BF",
+   "attested_at": "fx_text/4/124"
+  },
+  "好": {
+   "jp_glyph_code": "0x01C0",
+   "attested_at": "fx_text/2/3"
+  },
+  "思": {
+   "jp_glyph_code": "0x01C5",
+   "attested_at": "fx_text/6/24"
+  },
+  "指": {
+   "jp_glyph_code": "0x01C6",
+   "attested_at": "fx_text/8/12"
+  },
+  "実": {
+   "jp_glyph_code": "0x01C8",
+   "attested_at": "fx_text/1/37"
+  },
+  "受": {
+   "jp_glyph_code": "0x01C9",
+   "attested_at": "fx_text/8/3"
+  },
+  "全": {
+   "jp_glyph_code": "0x01D0",
+   "attested_at": "fx_text/6/21"
+  },
+  "待": {
+   "jp_glyph_code": "0x01D3",
+   "attested_at": "fx_text/1/31"
+  },
+  "別": {
+   "jp_glyph_code": "0x01D9",
+   "attested_at": "fx_text/4/19"
+  },
+  "明": {
+   "jp_glyph_code": "0x01DD",
+   "attested_at": "fx_text/6/1"
+  },
+  "問": {
+   "jp_glyph_code": "0x01DE",
+   "attested_at": "fx_text/6/8"
+  },
+  "暗": {
+   "jp_glyph_code": "0x0207",
+   "attested_at": "fx_text/8/44"
+  },
+  "囲": {
+   "jp_glyph_code": "0x020F",
+   "attested_at": "fx_text/4/129"
+  },
+  "運": {
+   "jp_glyph_code": "0x0252",
+   "attested_at": "fx_text/4/129"
+  },
+  "炎": {
+   "jp_glyph_code": "0x0277",
+   "attested_at": "fx_text/8/64"
+  },
+  "化": {
+   "jp_glyph_code": "0x02A0",
+   "attested_at": "fx_text/8/8"
+  },
+  "加": {
+   "jp_glyph_code": "0x02A5",
+   "attested_at": "fx_text/1/17"
+  },
+  "喚": {
+   "jp_glyph_code": "0x0336",
+   "attested_at": "fx_text/16/13"
+  },
+  "完": {
+   "jp_glyph_code": "0x0339",
+   "attested_at": "fx_text/8/6"
+  },
+  "間": {
+   "jp_glyph_code": "0x035A",
+   "attested_at": "fx_text/2/9"
+  },
+  "関": {
+   "jp_glyph_code": "0x035C",
+   "attested_at": "fx_text/4/118"
+  },
+  "器": {
+   "jp_glyph_code": "0x0371",
+   "attested_at": "fx_text/4/122"
+  },
+  "期": {
+   "jp_glyph_code": "0x037E",
+   "attested_at": "fx_text/1/29"
+  },
+  "気": {
+   "jp_glyph_code": "0x0384",
+   "attested_at": "fx_text/4/185"
+  },
+  "祈": {
+   "jp_glyph_code": "0x0387",
+   "attested_at": "fx_text/23/4"
+  },
+  "記": {
+   "jp_glyph_code": "0x038C",
+   "attested_at": "fx_text/4/119"
+  },
+  "技": {
+   "jp_glyph_code": "0x0398",
+   "attested_at": "fx_text/8/60"
+  },
+  "弓": {
+   "jp_glyph_code": "0x03B9",
+   "attested_at": "fx_text/6/12"
+  },
+  "決": {
+   "jp_glyph_code": "0x0468",
+   "attested_at": "fx_text/1/8"
+  },
+  "剣": {
+   "jp_glyph_code": "0x0475",
+   "attested_at": "fx_text/8/52"
+  },
+  "呼": {
+   "jp_glyph_code": "0x04A2",
+   "attested_at": "fx_text/8/11"
+  },
+  "功": {
+   "jp_glyph_code": "0x04CF",
+   "attested_at": "fx_text/4/83"
+  },
+  "幸": {
+   "jp_glyph_code": "0x04DE",
+   "attested_at": "fx_text/8/56"
+  },
+  "広": {
+   "jp_glyph_code": "0x04DF",
+   "attested_at": "fx_text/6/3"
+  },
+  "剛": {
+   "jp_glyph_code": "0x0510",
+   "attested_at": "fx_text/17/293"
+  },
+  "告": {
+   "jp_glyph_code": "0x051B",
+   "attested_at": "fx_text/17/11"
+  },
+  "黒": {
+   "jp_glyph_code": "0x051E",
+   "attested_at": "fx_text/8/44"
+  },
+  "混": {
+   "jp_glyph_code": "0x0533",
+   "attested_at": "fx_text/6/27"
+  },
+  "罪": {
+   "jp_glyph_code": "0x0564",
+   "attested_at": "fx_text/4/93"
+  },
+  "作": {
+   "jp_glyph_code": "0x0570",
+   "attested_at": "fx_text/4/138"
+  },
+  "仕": {
+   "jp_glyph_code": "0x059D",
+   "attested_at": "fx_text/2/11"
+  },
+  "使": {
+   "jp_glyph_code": "0x05A0",
+   "attested_at": "fx_text/1/4"
+  },
+  "私": {
+   "jp_glyph_code": "0x05B3",
+   "attested_at": "fx_text/8/68"
+  },
+  "試": {
+   "jp_glyph_code": "0x05BD",
+   "attested_at": "fx_text/2/3"
+  },
+  "次": {
+   "jp_glyph_code": "0x05CA",
+   "attested_at": "fx_text/4/111"
+  },
+  "示": {
+   "jp_glyph_code": "0x05D0",
+   "attested_at": "fx_text/2/12"
+  },
+  "自": {
+   "jp_glyph_code": "0x05D3",
+   "attested_at": "fx_text/4/96"
+  },
+  "失": {
+   "jp_glyph_code": "0x05E2",
+   "attested_at": "fx_text/1/28"
+  },
+  "守": {
+   "jp_glyph_code": "0x060A",
+   "attested_at": "fx_text/6/1"
+  },
+  "手": {
+   "jp_glyph_code": "0x060B",
+   "attested_at": "fx_text/1/16"
+  },
+  "狩": {
+   "jp_glyph_code": "0x060E",
+   "attested_at": "fx_text/4/123"
+  },
+  "終": {
+   "jp_glyph_code": "0x0628",
+   "attested_at": "fx_text/1/27"
+  },
+  "銃": {
+   "jp_glyph_code": "0x063E",
+   "attested_at": "fx_text/18/18"
+  },
+  "術": {
+   "jp_glyph_code": "0x0648",
+   "attested_at": "fx_text/8/6"
+  },
+  "勝": {
+   "jp_glyph_code": "0x0670",
+   "attested_at": "fx_text/4/179"
+  },
+  "召": {
+   "jp_glyph_code": "0x0673",
+   "attested_at": "fx_text/16/13"
+  },
+  "常": {
+   "jp_glyph_code": "0x06B5",
+   "attested_at": "fx_text/1/27"
+  },
+  "杖": {
+   "jp_glyph_code": "0x06B9",
+   "attested_at": "fx_text/7/3"
+  },
+  "信": {
+   "jp_glyph_code": "0x06D2",
+   "attested_at": "fx_text/1/12"
+  },
+  "刃": {
+   "jp_glyph_code": "0x06ED",
+   "attested_at": "fx_text/21/24"
+  },
+  "性": {
+   "jp_glyph_code": "0x0724",
+   "attested_at": "fx_text/17/150"
+  },
+  "成": {
+   "jp_glyph_code": "0x0725",
+   "attested_at": "fx_text/4/83"
+  },
+  "生": {
+   "jp_glyph_code": "0x072F",
+   "attested_at": "fx_text/4/127"
+  },
+  "精": {
+   "jp_glyph_code": "0x0731",
+   "attested_at": "fx_text/6/19"
+  },
+  "青": {
+   "jp_glyph_code": "0x073B",
+   "attested_at": "fx_text/12/44"
+  },
+  "石": {
+   "jp_glyph_code": "0x0746",
+   "attested_at": "fx_text/8/25"
+  },
+  "責": {
+   "jp_glyph_code": "0x074A",
+   "attested_at": "pages:quest/0/119"
+  },
+  "赤": {
+   "jp_glyph_code": "0x074B",
+   "attested_at": "fx_text/8/36"
+  },
+  "狙": {
+   "jp_glyph_code": "0x0789",
+   "attested_at": "fx_text/6/2"
+  },
+  "槍": {
+   "jp_glyph_code": "0x07AA",
+   "attested_at": "fx_text/8/56"
+  },
+  "属": {
+   "jp_glyph_code": "0x07D1",
+   "attested_at": "fx_text/17/150"
+  },
+  "族": {
+   "jp_glyph_code": "0x07D3",
+   "attested_at": "fx_text/2/5"
+  },
+  "体": {
+   "jp_glyph_code": "0x07ED",
+   "attested_at": "fx_text/8/2"
+  },
+  "対": {
+   "jp_glyph_code": "0x07EF",
+   "attested_at": "fx_text/4/137"
+  },
+  "大": {
+   "jp_glyph_code": "0x0801",
+   "attested_at": "fx_text/4/61"
+  },
+  "題": {
+   "jp_glyph_code": "0x0804",
+   "attested_at": "fx_text/8/56"
+  },
+  "短": {
+   "jp_glyph_code": "0x0831",
+   "attested_at": "fx_text/21/77"
+  },
+  "知": {
+   "jp_glyph_code": "0x0842",
+   "attested_at": "fx_text/8/56"
+  },
+  "沈": {
+   "jp_glyph_code": "0x0888",
+   "attested_at": "fx_text/8/11"
+  },
+  "転": {
+   "jp_glyph_code": "0x08DA",
+   "attested_at": "fx_text/17/276"
+  },
+  "度": {
+   "jp_glyph_code": "0x08F1",
+   "attested_at": "fx_text/4/18"
+  },
+  "盗": {
+   "jp_glyph_code": "0x0907",
+   "attested_at": "fx_text/6/6"
+  },
+  "祷": {
+   "jp_glyph_code": "0x090F",
+   "attested_at": "fx_text/23/4"
+  },
+  "同": {
+   "jp_glyph_code": "0x0924",
+   "attested_at": "fx_text/4/203"
+  },
+  "道": {
+   "jp_glyph_code": "0x092E",
+   "attested_at": "fx_text/4/97"
+  },
+  "毒": {
+   "jp_glyph_code": "0x0939",
+   "attested_at": "fx_text/17/42"
+  },
+  "入": {
+   "jp_glyph_code": "0x0967",
+   "attested_at": "fx_text/1/16"
+  },
+  "任": {
+   "jp_glyph_code": "0x096B",
+   "attested_at": "fx_text/21/278"
+  },
+  "忍": {
+   "jp_glyph_code": "0x096D",
+   "attested_at": "fx_text/17/59"
+  },
+  "敗": {
+   "jp_glyph_code": "0x099A",
+   "attested_at": "fx_text/1/28"
+  },
+  "配": {
+   "jp_glyph_code": "0x09A1",
+   "attested_at": "fx_text/4/90"
+  },
+  "白": {
+   "jp_glyph_code": "0x09B8",
+   "attested_at": "fx_text/4/121"
+  },
+  "判": {
+   "jp_glyph_code": "0x09DB",
+   "attested_at": "fx_text/8/57"
+  },
+  "範": {
+   "jp_glyph_code": "0x09EC",
+   "attested_at": "fx_text/4/129"
+  },
+  "彼": {
+   "jp_glyph_code": "0x09FC",
+   "attested_at": "fx_text/8/42"
+  },
+  "表": {
+   "jp_glyph_code": "0x0A31",
+   "attested_at": "fx_text/2/12"
+  },
+  "不": {
+   "jp_glyph_code": "0x0A46",
+   "attested_at": "fx_text/4/102"
+  },
+  "腐": {
+   "jp_glyph_code": "0x0A55",
+   "attested_at": "s_text/35/83"
+  },
+  "武": {
+   "jp_glyph_code": "0x0A5F",
+   "attested_at": "fx_text/4/122"
+  },
+  "風": {
+   "jp_glyph_code": "0x0A65",
+   "attested_at": "fx_text/17/35"
+  },
+  "報": {
+   "jp_glyph_code": "0x0AB4",
+   "attested_at": "fx_text/1/31"
+  },
+  "法": {
+   "jp_glyph_code": "0x0ABF",
+   "attested_at": "fx_text/4/90"
+  },
+  "忘": {
+   "jp_glyph_code": "0x0AD8",
+   "attested_at": "fx_text/4/84"
+  },
+  "魔": {
+   "jp_glyph_code": "0x0AFC",
+   "attested_at": "fx_text/4/118"
+  },
+  "戻": {
+   "jp_glyph_code": "0x0B4A",
+   "attested_at": "fx_text/1/10"
+  },
+  "役": {
+   "jp_glyph_code": "0x0B58",
+   "attested_at": "fx_text/4/114"
+  },
+  "友": {
+   "jp_glyph_code": "0x0B6A",
+   "attested_at": "fx_text/8/76"
+  },
+  "由": {
+   "jp_glyph_code": "0x0B74",
+   "attested_at": "fx_text/4/96"
+  },
+  "与": {
+   "jp_glyph_code": "0x0B7F",
+   "attested_at": "fx_text/8/68"
+  },
+  "雷": {
+   "jp_glyph_code": "0x0BA1",
+   "attested_at": "fx_text/17/106"
+  },
+  "覧": {
+   "jp_glyph_code": "0x0BAC",
+   "attested_at": "fx_text/16/18"
+  },
+  "流": {
+   "jp_glyph_code": "0x0BBF",
+   "attested_at": "fx_text/4/64"
+  },
+  "了": {
+   "jp_glyph_code": "0x0BCC",
+   "attested_at": "fx_text/1/27"
+  },
+  "冷": {
+   "jp_glyph_code": "0x0BF2",
+   "attested_at": "fx_text/12/46"
+  },
+  "霊": {
+   "jp_glyph_code": "0x0BFC",
+   "attested_at": "fx_text/17/70"
+  },
+  "録": {
+   "jp_glyph_code": "0x0C24",
+   "attested_at": "fx_text/4/79"
+  }
+ },
+ "entries": [
+  {
+   "us_logical_path": "fx_text/1/40",
+   "us_leaf": 1,
+   "us_entry": 40,
+   "original_english_sha256": "03675b55076382da09035b9c097fd26a192782b1bd443344b356604e3da8170e",
+   "japanese": "SELECTボタンでジョブの{4D}一覧を表示します。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/1/41",
+   "us_leaf": 1,
+   "us_entry": 41,
+   "original_english_sha256": "eef8c5f45a8789ca2ccc8b61da16a7c269eca4c4d888f52239b7493d89139291",
+   "japanese": "セーブしますか?{4D}{3210}はい/{EOS}いいえ{EOS}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/1/42",
+   "us_leaf": 1,
+   "us_entry": 42,
+   "original_english_sha256": "43e765ebdefc37f72ed506785cd0d36d5525152b9f820205a365fed1808d550a",
+   "japanese": "クランメニューに戻りますか?{4D}{3210}はい/{EOS}いいえ{EOS}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/1/43",
+   "us_leaf": 1,
+   "us_entry": 43,
+   "original_english_sha256": "8bbc56ab43830d9058de16a2bd0201d49bb719e714e16389be65a0af15f327d2",
+   "japanese": "クランがいっぱいです。{4D}このユニットは加入できません。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/1/44",
+   "us_leaf": 1,
+   "us_entry": 44,
+   "original_english_sha256": "30cc68f1224512cf2ffcb07c3866c07999d26be1259523e25b7418d240abeb2a",
+   "japanese": "すべてのセーブデータを消しますか?{4D}{3211}はい/{EOS}いいえ{EOS}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/1/45",
+   "us_leaf": 1,
+   "us_entry": 45,
+   "original_english_sha256": "c0c465a578de1aa94d9ada06ac60c3a177c3d372b1676394c808e16bd79b0cc5",
+   "japanese": "レッスンをやりなおしますか?{4D}{3211}はい/{EOS}いいえ{EOS}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/1/46",
+   "us_leaf": 1,
+   "us_entry": 46,
+   "original_english_sha256": "c4bea9d95140a3190bf0cc498753464966c808bcb07074c4ffa60dabd6a10388",
+   "japanese": "すべてのデータを消しました。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/8/58",
+   "us_leaf": 8,
+   "us_entry": 58,
+   "original_english_sha256": "0ceaf7a2386df8f2dbc44b939e39b85779924caf8df31e47c6c71ee30cbb9a64",
+   "japanese": "[{5117}に黒いうわさ?]{4D}{5117}は、イヴァリースのロウを{4D}まもるそんざいのはずだった。{4D}だが、ギルしだいでロウを{4D}まぬがれられるという{4D}うわさが流れている。{4F}{42}{5117}たちは、これを{4D}みとめていない。{4D}だが、{5117}ウォッチが{4D}しらべにのりだしたらしい!{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "note": "US-only rumour inserted ahead of the tutorial block; the JP leaf has no entry that corresponds to it. Written in the register of the leaf 8 rumours: 黒いうわさ for the corruption claim, ギル for the money the US original calls a sale price, and the three [5117] references of the original all reappear."
+  },
+  {
+   "us_logical_path": "fx_text/8/59",
+   "us_leaf": 8,
+   "us_entry": 59,
+   "original_english_sha256": "a59a67df3e7fc3b2003276819cf17ed0fe77475f9ca0f149a2809d1fe6afa258",
+   "japanese": "[ブランクカード]{4D}あちこちで新しいロウが{4D}生まれているのは、{4D}試作された「ブランクカード」が{4D}出まわっているせいらしい。{4F}{42}どこから流出したのかは不明だが、{4D}腐敗した役人がカードを使って{4D}好き勝手にロウを決めているのは{4D}まちがいないだろう。{4D}ジャッジも関わっているのか?{4D}責任は彼らにあるのか!?{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "note": "US-only rumour; JP fx_text/8/59 is an empty record"
+  },
+  {
+   "us_logical_path": "fx_text/10/3",
+   "us_leaf": 10,
+   "us_entry": 3,
+   "original_english_sha256": "f43f39130a730764c03767e693965826745c2fe523ca9505b6865adde359991a",
+   "japanese": "SELECTボタンでジョブの{4D}一覧を表示します。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "note": "lesson-mode duplicate of fx_text/1/40"
+  },
+  {
+   "us_logical_path": "fx_text/10/4",
+   "us_leaf": 10,
+   "us_entry": 4,
+   "original_english_sha256": "68bd8aca41129b3a14eee06700377704d1e9b03e37e2244063a68d02b0c90593",
+   "japanese": "セーブしますか?{4D}{3210}はい/{EOS}いいえ{EOS}{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "note": "lesson-mode duplicate of fx_text/1/41"
+  },
+  {
+   "us_logical_path": "fx_text/10/5",
+   "us_leaf": 10,
+   "us_entry": 5,
+   "original_english_sha256": "ce7053cf98c7401187cc1dabbf2089d094a97fa09b5b2590b5e12c5279f8a488",
+   "japanese": "クランメニューに戻りますか?{4D}{3210}はい/{EOS}いいえ{EOS}{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "note": "lesson-mode duplicate of fx_text/1/42"
+  },
+  {
+   "us_logical_path": "fx_text/10/6",
+   "us_leaf": 10,
+   "us_entry": 6,
+   "original_english_sha256": "4ebb652c74fe701ccf5825b8dba76f1c503007db3dad5d643a001fed47c264b9",
+   "japanese": "クランがいっぱいです。{4D}このユニットは加入できません。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "note": "lesson-mode duplicate of fx_text/1/43"
+  },
+  {
+   "us_logical_path": "fx_text/11/48",
+   "us_leaf": 11,
+   "us_entry": 48,
+   "original_english_sha256": "2eb20435079e11b0966c30dc71915ee48b568b1ed1f9a595737a1413c267491c",
+   "japanese": "{510A}だ。{4D}{4600}[{41C}]は{4D}言うまでもなく大成功さ!{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/49",
+   "us_leaf": 11,
+   "us_entry": 49,
+   "original_english_sha256": "4ade66ac50e17803f995f4309b05095df28cbbe7df35996a1ee354c335ce8e90",
+   "japanese": "{510A}だ。{4D}{4600}[{41C}]は{4D}問題なしさ!{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/50",
+   "us_leaf": 11,
+   "us_entry": 50,
+   "original_english_sha256": "8033173ea78fca6a433d01041ab049fe33cf76824e13ad697ac44dded1c50def",
+   "japanese": "{510A}だ。まあまあかな。{4D}{4600}[{41C}]は{4D}うまくいったよ。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/51",
+   "us_leaf": 11,
+   "us_entry": 51,
+   "original_english_sha256": "30a078e3c214e80e609531be3be8fc1400f14de1a8e5e407cdaa0eddd31d16e9",
+   "japanese": "{510A}だ。{4D}オレがリーダーなんだ、{4D}心配はいらないだろ?{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/52",
+   "us_leaf": 11,
+   "us_entry": 52,
+   "original_english_sha256": "acd45021c548b4fecf1d83cfc66bd050597db9176dfe8a79883ff07847e8cc9c",
+   "japanese": "{510A}だ。えーと…、{4D}{4600}[{41C}]は{4D}失敗だ。すまないね!{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/53",
+   "us_leaf": 11,
+   "us_entry": 53,
+   "original_english_sha256": "fc3d689e4443f44ff279a8aeada51fe500e08a19794ad317c0b024d78664080e",
+   "japanese": "{510A}だ。すまない…。{4D}{4600}[{41C}]は{4D}うまくいかなかった。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/54",
+   "us_leaf": 11,
+   "us_entry": 54,
+   "original_english_sha256": "663f6f7599a9c91b596c8b45e5862d0eb9de8d2cc8da577b1f8ed5bfd8b9b8a6",
+   "japanese": "{510A}だ。まいったな。{4D}{4600}[{41C}]は{4D}失敗だ。すまない。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/55",
+   "us_leaf": 11,
+   "us_entry": 55,
+   "original_english_sha256": "7fb1fe116a4bbc6d9c04b3099d13e713ed591ba7b8d4fc0c1204d66c195cbb8f",
+   "japanese": "{510A}だ。すまない!{4D}まるでダメだった…。{4D}いけると思ったんだがな!{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/56",
+   "us_leaf": 11,
+   "us_entry": 56,
+   "original_english_sha256": "039ae06cabe7b81e9dc2e9f1d3f9087059b536a313b50591bda0a5fd8470efc9",
+   "japanese": "{5109}·スウェイン、報告する。{4D}{4600}[{41C}]の{4D}ボーナスを受けとった。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/57",
+   "us_leaf": 11,
+   "us_entry": 57,
+   "original_english_sha256": "9c4fefd4bc3071cb478341d2762d4b17a880297b9685bfa2f38dbd25814108ec",
+   "japanese": "{5109}·スウェイン、報告する。{4D}{4600}[{41C}]は{4D}成功だ。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/58",
+   "us_leaf": 11,
+   "us_entry": 58,
+   "original_english_sha256": "4917d4fa068fe6c6d30271f7469dd1d5d978bdd8a155f42288b4041f3d316a47",
+   "japanese": "{5109}·スウェイン、報告する。{4D}{4600}[{41C}]は{4D}問題なく完了した。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/59",
+   "us_leaf": 11,
+   "us_entry": 59,
+   "original_english_sha256": "61ddf58e3a556e51c1e50204490ab825d925515467b9610046fd9fe01688780c",
+   "japanese": "{5109}·スウェイン、報告する。{4D}クエストは完了した。{4D}これよりクランへ戻る。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/60",
+   "us_leaf": 11,
+   "us_entry": 60,
+   "original_english_sha256": "28aa8a5806ee09e6bb58f82e32a968ca6d3ad741037c96ddb387363203095aba",
+   "japanese": "{5109}·スウェイン、報告する。{4D}{4600}[{41C}]は…{4D}失敗だ。すまない。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/61",
+   "us_leaf": 11,
+   "us_entry": 61,
+   "original_english_sha256": "fd703694a5afb3828e7e223d13196fa8ddab604ff60ed51fbc3e8b9e7bb5032d",
+   "japanese": "{5109}·スウェイン、報告する。{4D}{4600}[{41C}]は{4D}期待どおりとはいかなかった。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/62",
+   "us_leaf": 11,
+   "us_entry": 62,
+   "original_english_sha256": "61f94b7088d5233ef263323fcfbb13074e2e7115362d102a3d118287416fc26e",
+   "japanese": "{5109}·スウェイン、報告する。{4D}{4600}[{41C}]は{4D}失敗だ。責任は…私にある。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/63",
+   "us_leaf": 11,
+   "us_entry": 63,
+   "original_english_sha256": "71975eddd522320462770f5b5e771c3c0f785a2a299546155bcaa69210da6874",
+   "japanese": "{5109}·スウェイン、報告する。{4D}失敗した。だが、{4D}次こそは期待してくれ。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/64",
+   "us_leaf": 11,
+   "us_entry": 64,
+   "original_english_sha256": "05fd15a34c641740b7e3c1c56156a683464376521c2679d5572af6ddd64eaf43",
+   "japanese": "ねえ、{400}!{4D}{4600}[{41C}]は{4D}大成功だったわ!{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/65",
+   "us_leaf": 11,
+   "us_entry": 65,
+   "original_english_sha256": "5a979434d91c5ae6af9f9c67e133fe3db2951a94ecbb5f60a370fbdbcf38bc15",
+   "japanese": "ふう、きわどかったけど{4D}{4600}[{41C}]は{4D}ぶじに終わったわ!{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/66",
+   "us_leaf": 11,
+   "us_entry": 66,
+   "original_english_sha256": "b627d03ba120bfa5e8ab4ac4f59b1f99111ee2fcc72eaba9113ef5402485b9b0",
+   "japanese": "{4600}[{41C}]は{4D}成功よ。うちのクラン、{4D}なかなかのものでしょ?{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/67",
+   "us_leaf": 11,
+   "us_entry": 67,
+   "original_english_sha256": "9e48200166806a6598a338c806e071eb53ce7aafe422ad3f8ea8ec48f9299747",
+   "japanese": "{5104}よ。{4D}きびしかったけど、{4D}なんとかやりとげたわ。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/68",
+   "us_leaf": 11,
+   "us_entry": 68,
+   "original_english_sha256": "3487e5c6a1f4c04b49e2121fc08b753fd744d4ab58b3144fd76ce98009ba244c",
+   "japanese": "ごめん、ごめん!{4D}{4600}[{41C}]は{4D}まるでダメだったわ…。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/69",
+   "us_leaf": 11,
+   "us_entry": 69,
+   "original_english_sha256": "ce75f413fdd0590e2a439e089aade266a02edfd8e1e3db423cc11ada8eddb0f7",
+   "japanese": "どうしてこうなるの?{4D}{4600}[{41C}]は{4D}やっぱりうまくいかなかった。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/70",
+   "us_leaf": 11,
+   "us_entry": 70,
+   "original_english_sha256": "76644eb06148d7aaeba98d28e45a01a2352353d4ab43ae3a7b0a5293558d2d8d",
+   "japanese": "{4600}[{41C}]は{4D}さんざんだったわ。ごめんね、{4D}信じてくれていたのに…。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/71",
+   "us_leaf": 11,
+   "us_entry": 71,
+   "original_english_sha256": "2db5d8dedf6078a26e89303d7d1aef65e58a03428a1e3faf69ebee521df03f6c",
+   "japanese": "えーと…、{4D}おおきなミスをしちゃった。{4D}ごめん、ほんとうにごめん!{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/72",
+   "us_leaf": 11,
+   "us_entry": 72,
+   "original_english_sha256": "defbcc0f11a457540c43514b4394af2270d4317398ce4c3b8d870f9c683461eb",
+   "japanese": "{510C}、ボーナスつきで戻った。{4D}{4600}[{41C}]は{4D}大成功だ。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/73",
+   "us_leaf": 11,
+   "us_entry": 73,
+   "original_english_sha256": "da40086b200117e833545972c7ec68965c8b26ee485b7749cb80c2101cf8d922",
+   "japanese": "{510C}、戻った。{4D}{4600}[{41C}]は{4D}たいした問題じゃなかった。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/74",
+   "us_leaf": 11,
+   "us_entry": 74,
+   "original_english_sha256": "61e1d8200ecadfe76a5a80b8412f8e10263cf488be6b10c07a6afcb4458fb60f",
+   "japanese": "{510C}、戻った。{4D}{4600}[{41C}]は{4D}成功。以上だ。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/75",
+   "us_leaf": 11,
+   "us_entry": 75,
+   "original_english_sha256": "d7df97d0a0e4f5974ac31ff808f398f2ad3c3cdabac98301ba7de21283cded87",
+   "japanese": "{510C}だ。成功したよ!{4D}これからクランに{4D}戻るところだ。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/76",
+   "us_leaf": 11,
+   "us_entry": 76,
+   "original_english_sha256": "7ad3f1d80b8407e3fcd714f78a6503c347473556e015a3085aad684b78b194ed",
+   "japanese": "{510C}だ。わるい知らせだ。{4D}{4600}[{41C}]は{4D}失敗だった。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/77",
+   "us_leaf": 11,
+   "us_entry": 77,
+   "original_english_sha256": "efc724d461e7d9b22c723769c14fee8d636ba8e1c3c7bfdb6ce322ff04a6bec1",
+   "japanese": "{510C}だ。{4D}{4600}[{41C}]は{4D}うまくいかなかった。以上。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/78",
+   "us_leaf": 11,
+   "us_entry": 78,
+   "original_english_sha256": "8c25de8c90795008e55252776b18ac86d5f0bcc930a124842ce97a3ebffc02a2",
+   "japanese": "…{510C}だ。{4D}{4600}[{41C}]は{4D}まるでダメ。ごめん…。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/79",
+   "us_leaf": 11,
+   "us_entry": 79,
+   "original_english_sha256": "5fecd8b1eddda4221cef1cf14a946bdbfef847c707bc17966d274f4dc1002b0a",
+   "japanese": "{510C}だ。手短に報告する。{4D}しくじった。{4D}ごめん。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/80",
+   "us_leaf": 11,
+   "us_entry": 80,
+   "original_english_sha256": "d8f9898aaf9987e10861d7ddf394ba97db64738fd9dcdabacd7908e069ee6026",
+   "japanese": "報告する。{4D}{4600}[{41C}]は{4D}みごとな大成功だ!{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/81",
+   "us_leaf": 11,
+   "us_entry": 81,
+   "original_english_sha256": "c99544cf0a656253b70c88d76cddf35b49fedfc9da2f098c605717c30b058b89",
+   "japanese": "{400}、{4D}{4600}[{41C}]は{4D}思ったとおりうまくいった。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/82",
+   "us_leaf": 11,
+   "us_entry": 82,
+   "original_english_sha256": "4f544261ff3e51b2ca44c5002cc9bd87d9082accd38cd82805232fc6bff2db96",
+   "japanese": "{5106}、報告する。{4D}{4600}[{41C}]は{4D}たいした問題ではなかった。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/83",
+   "us_leaf": 11,
+   "us_entry": 83,
+   "original_english_sha256": "4f544261ff3e51b2ca44c5002cc9bd87d9082accd38cd82805232fc6bff2db96",
+   "japanese": "{5106}、報告する。{4D}{4600}[{41C}]は{4D}たいした問題ではなかった。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/84",
+   "us_leaf": 11,
+   "us_entry": 84,
+   "original_english_sha256": "40bb82224a4efa8291f89ed4293219041aa097454cc8681648ed969c2579d4fb",
+   "japanese": "すまない。どうやら{4D}{4600}[{41C}]は{4D}失敗したようだ…。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/85",
+   "us_leaf": 11,
+   "us_entry": 85,
+   "original_english_sha256": "a7ff9f7b0137a4e6bc7af713625c56099c1d720014afcd3160124adda47027aa",
+   "japanese": "{400}。{4D}{4600}[{41C}]は{4D}うまくいかなかった。すまない。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/86",
+   "us_leaf": 11,
+   "us_entry": 86,
+   "original_english_sha256": "d0179d7fe820adcda98e8bfcf53034a643b6628e4628292e68d25d89ca1ad6a8",
+   "japanese": "言いにくいのだが、{4D}{4600}[{41C}]は{4D}失敗してしまった。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/11/87",
+   "us_leaf": 11,
+   "us_entry": 87,
+   "original_english_sha256": "8abe57d1e94bed11a006eae07688e86e8d28709876a47f6c0c39e55cda98b3a9",
+   "japanese": "バトルはうまくいかず、{4D}引きあげるしかなかった。{4D}すまない。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/15/15",
+   "us_leaf": 15,
+   "us_entry": 15,
+   "original_english_sha256": "e956e72f81cb817095005ef66dd2163a993dab764368add73454a896a95e9442",
+   "japanese": "そろそろ自分の仕事に{4D}戻らないとね。{4D}じゃあ、またね!{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/15/16",
+   "us_leaf": 15,
+   "us_entry": 16,
+   "original_english_sha256": "e956e72f81cb817095005ef66dd2163a993dab764368add73454a896a95e9442",
+   "japanese": "そろそろ自分の仕事に{4D}戻らないとね。{4D}じゃあ、またね!{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/15/17",
+   "us_leaf": 15,
+   "us_entry": 17,
+   "original_english_sha256": "e956e72f81cb817095005ef66dd2163a993dab764368add73454a896a95e9442",
+   "japanese": "そろそろ自分の仕事に{4D}戻らないとね。{4D}じゃあ、またね!{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/15/18",
+   "us_leaf": 15,
+   "us_entry": 18,
+   "original_english_sha256": "d0510fa07dcd3d40ce15b58c2fcfd8c27c46b2681416df5834f0f56312b03b02",
+   "japanese": "これでお別れだけど、{4D}これからもずっと{4D}友達だよ。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/15/19",
+   "us_leaf": 15,
+   "us_entry": 19,
+   "original_english_sha256": "d0510fa07dcd3d40ce15b58c2fcfd8c27c46b2681416df5834f0f56312b03b02",
+   "japanese": "これでお別れだけど、{4D}これからもずっと{4D}友達だよ。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/15/20",
+   "us_leaf": 15,
+   "us_entry": 20,
+   "original_english_sha256": "d0510fa07dcd3d40ce15b58c2fcfd8c27c46b2681416df5834f0f56312b03b02",
+   "japanese": "これでお別れだけど、{4D}これからもずっと{4D}友達だよ。{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/15/21",
+   "us_leaf": 15,
+   "us_entry": 21,
+   "original_english_sha256": "ec4f38c10b33bbadaec44e976d7f3129b9e79236b20efc93a4a212c8e65b0de2",
+   "japanese": "ぬけてもだいじょうぶ?{4D}こまったときは{4D}いつでも呼んでね!{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/15/22",
+   "us_leaf": 15,
+   "us_entry": 22,
+   "original_english_sha256": "ec4f38c10b33bbadaec44e976d7f3129b9e79236b20efc93a4a212c8e65b0de2",
+   "japanese": "ぬけてもだいじょうぶ?{4D}こまったときは{4D}いつでも呼んでね!{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/15/23",
+   "us_leaf": 15,
+   "us_entry": 23,
+   "original_english_sha256": "ec4f38c10b33bbadaec44e976d7f3129b9e79236b20efc93a4a212c8e65b0de2",
+   "japanese": "ぬけてもだいじょうぶ?{4D}こまったときは{4D}いつでも呼んでね!{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/15/24",
+   "us_leaf": 15,
+   "us_entry": 24,
+   "original_english_sha256": "64354a2931542fcaad8be77cf39e20dc0526dc462b679f8a2d4034a80b430674",
+   "japanese": "このクラン、なかなか{4D}楽しかったよ。じゃあね!{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/15/25",
+   "us_leaf": 15,
+   "us_entry": 25,
+   "original_english_sha256": "64354a2931542fcaad8be77cf39e20dc0526dc462b679f8a2d4034a80b430674",
+   "japanese": "このクラン、なかなか{4D}楽しかったよ。じゃあね!{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/15/26",
+   "us_leaf": 15,
+   "us_entry": 26,
+   "original_english_sha256": "64354a2931542fcaad8be77cf39e20dc0526dc462b679f8a2d4034a80b430674",
+   "japanese": "このクラン、なかなか{4D}楽しかったよ。じゃあね!{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/15/27",
+   "us_leaf": 15,
+   "us_entry": 27,
+   "original_english_sha256": "da930667f43a000318190882ac3adde30a44378c68fec54879773a8dc0d98399",
+   "japanese": "これからの道に{4D}幸運がありますように!{4D}それじゃあ!{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/15/28",
+   "us_leaf": 15,
+   "us_entry": 28,
+   "original_english_sha256": "da930667f43a000318190882ac3adde30a44378c68fec54879773a8dc0d98399",
+   "japanese": "これからの道に{4D}幸運がありますように!{4D}それじゃあ!{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/15/29",
+   "us_leaf": 15,
+   "us_entry": 29,
+   "original_english_sha256": "da930667f43a000318190882ac3adde30a44378c68fec54879773a8dc0d98399",
+   "japanese": "これからの道に{4D}幸運がありますように!{4D}それじゃあ!{56}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/17/364",
+   "us_leaf": 17,
+   "us_entry": 364,
+   "original_english_sha256": "890fdfa9f135a237218f8c9263db452d88ece1523de91b75024c551a8e2ee85b",
+   "japanese": "ジャッジの行動を1度とばして、{4D}ロウやぶりを見のがさせる。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/17/365",
+   "us_leaf": 17,
+   "us_entry": 365,
+   "original_english_sha256": "ab06116fdb0dad457c88c98163e3111a760ea265e6dd740d32d684e7ff06321d",
+   "japanese": "切りつけてダメージを与え、{4D}JPを盗む技。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/17/366",
+   "us_leaf": 17,
+   "us_entry": 366,
+   "original_english_sha256": "c27325ab9a550ab057e1c2cadc9c5b70a42c9caaabd02ec16fc6025720842127",
+   "japanese": "相手を「ドンムブ」「ドンアク」にして{4D}とらえる技。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/17/367",
+   "us_leaf": 17,
+   "us_entry": 367,
+   "original_english_sha256": "c1e77a5dcf5b63f99f03a1760309ba4d65a35ca1602cb312146d26d1f94e662d",
+   "japanese": "自分のJPを{4D}味方にゆずりわたす技。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/17/368",
+   "us_leaf": 17,
+   "us_entry": 368,
+   "original_english_sha256": "97041a519fc98b6a2ec6f5a9216b5217a85c34d3d5bb1d599502114fac61de9e",
+   "japanese": "記録されたイエローカードを{4D}うち消す技。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/17/369",
+   "us_leaf": 17,
+   "us_entry": 369,
+   "original_english_sha256": "ab06116fdb0dad457c88c98163e3111a760ea265e6dd740d32d684e7ff06321d",
+   "japanese": "切りつけてダメージを与え、{4D}JPを盗む技。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/17/370",
+   "us_leaf": 17,
+   "us_entry": 370,
+   "original_english_sha256": "6f5f47d357d99249a1aeddbec9af99c0700b1d3c47919a224c82fca2c7b3961d",
+   "japanese": "相手にイエローカードを{4D}あたえる技。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/17/371",
+   "us_leaf": 17,
+   "us_entry": 371,
+   "original_english_sha256": "f4c64c194ebcdd2087fcae97a4b9df8d5f8e0f0a242e05a81d20c467ed330a50",
+   "japanese": "はげしく回転して、まわりの{4D}ユニットにダメージを与える技。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/17/372",
+   "us_leaf": 17,
+   "us_entry": 372,
+   "original_english_sha256": "ab9084bead06ea86e4c04cb5f993c80401cb6e2ed393b826531eaf8a3eb3ded7",
+   "japanese": "ブランクカード。{4D}ロウを自由に決められる。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/18/70",
+   "us_leaf": 18,
+   "us_entry": 70,
+   "original_english_sha256": "8999b0bd06561ebf6b66ae12a8a8f6fd2bcef2bcb33bcfa95671122240b1fe3e",
+   "japanese": "{5117}マスターのジョブコマンド。{4D}{5117}マスターだけが使えるロウ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/18/71",
+   "us_leaf": 18,
+   "us_entry": 71,
+   "original_english_sha256": "0554a46ac2c31b0422461fab660ec9774b2fce85d8b4fa2f828a56d3c3a8eeb7",
+   "japanese": "{5117}のジョブコマンド。{4D}罪をおかした者に判決をくだす。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/18/72",
+   "us_leaf": 18,
+   "us_entry": 72,
+   "original_english_sha256": "30b87cc9bfa5db3b7be771b57f405a274ccf674ad2a1a58bbfe3499d95236679",
+   "japanese": "ブランクカード。{4D}ロウを作ることができる。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/262",
+   "us_leaf": 23,
+   "us_entry": 262,
+   "original_english_sha256": "c26a9654c5d97e879b03bab68c9cc0d703edf0e71a1a2e2b7e3a8e297c852b3c",
+   "japanese": "「戦技」など「技」の{4D}Aアビリティをヒットさせると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/263",
+   "us_leaf": 23,
+   "us_entry": 263,
+   "original_english_sha256": "d67e92722da25057075d0e78002c113bc5291b1db1d50a6a21f8ed2ed92d8d56",
+   "japanese": "「忍術」など「術」の{4D}Aアビリティをヒットさせると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/264",
+   "us_leaf": 23,
+   "us_entry": 264,
+   "original_english_sha256": "aac285dce2ae3329b29f47a517cfb811b3a784c92e470d78d40f753c072eee0d",
+   "japanese": "弓·剛弓·銃の攻撃をヒットさせると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/265",
+   "us_leaf": 23,
+   "us_entry": 265,
+   "original_english_sha256": "63e01a5c99af69c277f9a9a6afa4be2edb85767d446909067802f2445e35086a",
+   "japanese": "「チャージ」のAアビリティを{4D}ヒットさせると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/266",
+   "us_leaf": 23,
+   "us_entry": 266,
+   "original_english_sha256": "1f25bcdac5ffbe701181c135912f8382e0d21cf215d1ac7775d601453a405f59",
+   "japanese": "「仕手」のAアビリティを{4D}ヒットさせると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/267",
+   "us_leaf": 23,
+   "us_entry": 267,
+   "original_english_sha256": "2882e958dd4d21dc9e6ebec194f0a66b62aaf5020e1b5b88e28cf77d89c1fcd9",
+   "japanese": "「狩り」のAアビリティを{4D}ヒットさせると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/268",
+   "us_leaf": 23,
+   "us_entry": 268,
+   "original_english_sha256": "4f3bc472f97ee11c011031598c17421e7bfaeca00ce0c919f3a0ad30cc18ec8c",
+   "japanese": "「時魔法」のAアビリティを{4D}ヒットさせると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/269",
+   "us_leaf": 23,
+   "us_entry": 269,
+   "original_english_sha256": "a1d02ce0f1b5cbc9836d920e26a7bad47b6a95f52439ed8e410faffa6e3c9ae3",
+   "japanese": "「守護」のAアビリティを{4D}ヒットさせると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/270",
+   "us_leaf": 23,
+   "us_entry": 270,
+   "original_english_sha256": "c457fb90b7e147185eb6e4bf4b8e35fc425f9297a72062c424cd74c9816b45da",
+   "japanese": "「騎士道」のAアビリティを{4D}ヒットさせると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/271",
+   "us_leaf": 23,
+   "us_entry": 271,
+   "original_english_sha256": "10f498bf0f602cfa474f00966a8e2ff4c20ca0600e2aa733cb41de8bf343a5ee",
+   "japanese": "「精霊魔法」のAアビリティを{4D}ヒットさせると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/272",
+   "us_leaf": 23,
+   "us_entry": 272,
+   "original_english_sha256": "9e613f7039ed8fed9b90e0ba59cd4a6b6b5590678328999d73a265a8208cf35b",
+   "japanese": "「盗む」のAアビリティを{4D}成功させると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/273",
+   "us_leaf": 23,
+   "us_entry": 273,
+   "original_english_sha256": "ac34cf87c822716874d73fbc0a15b776de7e23ec2df7dafaf3fe166aa69a0d9a",
+   "japanese": "「呼び出す」のAアビリティを{4D}ヒットさせると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/274",
+   "us_leaf": 23,
+   "us_entry": 274,
+   "original_english_sha256": "9b98c72cc7419fdffeb33425d97fe44531ce5ea57529b566f53d4adffc7a5e16",
+   "japanese": "「召喚魔法」のAアビリティを{4D}ヒットさせると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/275",
+   "us_leaf": 23,
+   "us_entry": 275,
+   "original_english_sha256": "3fc01a2fb7ac2c9df41efcad183dbdfc8f22c5f545d37b0a3663798df08d3b40",
+   "japanese": "「狙う」のAアビリティを{4D}ヒットさせると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/276",
+   "us_leaf": 23,
+   "us_entry": 276,
+   "original_english_sha256": "5baa691842338f0eb72205c761164bc2a1319a431e24ae8203aae949c96a9082",
+   "japanese": "「祈祷」のAアビリティを{4D}ヒットさせると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/277",
+   "us_leaf": 23,
+   "us_entry": 277,
+   "original_english_sha256": "403595defc2b7229f410b9a0f9fbdd0d761b45bf48fb5093e853dda25d43b7e9",
+   "japanese": "「めたもる」のAアビリティを{4D}実行すると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/278",
+   "us_leaf": 23,
+   "us_entry": 278,
+   "original_english_sha256": "246fbf68bc529c18d68fff1737729eb39a7ca4e54764b50fe047ddff99c29115",
+   "japanese": "「あやつる」のAアビリティを{4D}成功させると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/279",
+   "us_leaf": 23,
+   "us_entry": 279,
+   "original_english_sha256": "d3fbb939b8220ffdcc44f28b209c567ee51eb73e1767488d2629515360769133",
+   "japanese": "「狙撃」のAアビリティを{4D}ヒットさせると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/280",
+   "us_leaf": 23,
+   "us_entry": 280,
+   "original_english_sha256": "8458a44e54f33f7a0446b5c53fc0c55a56cd90e7acc66cf01f44ddc6d2d06787",
+   "japanese": "「銃撃」のAアビリティを{4D}ヒットさせると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/281",
+   "us_leaf": 23,
+   "us_entry": 281,
+   "original_english_sha256": "cf5a9a415c03fb243ef15554f365091a78734076865a20edec7f7e10b7fd8d1d",
+   "japanese": "暗黒属性の行動·Aアビリティを{4D}ヒットさせると{4F}{42}{5117}ポイントボーナス。{4F}{42}ただし暗黒属性武器での攻撃は{4D}ボーナスを受けない。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/282",
+   "us_leaf": 23,
+   "us_entry": 282,
+   "original_english_sha256": "43ad5e46f921906817c6b29a0b8e3e297ac4bf268d0dddced0604bb357711e36",
+   "japanese": "冷気属性の行動·Aアビリティを{4D}ヒットさせると{4F}{42}{5117}ポイントボーナス。{4F}{42}ただし冷気属性武器での攻撃は{4D}ボーナスを受けない。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/283",
+   "us_leaf": 23,
+   "us_entry": 283,
+   "original_english_sha256": "6abbfd208f2222fa16c69aaf5743ae04ab6cebf9152e95db576f0c3a6ff7de05",
+   "japanese": "炎属性の行動·Aアビリティを{4D}ヒットさせると{4F}{42}{5117}ポイントボーナス。{4F}{42}ただし炎属性武器での攻撃は{4D}ボーナスを受けない。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/284",
+   "us_leaf": 23,
+   "us_entry": 284,
+   "original_english_sha256": "9270260449de02b743cfa97adda5462ce8dbd8c3b820d9594b0c5cf02f38918e",
+   "japanese": "風属性の行動·Aアビリティを{4D}ヒットさせると{4F}{42}{5117}ポイントボーナス。{4F}{42}ただし風属性武器での攻撃は{4D}ボーナスを受けない。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/285",
+   "us_leaf": 23,
+   "us_entry": 285,
+   "original_english_sha256": "cf5a9a415c03fb243ef15554f365091a78734076865a20edec7f7e10b7fd8d1d",
+   "japanese": "暗黒属性の行動·Aアビリティを{4D}ヒットさせると{4F}{42}{5117}ポイントボーナス。{4F}{42}ただし暗黒属性武器での攻撃は{4D}ボーナスを受けない。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/286",
+   "us_leaf": 23,
+   "us_entry": 286,
+   "original_english_sha256": "8964f37904c56936e0d49d76dd8ea870e2fb6df2fb25ab8d9c2a92f6caf2d91a",
+   "japanese": "雷属性の行動·Aアビリティを{4D}ヒットさせると{4F}{42}{5117}ポイントボーナス。{4F}{42}ただし雷属性武器での攻撃は{4D}ボーナスを受けない。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/287",
+   "us_leaf": 23,
+   "us_entry": 287,
+   "original_english_sha256": "b7ee0cf4f6f94cebb3ac5416b912dd5af8242430a5755e27f060428c5471fb9e",
+   "japanese": "ダミー{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "note": "developer placeholder in an unused law slot; localized as the JP placeholder word, attested in the JP ROM at words:clan/51"
+  },
+  {
+   "us_logical_path": "fx_text/23/288",
+   "us_leaf": 23,
+   "us_entry": 288,
+   "original_english_sha256": "b7ee0cf4f6f94cebb3ac5416b912dd5af8242430a5755e27f060428c5471fb9e",
+   "japanese": "ダミー{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "note": "developer placeholder in an unused law slot; localized as the JP placeholder word, attested in the JP ROM at words:clan/51"
+  },
+  {
+   "us_logical_path": "fx_text/23/289",
+   "us_leaf": 23,
+   "us_entry": 289,
+   "original_english_sha256": "b7ee0cf4f6f94cebb3ac5416b912dd5af8242430a5755e27f060428c5471fb9e",
+   "japanese": "ダミー{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "note": "developer placeholder in an unused law slot; localized as the JP placeholder word, attested in the JP ROM at words:clan/51"
+  },
+  {
+   "us_logical_path": "fx_text/23/290",
+   "us_leaf": 23,
+   "us_entry": 290,
+   "original_english_sha256": "b7ee0cf4f6f94cebb3ac5416b912dd5af8242430a5755e27f060428c5471fb9e",
+   "japanese": "ダミー{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "note": "developer placeholder in an unused law slot; localized as the JP placeholder word, attested in the JP ROM at words:clan/51"
+  },
+  {
+   "us_logical_path": "fx_text/23/291",
+   "us_leaf": 23,
+   "us_entry": 291,
+   "original_english_sha256": "34e4a54edd0e5c6222c829bd58786fb24decfa5f9ce166786e55811792175736",
+   "japanese": "1つ前のユニットと同じ{4D}アクションをすると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/292",
+   "us_leaf": 23,
+   "us_entry": 292,
+   "original_english_sha256": "b7ee0cf4f6f94cebb3ac5416b912dd5af8242430a5755e27f060428c5471fb9e",
+   "japanese": "ダミー{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "note": "developer placeholder in an unused law slot; localized as the JP placeholder word, attested in the JP ROM at words:clan/51"
+  },
+  {
+   "us_logical_path": "fx_text/23/293",
+   "us_leaf": 23,
+   "us_entry": 293,
+   "original_english_sha256": "b7ee0cf4f6f94cebb3ac5416b912dd5af8242430a5755e27f060428c5471fb9e",
+   "japanese": "ダミー{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "note": "developer placeholder in an unused law slot; localized as the JP placeholder word, attested in the JP ROM at words:clan/51"
+  },
+  {
+   "us_logical_path": "fx_text/23/294",
+   "us_leaf": 23,
+   "us_entry": 294,
+   "original_english_sha256": "b4c222015981b7ccdf236fb786bc1e44c973383e1c23e5f9c4fb3049ce6b9390",
+   "japanese": "コンボを使うと{4D}{5117}ポイントボーナス。{4F}{42}使ったユニットのみ{4D}ボーナスをうける。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/295",
+   "us_leaf": 23,
+   "us_entry": 295,
+   "original_english_sha256": "2916e3103815f0da3474b6ca26d7c11f58ae534e6aae5e64216492d39f58a19b",
+   "japanese": "「白·黒·赤·青」魔法の{4D}どれかをヒットさせると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/296",
+   "us_leaf": 23,
+   "us_entry": 296,
+   "original_english_sha256": "74e3ef513b1f42d5ead9b40d0e00b219da49ee883e0a84bef7829851221d7a75",
+   "japanese": "Aアビリティの範囲が{4D}全体のときにヒットさせると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/297",
+   "us_leaf": 23,
+   "us_entry": 297,
+   "original_english_sha256": "faa951412f889093f1a6df295ac28d22eac1adadcaf631cebdf98acf37025f94",
+   "japanese": "2パネル以上の範囲指定{4D}Aアビリティをヒットさせると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/298",
+   "us_leaf": 23,
+   "us_entry": 298,
+   "original_english_sha256": "d6b30db82204445ef7ece1a8e3d833f09b5226a12c76b8e42142904aa0b95e86",
+   "japanese": "杖の攻撃をヒットさせると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/299",
+   "us_leaf": 23,
+   "us_entry": 299,
+   "original_english_sha256": "5f65625c50879a7acf18aef7379d06f3ccc3740b02dc910b90a678e37bd75ff9",
+   "japanese": "ロッドの攻撃をヒットさせると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/300",
+   "us_leaf": 23,
+   "us_entry": 300,
+   "original_english_sha256": "0046f888f469025993d51dc5f1fae2c80a02952040506e42b2ee4b1fd7f6e97a",
+   "japanese": "ナイフの攻撃をヒットさせると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/301",
+   "us_leaf": 23,
+   "us_entry": 301,
+   "original_english_sha256": "55eaf9808fde8c06749dac980b8351157c4d97f404361ac29a4f842ce4ef3ca8",
+   "japanese": "楽器の攻撃をヒットさせると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/302",
+   "us_leaf": 23,
+   "us_entry": 302,
+   "original_english_sha256": "f1b52e6600db1094cae5a32688482b60aad67c6694b07eca0ef3e1e100f204e8",
+   "japanese": "レイピアの攻撃をヒットさせると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/303",
+   "us_leaf": 23,
+   "us_entry": 303,
+   "original_english_sha256": "fbb81ea59c7df4d9f3653f525a7e69211a654cbd38b79535435e735783ca9dff",
+   "japanese": "槍の攻撃をヒットさせると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/304",
+   "us_leaf": 23,
+   "us_entry": 304,
+   "original_english_sha256": "1bfd0d1bbe26e447b777694d6923687c7b6dce63dc5383bd50a92a97a9750c7d",
+   "japanese": "サーベルの攻撃をヒットさせると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/305",
+   "us_leaf": 23,
+   "us_entry": 305,
+   "original_english_sha256": "a04edece3b4af9a5c864869adfef5c2d9ad551bf0bef1a7b8ec168d5a7844ec8",
+   "japanese": "大剣の攻撃をヒットさせると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/306",
+   "us_leaf": 23,
+   "us_entry": 306,
+   "original_english_sha256": "0feb942fdef33b2771a279234195cadd4428ec50f5e3ea9f48e367230b2c7c4b",
+   "japanese": "メイスの攻撃をヒットさせると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/307",
+   "us_leaf": 23,
+   "us_entry": 307,
+   "original_english_sha256": "fd9f09da659bc8d2ddb53ff2dee5cea7077a1368afea3ad8ebfbb5b7d0212a4e",
+   "japanese": "広刃剣の攻撃をヒットさせると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/308",
+   "us_leaf": 23,
+   "us_entry": 308,
+   "original_english_sha256": "00f48864fbca2f59068c2bc7ecc0e9366ce5b0933abb67ab367c1d03815a87f5",
+   "japanese": "騎士剣の攻撃をヒットさせると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/309",
+   "us_leaf": 23,
+   "us_entry": 309,
+   "original_english_sha256": "413cb11ecdf0e31259dbbb85c85fa4215f6a361b2f8331de061cb72b1332056a",
+   "japanese": "ソウルの攻撃をヒットさせると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/310",
+   "us_leaf": 23,
+   "us_entry": 310,
+   "original_english_sha256": "ce4fe7e0675797b6c14673e4fc4b7d59eed426f83483cd8c4f685aa4c006ab7e",
+   "japanese": "ナックルの攻撃をヒットさせると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/311",
+   "us_leaf": 23,
+   "us_entry": 311,
+   "original_english_sha256": "c43124154020fdb5a8e37463a6164559ac64be99a5c8c31199488a1b37387163",
+   "japanese": "ソードの攻撃をヒットさせると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/312",
+   "us_leaf": 23,
+   "us_entry": 312,
+   "original_english_sha256": "b7ee0cf4f6f94cebb3ac5416b912dd5af8242430a5755e27f060428c5471fb9e",
+   "japanese": "ダミー{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "note": "developer placeholder in an unused law slot; localized as the JP placeholder word, attested in the JP ROM at words:clan/51"
+  },
+  {
+   "us_logical_path": "fx_text/23/313",
+   "us_leaf": 23,
+   "us_entry": 313,
+   "original_english_sha256": "b7ee0cf4f6f94cebb3ac5416b912dd5af8242430a5755e27f060428c5471fb9e",
+   "japanese": "ダミー{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "note": "developer placeholder in an unused law slot; localized as the JP placeholder word, attested in the JP ROM at words:clan/51"
+  },
+  {
+   "us_logical_path": "fx_text/23/314",
+   "us_leaf": 23,
+   "us_entry": 314,
+   "original_english_sha256": "b7ee0cf4f6f94cebb3ac5416b912dd5af8242430a5755e27f060428c5471fb9e",
+   "japanese": "ダミー{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "note": "developer placeholder in an unused law slot; localized as the JP placeholder word, attested in the JP ROM at words:clan/51"
+  },
+  {
+   "us_logical_path": "fx_text/23/315",
+   "us_leaf": 23,
+   "us_entry": 315,
+   "original_english_sha256": "b7ee0cf4f6f94cebb3ac5416b912dd5af8242430a5755e27f060428c5471fb9e",
+   "japanese": "ダミー{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "note": "developer placeholder in an unused law slot; localized as the JP placeholder word, attested in the JP ROM at words:clan/51"
+  },
+  {
+   "us_logical_path": "fx_text/23/316",
+   "us_leaf": 23,
+   "us_entry": 316,
+   "original_english_sha256": "b7ee0cf4f6f94cebb3ac5416b912dd5af8242430a5755e27f060428c5471fb9e",
+   "japanese": "ダミー{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "note": "developer placeholder in an unused law slot; localized as the JP placeholder word, attested in the JP ROM at words:clan/51"
+  },
+  {
+   "us_logical_path": "fx_text/23/317",
+   "us_leaf": 23,
+   "us_entry": 317,
+   "original_english_sha256": "b7ee0cf4f6f94cebb3ac5416b912dd5af8242430a5755e27f060428c5471fb9e",
+   "japanese": "ダミー{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "note": "developer placeholder in an unused law slot; localized as the JP placeholder word, attested in the JP ROM at words:clan/51"
+  },
+  {
+   "us_logical_path": "fx_text/23/318",
+   "us_leaf": 23,
+   "us_entry": 318,
+   "original_english_sha256": "b7ee0cf4f6f94cebb3ac5416b912dd5af8242430a5755e27f060428c5471fb9e",
+   "japanese": "ダミー{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "note": "developer placeholder in an unused law slot; localized as the JP placeholder word, attested in the JP ROM at words:clan/51"
+  },
+  {
+   "us_logical_path": "fx_text/23/319",
+   "us_leaf": 23,
+   "us_entry": 319,
+   "original_english_sha256": "b7ee0cf4f6f94cebb3ac5416b912dd5af8242430a5755e27f060428c5471fb9e",
+   "japanese": "ダミー{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "note": "developer placeholder in an unused law slot; localized as the JP placeholder word, attested in the JP ROM at words:clan/51"
+  },
+  {
+   "us_logical_path": "fx_text/23/320",
+   "us_leaf": 23,
+   "us_entry": 320,
+   "original_english_sha256": "b7ee0cf4f6f94cebb3ac5416b912dd5af8242430a5755e27f060428c5471fb9e",
+   "japanese": "ダミー{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "note": "developer placeholder in an unused law slot; localized as the JP placeholder word, attested in the JP ROM at words:clan/51"
+  },
+  {
+   "us_logical_path": "fx_text/23/321",
+   "us_leaf": 23,
+   "us_entry": 321,
+   "original_english_sha256": "b7ee0cf4f6f94cebb3ac5416b912dd5af8242430a5755e27f060428c5471fb9e",
+   "japanese": "ダミー{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "note": "developer placeholder in an unused law slot; localized as the JP placeholder word, attested in the JP ROM at words:clan/51"
+  },
+  {
+   "us_logical_path": "fx_text/23/322",
+   "us_leaf": 23,
+   "us_entry": 322,
+   "original_english_sha256": "46a360fde8382ea149c848e9e1919441386db5b1fd172c7e948647e93d8a1def",
+   "japanese": "だれかをステータス異常にすると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/323",
+   "us_leaf": 23,
+   "us_entry": 323,
+   "original_english_sha256": "f8a24911825af0496309844a20f907d63e6d4c6b57e190102f8340ad1c90adf2",
+   "japanese": "だれかを「カエル」にすると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/324",
+   "us_leaf": 23,
+   "us_entry": 324,
+   "original_english_sha256": "b7906f234aeb6334d69149e26bed91517b54acb7572336b6d90f779d03d9ace7",
+   "japanese": "だれかを「石化」にすると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/325",
+   "us_leaf": 23,
+   "us_entry": 325,
+   "original_english_sha256": "f2d3f25574603d41cdd21e2dcd61d038892f163168d51e651d2051cc337135f2",
+   "japanese": "だれかを「ドンアク」「ドンムブ」に{4D}すると{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/326",
+   "us_leaf": 23,
+   "us_entry": 326,
+   "original_english_sha256": "080491d9400dc4a7f02b6c6ec7ad60639392a12d49e3dc156d645c7263083dcc",
+   "japanese": "だれかを「バーサク」にすると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/327",
+   "us_leaf": 23,
+   "us_entry": 327,
+   "original_english_sha256": "50010e039ba34414d8a5fcba700d60e690f61184edbd80db9b222a2cfeeb8723",
+   "japanese": "だれかを「チャーム」にすると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/328",
+   "us_leaf": 23,
+   "us_entry": 328,
+   "original_english_sha256": "37278892f93d969b6a1990f547e2187fc2695d3fe5d8686833aa63fa06c05929",
+   "japanese": "だれかを「もの忘れ」にすると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/329",
+   "us_leaf": 23,
+   "us_entry": 329,
+   "original_english_sha256": "4ee5b50fb27c10eddacf5406bfd10c4309247e0886f84d5489a28dad8521be75",
+   "japanese": "だれかを「混乱」にすると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/330",
+   "us_leaf": 23,
+   "us_entry": 330,
+   "original_english_sha256": "28e41e0e8cc51fddc74a96cf9a1988289b681b8a730146fdc4f0d0a7d12638e9",
+   "japanese": "だれかを「スロウ」にすると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/331",
+   "us_leaf": 23,
+   "us_entry": 331,
+   "original_english_sha256": "71eb0263bde084c2b89ba51d9dfac9cfa5032bb106ad7e9be58e5975bf78f7b7",
+   "japanese": "だれかを「ストップ」にすると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/332",
+   "us_leaf": 23,
+   "us_entry": 332,
+   "original_english_sha256": "802314c1c907f985f693498e5bd1a07717ddb6233ff880c7c06ed04deea78549",
+   "japanese": "だれかを「毒」にすると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/333",
+   "us_leaf": 23,
+   "us_entry": 333,
+   "original_english_sha256": "1cb0f82965013066f648ecc79c2a6de4e2ad7dcc112e1d1c9b299d56c1f675c6",
+   "japanese": "だれかを「沈黙」にすると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/334",
+   "us_leaf": 23,
+   "us_entry": 334,
+   "original_english_sha256": "416f96f485488d287b2cd3ec2e71600b60280c112f5789e3050c98157e667284",
+   "japanese": "モンスターへの敵対アクションを{4D}ヒットさせると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/335",
+   "us_leaf": 23,
+   "us_entry": 335,
+   "original_english_sha256": "1cb0f82965013066f648ecc79c2a6de4e2ad7dcc112e1d1c9b299d56c1f675c6",
+   "japanese": "だれかを「沈黙」にすると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/336",
+   "us_leaf": 23,
+   "us_entry": 336,
+   "original_english_sha256": "802314c1c907f985f693498e5bd1a07717ddb6233ff880c7c06ed04deea78549",
+   "japanese": "だれかを「毒」にすると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/337",
+   "us_leaf": 23,
+   "us_entry": 337,
+   "original_english_sha256": "28e41e0e8cc51fddc74a96cf9a1988289b681b8a730146fdc4f0d0a7d12638e9",
+   "japanese": "だれかを「スロウ」にすると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/338",
+   "us_leaf": 23,
+   "us_entry": 338,
+   "original_english_sha256": "440bddabd367f99dcec6cb070e2a0b2e7953826261763f8f7e204bd4b5cf4906",
+   "japanese": "バンガ族への敵対アクションを{4D}ヒットさせると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/339",
+   "us_leaf": 23,
+   "us_entry": 339,
+   "original_english_sha256": "03d9d3fdd92a7fcbd107c8283b8917e488ec784c37d703f15ff157209b2c83d8",
+   "japanese": "ン·モゥ族への敵対アクションを{4D}ヒットさせると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/340",
+   "us_leaf": 23,
+   "us_entry": 340,
+   "original_english_sha256": "bccfab38496502ccd82520d469c3a94b26513a6f445d7bff890a6d08a850714d",
+   "japanese": "ヴィエラ族への敵対アクションを{4D}ヒットさせると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/341",
+   "us_leaf": 23,
+   "us_entry": 341,
+   "original_english_sha256": "e698ec8b10075de4efc230023ee43df6a93269cc153649cf7e2b972ced2650da",
+   "japanese": "モーグリ族への敵対アクションを{4D}ヒットさせると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/342",
+   "us_leaf": 23,
+   "us_entry": 342,
+   "original_english_sha256": "84d77f3f80d716f220bdcb728da2e5e62ec013a632f8bca2aea76cc97b8c5b8e",
+   "japanese": "人間族への敵対アクションを{4D}ヒットさせると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/343",
+   "us_leaf": 23,
+   "us_entry": 343,
+   "original_english_sha256": "46a360fde8382ea149c848e9e1919441386db5b1fd172c7e948647e93d8a1def",
+   "japanese": "だれかをステータス異常にすると{4D}{5117}ポイントボーナス。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL"
+  },
+  {
+   "us_logical_path": "fx_text/23/344",
+   "us_leaf": 23,
+   "us_entry": 344,
+   "original_english_sha256": "b7ee0cf4f6f94cebb3ac5416b912dd5af8242430a5755e27f060428c5471fb9e",
+   "japanese": "ダミー{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "note": "developer placeholder in an unused law slot; localized as the JP placeholder word, attested in the JP ROM at words:clan/51"
+  },
+  {
+   "us_logical_path": "fx_text/23/345",
+   "us_leaf": 23,
+   "us_entry": 345,
+   "original_english_sha256": "b7ee0cf4f6f94cebb3ac5416b912dd5af8242430a5755e27f060428c5471fb9e",
+   "japanese": "ダミー{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "note": "developer placeholder in an unused law slot; localized as the JP placeholder word, attested in the JP ROM at words:clan/51"
+  }
+ ]
+}

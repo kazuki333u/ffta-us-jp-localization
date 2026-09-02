@@ -1,0 +1,2777 @@
+{
+ "_public_note": "Public build manifest. Verbatim retail source strings are stored as SHA-256 digests (fields ending in _sha256); the builder recomputes them from the user's own ROM. Japanese text in this file is written by this project.",
+ "milestone": "us_only_s_text_special_scenes",
+ "description": "Editorial localization of the US-only special-character sidequest scenes: s_text tops 44 (Babus keepsake), 45 (Ritz snow mission), 46 (Shara rescue), 48 (Ritz & Shara pub), 49 (Cid & Babus). Whole leaves: 182 entries of the exact 958 editorial scope plus the 5 line-0 scene openers, which the aligner excludes only because the JP side at those tops is a page-level repeat marker (alias of the JP top-35 cut-label page) -- they have no JP original either.",
+ "baseline_production_sha256": "27AA2CA34D6DE12F192DCD37BC3F3D873DEC0FBDD0D63ACA3417C1EAB1A31590",
+ "count": 187,
+ "translated_count": 187,
+ "no_change_required_count": 0,
+ "in_editorial_scope_count": 182,
+ "scene_completion_count": 5,
+ "voice_authorities": {
+  "マーシュ": "JP s_text 1/46, 5/11, 17/16, 26/49, 27/15, 30/9 -- 一人称ぼく(ひらがな), 大人には敬語",
+  "リッツ": "JP s_text 1/7-42, 5/24-36, 29/9-28 -- 一人称あたし, 勝ち気な「〜わよ」「〜じゃない」, マーシュをアンタ",
+  "シャアラ": "JP s_text 5/4, 17/1-36, 33/0-18 -- 簡潔な素の言い切り, 女性語尾なし",
+  "ドネッド": "JP s_text 1/75-108, 24/8-21, 27/34-57 -- 一人称ボク(カタカナ), お兄ちゃん/おねーちゃん呼び",
+  "バブズ": "JP s_text 12/4, 17/54, 26/1-16, 30/40, 33/49 -- 一人称私, 対王族は敬語, 対少年は率直な常体",
+  "シド": "JP s_text 17/50-52, 26/51-61, 30/1-41, 33/24-59 -- 一人称私, 威厳ある常体「〜かね」「〜まい」",
+  "レメディ": "JP s_text 26/22-30 -- 母性的で不気味な「〜わ」「〜のね」",
+  "パブマスター": "JP s_text 27/18-23 -- 気さくな「〜ぜ」「〜な」"
+ },
+ "terminology": {
+  "Ambervale": "琥珀の谷 (JP s_text/28/8, ルビ付き原文attested)",
+  "engagement": "エンゲージ (JP s_text/27/40)",
+  "snowball fight": "雪合戦 (JP s_text/1/14)",
+  "personal mage to the prince": "王子づきの魔道士 (JP s_text/12/4)",
+  "Alta Oron Sondus Kameela": "アルタ·オロン。ソンドス·カミーラ (JP s_text/1/92)",
+  "stuffed bear": "クマさん/クマのぬいぐるみ (JP s_text/1/3-4)",
+  "Swain": "スウェイン (新規, JP未出の姓; fx_text/11/56-63 の表記に統一。スワインは swine と同音のため不採用 -- 2026-08-31 translation QA)",
+  "Radijiu": "ラディウユ (新規, JP未出の姓)"
+ },
+ "kanji_codes": {
+  "一": {
+   "jp_glyph_code": "0x0122",
+   "attested_at": "fx_text/1/31",
+   "source": "reused:us_only_fx_text"
+  },
+  "丈": {
+   "jp_glyph_code": "0x06AE",
+   "attested_at": "s_text/1/20",
+   "source": "jp_corpus_attestation"
+  },
+  "上": {
+   "jp_glyph_code": "0x0135",
+   "attested_at": "fx_text/1/32",
+   "source": "reused:us_only_fx_text"
+  },
+  "世": {
+   "jp_glyph_code": "0x0142",
+   "attested_at": "s_text/1/98",
+   "source": "jp_corpus_attestation"
+  },
+  "中": {
+   "jp_glyph_code": "0x0125",
+   "attested_at": "s_text/1/38",
+   "source": "jp_corpus_attestation"
+  },
+  "事": {
+   "jp_glyph_code": "0x01A5",
+   "attested_at": "fx_text/8/19",
+   "source": "reused:us_only_fx_text"
+  },
+  "亡": {
+   "jp_glyph_code": "0x0AD2",
+   "attested_at": "s_text/19/58",
+   "source": "jp_corpus_attestation"
+  },
+  "人": {
+   "jp_glyph_code": "0x01A9",
+   "attested_at": "fx_text/2/9",
+   "source": "reused:us_only_fx_text"
+  },
+  "今": {
+   "jp_glyph_code": "0x0528",
+   "attested_at": "s_text/1/1",
+   "source": "jp_corpus_attestation"
+  },
+  "仕": {
+   "jp_glyph_code": "0x059D",
+   "attested_at": "fx_text/2/11",
+   "source": "reused:us_only_fx_text"
+  },
+  "仲": {
+   "jp_glyph_code": "0x0859",
+   "attested_at": "s_text/1/69",
+   "source": "jp_corpus_attestation"
+  },
+  "伝": {
+   "jp_glyph_code": "0x08DB",
+   "attested_at": "s_text/2/64",
+   "source": "jp_corpus_attestation"
+  },
+  "体": {
+   "jp_glyph_code": "0x07ED",
+   "attested_at": "fx_text/8/2",
+   "source": "reused:us_only_fx_text"
+  },
+  "何": {
+   "jp_glyph_code": "0x014E",
+   "attested_at": "s_text/2/64",
+   "source": "jp_corpus_attestation"
+  },
+  "元": {
+   "jp_glyph_code": "0x0492",
+   "attested_at": "s_text/2/58",
+   "source": "jp_corpus_attestation"
+  },
+  "兄": {
+   "jp_glyph_code": "0x0140",
+   "attested_at": "s_text/1/75",
+   "source": "jp_corpus_attestation"
+  },
+  "入": {
+   "jp_glyph_code": "0x0967",
+   "attested_at": "fx_text/1/16",
+   "source": "reused:us_only_fx_text"
+  },
+  "出": {
+   "jp_glyph_code": "0x013F",
+   "attested_at": "fx_text/1/33",
+   "source": "reused:us_only_fx_text"
+  },
+  "分": {
+   "jp_glyph_code": "0x0126",
+   "attested_at": "s_text/4/8",
+   "source": "reused:us_only_system_battle"
+  },
+  "切": {
+   "jp_glyph_code": "0x013C",
+   "attested_at": "fx_text/4/19",
+   "source": "reused:us_only_fx_text"
+  },
+  "別": {
+   "jp_glyph_code": "0x01D9",
+   "attested_at": "fx_text/4/19",
+   "source": "reused:us_only_fx_text"
+  },
+  "剣": {
+   "jp_glyph_code": "0x0475",
+   "attested_at": "fx_text/8/52",
+   "source": "reused:us_only_fx_text"
+  },
+  "力": {
+   "jp_glyph_code": "0x0182",
+   "attested_at": "s_text/2/51",
+   "source": "jp_corpus_attestation"
+  },
+  "助": {
+   "jp_glyph_code": "0x0667",
+   "attested_at": "s_text/2/24",
+   "source": "jp_corpus_attestation"
+  },
+  "勝": {
+   "jp_glyph_code": "0x0670",
+   "attested_at": "fx_text/4/179",
+   "source": "reused:us_only_fx_text"
+  },
+  "去": {
+   "jp_glyph_code": "0x01BC",
+   "attested_at": "s_text/30/13",
+   "source": "jp_corpus_attestation"
+  },
+  "友": {
+   "jp_glyph_code": "0x0B6A",
+   "attested_at": "fx_text/8/76",
+   "source": "reused:us_only_fx_text"
+  },
+  "受": {
+   "jp_glyph_code": "0x01C9",
+   "attested_at": "fx_text/8/3",
+   "source": "reused:us_only_fx_text"
+  },
+  "口": {
+   "jp_glyph_code": "0x0134",
+   "attested_at": "s_text/7/11",
+   "source": "jp_corpus_attestation"
+  },
+  "古": {
+   "jp_glyph_code": "0x04A1",
+   "attested_at": "s_text/1/45",
+   "source": "jp_corpus_attestation"
+  },
+  "合": {
+   "jp_glyph_code": "0x0513",
+   "attested_at": "s_text/1/3",
+   "source": "jp_corpus_attestation"
+  },
+  "同": {
+   "jp_glyph_code": "0x0924",
+   "attested_at": "fx_text/4/203",
+   "source": "reused:us_only_fx_text"
+  },
+  "向": {
+   "jp_glyph_code": "0x04D3",
+   "attested_at": "s_text/13/1",
+   "source": "reused:us_only_system_battle"
+  },
+  "味": {
+   "jp_glyph_code": "0x015A",
+   "attested_at": "fx_text/8/5",
+   "source": "reused:us_only_fx_text"
+  },
+  "問": {
+   "jp_glyph_code": "0x01DE",
+   "attested_at": "fx_text/6/8",
+   "source": "reused:us_only_fx_text"
+  },
+  "回": {
+   "jp_glyph_code": "0x014A",
+   "attested_at": "fx_text/4/121",
+   "source": "reused:us_only_fx_text"
+  },
+  "報": {
+   "jp_glyph_code": "0x0AB4",
+   "attested_at": "fx_text/1/31",
+   "source": "reused:us_only_fx_text"
+  },
+  "場": {
+   "jp_glyph_code": "0x01CD",
+   "attested_at": "s_text/1/56",
+   "source": "jp_corpus_attestation"
+  },
+  "士": {
+   "jp_glyph_code": "0x0133",
+   "attested_at": "fx_text/4/117",
+   "source": "reused:us_only_fx_text"
+  },
+  "声": {
+   "jp_glyph_code": "0x0733",
+   "attested_at": "s_text/6/20",
+   "source": "jp_corpus_attestation"
+  },
+  "変": {
+   "jp_glyph_code": "0x015E",
+   "attested_at": "s_text/1/3",
+   "source": "reused:us_only_system_battle"
+  },
+  "大": {
+   "jp_glyph_code": "0x0801",
+   "attested_at": "fx_text/4/61",
+   "source": "reused:us_only_fx_text"
+  },
+  "夫": {
+   "jp_glyph_code": "0x0A48",
+   "attested_at": "s_text/1/20",
+   "source": "jp_corpus_attestation"
+  },
+  "女": {
+   "jp_glyph_code": "0x0669",
+   "attested_at": "s_text/1/6",
+   "source": "jp_corpus_attestation"
+  },
+  "好": {
+   "jp_glyph_code": "0x01C0",
+   "attested_at": "fx_text/2/3",
+   "source": "reused:us_only_fx_text"
+  },
+  "子": {
+   "jp_glyph_code": "0x0132",
+   "attested_at": "s_text/2/75",
+   "source": "jp_corpus_attestation"
+  },
+  "実": {
+   "jp_glyph_code": "0x01C8",
+   "attested_at": "fx_text/1/37",
+   "source": "reused:us_only_fx_text"
+  },
+  "宮": {
+   "jp_glyph_code": "0x03B8",
+   "attested_at": "s_text/6/27",
+   "source": "jp_corpus_attestation"
+  },
+  "局": {
+   "jp_glyph_code": "0x03FA",
+   "attested_at": "s_text/19/44",
+   "source": "jp_corpus_attestation"
+  },
+  "屋": {
+   "jp_glyph_code": "0x01B6",
+   "attested_at": "s_text/1/88",
+   "source": "jp_corpus_attestation"
+  },
+  "年": {
+   "jp_glyph_code": "0x0976",
+   "attested_at": "s_text/3/12",
+   "source": "jp_corpus_attestation"
+  },
+  "幸": {
+   "jp_glyph_code": "0x04DE",
+   "attested_at": "fx_text/8/56",
+   "source": "reused:us_only_fx_text"
+  },
+  "幼": {
+   "jp_glyph_code": "0x0B84",
+   "attested_at": "s_text/12/18",
+   "source": "jp_corpus_attestation"
+  },
+  "度": {
+   "jp_glyph_code": "0x08F1",
+   "attested_at": "s_text/2/86",
+   "source": "reused:us_only_system_battle"
+  },
+  "廷": {
+   "jp_glyph_code": "0x08B0",
+   "attested_at": "s_text/6/27",
+   "source": "jp_corpus_attestation"
+  },
+  "引": {
+   "jp_glyph_code": "0x019F",
+   "attested_at": "fx_text/4/10",
+   "source": "reused:us_only_fx_text"
+  },
+  "弟": {
+   "jp_glyph_code": "0x08B1",
+   "attested_at": "s_text/1/46",
+   "source": "jp_corpus_attestation"
+  },
+  "強": {
+   "jp_glyph_code": "0x03E4",
+   "attested_at": "s_text/1/101",
+   "source": "jp_corpus_attestation"
+  },
+  "彼": {
+   "jp_glyph_code": "0x09FC",
+   "attested_at": "fx_text/8/42",
+   "source": "reused:us_only_fx_text"
+  },
+  "待": {
+   "jp_glyph_code": "0x01D3",
+   "attested_at": "fx_text/1/31",
+   "source": "reused:us_only_fx_text"
+  },
+  "従": {
+   "jp_glyph_code": "0x016B",
+   "attested_at": "s_text/12/26",
+   "source": "jp_corpus_attestation"
+  },
+  "忘": {
+   "jp_glyph_code": "0x0AD8",
+   "attested_at": "fx_text/4/84",
+   "source": "reused:us_only_fx_text"
+  },
+  "忠": {
+   "jp_glyph_code": "0x085B",
+   "attested_at": "fx_text/22/79",
+   "source": "jp_corpus_attestation"
+  },
+  "念": {
+   "jp_glyph_code": "0x0977",
+   "attested_at": "s_text/2/69",
+   "source": "jp_corpus_attestation"
+  },
+  "思": {
+   "jp_glyph_code": "0x01C5",
+   "attested_at": "fx_text/6/24",
+   "source": "reused:us_only_fx_text"
+  },
+  "急": {
+   "jp_glyph_code": "0x03BA",
+   "attested_at": "s_text/7/42",
+   "source": "jp_corpus_attestation"
+  },
+  "意": {
+   "jp_glyph_code": "0x0215",
+   "attested_at": "s_text/5/29",
+   "source": "jp_corpus_attestation"
+  },
+  "感": {
+   "jp_glyph_code": "0x033E",
+   "attested_at": "s_text/4/11",
+   "source": "jp_corpus_attestation"
+  },
+  "戦": {
+   "jp_glyph_code": "0x0175",
+   "attested_at": "fx_text/4/117",
+   "source": "reused:us_only_fx_text"
+  },
+  "戻": {
+   "jp_glyph_code": "0x0B4A",
+   "attested_at": "s_text/5/31",
+   "source": "reused:us_only_system_battle"
+  },
+  "所": {
+   "jp_glyph_code": "0x01CB",
+   "attested_at": "s_text/1/25",
+   "source": "jp_corpus_attestation"
+  },
+  "手": {
+   "jp_glyph_code": "0x060B",
+   "attested_at": "fx_text/1/16",
+   "source": "reused:us_only_fx_text"
+  },
+  "投": {
+   "jp_glyph_code": "0x0901",
+   "attested_at": "s_text/1/28",
+   "source": "jp_corpus_attestation"
+  },
+  "持": {
+   "jp_glyph_code": "0x05C9",
+   "attested_at": "s_text/1/52",
+   "source": "jp_corpus_attestation"
+  },
+  "方": {
+   "jp_glyph_code": "0x013A",
+   "attested_at": "s_text/2/58",
+   "source": "reused:us_only_system_battle"
+  },
+  "時": {
+   "jp_glyph_code": "0x0166",
+   "attested_at": "fx_text/2/12",
+   "source": "reused:us_only_fx_text"
+  },
+  "望": {
+   "jp_glyph_code": "0x0ADC",
+   "attested_at": "s_text/2/84",
+   "source": "jp_corpus_attestation"
+  },
+  "本": {
+   "jp_glyph_code": "0x0144",
+   "attested_at": "s_text/1/45",
+   "source": "jp_corpus_attestation"
+  },
+  "束": {
+   "jp_glyph_code": "0x07CD",
+   "attested_at": "s_text/8/17",
+   "source": "jp_corpus_attestation"
+  },
+  "来": {
+   "jp_glyph_code": "0x014F",
+   "attested_at": "s_text/1/38",
+   "source": "jp_corpus_attestation"
+  },
+  "様": {
+   "jp_glyph_code": "0x017B",
+   "attested_at": "s_text/1/116",
+   "source": "jp_corpus_attestation"
+  },
+  "次": {
+   "jp_glyph_code": "0x05CA",
+   "attested_at": "fx_text/4/111",
+   "source": "reused:us_only_fx_text"
+  },
+  "止": {
+   "jp_glyph_code": "0x012D",
+   "attested_at": "s_text/1/38",
+   "source": "jp_corpus_attestation"
+  },
+  "正": {
+   "jp_glyph_code": "0x072C",
+   "attested_at": "s_text/17/15",
+   "source": "jp_corpus_attestation"
+  },
+  "残": {
+   "jp_glyph_code": "0x059C",
+   "attested_at": "s_text/6/5",
+   "source": "jp_corpus_attestation"
+  },
+  "気": {
+   "jp_glyph_code": "0x0384",
+   "attested_at": "s_text/1/21",
+   "source": "reused:us_only_system_battle"
+  },
+  "決": {
+   "jp_glyph_code": "0x0468",
+   "attested_at": "fx_text/1/8",
+   "source": "reused:us_only_fx_text"
+  },
+  "法": {
+   "jp_glyph_code": "0x0ABF",
+   "attested_at": "fx_text/4/90",
+   "source": "reused:us_only_fx_text"
+  },
+  "洞": {
+   "jp_glyph_code": "0x0929",
+   "attested_at": "s_text/13/11",
+   "source": "jp_corpus_attestation"
+  },
+  "無": {
+   "jp_glyph_code": "0x0174",
+   "attested_at": "s_text/4/19",
+   "source": "reused:us_only_system_battle"
+  },
+  "物": {
+   "jp_glyph_code": "0x0A74",
+   "attested_at": "s_text/1/51",
+   "source": "jp_corpus_attestation"
+  },
+  "玉": {
+   "jp_glyph_code": "0x03FC",
+   "attested_at": "s_text/1/28",
+   "source": "jp_corpus_attestation"
+  },
+  "王": {
+   "jp_glyph_code": "0x0137",
+   "attested_at": "s_text/2/33",
+   "source": "jp_corpus_attestation"
+  },
+  "珀": {
+   "jp_glyph_code": "0x0C64",
+   "attested_at": "s_text/28/8",
+   "source": "jp_corpus_attestation"
+  },
+  "理": {
+   "jp_glyph_code": "0x0BB2",
+   "attested_at": "s_text/2/33",
+   "source": "jp_corpus_attestation"
+  },
+  "琥": {
+   "jp_glyph_code": "0x0C63",
+   "attested_at": "s_text/28/8",
+   "source": "jp_corpus_attestation"
+  },
+  "由": {
+   "jp_glyph_code": "0x0B74",
+   "attested_at": "fx_text/4/96",
+   "source": "reused:us_only_fx_text"
+  },
+  "男": {
+   "jp_glyph_code": "0x083F",
+   "attested_at": "s_text/1/31",
+   "source": "jp_corpus_attestation"
+  },
+  "界": {
+   "jp_glyph_code": "0x015F",
+   "attested_at": "s_text/1/98",
+   "source": "jp_corpus_attestation"
+  },
+  "白": {
+   "jp_glyph_code": "0x09B8",
+   "attested_at": "fx_text/4/121",
+   "source": "reused:us_only_fx_text"
+  },
+  "直": {
+   "jp_glyph_code": "0x0886",
+   "attested_at": "s_text/1/91",
+   "source": "jp_corpus_attestation"
+  },
+  "相": {
+   "jp_glyph_code": "0x01AB",
+   "attested_at": "fx_text/4/186",
+   "source": "reused:us_only_fx_text"
+  },
+  "真": {
+   "jp_glyph_code": "0x06E0",
+   "attested_at": "s_text/12/22",
+   "source": "jp_corpus_attestation"
+  },
+  "私": {
+   "jp_glyph_code": "0x05B3",
+   "attested_at": "fx_text/8/68",
+   "source": "reused:us_only_fx_text"
+  },
+  "窟": {
+   "jp_glyph_code": "0x042D",
+   "attested_at": "s_text/13/11",
+   "source": "jp_corpus_attestation"
+  },
+  "答": {
+   "jp_glyph_code": "0x0911",
+   "attested_at": "s_text/13/22",
+   "source": "jp_corpus_attestation"
+  },
+  "約": {
+   "jp_glyph_code": "0x0B59",
+   "attested_at": "s_text/8/17",
+   "source": "jp_corpus_attestation"
+  },
+  "結": {
+   "jp_glyph_code": "0x046B",
+   "attested_at": "s_text/6/27",
+   "source": "jp_corpus_attestation"
+  },
+  "続": {
+   "jp_glyph_code": "0x07D4",
+   "attested_at": "s_text/19/69",
+   "source": "jp_corpus_attestation"
+  },
+  "緒": {
+   "jp_glyph_code": "0x01CC",
+   "attested_at": "s_text/1/1",
+   "source": "jp_corpus_attestation"
+  },
+  "考": {
+   "jp_glyph_code": "0x04FB",
+   "attested_at": "s_text/1/98",
+   "source": "jp_corpus_attestation"
+  },
+  "者": {
+   "jp_glyph_code": "0x015B",
+   "attested_at": "fx_text/4/91",
+   "source": "reused:us_only_fx_text"
+  },
+  "自": {
+   "jp_glyph_code": "0x05D3",
+   "attested_at": "s_text/2/42",
+   "source": "reused:us_only_system_battle"
+  },
+  "荒": {
+   "jp_glyph_code": "0x01C2",
+   "attested_at": "s_text/2/57",
+   "source": "jp_corpus_attestation"
+  },
+  "落": {
+   "jp_glyph_code": "0x0BA4",
+   "attested_at": "s_text/26/43",
+   "source": "jp_corpus_attestation"
+  },
+  "葉": {
+   "jp_glyph_code": "0x0172",
+   "attested_at": "s_text/1/90",
+   "source": "jp_corpus_attestation"
+  },
+  "虫": {
+   "jp_glyph_code": "0x0860",
+   "attested_at": "s_text/17/15",
+   "source": "jp_corpus_attestation"
+  },
+  "行": {
+   "jp_glyph_code": "0x0149",
+   "attested_at": "fx_text/1/37",
+   "source": "reused:us_only_fx_text"
+  },
+  "見": {
+   "jp_glyph_code": "0x0150",
+   "attested_at": "s_text/1/83",
+   "source": "reused:us_only_system_battle"
+  },
+  "言": {
+   "jp_glyph_code": "0x0154",
+   "attested_at": "fx_text/4/180",
+   "source": "reused:us_only_fx_text"
+  },
+  "話": {
+   "jp_glyph_code": "0x0C28",
+   "attested_at": "s_text/2/47",
+   "source": "jp_corpus_attestation"
+  },
+  "謝": {
+   "jp_glyph_code": "0x05F7",
+   "attested_at": "s_text/6/11",
+   "source": "jp_corpus_attestation"
+  },
+  "谷": {
+   "jp_glyph_code": "0x0821",
+   "attested_at": "s_text/28/8",
+   "source": "jp_corpus_attestation"
+  },
+  "負": {
+   "jp_glyph_code": "0x01B0",
+   "attested_at": "s_text/23/58",
+   "source": "jp_corpus_attestation"
+  },
+  "身": {
+   "jp_glyph_code": "0x06E8",
+   "attested_at": "s_text/2/29",
+   "source": "jp_corpus_attestation"
+  },
+  "返": {
+   "jp_glyph_code": "0x0A9A",
+   "attested_at": "s_text/1/6",
+   "source": "jp_corpus_attestation"
+  },
+  "道": {
+   "jp_glyph_code": "0x092E",
+   "attested_at": "fx_text/4/97",
+   "source": "reused:us_only_fx_text"
+  },
+  "達": {
+   "jp_glyph_code": "0x0171",
+   "attested_at": "fx_text/8/88",
+   "source": "reused:us_only_fx_text"
+  },
+  "邪": {
+   "jp_glyph_code": "0x05FB",
+   "attested_at": "s_text/10/19",
+   "source": "jp_corpus_attestation"
+  },
+  "部": {
+   "jp_glyph_code": "0x01B1",
+   "attested_at": "s_text/4/19",
+   "source": "jp_corpus_attestation"
+  },
+  "酬": {
+   "jp_glyph_code": "0x0632",
+   "attested_at": "s_text/4/8",
+   "source": "jp_corpus_attestation"
+  },
+  "間": {
+   "jp_glyph_code": "0x035A",
+   "attested_at": "fx_text/2/9",
+   "source": "reused:us_only_fx_text"
+  },
+  "雪": {
+   "jp_glyph_code": "0x0755",
+   "attested_at": "s_text/1/3",
+   "source": "jp_corpus_attestation"
+  },
+  "霊": {
+   "jp_glyph_code": "0x0BFC",
+   "attested_at": "fx_text/17/70",
+   "source": "reused:us_only_fx_text"
+  },
+  "頭": {
+   "jp_glyph_code": "0x0920",
+   "attested_at": "s_text/23/17",
+   "source": "jp_corpus_attestation"
+  },
+  "題": {
+   "jp_glyph_code": "0x0804",
+   "attested_at": "fx_text/8/56",
+   "source": "reused:us_only_fx_text"
+  },
+  "魔": {
+   "jp_glyph_code": "0x0AFC",
+   "attested_at": "fx_text/4/118",
+   "source": "reused:us_only_fx_text"
+  }
+ },
+ "entries": [
+  {
+   "us_logical_path": "s_text/44/0",
+   "us_top": 44,
+   "us_line": 0,
+   "scene": "babus_keepsake",
+   "speaker": "バブズ",
+   "scope": "SCENE_COMPLETION",
+   "original_english_sha256": "0d6ae2cb830e7153c17158da873f247707e433779537016e3cdc5a177ce1e101",
+   "japanese": "こういう場所には{4D}どうもなれないな…。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/1",
+   "us_top": 44,
+   "us_line": 1,
+   "scene": "babus_keepsake",
+   "speaker": "ドネッド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "2fab7cad3b3a08942c10a3fc4908c6fa01318a191e5e8f09dac81ad255ba487a",
+   "japanese": "{5109}…?{4D}{5109}·スウェイン?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/2",
+   "us_top": 44,
+   "us_line": 2,
+   "scene": "babus_keepsake",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "3b8780892c39a438fe6f7eb11dd93918f1fee0c7c507d1aed18e293ea3fae97f",
+   "japanese": "そうだが。{4D}おまえは?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/3",
+   "us_top": 44,
+   "us_line": 3,
+   "scene": "babus_keepsake",
+   "speaker": "ドネッド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "6cedc4dbf6fddd06785059c8220f4d88a051fe3efec58c0dd5565cc834b12801",
+   "japanese": "ボク、{5107}·ラディウユ。{4D}{400}の弟だよ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/4",
+   "us_top": 44,
+   "us_line": 4,
+   "scene": "babus_keepsake",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "43aa986adc8bd8a8119aa0b8905f241bfff841d069cd61a25224ecfee07e1a17",
+   "japanese": "{400}の…{4D}弟?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/5",
+   "us_top": 44,
+   "us_line": 5,
+   "scene": "babus_keepsake",
+   "speaker": "ドネッド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "4a7a47c7ae7ed2fed31846d54f13393b51f3a6c1e2295b3adc5a05b03a2d2d09",
+   "japanese": "お兄ちゃんを{4D}待ってるんでしょ?{4D}もうすぐ来るよ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/6",
+   "us_top": 44,
+   "us_line": 6,
+   "scene": "babus_keepsake",
+   "speaker": "ドネッド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "872c452eab01cd7dc807d9aee4bd5bd96c6a4d37002cbd2f8a7ae074aff24320",
+   "japanese": "あっ、{400}お兄ちゃん!{4D}こっちこっち。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/7",
+   "us_top": 44,
+   "us_line": 7,
+   "scene": "babus_keepsake",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "9e78cbb8b015aa417dc687897e32d40316ea0d0b685bd3c29b9f50edec6a2908",
+   "japanese": "{5109}?{4D}わざわざ来てくれたの?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/8",
+   "us_top": 44,
+   "us_line": 8,
+   "scene": "babus_keepsake",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "e135b7f85c4535918660fc08224f31c23ed159534743b72f40afb41852a69db4",
+   "japanese": "時間があまっていた{4D}だけだ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/9",
+   "us_top": 44,
+   "us_line": 9,
+   "scene": "babus_keepsake",
+   "speaker": "ドネッド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "9a0443c479886495f0259ec2173593047c732fe512f1ecb9295b05fb2ebd607c",
+   "japanese": "どうだったの、{4D}{400}お兄ちゃん?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/10",
+   "us_top": 44,
+   "us_line": 10,
+   "scene": "babus_keepsake",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "4a1430a3c33905717db965307359de013a912ffe52c8ec685514b218f667dc78",
+   "japanese": "たぶんここだろうって{4D}場所はわかったよ。{4D}{4F}{42}琥珀の谷だ。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/11",
+   "us_top": 44,
+   "us_line": 11,
+   "scene": "babus_keepsake",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "55fe26d340ae722842370a98a91caf602521f05e0afa070ae42830d2554ea1b4",
+   "japanese": "琥珀の谷…?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/12",
+   "us_top": 44,
+   "us_line": 12,
+   "scene": "babus_keepsake",
+   "speaker": "ドネッド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "fe8f4bde20bb27d5fa4ec41a57cb345e40079319f2e47882ef5bb0f74603cd5d",
+   "japanese": "{5103}の忘れ物、{4D}見つかるといいね。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/13",
+   "us_top": 44,
+   "us_line": 13,
+   "scene": "babus_keepsake",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "1dc642b7eba7df401dd95e50def74d1fbe7e952ed99e8f9461f488f5c405a863",
+   "japanese": "おまえも来るか?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/14",
+   "us_top": 44,
+   "us_line": 14,
+   "scene": "babus_keepsake",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "3d3714a8f021f30b02cd0df9c9a9d6588ac8ad0e3e49e38a1bf62f989ce9802d",
+   "japanese": "え、ぼく?{4D}いいの?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/15",
+   "us_top": 44,
+   "us_line": 15,
+   "scene": "babus_keepsake",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "1e4fe25570886714ead5ec8c5ab68c0fcdc1ee642dec5b2f5cc3ee53fadd1f96",
+   "japanese": "もちろんだ。{4D}{4D}{4F}{42}むしろ私より、おまえが{4D}行った方がいいのかも{4D}しれん。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/16",
+   "us_top": 44,
+   "us_line": 16,
+   "scene": "babus_keepsake",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "3391ac134d28e6021d3b0fa10a46ecda7b6624fd29954324a0c7ee437aba96cf",
+   "japanese": "え?{4D}どうして?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/17",
+   "us_top": 44,
+   "us_line": 17,
+   "scene": "babus_keepsake",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "e22d462a9efefef3965b2dc35dd2d9ad573cbf747c08a8eca1ac280e7010fc17",
+   "japanese": "いや…、{4D}今のは忘れてくれ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/18",
+   "us_top": 44,
+   "us_line": 18,
+   "scene": "babus_keepsake",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "3652840c456fffeb2cc3b11cbd24f6c50fb4243a0f7b3f73ac5172689526d9d9",
+   "japanese": "一緒に行く気になったら{4D}声をかけてくれ。{4D}{4F}{42}場所をつきとめてくれて{4D}感謝する。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/19",
+   "us_top": 44,
+   "us_line": 19,
+   "scene": "babus_keepsake",
+   "speaker": "ドネッド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "144f1b118051a1571736efbc40d6a008cabfc4af9afc3f3641d16809afd8d62f",
+   "japanese": "どうするの、{4D}{400}お兄ちゃん?{4D}{4F}{42}ボクは{5103}の忘れ物、{4D}すっごく気になるな。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/20",
+   "us_top": 44,
+   "us_line": 20,
+   "scene": "babus_keepsake",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "73df94b4389ec613d80bdab5306c8891d2d6f0b2f5d8e77adc376911037506e1",
+   "japanese": "ぼくも気になるよ。{4D}{4D}{4F}{42}いったいなにを{4D}忘れたんだろう?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/21",
+   "us_top": 44,
+   "us_line": 21,
+   "scene": "babus_keepsake",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "af2db6a7590f273dc4bdaf4d429aed7eb364665fa0bb5445ed05b3a8e51df870",
+   "japanese": "ねぇ、{5109}。{4D}{5103}の忘れ物って、{4D}結局なんなの?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/22",
+   "us_top": 44,
+   "us_line": 22,
+   "scene": "babus_keepsake",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "295cf7e00bea6aff266bb42a28da9208c27bcc26e435f60860463ab8e4a1d075",
+   "japanese": "それは…。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/23",
+   "us_top": 44,
+   "us_line": 23,
+   "scene": "babus_keepsake",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "dc2655f96f654eebdb9163497207ea4d9906911a6c6026ba09086c3720e4620d",
+   "japanese": "む…?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/24",
+   "us_top": 44,
+   "us_line": 24,
+   "scene": "babus_keepsake",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "03c25e0af5197b215fc307b26fbd1314b68f2a0fbb3e5345202dc752b5c3c74d",
+   "japanese": "どうかしたの?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/25",
+   "us_top": 44,
+   "us_line": 25,
+   "scene": "babus_keepsake",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "965887e540e96d13a743316c7b263c6d23e4599238f1ef51b118454f6827e6cc",
+   "japanese": "強い力を感じる…。{4D}魔法の…、それも{4D}荒々しい力だ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/26",
+   "us_top": 44,
+   "us_line": 26,
+   "scene": "babus_keepsake",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "8948e69a28f1c765c4b8d47f881b1814cd88799510c4d444fc10b046b7890b0d",
+   "japanese": "!!{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/27",
+   "us_top": 44,
+   "us_line": 27,
+   "scene": "babus_keepsake",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "953695ca17cf743334195abf57ad063d88af795c2750bd8baed63ae56d560e0b",
+   "japanese": "女王様!!{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/28",
+   "us_top": 44,
+   "us_line": 28,
+   "scene": "babus_keepsake",
+   "speaker": "レメディ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "7c4a59c49c274a3dd2ba6b365e0509a842a2d6254c16820e2afe30c4031ad2f4",
+   "japanese": "こんなところで{4D}なにをしているの、{4D}{5109}?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/29",
+   "us_top": 44,
+   "us_line": 29,
+   "scene": "babus_keepsake",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "b9389f512c5bd0c4930e8bc370df9fbbc2ed4179937333df1fb42438158a14ea",
+   "japanese": "王子の忘れ物を{4D}さがしております…。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/30",
+   "us_top": 44,
+   "us_line": 30,
+   "scene": "babus_keepsake",
+   "speaker": "レメディ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "35baebf5983b8f8868c05477d7f648bda829cb567afa5c38d28a6ec27c4cf638",
+   "japanese": "あわれな子…。{4D}ゆめに身をささげるなんて。{4D}{4F}{42}{5103}はもう、おまえの{4D}ことなど忘れているわ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/31",
+   "us_top": 44,
+   "us_line": 31,
+   "scene": "babus_keepsake",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "b4e1634800902aca399fd512e0115b61e417f926c0e51ec69b503dfccee03df3",
+   "japanese": "それでも…私は{4D}{5103}王子の従者。{4D}{4F}{42}いつまでも{4D}忠実であり続けます!{4D}{4F}{42}どうか、私のつとめを{4D}止めないでいただきたい。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/32",
+   "us_top": 44,
+   "us_line": 32,
+   "scene": "babus_keepsake",
+   "speaker": "レメディ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "98226a1a26425171937895bcc1429f314c14c647e1ebd54ec40160d3bd40d876",
+   "japanese": "止めたら、どうするの?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/33",
+   "us_top": 44,
+   "us_line": 33,
+   "scene": "babus_keepsake",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "26facc05c7286e6d483ec2edf495b75924c9331665462ebc0101d7f6105c4ef4",
+   "japanese": "おやめください。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/34",
+   "us_top": 44,
+   "us_line": 34,
+   "scene": "babus_keepsake",
+   "speaker": "レメディ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "14153d654cc3dbbcaa1529f3f3722a0d2b14e7147600ee8d59f0d3e54fc1a02b",
+   "japanese": "自分の女王に、{4D}剣を向けるというの?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/35",
+   "us_top": 44,
+   "us_line": 35,
+   "scene": "babus_keepsake",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "fbaa8dba602416b65c9388c1f1d7b48fd0c397f0b44aec02ab38c75ad9c8eb7f",
+   "japanese": "あなたと戦うことに{4D}ためらいはありません。{4D}{4F}{42}あなたは亡霊。{4D}本物の女王は、王子と{4D}ともに去られました!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/36",
+   "us_top": 44,
+   "us_line": 36,
+   "scene": "babus_keepsake",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "075775039a7613f0345b1be97ed4e0646bda14df3f4d858e4d9d292b2632e97f",
+   "japanese": "クマのぬいぐるみ?{4D}これが{5103}の{4D}忘れ物?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/37",
+   "us_top": 44,
+   "us_line": 37,
+   "scene": "babus_keepsake",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "bf94b6af4503741657332bbcb514914954a3d4b5e981785f8ce3845e4284dada",
+   "japanese": "このクマさんは…{4D}{5103}がこの世界にいた{4D}っていう、しるしなんだ。{4F}{42}きみに残された、{4D}たったひとつの{4D}思い出なんだね。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/38",
+   "us_top": 44,
+   "us_line": 38,
+   "scene": "babus_keepsake",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "eb09895a32e9e9a7b8da1284d057793e14c55961d4565ca8bfbcb5081e104ca3",
+   "japanese": "……。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/39",
+   "us_top": 44,
+   "us_line": 39,
+   "scene": "babus_keepsake",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "fdbd9f8dfa28ed76ae1801d92b4b330dd7a37ab52808628a3cc118ce94d34ee0",
+   "japanese": "それ、宮廷の部屋に{4D}戻しに行くの?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/40",
+   "us_top": 44,
+   "us_line": 40,
+   "scene": "babus_keepsake",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "2b84d83ab5bb31deb613b1ef08993c0559b07fd057d1720ddc0ef6bfef1b4947",
+   "japanese": "もちろんだ。{4D}これは王子のもの{4D}だからな。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/41",
+   "us_top": 44,
+   "us_line": 41,
+   "scene": "babus_keepsake",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "572b73b6c71c13e24dfe43ad6cc5a664c6fe7678ee2402587ef85c9d7a417a70",
+   "japanese": "ねぇ、{5109}。{4D}ずっと考えてたんだけど。{4D}{4F}{42}ぼくたち、その…{4D}友達になれないかな?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/42",
+   "us_top": 44,
+   "us_line": 42,
+   "scene": "babus_keepsake",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "e010ca8145a1c384ce67f70b72fed35736137405a66838a6e500b0e452c4c342",
+   "japanese": "友達…?{4D}おまえが、私と?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/43",
+   "us_top": 44,
+   "us_line": 43,
+   "scene": "babus_keepsake",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "56bdf601fa5776d4422c66db30607266e63a33ad0740b97b12b5d8a654a23374",
+   "japanese": "うん。{4D}いろいろあったけどさ。{4D}{4F}{42}でも、いいだろ?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/44",
+   "us_top": 44,
+   "us_line": 44,
+   "scene": "babus_keepsake",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "91312d0babe813c71e3f117a38cc0270d8d99484982021a840037c603546c268",
+   "japanese": "…そうだな。{4D}ことわる理由もない。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/45",
+   "us_top": 44,
+   "us_line": 45,
+   "scene": "babus_keepsake",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "beafba73da7dfaf28f80048a477ae7533c4a5db6bbb77ae061e02995ad545f3e",
+   "japanese": "よし、決まりだね!{4D}友達だ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/46",
+   "us_top": 44,
+   "us_line": 46,
+   "scene": "babus_keepsake",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "80b7ca40821fd8125b7a2cc1c2bb3e45404cc21ffc53fb5533e00253c1986241",
+   "japanese": "友達、か。だが…{4D}なれなれしくは{4D}しないでもらおう。{4F}{42}では、さらばだ。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/47",
+   "us_top": 44,
+   "us_line": 47,
+   "scene": "babus_keepsake",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "d8aa467e2d54d0820c2e5f4dd42971625c3c278ca5dde695bb542f0a06be4185",
+   "japanese": "それは…{4D}できかねる。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/48",
+   "us_top": 44,
+   "us_line": 48,
+   "scene": "babus_keepsake",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "5e79aa8cedaeeb546bcc3b4200cf5d345016eb8660945147dca79a25f1981573",
+   "japanese": "そう…、わかった。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/49",
+   "us_top": 44,
+   "us_line": 49,
+   "scene": "babus_keepsake",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "e3e1ce3b2d8976cccf56d3622a87173f7a4137e7652748e3f735615b466d0fef",
+   "japanese": "私にはまだ、考える{4D}ことがたくさんあるのだ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/50",
+   "us_top": 44,
+   "us_line": 50,
+   "scene": "babus_keepsake",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "5760ad02aba5d1c11a169db382f25958d45797ffdd6ceac6e2275a1fc26135ff",
+   "japanese": "うん、わかった。{4D}{4D}{4F}{42}でも、望みはあるって{4D}ことだよね?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/44/51",
+   "us_top": 44,
+   "us_line": 51,
+   "scene": "babus_keepsake",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "f53a023a0ab23e58bb3ff40f3c6989662113daaede024786c3fefdfa36929cab",
+   "japanese": "さあ、これを{5103}に{4D}返しに行こう。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/0",
+   "us_top": 45,
+   "us_line": 0,
+   "scene": "ritz_snow_mission",
+   "speaker": "パブマスター",
+   "scope": "SCENE_COMPLETION",
+   "original_english_sha256": "d9ba7b38d8d1fdb8d7a528ef84ad09f7f38b7a9ec71f1d15a522f6e5c44af015",
+   "japanese": "ありがとよ!{4D}雪の仕事は、なかなか{4D}なり手がいなくてな。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/1",
+   "us_top": 45,
+   "us_line": 1,
+   "scene": "ritz_snow_mission",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "0b07212176fbaf1945b702646d2efecea4f8d13548514945f4d42f795dbef653",
+   "japanese": "そうよね、このへんの人は{4D}雪になれてないものね。{4D}{4F}{42}あたしも、引っこしてきた{4D}ばかりのころは{4D}大変だったわ…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/2",
+   "us_top": 45,
+   "us_line": 2,
+   "scene": "ritz_snow_mission",
+   "speaker": "パブマスター",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "8c4b34499caf85ec8f1b1ab610c26b0dbf9f1541ec4d93a05cae03eb08d7cc9c",
+   "japanese": "そのかわり、{4D}報酬ははずむぜ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/3",
+   "us_top": 45,
+   "us_line": 3,
+   "scene": "ritz_snow_mission",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "7faab6082c129a0df992bed3b448a677edc55bbc1601a7a7f380fbd9728e03f5",
+   "japanese": "ねぇ、マスター!{4D}雪の仕事って、{4D}まだ残ってる?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/4",
+   "us_top": 45,
+   "us_line": 4,
+   "scene": "ritz_snow_mission",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "c9307d62f7871b662da54ae0a71491158c7b28b73aaa7f8f37094833c4a6c57e",
+   "japanese": "{5104}?{4D}雪の仕事が、どうかした?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/5",
+   "us_top": 45,
+   "us_line": 5,
+   "scene": "ritz_snow_mission",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "c83d332acc00b3b74fccd4af8f10d5ec1cb4e4dab6d9447d96695ef4f3459130",
+   "japanese": "{400}…。{4D}なんだ、受けたのは{4D}アンタだったの。{4F}{42}なら、ちょうど{4D}いいじゃない!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/6",
+   "us_top": 45,
+   "us_line": 6,
+   "scene": "ritz_snow_mission",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "28f501abc8cf5003a6b929e8807272e4ab072ba9e6ac0b2407652519a8dfefe2",
+   "japanese": "あたしも{4D}つれてってくれない?{4D}{4F}{42}報酬なんて{4D}いらないから!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/7",
+   "us_top": 45,
+   "us_line": 7,
+   "scene": "ritz_snow_mission",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "d9e55be5129322baf3fb0c8db5824ad92944b3b07720b7c753adb5f467db3438",
+   "japanese": "いいけど…。{4D}{4D}{4F}{42}どうしてそんなに{4D}行きたいのか、{4D}きいてもいい?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/8",
+   "us_top": 45,
+   "us_line": 8,
+   "scene": "ritz_snow_mission",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "f779ae5e9b42e411a475a053c7f1d0628f23348167b39558d953a23698788ed9",
+   "japanese": "雪の中で行きだおれた人に{4D}きょうみがあるのよ。{4D}{4F}{42}それだけ。{4D}ほんとうよ?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/9",
+   "us_top": 45,
+   "us_line": 9,
+   "scene": "ritz_snow_mission",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "4f417b3b2cd553097af36054b0569ce2d1203542f8ef8641f5765de477e42d8c",
+   "japanese": "おねがい!{4D}邪魔はしないって{4D}約束するから!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/10",
+   "us_top": 45,
+   "us_line": 10,
+   "scene": "ritz_snow_mission",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "74e73bc642aea25b9ec18bf66b48fa1141f9774506664629b9d539856bb01a0f",
+   "japanese": "わかった。{4D}じゃあ、一緒に行こう。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/11",
+   "us_top": 45,
+   "us_line": 11,
+   "scene": "ritz_snow_mission",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "94923c6fd8d6d6a154b179ae889decd7129b1d91d9a2019768eecbc0ff6f175c",
+   "japanese": "ありがと、{400}。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/12",
+   "us_top": 45,
+   "us_line": 12,
+   "scene": "ritz_snow_mission",
+   "speaker": "パブマスター",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "0e824854ecfe24faa8e55a609de93e13677d7bdf33a7958cf28222a90079d764",
+   "japanese": "おまえさんたち、{4D}気をつけて行きなよ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/13",
+   "us_top": 45,
+   "us_line": 13,
+   "scene": "ritz_snow_mission",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "3be3d4bd1e6d878f83ddc597914d3aeb5841e854c9fa602ef1d671a89833b7c4",
+   "japanese": "{5104}!{4D}あれを見て!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/14",
+   "us_top": 45,
+   "us_line": 14,
+   "scene": "ritz_snow_mission",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "18ce86efda063c540f384247523bf618052604aea961ec3c73c505d136108ab4",
+   "japanese": "あたしたちの勝ちよ!{4D}この雪合戦は{4D}おしまい。いいわね?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/15",
+   "us_top": 45,
+   "us_line": 15,
+   "scene": "ritz_snow_mission",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "1e71df0711dc56cfeb972cc493e8d08d03935b39998c5f77c7f980d640f1ba89",
+   "japanese": "雪合戦…?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/16",
+   "us_top": 45,
+   "us_line": 16,
+   "scene": "ritz_snow_mission",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "9a06db72821868f7a7aafbca43c68ca713ba0a761494ac123b0706ef9b666bbb",
+   "japanese": "ねぇ、{5104}。さっき{4D}「雪合戦」って言ったよね。{4D}{4F}{42}あれ、どういうこと?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/17",
+   "us_top": 45,
+   "us_line": 17,
+   "scene": "ritz_snow_mission",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "93da264e472a91024a73c2c47d27e2d18e6fbeeb4e0c150f4661ab454938495e",
+   "japanese": "あいつら、雪玉を人に{4D}ぶつけてたでしょ。{4D}{4F}{42}なにか思い出さない?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/18",
+   "us_top": 45,
+   "us_line": 18,
+   "scene": "ritz_snow_mission",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "27ac6907bdcdd8f442a3b3eb3e42352b3ba2ebbf5d9d3c2149b5d57260153a42",
+   "japanese": "あ…。{4D}{5103}だ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/19",
+   "us_top": 45,
+   "us_line": 19,
+   "scene": "ritz_snow_mission",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "6df34e156da68a65538f54b95f046c3a7678b5aa930fe67a2f9c9ad9d2f70119",
+   "japanese": "そう。{4D}{4D}{4F}{42}あのモンスターたちが{4D}{510E}たちだった、なんて{4D}言わないけどね。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/20",
+   "us_top": 45,
+   "us_line": 20,
+   "scene": "ritz_snow_mission",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "efe2dbcace57951c7fb8c347c6eadbed7550a34b0316329ad4f8f7495ac287d0",
+   "japanese": "ただ、パブであの仕事を{4D}見かけたとき…。{4D}{4F}{42}どうしてか、受けなきゃ{4D}って思ったのよね。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/21",
+   "us_top": 45,
+   "us_line": 21,
+   "scene": "ritz_snow_mission",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "9199b0979431afdf7cb6d605f74f067f232004f1751bc5bccd09c933229d2a8e",
+   "japanese": "ぼく…ぼくも、あっちで{4D}同じことができてたら…。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/22",
+   "us_top": 45,
+   "us_line": 22,
+   "scene": "ritz_snow_mission",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "8ea778adc44bdefd2585afe7bf6ba23624bb2ebc9cdf098a995261aa9c5c9c00",
+   "japanese": "え?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/23",
+   "us_top": 45,
+   "us_line": 23,
+   "scene": "ritz_snow_mission",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "ab6a18deb1f0f50e858c18c43465eeb8a32e5959205c990ab832d6a9a93f738c",
+   "japanese": "その…、{4D}元の世界でってこと。{4D}{4F}{42}いじめっ子たちに、{4D}雪玉を投げ返すんだ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/24",
+   "us_top": 45,
+   "us_line": 24,
+   "scene": "ritz_snow_mission",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "762ed5984928ce5eb7911c66ff8f7f4c09388a5d448b5ca902917e87d3c46374",
+   "japanese": "できるわよ!{4D}カンタンじゃない!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/25",
+   "us_top": 45,
+   "us_line": 25,
+   "scene": "ritz_snow_mission",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "539d3dbd6c318f22d9053a2de2e70978d812a2155f45fea42cde12c162c93406",
+   "japanese": "…そんなカンタンには{4D}思えなかったんだ。{4D}でも、そうだよね。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/26",
+   "us_top": 45,
+   "us_line": 26,
+   "scene": "ritz_snow_mission",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "03993661c82296e36554d91d25d9e98662025f40311f6a60ec56de7dff49aa4b",
+   "japanese": "それで、{400}、{4D}あたしに手伝って{4D}ほしい?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/27",
+   "us_top": 45,
+   "us_line": 27,
+   "scene": "ritz_snow_mission",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "4c614af36316eaab8ccae171766890b35491c3a81676ba2d715882ec847dcdd9",
+   "japanese": "手伝うって、{4D}なにを?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/28",
+   "us_top": 45,
+   "us_line": 28,
+   "scene": "ritz_snow_mission",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "4c51c14427321cc6b61ba5fa85ae3cd80fa16d0713376121d130f22ad4658618",
+   "japanese": "アンタのクランをよ。{4D}{4D}{4F}{42}よかったら、あたしが{4D}入ってあげるって{4D}言ってるの。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/29",
+   "us_top": 45,
+   "us_line": 29,
+   "scene": "ritz_snow_mission",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "e15ae7f53e0cdc612a0f62ee8f5660c5316209f3476b0dd7731779fed56943cb",
+   "japanese": "え、えっと…。{4D}どうして急に?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/30",
+   "us_top": 45,
+   "us_line": 30,
+   "scene": "ritz_snow_mission",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "84eb5c4ca14305a61efa546e43b293a64e3af5b96c4958d44ff14a580a080c5b",
+   "japanese": "いいじゃない、別に!{4D}おもしろそうだって{4D}思っただけよ。{4F}{42}イヤなら、{4D}そう言いなさいよね?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/31",
+   "us_top": 45,
+   "us_line": 31,
+   "scene": "ritz_snow_mission",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "6a42257f5c4d5ec6bfb7cde480ff2b711272fe377b746a37ab2d1e5dce521459",
+   "japanese": "あたしがいれば{4D}負けなしよ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/32",
+   "us_top": 45,
+   "us_line": 32,
+   "scene": "ritz_snow_mission",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "f15dd5c4f6a663b66229aa0f892d6252659696c7eb151b74810b9a31e9bb6944",
+   "japanese": "あはは、そうだね。{4D}よろしく、{5104}。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/45/33",
+   "us_top": 45,
+   "us_line": 33,
+   "scene": "ritz_snow_mission",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "d4fe38ab190171087d1bbd835fa17e04ed090b78c3fcacb65385d58d0efc1785",
+   "japanese": "そう、わかったわ。{4D}残念ね。{4D}{4F}{42}じゃ、またね!{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/0",
+   "us_top": 46,
+   "us_line": 0,
+   "scene": "shara_antlion_rescue",
+   "speaker": "シャアラ",
+   "scope": "SCENE_COMPLETION",
+   "original_english_sha256": "d95026e5d5bcd88168e8419c13ece634b8a883e898e50e18bd430f66e253ac18",
+   "japanese": "ふう…。{4D}助かった!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/1",
+   "us_top": 46,
+   "us_line": 1,
+   "scene": "shara_antlion_rescue",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "2dfd9aae8da78552e18b810654385626893fef07424e6902673980f5328e663e",
+   "japanese": "まさか、こんなところに{4D}いたなんて!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/2",
+   "us_top": 46,
+   "us_line": 2,
+   "scene": "shara_antlion_rescue",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "737b565287c6567934aa4346f7b762d06f422b255b2f46767ca13b656f20f770",
+   "japanese": "あたしこそ、{400}が{4D}来るなんて思わなかった!{4D}{4F}{42}まさかパブに、あんな{4D}おしらせが出てたなんて。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/3",
+   "us_top": 46,
+   "us_line": 3,
+   "scene": "shara_antlion_rescue",
+   "speaker": "ドネッド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "672d19a524f66e110517abad7262fd4b7f6812872ee526a6bd5608b3b92e8ab3",
+   "japanese": "きっと、すっごい声で{4D}さけんでたんだよ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/4",
+   "us_top": 46,
+   "us_line": 4,
+   "scene": "shara_antlion_rescue",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "823f67b0d8f05f7f6b6d0ecd0f14ce204c6c6eb47eda61bbcb9720f950f0f317",
+   "japanese": "{5107}!{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/5",
+   "us_top": 46,
+   "us_line": 5,
+   "scene": "shara_antlion_rescue",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "3cba5b6d6fa0bfd0b79041e8a6e417eb2950a07b8bbe47ad4a0a2b2b38dcffd5",
+   "japanese": "ゴメン…。{4D}ぼくの弟なんだ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/6",
+   "us_top": 46,
+   "us_line": 6,
+   "scene": "shara_antlion_rescue",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "fced34f85b6d2ba914a81acfe91816eb07d1cbb20506195a712fbfb2a92e7306",
+   "japanese": "ふふ。たぶん、{4D}弟くんの言うとおり。{4D}{4F}{42}気がヘンになるかと{4D}思ったんだ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/7",
+   "us_top": 46,
+   "us_line": 7,
+   "scene": "shara_antlion_rescue",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "143d4ff2f232708232939d94cb4f49c113f3a5a556164aac5c9d2b87db179d7c",
+   "japanese": "洞窟に、なにがいたのか{4D}きいてもいい?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/8",
+   "us_top": 46,
+   "us_line": 8,
+   "scene": "shara_antlion_rescue",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "eb09895a32e9e9a7b8da1284d057793e14c55961d4565ca8bfbcb5081e104ca3",
+   "japanese": "……。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/9",
+   "us_top": 46,
+   "us_line": 9,
+   "scene": "shara_antlion_rescue",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "92ae1bbc93c58d75675b7e58d1c6534a4df81cd497df1bcbb7a866cf9ed416fd",
+   "japanese": "言いたくないなら、{4D}いいんだ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/10",
+   "us_top": 46,
+   "us_line": 10,
+   "scene": "shara_antlion_rescue",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "fd46a208f9e6be3897d4044454ef6eb03c5b3a6c0e6d7f19d20756452bd63e28",
+   "japanese": "…落ちてきたんだ。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/11",
+   "us_top": 46,
+   "us_line": 11,
+   "scene": "shara_antlion_rescue",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "8ea778adc44bdefd2585afe7bf6ba23624bb2ebc9cdf098a995261aa9c5c9c00",
+   "japanese": "え?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/12",
+   "us_top": 46,
+   "us_line": 12,
+   "scene": "shara_antlion_rescue",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "1560ce0a8ea84cf33203a3a2ce74a9eaefcd839c76cef4c996e6990ffc4b3513",
+   "japanese": "アントリオンの幼虫が。{4D}あたしの頭の上に。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/13",
+   "us_top": 46,
+   "us_line": 13,
+   "scene": "shara_antlion_rescue",
+   "speaker": "ドネッド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "544075dbe1e0f082fb5359af34b18664f5c60f891081da809467bbdbb1500a20",
+   "japanese": "あー、あの白くて{4D}ぶっとくて大きい{4D}イモムシ…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/14",
+   "us_top": 46,
+   "us_line": 14,
+   "scene": "shara_antlion_rescue",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "45e17945ecf8bf929aaae4e1a76a9d7bde741cd5946ec284b49fd29f1a8ac5d8",
+   "japanese": "わーっ!その話は{4D}やめて!思い出させ{4D}ないで!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/15",
+   "us_top": 46,
+   "us_line": 15,
+   "scene": "shara_antlion_rescue",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "f2cb7fa4fee8908efe6145b4fe5eb8ec2041a0c97c0754b3a30bde1f3c1863ee",
+   "japanese": "それは…{4D}大変だったね。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/16",
+   "us_top": 46,
+   "us_line": 16,
+   "scene": "shara_antlion_rescue",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "7a1236eaa94d31408d586cb0759ad9aa69d546ff9515fb0ff63c9badac848663",
+   "japanese": "でも、無事でよかった!{4D}それがいちばんだよ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/17",
+   "us_top": 46,
+   "us_line": 17,
+   "scene": "shara_antlion_rescue",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "e9380f56a5f7d62c03130cea300bdc57d4653fede1e07f70417a5ae0caa7bc24",
+   "japanese": "うん。ありがとう。{4D}ほんとうに、ありがとう!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/18",
+   "us_top": 46,
+   "us_line": 18,
+   "scene": "shara_antlion_rescue",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "b8d17292c5fc29fcdaa9e04e044048958c3af2551b80d19a188716e010bc18d8",
+   "japanese": "さて、{4D}あたしはそろそろ戻るよ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/19",
+   "us_top": 46,
+   "us_line": 19,
+   "scene": "shara_antlion_rescue",
+   "speaker": "ドネッド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "d41bd6821f39447bf60a04d9ede07cd9e22234ee854e15b27bb2a1a43ff2f63d",
+   "japanese": "あ、待ってよ!{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/20",
+   "us_top": 46,
+   "us_line": 20,
+   "scene": "shara_antlion_rescue",
+   "speaker": "ドネッド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "639d54e26db00e7ebd5570617dec164a9a6f4507746a9e6f00d78f9c2c253998",
+   "japanese": "おねがいが{4D}あるんだけど、いい?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/21",
+   "us_top": 46,
+   "us_line": 21,
+   "scene": "shara_antlion_rescue",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "ffc10aa3272d8da054368c691e7975210986394fbe71adb96b214fb42f19ec67",
+   "japanese": "{5107}?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/22",
+   "us_top": 46,
+   "us_line": 22,
+   "scene": "shara_antlion_rescue",
+   "speaker": "ドネッド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "fc0ac7c3ad90f73f8012437581575500f09df638d2ac3ce67eb4044e37944e09",
+   "japanese": "あのね、お兄ちゃんと{4D}{5104}おねーちゃんの{4D}ことなんだけど…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/23",
+   "us_top": 46,
+   "us_line": 23,
+   "scene": "shara_antlion_rescue",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "cb586d1208b0d38da8a981635143fe84c81a7ddaa56ca66d4cabae499db7f342",
+   "japanese": "{400}と、{5104}?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/24",
+   "us_top": 46,
+   "us_line": 24,
+   "scene": "shara_antlion_rescue",
+   "speaker": "ドネッド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "067aae826d62bcf67f25d1511f02248c12c0a9f511f0eb96c8e99a26dd7ef76b",
+   "japanese": "ふたりとも、話すのが{4D}すっごくヘタでしょ。{4D}{4F}{42}だからさ、なんとなく{4D}力になってあげて{4D}ほしいんだ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/25",
+   "us_top": 46,
+   "us_line": 25,
+   "scene": "shara_antlion_rescue",
+   "speaker": "ドネッド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "92a2e5e32e3952929dc0f2ccc104d649398cdd4adfc501304319133aad60a342",
+   "japanese": "ふたりとも、まだ仲直り{4D}してない気がするんだ。{4D}{4F}{42}だからさ、それとなく{4D}力になってあげて{4D}ほしいんだ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/26",
+   "us_top": 46,
+   "us_line": 26,
+   "scene": "shara_antlion_rescue",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "2ac303589c449c05718a4edff3ae6eabd127bbece0059db4bc61e705fc213ee5",
+   "japanese": "いいよ。{4D}それくらいなら。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/27",
+   "us_top": 46,
+   "us_line": 27,
+   "scene": "shara_antlion_rescue",
+   "speaker": "ドネッド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "1f0b1aaeb41afe5deb7997363faeb3d4a18f78669ef6966dfb78a7531d915213",
+   "japanese": "ねぇ、{510C}を{4D}{400}のクランに{4D}入れてあげてよ。ね?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/28",
+   "us_top": 46,
+   "us_line": 28,
+   "scene": "shara_antlion_rescue",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "52cf08d23711a51dc0d5f1d476f46ed722c1a4682ba30222be084f6dc484c100",
+   "japanese": "してほしいことがあったら{4D}言って。{4D}{4F}{42}できることなら{4D}力になるよ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/29",
+   "us_top": 46,
+   "us_line": 29,
+   "scene": "shara_antlion_rescue",
+   "speaker": "ドネッド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "a58071156af0cdf6ea5816e6c39f407f53bc2119c99f4f3ff6217ed0c6a049d9",
+   "japanese": "やった!{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/30",
+   "us_top": 46,
+   "us_line": 30,
+   "scene": "shara_antlion_rescue",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "ba2989d6678fa22bad87d77972b10fd672b989472fdc1af56bfc511b15de5128",
+   "japanese": "うん、ありがとう、{4D}{510C}。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/31",
+   "us_top": 46,
+   "us_line": 31,
+   "scene": "shara_antlion_rescue",
+   "speaker": "ドネッド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "10cc8c72ce493dce2431b1d40bb45f9543ed0afdac0deb06273566640d1479e0",
+   "japanese": "どうして?{4D}{4D}{4F}{42}お兄ちゃんと{4D}{5104}おねーちゃんの{4D}いいチャンスなのに…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/32",
+   "us_top": 46,
+   "us_line": 32,
+   "scene": "shara_antlion_rescue",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "b95e50c3319a23a57d55dbb6987babd4841af2ac001813a6289ecb97ffbf6fa1",
+   "japanese": "{5104}とのことは、{4D}ぼくたちでなんとか{4D}するよ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/33",
+   "us_top": 46,
+   "us_line": 33,
+   "scene": "shara_antlion_rescue",
+   "speaker": "ドネッド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "07cd86b293b054330d66daddfef379bf0dbc485c596c7a87f25de595393d6246",
+   "japanese": "わかったよ。{4D}せっかく力になろうと{4D}思ったのに。もう。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/34",
+   "us_top": 46,
+   "us_line": 34,
+   "scene": "shara_antlion_rescue",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "ac8756026961d765f43d01ecc4eea76546af5ec968a24ff3fb1a4a640e2babed",
+   "japanese": "じゃあ、{400}。{4D}またね。{4D}{4F}{42}助けてくれて{4D}ありがとう!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/35",
+   "us_top": 46,
+   "us_line": 35,
+   "scene": "shara_antlion_rescue",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "dd0bb7c18bf4842d2a9354ec6fd67603954da236b2b091fc95fd72358124f947",
+   "japanese": "いつでもどうぞ。{4D}じゃあね。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/36",
+   "us_top": 46,
+   "us_line": 36,
+   "scene": "shara_antlion_rescue",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "9952ce8933161f6dc2ee46f809fe520b3982cf4e0118957f0c5d83f57f545e46",
+   "japanese": "{510C}?{4D}大丈夫?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/37",
+   "us_top": 46,
+   "us_line": 37,
+   "scene": "shara_antlion_rescue",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "925d3a1aa888b15b2de1893d358b40fa4d6f6da7ef297950c983e825a0c41142",
+   "japanese": "すごく、{4D}はずかしい。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/38",
+   "us_top": 46,
+   "us_line": 38,
+   "scene": "shara_antlion_rescue",
+   "speaker": "ドネッド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "a46fd32fff4674b0924b8d55df95ee8424d192571cda1decdb5e4af521793cba",
+   "japanese": "今度はなに?{4D}イモムシでも{4D}ふんづけた?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/39",
+   "us_top": 46,
+   "us_line": 39,
+   "scene": "shara_antlion_rescue",
+   "speaker": "ドネッド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "c9b7601a8f60af670c2a3a22cf771526742e2dd967c6fc615b0322a549d8a452",
+   "japanese": "でもさ、{400}!{4D}もういちどの{4D}チャンスだよ!{4F}{42}クランにさそって{4D}あげたら?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/40",
+   "us_top": 46,
+   "us_line": 40,
+   "scene": "shara_antlion_rescue",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "09e3ed59240cfaf27eba1704dc1c8bcef9cc465ef7d6b7f59b194dca8a7737b5",
+   "japanese": "これでいい?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/41",
+   "us_top": 46,
+   "us_line": 41,
+   "scene": "shara_antlion_rescue",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "dae97a1db03cce0145326bff0189895a79edac9aa605040dd170066780938982",
+   "japanese": "ようこそクランへ、{4D}{510C}。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/42",
+   "us_top": 46,
+   "us_line": 42,
+   "scene": "shara_antlion_rescue",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "c48aa0d0337d715eb4099f16bbcb9955327c1bde7da87b419276cc1244103e20",
+   "japanese": "うん、たのむよ。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/43",
+   "us_top": 46,
+   "us_line": 43,
+   "scene": "shara_antlion_rescue",
+   "speaker": "ドネッド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "7de9a0a332fe762e000c1f5248356b3cf66e2bb1e7f201b8ce68be16d466f847",
+   "japanese": "えー、またなの!{4D}おねがいだよ、{4D}{400}お兄ちゃん!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/44",
+   "us_top": 46,
+   "us_line": 44,
+   "scene": "shara_antlion_rescue",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "15312ef8588b0677d0122ecb3ddec5a2995f72523369becef13df838c748042d",
+   "japanese": "それはこっちのセリフだよ、{4D}{5107}。{4D}こまらせないでくれよ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/45",
+   "us_top": 46,
+   "us_line": 45,
+   "scene": "shara_antlion_rescue",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "b1057b0e79a0e5b82cefa99d812fceb5b6303e77300bb65e1f7ae8db32114744",
+   "japanese": "じゃあ、ふたりとも{4D}またね。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/46/46",
+   "us_top": 46,
+   "us_line": 46,
+   "scene": "shara_antlion_rescue",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "63558cbefbf8fb1f45d5e305d41aad4c36c420973a89c721b082f483b08f52b7",
+   "japanese": "うん。{4D}気をつけて。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/0",
+   "us_top": 48,
+   "us_line": 0,
+   "scene": "ritz_shara_pub",
+   "speaker": "リッツ",
+   "scope": "SCENE_COMPLETION",
+   "original_english_sha256": "3a7503b67abe2bb849ac24e8af9ce447a2486f27aabf74582cacf0b452c45589",
+   "japanese": "ふう、つかれた!{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/1",
+   "us_top": 48,
+   "us_line": 1,
+   "scene": "ritz_shara_pub",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "8ac795a25f436f72cd78cad369d10285d8d0004256609ee435bf355f15831e2f",
+   "japanese": "さっきのエンゲージ、{4D}ずいぶんはりきってたね!{4D}{4F}{42}何人たおしたの?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/2",
+   "us_top": 48,
+   "us_line": 2,
+   "scene": "ritz_shara_pub",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "ec841ef61a34db5d57ed2705d4f782a1d4018ff7ec7aec74fbc038be3a07dfef",
+   "japanese": "あんなの、{4D}相手のうちに{4D}入らないわ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/3",
+   "us_top": 48,
+   "us_line": 3,
+   "scene": "ritz_shara_pub",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "5e5149498d509319eb5821ae36ccee91b5be47644b6750de6d1e8162ca0babd2",
+   "japanese": "強すぎるのが{4D}問題なんだって!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/4",
+   "us_top": 48,
+   "us_line": 4,
+   "scene": "ritz_shara_pub",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "96790a75aef02b6b9d3b9675f8f6b6407c05c45f0329a084f1c80b4a430cad1c",
+   "japanese": "?{4D}{5104}、どうしたの?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/5",
+   "us_top": 48,
+   "us_line": 5,
+   "scene": "ritz_shara_pub",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "24d905279e7233d8a97d4807527781bf024c7f15e35ebd9ef8bf71f9642a54ea",
+   "japanese": "{510C}…。{4D}正直に答えて。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/6",
+   "us_top": 48,
+   "us_line": 6,
+   "scene": "ritz_shara_pub",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "dc2655f96f654eebdb9163497207ea4d9906911a6c6026ba09086c3720e4620d",
+   "japanese": "なに?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/7",
+   "us_top": 48,
+   "us_line": 7,
+   "scene": "ritz_shara_pub",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "b428c947a8a07bd3f7dcd3e96d15e94f738e1ce74ee666fa8156b84e4b55d34e",
+   "japanese": "あたしって…。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/8",
+   "us_top": 48,
+   "us_line": 8,
+   "scene": "ritz_shara_pub",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "1f31c57ea17872b1655ff3ebfee4c4f435ef424d57b39e70274cc86001798f19",
+   "japanese": "あたしって、{4D}あんまりかわいく{4D}ないわよね?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/9",
+   "us_top": 48,
+   "us_line": 9,
+   "scene": "ritz_shara_pub",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "dc2655f96f654eebdb9163497207ea4d9906911a6c6026ba09086c3720e4620d",
+   "japanese": "…なんだって?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/10",
+   "us_top": 48,
+   "us_line": 10,
+   "scene": "ritz_shara_pub",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "b3f8e300942c44dc6a252d5deda56dc3728dd5338f7dd0c572bf08cb9e889127",
+   "japanese": "ほら、あたしって{4D}思ったこと、すぐ{4D}口に出すでしょ。{4F}{42}エンゲージで剣を{4D}ふり回すのも大好きだし…。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/11",
+   "us_top": 48,
+   "us_line": 11,
+   "scene": "ritz_shara_pub",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "eb09895a32e9e9a7b8da1284d057793e14c55961d4565ca8bfbcb5081e104ca3",
+   "japanese": "……。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/12",
+   "us_top": 48,
+   "us_line": 12,
+   "scene": "ritz_shara_pub",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "6ec864bfa044adfaa3eb7a1f4a2efb44b126d4e5164520a823d508fd736820d6",
+   "japanese": "…ふふっ!{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/13",
+   "us_top": 48,
+   "us_line": 13,
+   "scene": "ritz_shara_pub",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "daa34a7b3e47d5555266d0597f858b25ab5a6567de8e78b5fae10e426c3ebb11",
+   "japanese": "なにがおかしいのよ?{4D}こっちは真剣なんだから!{4D}{4F}{42}あたしは「かわいい」って{4D}タイプじゃないって{4D}だけの話よ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/14",
+   "us_top": 48,
+   "us_line": 14,
+   "scene": "ritz_shara_pub",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "311d6f1111dbdde33c29c784b030c2fed57570af5e161a03fcb577d8a532289d",
+   "japanese": "{400}に{4D}きいてみたら?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/15",
+   "us_top": 48,
+   "us_line": 15,
+   "scene": "ritz_shara_pub",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "1d6961aa95d297d8b13a146c4fcf383b17f6746880c28124f922602b089617eb",
+   "japanese": "イヤよ!{4D}あいつの言うことなんて{4D}気にしないわ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/16",
+   "us_top": 48,
+   "us_line": 16,
+   "scene": "ritz_shara_pub",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "1f0245a898d42e9d8f1ce24b0eb49feaa53914d18e86eef299d2a42a01d38c56",
+   "japanese": "{5104}!シャアラ!{4D}どうしたの?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/17",
+   "us_top": 48,
+   "us_line": 17,
+   "scene": "ritz_shara_pub",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "c1c76659162c1eaa31abc72d3f1353045bd7f96b94f3def7f3f054fbef32ab6e",
+   "japanese": "ちょうどいいところに{4D}来た!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/18",
+   "us_top": 48,
+   "us_line": 18,
+   "scene": "ritz_shara_pub",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "41ecc90bfa86ee22c6e9090e021b6fdaede1b0fbe80acd11dc7cecfc2d089839",
+   "japanese": "{510C}!{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/19",
+   "us_top": 48,
+   "us_line": 19,
+   "scene": "ritz_shara_pub",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "e1d22e1a2a461cbac9481bd83433c70cd144a03107ce363966b148cbac296c6e",
+   "japanese": "??{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/20",
+   "us_top": 48,
+   "us_line": 20,
+   "scene": "ritz_shara_pub",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "89ec6fbb22236c27f4a3694969ca0b4225a8dfec2ba159345704834eb80193c6",
+   "japanese": "なんでもない!{4D}なんでもないの!{4D}で、{400}、なに?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/21",
+   "us_top": 48,
+   "us_line": 21,
+   "scene": "ritz_shara_pub",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "3d7423dcc5f384e02a2c8dfc076bb62d24c95808bd6587946a614e33d6a390ab",
+   "japanese": "え、えっと…、{4D}別に、なにも?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/22",
+   "us_top": 48,
+   "us_line": 22,
+   "scene": "ritz_shara_pub",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "96f08ad8af90961360bbcbb9a489929bef3b97f40486811a5547a5acb861eb3b",
+   "japanese": "{5104}、{4D}このままじゃ彼が{4D}かわいそうだよ…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/23",
+   "us_top": 48,
+   "us_line": 23,
+   "scene": "ritz_shara_pub",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "8f37a22a4d8ba083f8e193a13b714b769e609f096e09a6fdd55ffaf602bd6587",
+   "japanese": "いいのよ、これで!{4D}あっ…。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/24",
+   "us_top": 48,
+   "us_line": 24,
+   "scene": "ritz_shara_pub",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "79f5d0eb85c84457e26817ea65f10321b12de2bd6543f84db3fb95d8df22954c",
+   "japanese": "ご、ゴメン。{4D}ほんとになんでもないの。{4D}なんでもないから!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/48/25",
+   "us_top": 48,
+   "us_line": 25,
+   "scene": "ritz_shara_pub",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "aaaec4fccee6ebddbec29c47aefdc4f39a68052b9adba1f70ff5bfcd59bc2fcb",
+   "japanese": "次の仕事の話でも{4D}しましょ、ね?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/0",
+   "us_top": 49,
+   "us_line": 0,
+   "scene": "cid_babus_words",
+   "speaker": "バブズ",
+   "scope": "SCENE_COMPLETION",
+   "original_english_sha256": "e67e4167feef30ecad1a9e0c3c342ad22f71992151ce3067ed650c910618aa6e",
+   "japanese": "…アルタ·オラン…。{4D}いや、ちがうな…。{4D}こうだったか…?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/1",
+   "us_top": 49,
+   "us_line": 1,
+   "scene": "cid_babus_words",
+   "speaker": "シド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "2c728f8452ebcd2b52406523b551581eb58e7298082dd83d115bde1a7f1e7a10",
+   "japanese": "魔法でも{4D}となえているのかね、{4D}{5109}?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/2",
+   "us_top": 49,
+   "us_line": 2,
+   "scene": "cid_babus_words",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "dec764df650d187676daf80b9a2279dabff7e59eba29c4b4d6945433475f5333",
+   "japanese": "{5106}様!{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/3",
+   "us_top": 49,
+   "us_line": 3,
+   "scene": "cid_babus_words",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "dba13d7476061cfa0eb32625d1f509a09f0c76409981cd7f3954ea721462339c",
+   "japanese": "魔法ではありません。{4D}みょうに気にかかる{4D}言葉がありまして。{4F}{42}ただ、どこできいたのか{4D}思い出せないのです…。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/4",
+   "us_top": 49,
+   "us_line": 4,
+   "scene": "cid_babus_words",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "c898459eb15e20bf6019b212d45fb1f8ea3740d7b07885a9539060a53f5b6076",
+   "japanese": "そう、そうです!{4D}王子がよく{4D}口にしておられました!{4F}{42}「アルタ·オロン。{4D}ソンドス·カミーラ」と。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/5",
+   "us_top": 49,
+   "us_line": 5,
+   "scene": "cid_babus_words",
+   "speaker": "シド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "8185b3cd0302d62104aedb5587ce9cf8267e189c24044cd1fb38cc3b8d3c5bda",
+   "japanese": "{5103}が?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/6",
+   "us_top": 49,
+   "us_line": 6,
+   "scene": "cid_babus_words",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "bc514e95a6c2df6e2af44f6f481b1968a778b024afb29da71c7ba7cec7ffd7a6",
+   "japanese": "はい。今、たしかに{4D}思い出しました。{4D}{4F}{42}あのときは、古い魔法の{4D}言葉のようにきこえた{4D}ものです。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/7",
+   "us_top": 49,
+   "us_line": 7,
+   "scene": "cid_babus_words",
+   "speaker": "シド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "ee64368077c56d5b64daa7a9dc75a09bb63a64a0819fced2b931d9b629c473ce",
+   "japanese": "なかなかいい{4D}ひびきの言葉だ。{4D}意味はわかるのかね?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/8",
+   "us_top": 49,
+   "us_line": 8,
+   "scene": "cid_babus_words",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "059197870134eebb3c52919952bb51b35972391fdd853b60cc07f5f91362f1db",
+   "japanese": "わかりません。ですが、{4D}きっとよい意味かと。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/9",
+   "us_top": 49,
+   "us_line": 9,
+   "scene": "cid_babus_words",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "fed5242fd265661db999b1f96d699c49b0855d4a88a065be4cbdcacbf13ce12c",
+   "japanese": "古い言葉は、ひびきを{4D}大切にしたといいます…。{4D}{4F}{42}よいひびきは、{4D}よい意味を持つのです。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/10",
+   "us_top": 49,
+   "us_line": 10,
+   "scene": "cid_babus_words",
+   "speaker": "シド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "f490ed2ef15dbb986fc421270ff9d9c9d1b7921fd55bfc4e7790e63edad791df",
+   "japanese": "「幸あれ」とか、{4D}そういうたぐいかね?{4D}{4F}{42}{5103}は、意味を{4D}しって言っていたのかな?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/11",
+   "us_top": 49,
+   "us_line": 11,
+   "scene": "cid_babus_words",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "a6fbd8f219cb5066b224a1bae4455480eb00e8cda07c87efb3f7880ca270b09d",
+   "japanese": "さて…どうでしょう?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/12",
+   "us_top": 49,
+   "us_line": 12,
+   "scene": "cid_babus_words",
+   "speaker": "シド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "be98ff35404e1cc060ae13d190d5b7a2251a16bf1c8fe7229c2c3ccbc1589bc7",
+   "japanese": "いずれにせよ、あの子が{4D}そんな言葉をしっている{4D}こと自体、ふしぎな話だ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/13",
+   "us_top": 49,
+   "us_line": 13,
+   "scene": "cid_babus_words",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "244f0c160a417b0e61eca95c9c8fad8db5852b5e7956070d0e8cc88173cc89bc",
+   "japanese": "王子…。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/14",
+   "us_top": 49,
+   "us_line": 14,
+   "scene": "cid_babus_words",
+   "speaker": "シド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "e705a6e32c311adbd062258b7e69c76cd643edec57c6394cbffe855a6709918f",
+   "japanese": "ところで{5109}、{4D}ここでなにを{4D}していたのかね?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/15",
+   "us_top": 49,
+   "us_line": 15,
+   "scene": "cid_babus_words",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "23ebc3ec0a3d49d7b1cfe978719ffc8fc5d720293e58ee556f89eddc26164455",
+   "japanese": "いえ…。{4D}ただ、ぼんやりと{4D}すごしていただけです。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/16",
+   "us_top": 49,
+   "us_line": 16,
+   "scene": "cid_babus_words",
+   "speaker": "シド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "659c8ab47741ce97d971363f05a0bfc0902080bd8b437f2847ac5a6fadb6c6fb",
+   "japanese": "それはいい。{4D}{4D}{4F}{42}おまえは年のわりに{4D}がんばりすぎだったからな。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/17",
+   "us_top": 49,
+   "us_line": 17,
+   "scene": "cid_babus_words",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "aaf0c782c69e1454363ca752052af259314cba8a565a20e6ef6a4cc9beecac30",
+   "japanese": "ありがとうございます。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/18",
+   "us_top": 49,
+   "us_line": 18,
+   "scene": "cid_babus_words",
+   "speaker": "シド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "5e540b5456de41c4162209650eed0aedcc1c02cd773d3081a961d3ace45ee857",
+   "japanese": "ほめたわけではないぞ、{4D}{5109}。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/19",
+   "us_top": 49,
+   "us_line": 19,
+   "scene": "cid_babus_words",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "a46640e8ce2b9e0fff34db21127c5e0ce7c1905335441f8aade82262ade01a59",
+   "japanese": "は…?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/20",
+   "us_top": 49,
+   "us_line": 20,
+   "scene": "cid_babus_words",
+   "speaker": "シド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "0e91a4475d865312219199d4c471e7fe3e0a9b24260d305670e36f2669267d7c",
+   "japanese": "おまえががんばりすぎる{4D}から、まわりの者は{4D}気がぬけなかったのだ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/21",
+   "us_top": 49,
+   "us_line": 21,
+   "scene": "cid_babus_words",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "0a5089bcba08592ecd6cb8321e1fc37420a887d10f4b048db830d24cbce691fd",
+   "japanese": "もうしわけありません!{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/22",
+   "us_top": 49,
+   "us_line": 22,
+   "scene": "cid_babus_words",
+   "speaker": "シド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "8333f20f5180666c2f190a8081f35c40e34ea044e672e8ba0bcc282bda8ac5d7",
+   "japanese": "はっはっは!{4D}じょうだんだよ、{5109}!{4D}{4F}{42}おまえは、まったく{4D}おもしろい男だな。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/23",
+   "us_top": 49,
+   "us_line": 23,
+   "scene": "cid_babus_words",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "26509866c128614682bb6f55b9abc5b982fd9cb5941c08f02db71b1120cae205",
+   "japanese": "じょうだんは、どうも{4D}ニガテなのです。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/24",
+   "us_top": 49,
+   "us_line": 24,
+   "scene": "cid_babus_words",
+   "speaker": "シド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "6c8b37e9006b6af9fef6019fd100f5078ec852981191632400db08065102922c",
+   "japanese": "ああ。おまえは{4D}{5109}·スウェイン。{4D}王子づきの魔道士だ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/25",
+   "us_top": 49,
+   "us_line": 25,
+   "scene": "cid_babus_words",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "eb09895a32e9e9a7b8da1284d057793e14c55961d4565ca8bfbcb5081e104ca3",
+   "japanese": "……。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/26",
+   "us_top": 49,
+   "us_line": 26,
+   "scene": "cid_babus_words",
+   "speaker": "シド",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "67782f6c7c604b08f437ccda44f1096dad93892a459573ae07d194b841e2cbec",
+   "japanese": "それだけで、{4D}じゅうぶんでは{4D}ないかな。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/49/27",
+   "us_top": 49,
+   "us_line": 27,
+   "scene": "cid_babus_words",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_958",
+   "original_english_sha256": "e72291eaada643138f3d5b5adb6364cc3a97bb43c4b2696afa8213e475a16b2d",
+   "japanese": "はい。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  }
+ ]
+}

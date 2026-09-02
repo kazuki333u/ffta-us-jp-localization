@@ -1,0 +1,20 @@
+# Text files keep LF in the repository; Git may check them out natively.
+* text=auto eol=lf
+
+# Never let end-of-line normalization touch binary-shaped artifacts, even
+# though .gitignore should keep them out of the repository entirely.
+*.gba binary
+*.bps binary
+*.ips binary
+*.sav binary
+*.png binary
+*.ttf binary
+
+# Copied byte-for-byte from the upstream project (see NOTICE.md), so it must
+# not be touched by end-of-line normalization.  Both attributes have to be
+# unset: "eol" implies text handling on its own, so "-text" alone still lets
+# the "* ... eol=lf" rule above rewrite the file on checkout.
+LICENSE -text -eol
+
+# Generated build manifests: keep them out of diff noise but still reviewable.
+src/localizer/chain/SYNC_MANIFEST.json linguist-generated=true

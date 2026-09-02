@@ -1,0 +1,140 @@
+name: 不具合の報告 / Bug report
+description: 表示の崩れ、誤字、クラッシュ、その他の問題を報告します
+title: "[BUG] "
+labels: ["bug", "needs-reproduction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        報告ありがとうございます。
+
+        ### ⚠️ 添付についてのお願い
+
+        - **ROMファイル (`.gba`) は絶対に添付しないでください。** リンクも貼らないでください。
+        - `.build/` フォルダも添付しないでください (あなたのROMのコピーが入っています)。
+        - セーブデータの添付は**任意**です。添付する場合、プレイヤーが入力した
+          キャラクター名・クラン名が含まれる点にご注意ください。
+
+        先に `docs/KNOWN_ISSUES.md` をご確認いただけると
+        助かりますが、**重複していても構いません。**
+
+  - type: input
+    id: version
+    attributes:
+      label: バージョン
+      description: どのビルドで発生しましたか
+      placeholder: "Public Beta 2 (RC23-based)"
+      value: "Public Beta 2 (RC23-based)"
+    validations:
+      required: true
+
+  - type: input
+    id: rom_hash
+    attributes:
+      label: ビルドしたROMのSHA-256
+      description: |
+        `python build.py --identify <出力したROM>` の SHA-256 行を貼ってください。
+        分からない場合は空欄で構いません。
+      placeholder: "6C78CDEE7914056CEBF6A39354A6A82C8DA132C2D6A0D88928B4B6A2CDB717E6"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: 実行環境
+      options:
+        - エミュレータ
+        - 実機 (フラッシュカート)
+        - その他 / 不明
+    validations:
+      required: true
+
+  - type: input
+    id: emulator
+    attributes:
+      label: エミュレータ名とバージョン / 実機の構成
+      description: 実機の場合はフラッシュカートの名前を書いてください
+      placeholder: "mGBA 0.10.3 / Windows 11"
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: 発生箇所
+      description: どの画面・場所・ミッションで起きましたか
+      placeholder: "戦闘中の SYSTEM メニュー / ミッション「〇〇」の受注直後 / 酒場"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      description: そこへ至るまでの操作を、分かる範囲で順に書いてください
+      placeholder: |
+        1. ワールドマップで酒場へ入る
+        2. 「クエストをうける」を選ぶ
+        3. 一覧から「〇〇」を選ぶ
+        4. ここで発生
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: 発生頻度
+      options:
+        - 毎回発生する
+        - ときどき発生する
+        - 一度だけ発生した
+        - 分からない
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待した動作
+      placeholder: "項目名が最後まで表示される"
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 実際の動作
+      placeholder: "最後の文字が切れている / 英語のまま表示される / 画面が固まる"
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: スクリーンショット (任意)
+      description: |
+        画像をこの欄へドラッグ＆ドロップできます。
+        表示の問題では非常に助かります。
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: その他 (任意)
+      description: |
+        ビルド時のエラーであれば `.build/build.log` の**末尾**を貼ってください。
+        Python のバージョン (`python --version`) も役立ちます。
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 確認
+      options:
+        - label: ROMファイルを添付していません
+          required: true
+        - label: セーブデータを添付する場合、個人情報が含まれていないことを確認しました (添付しない場合もチェック)
+          required: true

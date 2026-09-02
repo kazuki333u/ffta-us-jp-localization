@@ -1,0 +1,1603 @@
+{
+ "_public_note": "Public build manifest. Verbatim retail source strings are stored as SHA-256 digests (fields ending in _sha256); the builder recomputes them from the user's own ROM. Japanese text in this file is written by this project.",
+ "_note": "Editorial decision of record for the US-added placeholder-transfer family: the twenty US-added missions' names (words:quest 377..396) and briefings (pages:quest/1 176..195), the Official unit kind (words:content/122) and its description (fx_text/22/121). JP retail ships developer placeholders in these slots (クエスト377, ダミー377, 予備2, empty), so the JP bytes are not a translation; this manifest is. Consumed and revalidated on every build by ffta_jp_us_added_missions.py. Markup: {HEX} is a CTR_FUNC operand; every other character is text.",
+ "milestone": "us_added_missions",
+ "description": "US-added placeholder-transfer family (RC16 finding, ffta_placeholder_transfer_audit.py): 42 records that RC12 still ships as JP developer placeholders, localized from the US retail originals.",
+ "baseline_production_sha256": "9098F025FDDD00119E0FD833199F5E9BBD1F66DCBEAD865D60749C3C4E652532",
+ "count": 42,
+ "translated_count": 42,
+ "no_change_required_count": 0,
+ "families": {
+  "words:quest": 20,
+  "pages:quest/1": 20,
+  "words:content": 1,
+  "fx_text/22": 1
+ },
+ "root_cause": "ffta_jp_us_only_editorial_scope.py treats a US record as US-only only when the aligned JP record is missing or empty. These JP records are non-empty developer placeholders (クエスト<n>, ダミー<n>, 予備2), so source transfer 'succeeded' and shipped the placeholder. Policy (Main docs/decisions.md, 2026-09-01): JP retail is the authority for player-visible wording, not for developer placeholders.",
+ "lane": "CHR_FULL for every written entry; every glyph is a native JP record the production font already carries (zero new glyphs)",
+ "width_policy": {
+  "rule": "per-family bound = the widest single rendered line among that family's own JP originals, measured with the JP font advance metadata; lines per record bounded by the family's JP maximum",
+  "words:quest": "<= 87 px (JP words:quest/66); the pub mission list column",
+  "words:content": "<= 86 px (JP words:content/507)",
+  "pages:quest/1": "<= 192 px per line (JP pages:quest ordinal 12) and <= 7 lines (JP maximum, 6 in practice: five body lines and the {1D10} requester line); encoded payload <= the longest JP original of the leaf (renderer buffer)",
+  "fx_text/22": "<= 192 px per line and <= 2 lines per page (JP fx_text/22 originals)"
+ },
+ "control_policy": {
+  "preserved": "every reference control of the US original ({400} the player's name, {51xx} character / word references such as {5109} バブズ, {510A} エゼル, {5104} リッツ, {5103} ミュート, {5106} シド, {5107} ドネッド, {5117} ジャッジ), the {1D10} requester-line indent JP retail's own briefings use, and the trailing close sequence ({42} for briefings, {40}{42} for the description)",
+  "dropped": "the English word space {52} and the justification controls {1D02}/{1D03}/{1D04}; line breaks {4D} are re-flowed to Japanese line lengths; the mid-record page break of fx_text/22/121 is dropped because the two-line JP shape needs none",
+  "mission_panel_invariant": "the briefing records carry no {04 xx} substitution token; they are the value a template's {04 xx} consumes, so the RC12 template-slot rule does not apply to them -- the shape (<= 6 lines, <= 192 px, {42} terminator) is what JP retail's own briefings give the same renderer"
+ },
+ "terminology": {
+  "official(s)": "役人 (s_text/61/16/71, s_text/47/16, fx_text/8/59 editorial)",
+  "Judgemaster / Judge": "ジャッジマスター{5106} (JP pages:quest/0/23) / {5117} = ジャッジ (words:refer/23)",
+  "JudgeWatch": "{5117}ウォッチ (fx_text/8/58 editorial)",
+  "seal of immunity / red card immunity": "免罪の印 / レッドカードの免罪 (judge_ezel manifest)",
+  "palace / resistance / treaty": "宮廷 / レジスタンス / 協定 (judge_ezel manifest: 不干渉の協定)",
+  "engagement / jagd": "エンゲージ / ヤクト (JP s_text/27/40, words:content/744)",
+  "Streetear / Merchant / Traveler / Swordsman": "情報屋 / 商人 / 旅人 / 剣士 (JP retail pages:quest requester lines)",
+  "The Chocobo's Kweh": "チョコボ亭 (JP pages:quest/0/49 チョコボ亭ロロアンナ)",
+  "Clan Marble / Clan Ritz": "マーブルクラン (words:clan/8) / {5104}クラン (JP pages:quest/0/50)",
+  "Lutia Pass / Tubola / Uladon / Roda / Giza Plains / Cyril / Sprohm / Baguba / Ambervale": "ルテチア峠 / ツァボラ / ウラドノ / ローダ / ギーザ平原 / シリル / スプロム / バクーバ / 琥珀の谷 (words:content 719..747)",
+  "HP満タン禁止": "JP retail's own law name (words:content/656), reused for No Full HP",
+  "play favorites": "えこひいき (judge_ezel manifest)"
+ },
+ "voice_authorities": {
+  "エゼル": "judge_ezel manifest -- オレ/おまえ, 「〜だぜ」「〜な」",
+  "バブズ": "special_scenes manifest -- 率直な常体, きみ",
+  "リッツ": "special_scenes manifest -- あたし, 勝ち気",
+  "ドネッド": "special_scenes manifest -- casual, カタカナ書きの強調",
+  "情報屋": "JP retail streetear briefings -- 〜らしいぜ / 〜って話だ"
+ },
+ "kanji_codes": {
+  "一": {
+   "jp_glyph_code": "0x0122",
+   "attested_at": "fx_text/1/31",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "万": {
+   "jp_glyph_code": "0x0B14",
+   "attested_at": "words:content/497",
+   "source": "jp_corpus_attestation"
+  },
+  "上": {
+   "jp_glyph_code": "0x0135",
+   "attested_at": "fx_text/1/32",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "不": {
+   "jp_glyph_code": "0x0A46",
+   "attested_at": "fx_text/4/102",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "世": {
+   "jp_glyph_code": "0x0142",
+   "attested_at": "s_text/1/98",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "中": {
+   "jp_glyph_code": "0x0125",
+   "attested_at": "s_text/1/38",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "乙": {
+   "jp_glyph_code": "0x029A",
+   "attested_at": "words:quest/214",
+   "source": "jp_corpus_attestation"
+  },
+  "事": {
+   "jp_glyph_code": "0x01A5",
+   "attested_at": "fx_text/8/19",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "亡": {
+   "jp_glyph_code": "0x0AD2",
+   "attested_at": "s_text/19/58",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "亭": {
+   "jp_glyph_code": "0x08A7",
+   "attested_at": "words:quest/241",
+   "source": "jp_corpus_attestation"
+  },
+  "人": {
+   "jp_glyph_code": "0x01A9",
+   "attested_at": "fx_text/2/9",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "今": {
+   "jp_glyph_code": "0x0528",
+   "attested_at": "s_text/1/1",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "令": {
+   "jp_glyph_code": "0x0BEF",
+   "attested_at": "s_text/30/20",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "伝": {
+   "jp_glyph_code": "0x08DB",
+   "attested_at": "s_text/2/64",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "作": {
+   "jp_glyph_code": "0x0570",
+   "attested_at": "fx_text/4/138",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "依": {
+   "jp_glyph_code": "0x020D",
+   "attested_at": "s_text/4/14",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "元": {
+   "jp_glyph_code": "0x0492",
+   "attested_at": "s_text/2/58",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "免": {
+   "jp_glyph_code": "0x0B36",
+   "attested_at": "s_text/2/15",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "入": {
+   "jp_glyph_code": "0x0967",
+   "attested_at": "fx_text/1/16",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "兵": {
+   "jp_glyph_code": "0x0A84",
+   "attested_at": "words:quest/196",
+   "source": "jp_corpus_attestation"
+  },
+  "凍": {
+   "jp_glyph_code": "0x08F7",
+   "attested_at": "words:quest/187",
+   "source": "jp_corpus_attestation"
+  },
+  "出": {
+   "jp_glyph_code": "0x013F",
+   "attested_at": "fx_text/1/33",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "別": {
+   "jp_glyph_code": "0x01D9",
+   "attested_at": "fx_text/4/19",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "前": {
+   "jp_glyph_code": "0x01AA",
+   "attested_at": "fx_text/4/88",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "剣": {
+   "jp_glyph_code": "0x0475",
+   "attested_at": "fx_text/8/52",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "力": {
+   "jp_glyph_code": "0x0182",
+   "attested_at": "s_text/2/51",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "助": {
+   "jp_glyph_code": "0x0667",
+   "attested_at": "s_text/2/24",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "協": {
+   "jp_glyph_code": "0x03DD",
+   "attested_at": "s_text/2/89",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "印": {
+   "jp_glyph_code": "0x0230",
+   "attested_at": "s_text/14/26",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "原": {
+   "jp_glyph_code": "0x0493",
+   "attested_at": "words:quest/255",
+   "source": "jp_corpus_attestation"
+  },
+  "反": {
+   "jp_glyph_code": "0x0139",
+   "attested_at": "s_text/2/80",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "取": {
+   "jp_glyph_code": "0x0609",
+   "attested_at": "s_text/1/30",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "受": {
+   "jp_glyph_code": "0x01C9",
+   "attested_at": "fx_text/8/3",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "合": {
+   "jp_glyph_code": "0x0513",
+   "attested_at": "s_text/1/3",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "同": {
+   "jp_glyph_code": "0x0924",
+   "attested_at": "fx_text/4/203",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "向": {
+   "jp_glyph_code": "0x04D3",
+   "attested_at": "s_text/13/1",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "吹": {
+   "jp_glyph_code": "0x06FE",
+   "attested_at": "pages:quest/0/231",
+   "source": "jp_corpus_attestation"
+  },
+  "告": {
+   "jp_glyph_code": "0x051B",
+   "attested_at": "fx_text/17/11",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "命": {
+   "jp_glyph_code": "0x015D",
+   "attested_at": "s_text/7/23",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "和": {
+   "jp_glyph_code": "0x0C27",
+   "attested_at": "s_text/29/34",
+   "source": "reused:us_only_s_text_top61_judge_missions"
+  },
+  "商": {
+   "jp_glyph_code": "0x0675",
+   "attested_at": "s_text/4/15",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "器": {
+   "jp_glyph_code": "0x0371",
+   "attested_at": "fx_text/4/122",
+   "source": "reused:us_only_s_text_top61_judge_missions"
+  },
+  "地": {
+   "jp_glyph_code": "0x01D5",
+   "attested_at": "s_text/10/1",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "報": {
+   "jp_glyph_code": "0x0AB4",
+   "attested_at": "fx_text/1/31",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "士": {
+   "jp_glyph_code": "0x0133",
+   "attested_at": "fx_text/4/117",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "声": {
+   "jp_glyph_code": "0x0733",
+   "attested_at": "s_text/6/20",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "変": {
+   "jp_glyph_code": "0x015E",
+   "attested_at": "s_text/1/3",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "女": {
+   "jp_glyph_code": "0x0669",
+   "attested_at": "s_text/1/6",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "子": {
+   "jp_glyph_code": "0x0132",
+   "attested_at": "s_text/2/75",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "定": {
+   "jp_glyph_code": "0x0186",
+   "attested_at": "fx_text/1/8",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "宮": {
+   "jp_glyph_code": "0x03B8",
+   "attested_at": "s_text/6/27",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "対": {
+   "jp_glyph_code": "0x07EF",
+   "attested_at": "fx_text/4/137",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "屋": {
+   "jp_glyph_code": "0x01B6",
+   "attested_at": "s_text/1/88",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "山": {
+   "jp_glyph_code": "0x012F",
+   "attested_at": "s_text/2/84",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "峠": {
+   "jp_glyph_code": "0x0930",
+   "attested_at": "words:content/729",
+   "source": "jp_corpus_attestation"
+  },
+  "帰": {
+   "jp_glyph_code": "0x0382",
+   "attested_at": "s_text/1/40",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "幕": {
+   "jp_glyph_code": "0x0B05",
+   "attested_at": "words:rumor/55",
+   "source": "jp_corpus_attestation"
+  },
+  "平": {
+   "jp_glyph_code": "0x0A87",
+   "attested_at": "s_text/1/21",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "幻": {
+   "jp_glyph_code": "0x0495",
+   "attested_at": "words:content/17",
+   "source": "jp_corpus_attestation"
+  },
+  "店": {
+   "jp_glyph_code": "0x08D6",
+   "attested_at": "s_text/8/60",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "度": {
+   "jp_glyph_code": "0x08F1",
+   "attested_at": "s_text/2/86",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "廷": {
+   "jp_glyph_code": "0x08B0",
+   "attested_at": "s_text/6/27",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "引": {
+   "jp_glyph_code": "0x019F",
+   "attested_at": "fx_text/4/10",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "強": {
+   "jp_glyph_code": "0x03E4",
+   "attested_at": "s_text/1/101",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "当": {
+   "jp_glyph_code": "0x090D",
+   "attested_at": "s_text/1/30",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "役": {
+   "jp_glyph_code": "0x0B58",
+   "attested_at": "fx_text/4/114",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "心": {
+   "jp_glyph_code": "0x013B",
+   "attested_at": "fx_text/4/120",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "忘": {
+   "jp_glyph_code": "0x0AD8",
+   "attested_at": "fx_text/4/84",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "思": {
+   "jp_glyph_code": "0x01C5",
+   "attested_at": "fx_text/6/24",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "急": {
+   "jp_glyph_code": "0x03BA",
+   "attested_at": "s_text/7/42",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "息": {
+   "jp_glyph_code": "0x07CB",
+   "attested_at": "words:battle/257",
+   "source": "jp_corpus_attestation"
+  },
+  "悲": {
+   "jp_glyph_code": "0x09FD",
+   "attested_at": "s_text/17/42",
+   "source": "reused:us_only_s_text_final_remainder"
+  },
+  "情": {
+   "jp_glyph_code": "0x06B6",
+   "attested_at": "s_text/3/13",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "感": {
+   "jp_glyph_code": "0x033E",
+   "attested_at": "s_text/4/11",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "憶": {
+   "jp_glyph_code": "0x0296",
+   "attested_at": "words:quest/179",
+   "source": "jp_corpus_attestation"
+  },
+  "手": {
+   "jp_glyph_code": "0x060B",
+   "attested_at": "fx_text/1/16",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "拠": {
+   "jp_glyph_code": "0x03CC",
+   "attested_at": "s_text/18/34",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "捕": {
+   "jp_glyph_code": "0x0AA4",
+   "attested_at": "s_text/5/11",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "断": {
+   "jp_glyph_code": "0x083B",
+   "attested_at": "s_text/8/6",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "新": {
+   "jp_glyph_code": "0x01A8",
+   "attested_at": "fx_text/1/31",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "旅": {
+   "jp_glyph_code": "0x0BCA",
+   "attested_at": "fx_text/6/2",
+   "source": "reused:us_only_s_text_final_remainder"
+  },
+  "日": {
+   "jp_glyph_code": "0x01D8",
+   "attested_at": "s_text/1/1",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "時": {
+   "jp_glyph_code": "0x0166",
+   "attested_at": "fx_text/2/12",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "書": {
+   "jp_glyph_code": "0x0666",
+   "attested_at": "s_text/1/51",
+   "source": "reused:us_only_s_text_top61_judge_missions"
+  },
+  "来": {
+   "jp_glyph_code": "0x014F",
+   "attested_at": "s_text/1/38",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "止": {
+   "jp_glyph_code": "0x012D",
+   "attested_at": "s_text/1/38",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "正": {
+   "jp_glyph_code": "0x072C",
+   "attested_at": "s_text/17/15",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "武": {
+   "jp_glyph_code": "0x0A5F",
+   "attested_at": "fx_text/4/122",
+   "source": "reused:us_only_s_text_top61_judge_missions"
+  },
+  "死": {
+   "jp_glyph_code": "0x05AF",
+   "attested_at": "s_text/1/68",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "残": {
+   "jp_glyph_code": "0x059C",
+   "attested_at": "s_text/6/5",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "段": {
+   "jp_glyph_code": "0x083E",
+   "attested_at": "fx_text/6/21",
+   "source": "jp_corpus_attestation"
+  },
+  "求": {
+   "jp_glyph_code": "0x03BD",
+   "attested_at": "s_text/8/30",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "決": {
+   "jp_glyph_code": "0x0468",
+   "attested_at": "fx_text/1/8",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "治": {
+   "jp_glyph_code": "0x05CC",
+   "attested_at": "words:quest/78",
+   "source": "jp_corpus_attestation"
+  },
+  "活": {
+   "jp_glyph_code": "0x0318",
+   "attested_at": "words:battle/624",
+   "source": "jp_corpus_attestation"
+  },
+  "満": {
+   "jp_glyph_code": "0x0B16",
+   "attested_at": "words:content/656",
+   "source": "jp_corpus_attestation"
+  },
+  "物": {
+   "jp_glyph_code": "0x0A74",
+   "attested_at": "s_text/1/51",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "王": {
+   "jp_glyph_code": "0x0137",
+   "attested_at": "s_text/2/33",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "珀": {
+   "jp_glyph_code": "0x0C64",
+   "attested_at": "s_text/28/8",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "琥": {
+   "jp_glyph_code": "0x0C63",
+   "attested_at": "s_text/28/8",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "生": {
+   "jp_glyph_code": "0x072F",
+   "attested_at": "fx_text/4/127",
+   "source": "reused:us_only_s_text_final_remainder"
+  },
+  "由": {
+   "jp_glyph_code": "0x0B74",
+   "attested_at": "fx_text/4/96",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "申": {
+   "jp_glyph_code": "0x06DE",
+   "attested_at": "fx_text/21/186",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "男": {
+   "jp_glyph_code": "0x083F",
+   "attested_at": "s_text/1/31",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "界": {
+   "jp_glyph_code": "0x015F",
+   "attested_at": "s_text/1/98",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "知": {
+   "jp_glyph_code": "0x0842",
+   "attested_at": "fx_text/8/56",
+   "source": "reused:us_only_s_text_final_remainder"
+  },
+  "石": {
+   "jp_glyph_code": "0x0746",
+   "attested_at": "fx_text/8/25",
+   "source": "reused:us_only_fx_text_translations"
+  },
+  "禁": {
+   "jp_glyph_code": "0x0407",
+   "attested_at": "s_text/2/25",
+   "source": "reused:us_only_s_text_top61_judge_missions"
+  },
+  "私": {
+   "jp_glyph_code": "0x05B3",
+   "attested_at": "fx_text/8/68",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "空": {
+   "jp_glyph_code": "0x0422",
+   "attested_at": "s_text/6/29",
+   "source": "reused:us_only_system_battle_translations"
+  },
+  "答": {
+   "jp_glyph_code": "0x0911",
+   "attested_at": "s_text/13/22",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "結": {
+   "jp_glyph_code": "0x046B",
+   "attested_at": "s_text/6/27",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "罪": {
+   "jp_glyph_code": "0x0564",
+   "attested_at": "fx_text/4/93",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "考": {
+   "jp_glyph_code": "0x04FB",
+   "attested_at": "s_text/1/98",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "聞": {
+   "jp_glyph_code": "0x0A81",
+   "attested_at": "words:clan/40",
+   "source": "jp_corpus_attestation"
+  },
+  "自": {
+   "jp_glyph_code": "0x05D3",
+   "attested_at": "s_text/2/42",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "船": {
+   "jp_glyph_code": "0x0773",
+   "attested_at": "words:quest/210",
+   "source": "jp_corpus_attestation"
+  },
+  "虫": {
+   "jp_glyph_code": "0x0860",
+   "attested_at": "s_text/17/15",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "行": {
+   "jp_glyph_code": "0x0149",
+   "attested_at": "fx_text/1/37",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "街": {
+   "jp_glyph_code": "0x02F1",
+   "attested_at": "s_text/2/33",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "裁": {
+   "jp_glyph_code": "0x055E",
+   "attested_at": "fx_text/8/70",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "裏": {
+   "jp_glyph_code": "0x0BB5",
+   "attested_at": "s_text/26/6",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "要": {
+   "jp_glyph_code": "0x017F",
+   "attested_at": "s_text/2/64",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "見": {
+   "jp_glyph_code": "0x0150",
+   "attested_at": "s_text/1/83",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "解": {
+   "jp_glyph_code": "0x02D0",
+   "attested_at": "s_text/1/40",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "言": {
+   "jp_glyph_code": "0x0154",
+   "attested_at": "fx_text/4/180",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "記": {
+   "jp_glyph_code": "0x038C",
+   "attested_at": "fx_text/4/119",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "証": {
+   "jp_glyph_code": "0x06A6",
+   "attested_at": "s_text/18/34",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "話": {
+   "jp_glyph_code": "0x0C28",
+   "attested_at": "s_text/2/47",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "読": {
+   "jp_glyph_code": "0x093B",
+   "attested_at": "s_text/1/83",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "調": {
+   "jp_glyph_code": "0x087D",
+   "attested_at": "s_text/4/20",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "謝": {
+   "jp_glyph_code": "0x05F7",
+   "attested_at": "s_text/6/11",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "谷": {
+   "jp_glyph_code": "0x0821",
+   "attested_at": "s_text/28/8",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "買": {
+   "jp_glyph_code": "0x09A9",
+   "attested_at": "s_text/1/45",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "貸": {
+   "jp_glyph_code": "0x07FC",
+   "attested_at": "s_text/7/33",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "起": {
+   "jp_glyph_code": "0x038D",
+   "attested_at": "fx_text/17/166",
+   "source": "jp_corpus_attestation"
+  },
+  "迎": {
+   "jp_glyph_code": "0x0193",
+   "attested_at": "pages:quest/0/241",
+   "source": "jp_corpus_attestation"
+  },
+  "返": {
+   "jp_glyph_code": "0x0A9A",
+   "attested_at": "s_text/1/6",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "配": {
+   "jp_glyph_code": "0x09A1",
+   "attested_at": "s_text/5/19",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "重": {
+   "jp_glyph_code": "0x063D",
+   "attested_at": "fx_text/4/50",
+   "source": "reused:us_only_s_text_top61_judge_missions"
+  },
+  "長": {
+   "jp_glyph_code": "0x01D6",
+   "attested_at": "words:content/95",
+   "source": "jp_corpus_attestation"
+  },
+  "雪": {
+   "jp_glyph_code": "0x0755",
+   "attested_at": "s_text/1/3",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "霊": {
+   "jp_glyph_code": "0x0BFC",
+   "attested_at": "fx_text/17/70",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "頼": {
+   "jp_glyph_code": "0x0180",
+   "attested_at": "s_text/4/6",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "願": {
+   "jp_glyph_code": "0x036C",
+   "attested_at": "s_text/2/63",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "鳴": {
+   "jp_glyph_code": "0x0B32",
+   "attested_at": "words:quest/159",
+   "source": "jp_corpus_attestation"
+  },
+  "黒": {
+   "jp_glyph_code": "0x051E",
+   "attested_at": "fx_text/8/44",
+   "source": "reused:us_only_fx_text_translations"
+  }
+ },
+ "entries": [
+  {
+   "us_logical_path": "words:quest/377",
+   "family": "words:quest",
+   "us_index": 377,
+   "mission": 377,
+   "japanese": "和解の話し合い",
+   "note": "the palace / resistance talks Ezel mediates (US-SCN-55); 和解 = reconciliation, 話し合い = talks",
+   "original_english_sha256": "3c7205af7070aafdeeaa6a605e8d30119f28c41d095baadb715585409fb3878d",
+   "jp_placeholder": "クエスト377",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 74,
+   "line_widths_px": [
+    74
+   ],
+   "lines": 1
+  },
+  {
+   "us_logical_path": "words:quest/378",
+   "family": "words:quest",
+   "us_index": 378,
+   "mission": 378,
+   "japanese": "王子の忘れ物",
+   "note": "the prince's keepsake left in Ivalice (Babus, US-SCN-44); 忘れ物 = something left behind",
+   "original_english_sha256": "94425f849597adbb8df9be472d3bb823f8fe5fa89c4bc4af72b45583b4b5b316",
+   "jp_placeholder": "クエスト378",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 64,
+   "line_widths_px": [
+    64
+   ],
+   "lines": 1
+  },
+  {
+   "us_logical_path": "words:quest/379",
+   "family": "words:quest",
+   "us_index": 379,
+   "mission": 379,
+   "japanese": "バブズと同行",
+   "note": "Babus asks the clan to come to the Ambervale with him; 同行 = accompany",
+   "original_english_sha256": "a3120a8e25d96adaad9d4b80161eaa82e4bef153605a108c80ceab524dd06328",
+   "jp_placeholder": "クエスト379",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 65,
+   "line_widths_px": [
+    65
+   ],
+   "lines": 1
+  },
+  {
+   "us_logical_path": "words:quest/380",
+   "family": "words:quest",
+   "us_index": 380,
+   "mission": 380,
+   "japanese": "雪山の亡霊",
+   "note": "the dead of the Lutia Pass snowstorms are back (Ritz snow mission, US-SCN-45); 亡霊 attested (アイセンの亡霊)",
+   "original_english_sha256": "2b36568cb1bedf10a6ee70aedfc080ec611fd9b64678e1e63186a2b1cb0d0933",
+   "jp_placeholder": "クエスト380",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 54,
+   "line_widths_px": [
+    54
+   ],
+   "lines": 1
+  },
+  {
+   "us_logical_path": "words:quest/381",
+   "family": "words:quest",
+   "us_index": 381,
+   "mission": 381,
+   "japanese": "乙女の悲鳴",
+   "note": "a woman screams at bugs in Tubola (Shara rescue, US-SCN-46); 乙女 attested words:quest/214",
+   "original_english_sha256": "552f544ace2b8feac4224d05699a0e3605c9495c86fbdea8338091efd067f7f8",
+   "jp_placeholder": "クエスト381",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 54,
+   "line_widths_px": [
+    54
+   ],
+   "lines": 1
+  },
+  {
+   "us_logical_path": "words:quest/382",
+   "family": "words:quest",
+   "us_index": 382,
+   "mission": 382,
+   "japanese": "不正をあばけ",
+   "note": "expose the corrupt officials and judges in Cadoan (Cid recruit, US-SCN-47); 不正 = corruption per judge_ezel terminology",
+   "original_english_sha256": "fedef7af589d227a36d5d4fa4daaf884210d4cc9bf536fda33dd567161d671ee",
+   "jp_placeholder": "クエスト382",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 63,
+   "line_widths_px": [
+    63
+   ],
+   "lines": 1
+  },
+  {
+   "us_logical_path": "words:quest/383",
+   "family": "words:quest",
+   "us_index": 383,
+   "mission": 383,
+   "japanese": "ミュートの記憶",
+   "note": "the memory Mewt left behind when he went home; 記憶 attested words:quest/179 (うばわれた記憶)",
+   "original_english_sha256": "e7218b5e4a56497509ef63bbad37e594d8f24ac90928ef6ce542b1142e5426fa",
+   "jp_placeholder": "クエスト383",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 72,
+   "line_widths_px": [
+    72
+   ],
+   "lines": 1
+  },
+  {
+   "us_logical_path": "words:quest/384",
+   "family": "words:quest",
+   "us_index": 384,
+   "mission": 384,
+   "japanese": "ヒマなエゼル",
+   "note": "Ezel has nothing to do since the treaty and joins the clan; named after the character like エゼルからの手紙",
+   "original_english_sha256": "9d50c48adbbf5b98502c5d7aa74eba27870d7e2807dbceee7bba9999a7eb5801",
+   "jp_placeholder": "クエスト384",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 61,
+   "line_widths_px": [
+    61
+   ],
+   "lines": 1
+  },
+  {
+   "us_logical_path": "words:quest/385",
+   "family": "words:quest",
+   "us_index": 385,
+   "mission": 385,
+   "japanese": "ドネッドより",
+   "note": "the briefing is Doned's own sign-off as a streetear ('Doned here!'); より = 'from', the JP letter-title shape",
+   "original_english_sha256": "6bfe40100db644e7f91dc623cb87586042183b6734021d47572e0cd50e1896d7",
+   "jp_placeholder": "クエスト385",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 62,
+   "line_widths_px": [
+    62
+   ],
+   "lines": 1
+  },
+  {
+   "us_logical_path": "words:quest/386",
+   "family": "words:quest",
+   "us_index": 386,
+   "mission": 386,
+   "japanese": "リッツの申し出",
+   "note": "Ritz offers her help; 申し出 = offer (申 attested fx_text/21/186)",
+   "original_english_sha256": "6977b7c85c446018b66d806134d5fe78a942ed5f4a083fb1b2fe1fbf75b79ad1",
+   "jp_placeholder": "クエスト386",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 72,
+   "line_widths_px": [
+    72
+   ],
+   "lines": 1
+  },
+  {
+   "us_logical_path": "words:quest/387",
+   "family": "words:quest",
+   "us_index": 387,
+   "mission": 387,
+   "japanese": "シドの依頼",
+   "note": "Cid asks for clan assistance against corrupt judges; 依頼 = request, distinct from シドからの手紙 / シドからの伝言",
+   "original_english_sha256": "12c789a7f15b6e7e8ecae87f915d064c5b5dd1ef3dc4cf208aa513383a81a8b9",
+   "jp_placeholder": "クエスト387",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 53,
+   "line_widths_px": [
+    53
+   ],
+   "lines": 1
+  },
+  {
+   "us_logical_path": "words:quest/388",
+   "family": "words:quest",
+   "us_index": 388,
+   "mission": 388,
+   "japanese": "武器禁止令",
+   "note": "the six US-only judge missions are named after their fake law, JP law-name style (プロテス禁止, カード使用禁止) + 令",
+   "original_english_sha256": "1c5b36cd5d43e29a96db4a6fcaf88b44b312df9e21fc56962602710478876bdb",
+   "jp_placeholder": "クエスト388",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 55,
+   "line_widths_px": [
+    55
+   ],
+   "lines": 1
+  },
+  {
+   "us_logical_path": "words:quest/389",
+   "family": "words:quest",
+   "us_index": 389,
+   "mission": 389,
+   "japanese": "キス自由令",
+   "note": "the 'free kissing rule' of the briefing",
+   "original_english_sha256": "218ab9a0b613614fd20f9b828588e562bb60fda802b9e633b7e08a178d427f5b",
+   "jp_placeholder": "クエスト389",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 53,
+   "line_widths_px": [
+    53
+   ],
+   "lines": 1
+  },
+  {
+   "us_logical_path": "words:quest/390",
+   "family": "words:quest",
+   "us_index": 390,
+   "mission": 390,
+   "japanese": "免罪の印の取引",
+   "note": "免罪の印 = seal of immunity (judge_ezel terminology); the untrustworthy gent sells them",
+   "original_english_sha256": "78f0d536508b70a2fe8f3717d9b8e98b8bd1825ffc9066e43f1955e562659697",
+   "jp_placeholder": "クエスト390",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 75,
+   "line_widths_px": [
+    75
+   ],
+   "lines": 1
+  },
+  {
+   "us_logical_path": "words:quest/391",
+   "family": "words:quest",
+   "us_index": 391,
+   "mission": 391,
+   "japanese": "HP満タン禁止令",
+   "note": "HP満タン禁止 is JP retail's own law name (words:content/656)",
+   "original_english_sha256": "8589ce3ce7f03d165da75d67cbe996a490feba6191dbf5d4bad76bcfe22e854a",
+   "jp_placeholder": "クエスト391",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 84,
+   "line_widths_px": [
+    84
+   ],
+   "lines": 1
+  },
+  {
+   "us_logical_path": "words:quest/392",
+   "family": "words:quest",
+   "us_index": 392,
+   "mission": 392,
+   "japanese": "読み書き禁止令",
+   "note": "no reading or writing allowed",
+   "original_english_sha256": "68d5bd71a2f6abcc67003eeea9ddd03312e5ac1a0cbca100381bd7e3fd152aa3",
+   "jp_placeholder": "クエスト392",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 75,
+   "line_widths_px": [
+    75
+   ],
+   "lines": 1
+  },
+  {
+   "us_logical_path": "words:quest/393",
+   "family": "words:quest",
+   "us_index": 393,
+   "mission": 393,
+   "japanese": "えこひいき裁定",
+   "note": "えこひいき = play favorites (judge_ezel terminology); 裁定 = the judge's ruling",
+   "original_english_sha256": "914d634ef5f71d0d75e1d12d87c38db8b0c91f647a6e3731998472f8243e776d",
+   "jp_placeholder": "クエスト393",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 73,
+   "line_widths_px": [
+    73
+   ],
+   "lines": 1
+  },
+  {
+   "us_logical_path": "words:quest/394",
+   "family": "words:quest",
+   "us_index": 394,
+   "mission": 394,
+   "japanese": "返事禁止令",
+   "note": "the 'no answering' law; 61/16/174 renders it 答えちゃダメ",
+   "original_english_sha256": "24eb8fa86f92f7cf156421e0a3200256d93e69f02ace7db88bb3676ff174f45d",
+   "jp_placeholder": "クエスト394",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 55,
+   "line_widths_px": [
+    55
+   ],
+   "lines": 1
+  },
+  {
+   "us_logical_path": "words:quest/395",
+   "family": "words:quest",
+   "us_index": 395,
+   "mission": 395,
+   "japanese": "ジャンプ禁止令",
+   "note": "61/16/192 renders it ジャンプも禁止!",
+   "original_english_sha256": "37315780919ac3fb20aaeed989aab8b3f4e83f001d49ecd81e3979e9bf0bd73c",
+   "jp_placeholder": "クエスト395",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 75,
+   "line_widths_px": [
+    75
+   ],
+   "lines": 1
+  },
+  {
+   "us_logical_path": "words:quest/396",
+   "family": "words:quest",
+   "us_index": 396,
+   "mission": 396,
+   "japanese": "決断の時",
+   "note": "the final judge mission in Sprohm (US-SCN-53)",
+   "original_english_sha256": "5fa4d8d80f81fdb7ba26c7d2e8179e62df1327c177825f8d89b11da86611036f",
+   "jp_placeholder": "クエスト396",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 43,
+   "line_widths_px": [
+    43
+   ],
+   "lines": 1
+  },
+  {
+   "us_logical_path": "pages:quest/1/176",
+   "family": "pages:quest/1",
+   "us_index": 176,
+   "mission": 377,
+   "japanese": "宮廷とレジスタンスが{4D}話し合いをするんだが…{4D}反対するやつらもいてな。{4D}もめごとが起きないよう、{4D}力を貸してくれ!{4D}{1D10}{510A}{42}",
+   "note": "Ezel (オレ/だぜ/な register per judge_ezel voice authority); 宮廷 = palace, レジスタンス = resistance",
+   "original_english_sha256": "d2d14470175da025135ae133f99182c16d33fd2104407ab3870e91a2789bd9eb",
+   "jp_placeholder": "ダミー377",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 119,
+   "line_widths_px": [
+    104,
+    115,
+    119,
+    119,
+    82,
+    0
+   ],
+   "lines": 6
+  },
+  {
+   "us_logical_path": "pages:quest/1/177",
+   "family": "pages:quest/1",
+   "us_index": 177,
+   "mission": 378,
+   "japanese": "王子はこのイヴァリースに{4D}なにかを残していかれた…{4D}だが、どこにあるのか{4D}見当もつかない。{4D}手がかりをさがしてほしい。{4D}{1D10}{5109}{42}",
+   "note": "Babus (plain register, respectful of the prince); the keepsake of US-SCN-44",
+   "original_english_sha256": "d0b1a721bc04f00474eda66e9aac6534f2b9a0a4989828ebb408d9d82ab374a4",
+   "jp_placeholder": "ダミー378",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 130,
+   "line_widths_px": [
+    123,
+    122,
+    99,
+    79,
+    130,
+    0
+   ],
+   "lines": 6
+  },
+  {
+   "us_logical_path": "pages:quest/1/178",
+   "family": "pages:quest/1",
+   "us_index": 178,
+   "mission": 379,
+   "japanese": "報告、感謝する!{4D}きみの言うとおり、{4D}琥珀の谷にあるにちがいない。{4D}私はこれから向かう。{4D}{400}、きみも来てくれ。{4D}{1D10}{5109}{42}",
+   "note": "Babus; 琥珀の谷 = Ambervale (special_scenes terminology); {400} = the player's name, preserved",
+   "original_english_sha256": "aff9fa149fced68a1fc5203d2b4861c0bf6ccb06d65e2f5fbc1313c0da3bd22f",
+   "jp_placeholder": "ダミー379",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 141,
+   "line_widths_px": [
+    80,
+    87,
+    141,
+    99,
+    84,
+    0
+   ],
+   "lines": 6
+  },
+  {
+   "us_logical_path": "pages:quest/1/179",
+   "family": "pages:quest/1",
+   "us_index": 179,
+   "mission": 380,
+   "japanese": "ルテチア峠の吹雪で{4D}死んだ人たちの話、知ってるか?{4D}そいつらがよみがえって、{4D}旅人を凍えさせてるらしいぜ!{4D}{1D10}情報屋バッソ{42}",
+   "note": "Basso, Streetear -> 情報屋バッソ (JP retail: Streetear = 情報屋); ルテチア峠 = Lutia Pass (words:content/729)",
+   "original_english_sha256": "5912596adc8016c4ac9d5245ecb4872c203f23f824050f1f970d1b81d0b9adb2",
+   "jp_placeholder": "ダミー380",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 151,
+   "line_widths_px": [
+    94,
+    151,
+    118,
+    144,
+    64
+   ],
+   "lines": 5
+  },
+  {
+   "us_logical_path": "pages:quest/1/180",
+   "family": "pages:quest/1",
+   "us_index": 180,
+   "mission": 381,
+   "japanese": "さっきツァボラをあるいてたら{4D}「きゃあ、虫!」って{4D}女の人の悲鳴が聞こえたの。{4D}ちょっと心配だから、{4D}ようすを見てきてくれない?{4D}{1D10}旅人ダレルカ{42}",
+   "note": "Darelka, Traveler -> 旅人ダレルカ (JP retail: Traveler = 旅人); ツァボラ = Tubola",
+   "original_english_sha256": "8bd24ba57fab38e8c2efd4facada4017c4b6a55c417503273180b98a8e49ee9f",
+   "jp_placeholder": "ダミー381",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 141,
+   "line_widths_px": [
+    141,
+    98,
+    133,
+    99,
+    131,
+    63
+   ],
+   "lines": 6
+  },
+  {
+   "us_logical_path": "pages:quest/1/181",
+   "family": "pages:quest/1",
+   "us_index": 181,
+   "mission": 382,
+   "japanese": "カドアンでロウが{4D}おかしく変えられていると{4D}うわさになっています。{4D}裏にいる役人とジャッジの{4D}不正をあばいてください!{4D}{1D10}{5117}ウォッチのマウ{42}",
+   "note": "Mau, JudgeWatch -> {5117}ウォッチのマウ ({5117}ウォッチ = JudgeWatch, fx_text/8/58 editorial); 役人 = official",
+   "original_english_sha256": "3caa2453b4330d2e8fa2ce643712ea0eca9dffad13461f6824fee8eb495cbe90",
+   "jp_placeholder": "ダミー382",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 125,
+   "line_widths_px": [
+    83,
+    121,
+    107,
+    125,
+    124,
+    70
+   ],
+   "lines": 6
+  },
+  {
+   "us_logical_path": "pages:quest/1/182",
+   "family": "pages:quest/1",
+   "us_index": 182,
+   "mission": 383,
+   "japanese": "「この世界は幻」{4D}{5103}が元の世界へ帰ったとき、{4D}別れの記憶が{4D}この地に残された。{4D}強く願えば、{4D}{1D10}もう一度、見つかるだろう。{42}",
+   "note": "no requester in the US original either; {5103} = Mewt; 幻 attested words:content/17 (幻術士)",
+   "original_english_sha256": "ce7d8c6e392b3f05e89e21fc31b8f1ea0414dc75c2a080d6aef97aebc8e57e98",
+   "jp_placeholder": "ダミー383",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 127,
+   "line_widths_px": [
+    84,
+    121,
+    64,
+    89,
+    59,
+    127
+   ],
+   "lines": 6
+  },
+  {
+   "us_logical_path": "pages:quest/1/183",
+   "family": "pages:quest/1",
+   "us_index": 183,
+   "mission": 384,
+   "japanese": "協定が結ばれてからってもの、{4D}やることがなくてな。{4D}おい、{400}!{4D}おまえのクランに入ってやるから{4D}さっさと迎えに来い!{4D}{1D10}{510A}{42}",
+   "note": "Ezel; 協定 = the treaty (judge_ezel: 不干渉の協定); {400} preserved",
+   "original_english_sha256": "1cc50b7f67d54d01a373de65199f08ddb31f846e50ae0bbd62d0288c88fbedd8",
+   "jp_placeholder": "ダミー384",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 151,
+   "line_widths_px": [
+    141,
+    98,
+    36,
+    151,
+    102,
+    0
+   ],
+   "lines": 6
+  },
+  {
+   "us_logical_path": "pages:quest/1/184",
+   "family": "pages:quest/1",
+   "us_index": 184,
+   "mission": 385,
+   "japanese": "{5109}は前はしぶってたけど、{4D}今なら頼めばクランに{4D}入ってくれるはずだよ。{4D}宮廷でヒマしてるって{4D}ウワサだからね。{4D}{1D10}なんちゃって情報屋{5107}{42}",
+   "note": "Doned writing as a 'streetear (kind of)' about Babus ({5109}); Doned's register (ボク, casual); なんちゃって情報屋 = self-styled streetear",
+   "original_english_sha256": "127c4a4d90d2dbe6fd329872d08e23a8a342e325d96c7513531716728625172f",
+   "jp_placeholder": "ダミー385",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 110,
+   "line_widths_px": [
+    109,
+    103,
+    110,
+    103,
+    79,
+    93
+   ],
+   "lines": 6
+  },
+  {
+   "us_logical_path": "pages:quest/1/185",
+   "family": "pages:quest/1",
+   "us_index": 185,
+   "mission": 386,
+   "japanese": "クランの調子はどう?{4D}あたし、今なら{4D}手が空いてるから、{4D}手伝ってほしいときは{4D}声をかけてよね。{4D}{1D10}{5104}{42}",
+   "note": "Ritz (あたし, 勝ち気 register per special_scenes voice authority)",
+   "original_english_sha256": "3b20e34785545d789a56ce9d940d6f22a2f6e53f97f5139177e49a64bf0a4f97",
+   "jp_placeholder": "ダミー386",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 103,
+   "line_widths_px": [
+    103,
+    67,
+    89,
+    102,
+    79,
+    0
+   ],
+   "lines": 6
+  },
+  {
+   "us_logical_path": "pages:quest/1/186",
+   "family": "pages:quest/1",
+   "us_index": 186,
+   "mission": 387,
+   "japanese": "ジャッジマスター{5106}が{4D}不正なジャッジをさがして{4D}イヴァリースをまわってるらしい。{4D}クランの協力を求めてるって{4D}話だぜ。手伝ってきなよ!{4D}{1D10}情報屋ブビン{42}",
+   "note": "Bubin, Streetear -> 情報屋ブビン; ジャッジマスター{5106} as JP pages:quest/0/23 writes it",
+   "original_english_sha256": "aab0d5d7b286e853f45bcf36973470e34af49b22b1e67aa61a238986c4985b7c",
+   "jp_placeholder": "ダミー387",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 158,
+   "line_widths_px": [
+    93,
+    125,
+    158,
+    133,
+    122,
+    65
+   ],
+   "lines": 6
+  },
+  {
+   "us_logical_path": "pages:quest/1/187",
+   "family": "pages:quest/1",
+   "us_index": 187,
+   "mission": 388,
+   "japanese": "ギーザ平原のキャンプに{4D}役人がやってきて、{4D}「武器禁止令」だとか言って{4D}オレの武器を取り上げたんだ!{4D}なんだよそれ!?{4D}{1D10}新兵ゼルベス{42}",
+   "note": "Zelbeth, New Recruit -> 新兵ゼルベス (兵 attested words:quest/196); barracks -> キャンプ as JP pages:quest/0/30 does; the law name matches the title",
+   "original_english_sha256": "24c1417892feebf78abcf24699c9b5d479c507b16d624e0d8255b7af6b1f8160",
+   "jp_placeholder": "ダミー388",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 146,
+   "line_widths_px": [
+    115,
+    89,
+    138,
+    146,
+    81,
+    64
+   ],
+   "lines": 6
+  },
+  {
+   "us_logical_path": "pages:quest/1/188",
+   "family": "pages:quest/1",
+   "us_index": 188,
+   "mission": 389,
+   "japanese": "「キス自由令」のせいで{4D}あたしの生活はめちゃくちゃよ!{4D}一日中、デートの{4D}さそいを断ってばかり{4D}なんだから!{4D}{1D10}チョコボ亭ロロアンナ{42}",
+   "note": "Rolana, The Chocobo's Kweh -> チョコボ亭ロロアンナ, JP retail's own rendering (pages:quest/0/49)",
+   "original_english_sha256": "205091764d86fe251ffee35995766f7aec31ef6866345fd35483c3db692e81b1",
+   "jp_placeholder": "ダミー389",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 152,
+   "line_widths_px": [
+    115,
+    152,
+    80,
+    102,
+    61,
+    102
+   ],
+   "lines": 6
+  },
+  {
+   "us_logical_path": "pages:quest/1/189",
+   "family": "pages:quest/1",
+   "us_index": 189,
+   "mission": 390,
+   "japanese": "シリルの街では{4D}レッドカードの免罪が{4D}買えるって話だぜ!{4D}あんたも1つどうだい?{4D}たったの10万ギルだ!{4D}{1D10}あやしい男{42}",
+   "note": "Untrustworthy Gent -> あやしい男; レッドカードの免罪 = red card immunity (s_text/47/10 editorial); digits are JP retail's own 0x00A6.. glyphs",
+   "original_english_sha256": "bb32c060c44f64db98de11b2d4b696242c0bb11af842c37370b1211f818c5747",
+   "jp_placeholder": "ダミー390",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 113,
+   "line_widths_px": [
+    72,
+    105,
+    94,
+    112,
+    113,
+    51
+   ],
+   "lines": 6
+  },
+  {
+   "us_logical_path": "pages:quest/1/190",
+   "family": "pages:quest/1",
+   "us_index": 190,
+   "mission": 391,
+   "japanese": "この前、平原をあるいてたら{4D}いきなり男になぐられたんだ!{4D}「HP満タンは禁止だ!」{4D}だってさ。{4D}そんなロウがあるのかい?{4D}{1D10}商人アルラン{42}",
+   "note": "Alran, Merchant -> 商人アルラン (JP retail: Merchant = 商人); HP満タン禁止 = JP retail's law name (words:content/656)",
+   "original_english_sha256": "2e26689109e5de6742fda7573e7d64ccf826ade73d53a42cd724dcf36f045c2e",
+   "jp_placeholder": "ダミー391",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 143,
+   "line_widths_px": [
+    129,
+    143,
+    125,
+    48,
+    121,
+    62
+   ],
+   "lines": 6
+  },
+  {
+   "us_logical_path": "pages:quest/1/191",
+   "family": "pages:quest/1",
+   "us_index": 191,
+   "mission": 392,
+   "japanese": "助けてくれ!{4D}ウラドノの役人が{4D}読み書き禁止なんて{4D}ロウを作りやがった!{4D}これじゃ船の日記もつけられん!{4D}{1D10}船長イエンダ{42}",
+   "note": "Ienda, Captain -> 船長イエンダ (船 attested words:quest/210, 長 attested words:content/95); ship's log -> 船の日記",
+   "original_english_sha256": "f45b019e5dc6f10a79ac2737b96a8fba5c5f4a07d2faa2ca88de13dfaaa1924a",
+   "jp_placeholder": "ダミー392",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 154,
+   "line_widths_px": [
+    61,
+    84,
+    94,
+    102,
+    154,
+    63
+   ],
+   "lines": 6
+  },
+  {
+   "us_logical_path": "pages:quest/1/192",
+   "family": "pages:quest/1",
+   "us_index": 192,
+   "mission": 393,
+   "japanese": "バクーバの役人の息子と{4D}エンゲージしたんだが、{4D}ジャッジのやつ、{4D}思いっきりえこひいきしやがって!{4D}もうヤクトに行くしかねぇよ。{4D}{1D10}マーブルクランのブリック{42}",
+   "note": "Blik, Clan Marble -> マーブルクランのブリック (words:clan/8 マーブルクラン); エンゲージ = engagement; ヤクト = jagd",
+   "original_english_sha256": "672285279913d3e9db0368e5cf73ae5692c3da62faf28c28a0519ccb8c268c91",
+   "jp_placeholder": "ダミー393",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 163,
+   "line_widths_px": [
+    116,
+    110,
+    78,
+    163,
+    139,
+    122
+   ],
+   "lines": 6
+  },
+  {
+   "us_logical_path": "pages:quest/1/193",
+   "family": "pages:quest/1",
+   "us_index": 193,
+   "mission": 394,
+   "japanese": "エレンのお店に行ったのに{4D}なにも答えてくれないの!{4D}聞けば「返事禁止令」なんて{4D}ロウがあるんですって?{4D}いったいどういうことなの?{4D}{1D10}{5104}クランのメル{42}",
+   "note": "Mel, Clan Ritz Member -> {5104}クランのメル ({5104}クラン is JP retail's name for Ritz's clan, pages:quest/0/50); メル = words:name/465",
+   "original_english_sha256": "c4805c81d904d0581a35b5fc84bdaa219cfc3a174926b816ddcc8fd3ae6287a5",
+   "jp_placeholder": "ダミー394",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 138,
+   "line_widths_px": [
+    122,
+    121,
+    138,
+    112,
+    131,
+    60
+   ],
+   "lines": 6
+  },
+  {
+   "us_logical_path": "pages:quest/1/194",
+   "family": "pages:quest/1",
+   "us_index": 194,
+   "mission": 395,
+   "japanese": "ローダの役人どもは{4D}なにを考えてるんだ?{4D}ジャンプ禁止だと!{4D}これじゃ石段さえ{4D}のぼれないじゃないか!{4D}{1D10}剣士ヒューリック{42}",
+   "note": "Hulick, Swordsman -> 剣士ヒューリック, JP retail's own rendering of the same character (pages:quest/0 signature); stairs -> 石段 (階 has no JP glyph)",
+   "original_english_sha256": "a2048988eccc1674872ab523b1c3254d4e2edea389bd54b3f74c222effc7602a",
+   "jp_placeholder": "ダミー395",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 112,
+   "line_widths_px": [
+    94,
+    102,
+    95,
+    83,
+    112,
+    82
+   ],
+   "lines": 6
+  },
+  {
+   "us_logical_path": "pages:quest/1/195",
+   "family": "pages:quest/1",
+   "us_index": 195,
+   "mission": 396,
+   "japanese": "あなたが捕まえたジャッジが{4D}重要な証拠を話してくれました。{4D}どうやら、すべての黒幕は{4D}スプロムにいるようです!{4D}急いで来てください!{4D}{1D10}{5117}ウォッチのマウ{42}",
+   "note": "Mau, JudgeWatch; 証拠 attested s_text/18/34; 黒幕 = the person behind it all (幕 attested words:rumor/55)",
+   "original_english_sha256": "20499a66a781c8ce03307931440263f6b336fb19308b4296aae990b63ff9fa85",
+   "jp_placeholder": "ダミー396",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 152,
+   "line_widths_px": [
+    135,
+    152,
+    120,
+    122,
+    104,
+    70
+   ],
+   "lines": 6
+  },
+  {
+   "us_logical_path": "words:content/122",
+   "family": "words:content",
+   "us_index": 122,
+   "japanese": "役人",
+   "note": "役人 is how the judge arc's editorial layers already render 'official' (s_text/61/16/71, s_text/47/16, fx_text/8/59)",
+   "original_english_sha256": "c409c66f71f2750e0262d81f0816938f6b8b1ffccb55fc59a4a6c5c8aae81c1e",
+   "jp_placeholder": "予备2",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 22,
+   "line_widths_px": [
+    22
+   ],
+   "lines": 1
+  },
+  {
+   "us_logical_path": "fx_text/22/121",
+   "family": "fx_text/22",
+   "us_leaf": 22,
+   "us_entry": 121,
+   "japanese": "宮廷の命を受け、イヴァリースを{4D}治める役人たち。{40}{42}",
+   "note": "two lines like the JP fx_text/22 originals (68 ジャッジ, 120 ボルゾイクラン); 治 attested words:quest/78 (治安)",
+   "original_english_sha256": "db503b422e161f5157a5823f96ba1466625962287aff5e0ec46c444a7555f00b",
+   "jp_placeholder": "",
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 151,
+   "line_widths_px": [
+    151,
+    80
+   ],
+   "lines": 2
+  }
+ ]
+}
