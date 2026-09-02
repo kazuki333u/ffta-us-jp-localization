@@ -1,17 +1,17 @@
 blank_issues_enabled: true
 contact_links:
   - name: 既知の問題を確認する
-    url: https://github.com/OWNER/REPO/blob/main/docs/KNOWN_ISSUES.md
+    url: https://github.com/kazuki333u/ffta-us-jp-localization/blob/main/docs/KNOWN_ISSUES.md
     about: すでに把握している問題の一覧です。報告前にご確認ください (重複していても構いません)。
   - name: ビルド手順
-    url: https://github.com/OWNER/REPO/blob/main/docs/BUILD.md
+    url: https://github.com/kazuki333u/ffta-us-jp-localization/blob/main/docs/BUILD.md
     about: ビルドの詳しい手順です。
   - name: トラブルシューティング
-    url: https://github.com/OWNER/REPO/blob/main/docs/TROUBLESHOOTING.md
+    url: https://github.com/kazuki333u/ffta-us-jp-localization/blob/main/docs/TROUBLESHOOTING.md
     about: ビルドできない場合は、まずこちらをご覧ください。
   - name: よくある質問 (FAQ)
-    url: https://github.com/OWNER/REPO/blob/main/docs/FAQ.md
+    url: https://github.com/kazuki333u/ffta-us-jp-localization/blob/main/docs/FAQ.md
     about: パッチを配布しない理由、2本のROMが必要な理由など。
   - name: ROMの入手について
-    url: https://github.com/OWNER/REPO/blob/main/CONTRIBUTING.md
+    url: https://github.com/kazuki333u/ffta-us-jp-localization/blob/main/CONTRIBUTING.md
     about: 本プロジェクトはROMを配布せず、入手先の案内もしません。関連する質問はご遠慮ください。
