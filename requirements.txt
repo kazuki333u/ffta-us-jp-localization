@@ -1,9 +1,14 @@
 # Runtime dependencies of the public builder.
 #
-# Pillow is required: the localization rebuilds the font sheet from your own
-# JP ROM's glyphs, and that path draws bitmaps.
+# Pillow is the only one.  The localization rebuilds the font sheet from your
+# own JP ROM's glyphs, and that path draws bitmaps.
 Pillow>=9.0
 
-# Optional, not needed to build:
-#   capstone  - used only by local disassembly helpers
-#   cnocr     - used only by the upstream OCR path, which this build never runs
+# NOT needed to build, and deliberately not listed above.  Verified by running
+# a full clean-room build with all four blocked at import time:
+#   capstone  - only in ffta_jp_system_menu_geometry.main(), the self-check that
+#               layer runs when it is executed as a script.  The chain calls
+#               build(), never main().
+#   cnocr     - only in the upstream OCR path, which this build never runs.
+#   hexdump   - only inside `if __name__ == '__main__'` debug blocks.
+#   numpy     - not imported anywhere on the build path.

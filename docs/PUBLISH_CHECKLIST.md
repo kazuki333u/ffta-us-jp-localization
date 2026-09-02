@@ -7,6 +7,39 @@
 
 ---
 
+## 0. 新しいマイルストーンへ更新する手順 (メンテナ向け)
+
+このツリーは**手で編集しません**。開発リポジトリから機械的に導出します。
+
+1. 終端ビルダー名を差し替える (3 か所)
+
+   | ファイル | 定数 |
+   |---|---|
+   | `tools/sync_from_canonical.py` | `TERMINAL` |
+   | `tools/public_audit.py` | `TERMINAL` |
+   | `tests/public/test_public_surface.py` | `test_chain_is_closed_under_import` 内の起点 |
+
+2. チェーンを再生成する
+
+   ```
+   python tools/sync_from_canonical.py --canonical <開発リポジトリのパス>
+   python tools/sync_from_canonical.py --canonical <開発リポジトリのパス> --check
+   ```
+
+3. `build.py` を更新する
+
+   - `TERMINAL` (終端ビルダーのファイル名)
+   - `RELEASE` (公開向けの呼称)
+   - `EXPECTED_OUTPUT` / `EXPECTED_OUTPUT_CRC32`
+   - `produced` (チェーンが書き出すROMのファイル名)
+   - `KNOWN` に旧リリースのハッシュを追加
+
+4. ドキュメントのハッシュ・リリース名・既知の問題を更新する
+
+5. §2 の検査をすべて実行する
+
+---
+
 ## 1. 公開前に埋めるプレースホルダ
 
 `.github/ISSUE_TEMPLATE/config.yml` の `contact_links` は
