@@ -25,6 +25,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # The commit-email gate audits every reachable commit, so the audit
+          # job needs the whole history, not the tip.
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:

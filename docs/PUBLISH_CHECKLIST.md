@@ -74,6 +74,32 @@ FFTA_US_ROM=<US版ROM> FFTA_JP_ROM=<JP版ROM> python -m pytest tests/rom -q
 すべて PASS することを確認してください。
 
 `rom-substring` が `SKIP` のまま公開しないでください。
+`commit-email` が `SKIP` のまま公開しないでください
+(shallow clone では履歴を検査できません)。
+
+### コミットのメールアドレス
+
+`public_audit.py` の `commit-email` は、到達可能なすべてのコミットとタグの
+author / committer / tagger アドレスが GitHub の noreply
+(`ID+ユーザー名@users.noreply.github.com`) であることを検査します。
+
+個人のメールアドレスは、リポジトリを public にした瞬間に公開されます。
+そして **force push では取り戻せません**。履歴を書き換えても、古いオブジェクトは
+ホスト側に残り、SHA を知っていれば取得できる状態が続きます。
+つまりこれは、最初の 1 回で正しくしなければならない項目です。
+
+作業前に、このリポジトリで:
+
+```
+git config --local user.email <ID>+<ユーザー名>@users.noreply.github.com
+```
+
+GitHub 側でも次の 2 つを有効にしてください (別々の保護です)。
+
+- Settings → Emails → **Keep my email addresses private**
+- Settings → Emails → **Block command line pushes that expose my email**
+
+後者は、ローカル設定を間違えたコミットの push そのものを止めます。
 
 ### クリーンルーム確認 (推奨)
 

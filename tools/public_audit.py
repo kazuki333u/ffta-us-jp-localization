@@ -13,6 +13,7 @@ published, and again on every change:
   rom-substring      no tracked file reproduces a long run of bytes from a ROM
   provenance         upstream-derived files are declared and attributed
   chain-integrity    every module the builder imports is present and parses
+  commit-email       no commit or tag carries a personal e-mail address
 
 The ROM-substring check needs ROMs and is skipped without them, so this whole
 tool is safe to run in CI, where no ROM exists.  Run it with ROMs locally
@@ -114,6 +115,12 @@ LITERAL_EXCEPTIONS = {("words:ico/8", "/"), ("words:ico/9", "-\u25b3\u25b3\u25cb
 # ROM-substring audit.  32 bytes of exact ROM data is far past coincidence for
 # a text file, and short enough to catch a pasted table.
 ROM_MATCH_BYTES = 32
+
+# Commit metadata is published with the repository and cannot be taken back:
+# rewriting history leaves the old objects resolvable by SHA on the host.  The
+# only address that may appear in it is the one GitHub hands out for exactly
+# this purpose.
+NOREPLY_SUFFIX = "@users.noreply.github.com"
 
 
 class Audit:
@@ -422,6 +429,63 @@ def check_required_files(a: Audit) -> None:
     a.note(f"required-files: {len(REQUIRED_DOCS)} checked")
 
 
+def check_commit_emails(a: Audit) -> None:
+    """Every reachable commit and tag must carry a GitHub noreply address.
+
+    An author or committer e-mail is published the moment the repository is,
+    and a force-push does not take it back: the old objects stay resolvable by
+    SHA on the host long after the branch has moved.  So the address has to be
+    right the first time, which is what this gate is for.
+
+    The offending address is never printed.  This check runs in public CI, and
+    naming the leak would be the leak; the SHA is enough to fix it with
+    ``git log --format='%H %ae %ce'`` on a private clone.
+    """
+    def git(*args: str) -> str:
+        return subprocess.run(["git", "-C", str(REPO), *args],
+                              capture_output=True, text=True, check=True).stdout
+
+    try:
+        if git("rev-parse", "--is-shallow-repository").strip() == "true":
+            a.skip("commit-email",
+                   "shallow clone; check out with fetch-depth 0 to audit history")
+            return
+        log = git("log", "--all", "--pretty=format:%H%x09%ae%x09%ce")
+        tags = git("for-each-ref", "--format=%(refname:short)%09%(taggeremail)",
+                   "refs/tags")
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        a.skip("commit-email", "not a git checkout; nothing to audit")
+        return
+
+    commits = 0
+    for line in log.splitlines():
+        if not line.strip():
+            continue
+        sha, _, rest = line.partition("	")
+        author, _, committer = rest.partition("	")
+        commits += 1
+        for role, email in (("author", author), ("committer", committer)):
+            if not email.endswith(NOREPLY_SUFFIX):
+                a.fail("commit-email",
+                       f"{sha[:12]} {role} address is not a GitHub noreply "
+                       f"address (value withheld: this log is public)")
+
+    tagged = 0
+    for line in tags.splitlines():
+        name, _, email = line.partition("	")
+        email = email.strip().strip("<>")
+        if not email:  # a lightweight tag has no tagger
+            continue
+        tagged += 1
+        if not email.endswith(NOREPLY_SUFFIX):
+            a.fail("commit-email",
+                   f"tag {name} tagger address is not a GitHub noreply "
+                   f"address (value withheld: this log is public)")
+
+    a.note(f"commit-email: {commits} commit(s) and {tagged} annotated tag(s) "
+           f"audited")
+
+
 def check_rom_substrings(a: Audit, files: list[Path], roms: list[Path]) -> None:
     """No tracked file may reproduce a long contiguous run of ROM bytes.
 
@@ -478,6 +542,7 @@ def main() -> int:
     check_decoded_records(a)
     check_chain(a)
     check_provenance(a)
+    check_commit_emails(a)
     check_rom_substrings(a, files, [p for p in (args.us, args.jp) if p and p.is_file()])
 
     if args.json:
