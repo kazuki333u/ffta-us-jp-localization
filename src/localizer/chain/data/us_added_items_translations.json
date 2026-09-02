@@ -1,0 +1,111 @@
+{
+ "_public_note": "Public build manifest. Verbatim retail source strings are stored as SHA-256 digests (fields ending in _sha256); the builder recomputes them from the user's own ROM. Japanese text in this file is written by this project.",
+ "_note": "Editorial decision of record for the US-added mission-item family: the mission item US retail added in slot 0x48 (words:content/570 name, fx_text/25/71 description). JP retail's aligned slot holds a real, shipped, non-placeholder item -- a time-magic tome that no JP mission requires -- so the JP bytes are not a translation of this object; this manifest is. Consumed and revalidated on every build by ffta_jp_us_added_items.py. Markup: {HEX} is a CTR_FUNC operand; every other character is text.",
+ "milestone": "us_added_items",
+ "description": "US-added item identity over a real JP slot (RC24 finding, ffta_us_added_item_identity_audit.py): the two records RC23 still ships as JP retail's unrelated same-slot item, localized from the US retail originals.",
+ "baseline_production_sha256": "6C78CDEE7914056CEBF6A39354A6A82C8DA132C2D6A0D88928B4B6A2CDB717E6",
+ "count": 2,
+ "translated_count": 2,
+ "no_change_required_count": 0,
+ "families": {
+  "words:content": 1,
+  "fx_text/25": 1
+ },
+ "root_cause": "Source transfer pairs a US record with the JP record at the same index and takes the JP record whenever it is non-empty and parseable. ffta_placeholder_transfer_audit.py (RC16) added a guard for JP *developer placeholders* (クエスト<n>, ダミー<n>, 予備<n>); it does not fire when the JP record is real shipped content, which is what the JP records aligned with words:content/570 and fx_text/25/71 are. The US build re-used mission item slot 0x48 for Stuffed Bear -- required by the US-added postgame mission 383 `Memories`, and by no JP mission -- so JP retail has no name for this object at all. Policy (Main docs/decisions.md, 2026-09-01): JP retail is the authority for player-visible wording of the objects it has; an object the JP build does not have is US-added content to be localized.",
+ "provenance": "PROJECT_AUTHORED_TRANSLATION -- not ported from JP retail. JP retail contains no record for this item.",
+ "jp_same_slot_policy": "The JP retail record this build replaces is NOT stored here. The builder reads it out of the user's own JP ROM, proves the base image still ships it token-for-token through the chain's glyph allocation, and proves it is not a developer placeholder -- which is what makes this a different failure class from the RC17 placeholder-transfer family.",
+ "lane": "CHR_FULL for every written entry; every glyph is a native JP record the production font already carries (zero new glyphs, zero font or metadata writes)",
+ "width_policy": {
+  "rule": "per-family bound = the widest single rendered line among that family's own JP originals, measured with the JP font advance metadata",
+  "words:content": "<= 86 px (JP words:content/507 沿岸警備隊メダル); クマのぬいぐるみ is 82 px",
+  "fx_text/25": "<= 192 px per line and <= 2 lines on the prose page (JP fx_text/24 originals: 192 px is reached by entries 29 and 115). The line carrying {5103} is additionally measured with the reference expanded to ミュート (181 px), because the static token measurement scores a substitution control as zero.",
+  "substitution_expansion": "ミュート"
+ },
+ "control_policy": {
+  "preserved": "the {5103} character reference of the US original ({5103} = ミュート, the same reference RC17 used for words:quest/383 ミュートの記憶 and pages:quest/1/182)",
+  "dropped": "the English word space {52} and the mid-record page break {4F}{42} between the two US prose pages -- JP retail's own fx_text/24 records put the whole description on one two-line page, and that is the shape this leaf's renderer is given everywhere else",
+  "retained_from_the_base_image": "the trailing statistics page ({1D09}武器こうげき... {40}{42}) is NOT rewritten. The builder splices the new prose page onto the record's own remaining pages, so the statistics page stays byte-identical to the JP retail page RC23 already ships. The US original's four ratings are all `-`, and so are the retained page's, which the builder asserts."
+ },
+ "terminology": {
+  "Stuffed Bear": "クマのぬいぐるみ -- the mission item list writes animals in katakana (ネズミのしっぽ, ウサギのしっぽ, チョコボの卵, パンサーの毛皮) and the rest in kana, so クマの + ぬいぐるみ is the register of its own family",
+  "Mewt": "{5103} = ミュート (RC17 us_added_missions manifest, control_policy)",
+  "memories / memory": "記憶 (JP words:quest/179 うばわれた記憶; RC17 words:quest/383 ミュートの記憶)",
+  "left behind": "残していった (残 attested s_text/6/5; RC17 pages:quest/1/182 uses 残された for the same scene)",
+  "teddy bear": "ぬいぐるみ -- the item name is printed directly above the description, so the second mention does not repeat クマの"
+ },
+ "kanji_codes": {
+  "中": {
+   "jp_glyph_code": "0x0125",
+   "attested_at": "s_text/1/38",
+   "source": "reused:us_added_missions"
+  },
+  "残": {
+   "jp_glyph_code": "0x059C",
+   "attested_at": "s_text/6/5",
+   "source": "reused:us_added_missions"
+  },
+  "母": {
+   "jp_glyph_code": "0x01DC",
+   "attested_at": "fx_text/24/119",
+   "source": "jp_corpus_attestation"
+  },
+  "親": {
+   "jp_glyph_code": "0x06E6",
+   "attested_at": "pages:quest/0/232",
+   "source": "jp_corpus_attestation"
+  },
+  "記": {
+   "jp_glyph_code": "0x038C",
+   "attested_at": "fx_text/4/119",
+   "source": "reused:us_added_missions"
+  },
+  "憶": {
+   "jp_glyph_code": "0x0296",
+   "attested_at": "words:quest/179",
+   "source": "reused:us_added_missions"
+  }
+ },
+ "entries": [
+  {
+   "us_logical_path": "words:content/570",
+   "family": "words:content",
+   "us_index": 570,
+   "item_id": "0x48",
+   "japanese": "クマのぬいぐるみ",
+   "note": "the keepsake mission 383 `Memories` asks for; ぬいぐるみ is the ordinary Japanese word for a stuffed toy and クマ follows the family's katakana animals",
+   "original_english_sha256": "31ef92854ee2e6ae6f3ab8deed571b9b7235d8e3c8d199d99a7dd231ea3123e1",
+   "jp_same_slot_is_placeholder": false,
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 82,
+   "line_widths_px": [
+    82
+   ],
+   "lines": 1
+  },
+  {
+   "us_logical_path": "fx_text/25/71",
+   "family": "fx_text/25",
+   "us_leaf": 25,
+   "us_entry": 71,
+   "item_id": "0x48",
+   "japanese": "{5103}が残していった記憶のかけら。{4D}母親がくれたぬいぐるみの中にあった。",
+   "note": "the prose page only; the builder keeps the record's own statistics page verbatim. Two lines like every JP fx_text/24 original. {5103} renders ミュート, so line 1 is 181 px when the reference is expanded.",
+   "original_english_sha256": "c61ad306b474f9b120e37cab66b6ef259bdb5471f4c35b1f3f572be7a7db7bc8",
+   "jp_same_slot_is_placeholder": false,
+   "status": "TRANSLATED_REVIEWED",
+   "source": "EDITORIAL",
+   "rendered_width_px": 183,
+   "line_widths_px": [
+    141,
+    183
+   ],
+   "line_widths_px_reference_expanded": [
+    181,
+    183
+   ],
+   "lines": 2,
+   "pages_retained_from_base": 1
+  }
+ ]
+}

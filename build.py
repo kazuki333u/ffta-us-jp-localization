@@ -37,9 +37,9 @@ for _s in (sys.stdout, sys.stderr):
 
 REPO = Path(__file__).resolve().parent
 CHAIN = REPO / "src/localizer/chain"
-TERMINAL = "ffta_jp_item_job_strip.py"
+TERMINAL = "ffta_jp_us_added_items.py"
 
-RELEASE = "Public Beta 2 (RC23-based)"
+RELEASE = "Public Beta 3 (RC24-based)"
 
 # --- the only ROMs this build supports --------------------------------------
 
@@ -47,8 +47,8 @@ PRISTINE_US = "43FC8204C6DCEEE58828AEBC7AF0C72EB807E99F35AD641C8BB0A4FA8B6EDC19"
 PRISTINE_JP = "B13DD536808EF5D0FD4494386A9499F6FEB8310835D3F867CD17CC340D82BF9A"
 
 # The localized ROM this project produces from those two.
-EXPECTED_OUTPUT = "6C78CDEE7914056CEBF6A39354A6A82C8DA132C2D6A0D88928B4B6A2CDB717E6"
-EXPECTED_OUTPUT_CRC32 = "8262D569"
+EXPECTED_OUTPUT = "F1D673A1966C6C42B6F2CEF157F11EF984BB61E6A2184D7F0F47AC17EE2CA695"
+EXPECTED_OUTPUT_CRC32 = "C53A1A50"
 
 ROM_SIZE = 16 * 1024 * 1024
 
@@ -58,7 +58,7 @@ ROM_SIZE = 16 * 1024 * 1024
 KNOWN = {
     PRISTINE_US: "pristine US ROM (correct --us input)",
     PRISTINE_JP: "pristine JP ROM (correct --jp input)",
-    EXPECTED_OUTPUT: "an already-localized ROM built by this project (Public Beta 2 / RC23)",
+    EXPECTED_OUTPUT: "an already-localized ROM built by this project (Public Beta 3 / RC24)",
     "6A9A686F1D281AEF0B5F81A337EE6339C8B862EC7732A23329B08F9EF8969D3D":
         "an already-localized ROM from an earlier internal build (RC22)",
     "F3B0F990B416C0AEFBEB44EE468A16B2D7FA0FDDDA19F9E7CF5E99F91EEEE49B":
@@ -244,7 +244,7 @@ def main() -> int:
     run_chain(chain, log)
     print(f"      done in {time.time() - started:.0f}s   log: {log}")
 
-    produced = work / "rom/build/ffta_us_jp_item_job_strip.gba"
+    produced = work / "rom/build/ffta_us_jp_us_added_items.gba"
     if not produced.is_file():
         raise BuildError(f"the build chain produced no ROM at {produced}")
 

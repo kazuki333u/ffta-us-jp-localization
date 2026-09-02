@@ -163,6 +163,15 @@
    "rewrites": []
   },
   {
+   "module": "ffta_jp_us_added_items.py",
+   "origin": "project",
+   "rewrites": [
+    "source-gate -> digest",
+    "evidence echo x2 -> digest",
+    "import ffta_us_source"
+   ]
+  },
+  {
    "module": "ffta_jp_us_added_missions.py",
    "origin": "project",
    "rewrites": [
@@ -289,6 +298,11 @@
    "module": "ffta_sect.py",
    "origin": "upstream",
    "rewrites": []
+  },
+  {
+   "module": "ffta_us_added_item_identity_audit.py",
+   "origin": "project",
+   "rewrites": []
   }
  ],
  "shared_data": [
@@ -303,6 +317,10 @@
   {
    "file": "s_text_recovered_pairs.json",
    "digested_fields": 0
+  },
+  {
+   "file": "us_added_items_translations.json",
+   "digested_fields": 2
   },
   {
    "file": "us_added_missions_translations.json",
@@ -347,7 +365,7 @@
   "ffta_parser.py",
   "ffta_sect.py"
  ],
- "redacted_fields": 1571,
+ "redacted_fields": 1573,
  "skipped_outputs": [
   "us_added_placeholder_transfer.json"
  ]

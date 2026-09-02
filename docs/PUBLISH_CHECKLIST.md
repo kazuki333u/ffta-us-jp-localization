@@ -114,7 +114,7 @@ cd <一時ディレクトリ>\clean
 python build.py --us <US版ROM> --jp <JP版ROM> --output out.gba
 ```
 
-出力 SHA-256 が `6C78CDEE7914056CEBF6A39354A6A82C8DA132C2D6A0D88928B4B6A2CDB717E6`
+出力 SHA-256 が `F1D673A1966C6C42B6F2CEF157F11EF984BB61E6A2184D7F0F47AC17EE2CA695`
 になれば合格です。
 
 ---
@@ -163,7 +163,7 @@ private 状態での監査が終わってから public へ切り替えてくだ�
 
 ## 5. BPS パッチの公開について
 
-RC23 の BPS パッチは開発側に存在しますが、
+RC24 の BPS パッチは開発側に存在しますが、
 **このリポジトリには含めていません。**
 
 「差分パッチだから安全」と自動的に言えるわけではないため、
@@ -181,6 +181,6 @@ RC23 の BPS パッチは開発側に存在しますが、
 v0.2.0-beta.2
 ```
 
-内部の RC 番号 (RC23 等) を公開タグに使わないでください
+内部の RC 番号 (RC24 等) を公開タグに使わないでください
 ([`PUBLIC_BETA_RELEASE_NOTES.md`](PUBLIC_BETA_RELEASE_NOTES.md) の
 「バージョンについて」を参照)。

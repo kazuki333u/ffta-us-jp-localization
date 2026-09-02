@@ -234,7 +234,7 @@ def test_every_chain_module_parses():
 def test_chain_is_closed_under_import():
     """Nothing the terminal builder imports may be missing from this repo."""
     local = {p.stem for p in CHAIN.glob("*.py")}
-    seen, stack = set(), ["ffta_jp_item_job_strip"]
+    seen, stack = set(), ["ffta_jp_us_added_items"]
     external = set()
     while stack:
         name = stack.pop()
@@ -254,6 +254,7 @@ def test_chain_is_closed_under_import():
                     stack.append(m)
                 elif m not in sys.stdlib_module_names:
                     external.add(m)
+    assert "ffta_jp_us_added_items" in seen
     assert "ffta_jp_item_job_strip" in seen
     assert external <= {"PIL", "capstone", "cnocr", "hexdump", "numpy"}, \
         f"unexpected third-party dependency: {external}"

@@ -48,7 +48,7 @@ for _s in (sys.stdout, sys.stderr):
 REPO = Path(__file__).resolve().parent.parent
 CHAIN = REPO / "src/localizer/chain"
 DATA = CHAIN / "data"
-TERMINAL = "ffta_jp_item_job_strip"
+TERMINAL = "ffta_jp_us_added_items"
 
 # --------------------------------------------------------------- policy ---
 

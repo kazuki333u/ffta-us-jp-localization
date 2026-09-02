@@ -7,7 +7,7 @@
 US版が独自に持つ追加ミッション・システム改善・バグ修正はそのまま維持したまま、
 表示を日本語に置き換えます。
 
-> **Public Beta 2 (RC23-based)**
+> **Public Beta 3 (RC24-based)**
 > 現在は公開ベータです。正式版 (1.0) ではありません。
 > 既知の問題は [`docs/KNOWN_ISSUES.md`](docs/KNOWN_ISSUES.md) を必ずお読みください。
 
@@ -96,7 +96,7 @@ python build.py --us "C:\path\to\FFTA_US.gba" --jp "C:\path\to\FFTA_JP.gba" --ou
 ### 成功したときの出力
 
 ```
-FFTA US->JP localization -- Public Beta 2 (RC23-based)
+FFTA US->JP localization -- Public Beta 3 (RC24-based)
 
 [1/5] verifying your ROMs
       US  OK  43FC8204...
@@ -106,8 +106,8 @@ FFTA US->JP localization -- Public Beta 2 (RC23-based)
 [3/5] building (this rebuilds every layer from your ROMs; expect a few minutes)
       done in 154s   log: ...
 [4/5] verifying the build
-      SHA-256 6C78CDEE7914056CEBF6A39354A6A82C8DA132C2D6A0D88928B4B6A2CDB717E6
-      CRC32   8262D569
+      SHA-256 F1D673A1966C6C42B6F2CEF157F11EF984BB61E6A2184D7F0F47AC17EE2CA695
+      CRC32   C53A1A50
 [5/5] writing the output
       FFTA_US_JP.gba
 ```
@@ -115,8 +115,8 @@ FFTA US->JP localization -- Public Beta 2 (RC23-based)
 ビルドされたROMは**必ず**次のハッシュになります。
 
 ```
-SHA-256  6C78CDEE7914056CEBF6A39354A6A82C8DA132C2D6A0D88928B4B6A2CDB717E6
-CRC32    8262D569
+SHA-256  F1D673A1966C6C42B6F2CEF157F11EF984BB61E6A2184D7F0F47AC17EE2CA695
+CRC32    C53A1A50
 サイズ   16,777,216 バイト
 ```
 
@@ -172,6 +172,9 @@ shasum -a 256 FFTA_US_JP.gba
   正しく描画されます (Public Beta 2 で修正)。
 - クエスト期限表示、バトル中 SYSTEM メニュー、OPTIONS の値表示の
   文字欠けを修正しました (Public Beta 2 で修正)。
+- 北米版が追加したクエストアイテム `Stuffed Bear` の表示名を修正しました。
+  日本版にこのアイテムは存在せず、同じ番号のスロットに入っていた別アイテムの
+  名前と説明が出ていました (Public Beta 3 で修正)。
 - 自動探索QAで **26ルート / 3,130 UI状態 / 12,766 遷移** を走査し、
   クラッシュ0・ハング0・リブート0 (この計測は同系列の以前のビルドで実施)。
 - 固定回帰スイート **84/84 フレームが画素単位で一致**。
@@ -261,10 +264,10 @@ python build.py --us FFTA_US.gba --jp FFTA_JP.gba --output FFTA_US_JP.gba
 ```
 
 Both inputs are gated on exact SHA-256, and the finished ROM is verified
-against the pinned release hash (`6C78CDEE…`, CRC32 `8262D569`) before it is
+against the pinned release hash (`F1D673A1…`, CRC32 `C53A1A50`) before it is
 written.
 
-This is **Public Beta 2 (RC23-based)**, not a 1.0 release — see
+This is **Public Beta 3 (RC24-based)**, not a 1.0 release — see
 [`docs/KNOWN_ISSUES.md`](docs/KNOWN_ISSUES.md). Program code is GPL-3.0
 (see [`NOTICE.md`](NOTICE.md) for third-party attribution). Final Fantasy
 Tactics Advance is the property of Square Enix; this project is not affiliated

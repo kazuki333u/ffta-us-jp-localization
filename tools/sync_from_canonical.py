@@ -40,7 +40,7 @@ REPO = HERE.parent
 CHAIN = REPO / "src/localizer/chain"
 DATA = CHAIN / "data"
 
-TERMINAL = "ffta_jp_item_job_strip"
+TERMINAL = "ffta_jp_us_added_items"
 
 # Upstream (third-party, GPL-3.0) modules.  Recorded so NOTICE.md and the
 # provenance audit can name them without guessing.
@@ -115,6 +115,9 @@ GATE_IMPORT = "import ffta_us_source as _us_source\n"
 
 GATE_REWRITES = [
     # (module, old fragment, new fragment)
+    ("ffta_jp_us_added_items.py",
+     '        if row["original_english"] != fxt.visible(original, decode):',
+     '        if not _us_source.matches(row, fxt.visible(original, decode)):'),
     # The US text this layer gates on is also the text it hands to the
     # placeholder proof.  Read it out of the user's ROM once and use it for
     # both, instead of carrying a second copy in the manifest.
