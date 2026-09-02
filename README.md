@@ -78,16 +78,12 @@ python build.py --identify path/to/your.gba
 
 ## ビルド方法
 
+2本のROMをこのフォルダに置いた場合、次の2行だけです。
+Windows の PowerShell / コマンドプロンプト、macOS / Linux のいずれでも
+同じコマンドがそのまま使えます。
+
 ```
 python -m pip install -r requirements.txt
-
-python build.py --us FFTA_US.gba --jp FFTA_JP.gba --output FFTA_US_JP.gba
-```
-
-Windows の PowerShell / コマンドプロンプトでも、同じ1行がそのまま使えます
-(ROMをこのフォルダに置いた場合)。
-
-```
 python build.py --us FFTA_US.gba --jp FFTA_JP.gba --output FFTA_US_JP.gba
 ```
 
