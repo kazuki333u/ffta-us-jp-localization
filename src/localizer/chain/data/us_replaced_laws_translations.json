@@ -1,0 +1,209 @@
+{
+ "_public_note": "Public build manifest. Verbatim retail source strings are stored as SHA-256 digests (fields ending in _sha256); the builder recomputes them from the user's own ROM. Japanese text in this file is written by this project.",
+ "_authority": "Tracked production authority for the six laws US retail replaced. The builder ffta_jp_us_replaced_laws.py consumes this manifest on every build and re-proves every claim it makes against the pristine JP and US ROMs; nothing here is trusted. Markup: {HEX} is a CTR_FUNC operand; every other character is text.",
+ "milestone": "us_replaced_laws",
+ "family": "words:content",
+ "evidence": "the (type, value) pairs of the JP and US law tables, compared law by law",
+ "defect": "The chain transfers JP words:content into US by index. Law names live at words:content/(625 + law_id). US retail kept 79 of the 85 laws and replaced six of them with different prohibitions, so for those six the transferred JP name describes a law the US engine does not enforce. The transfer is faithful; the meaning is not. An identity oracle cannot see this: the record really is the JP record for that index.",
+ "scope": "Exactly the six laws whose (type, value) differ between the two law tables. The other 79 keep JP retail's own name, including 56..60, whose records are identical in both images (an earlier analysis had wrongly listed them as reversed).",
+ "law_name_base": 625,
+ "law_tables": {
+  "us_rom": "0x08528F34",
+  "jp_rom": "0x084FED94",
+  "stride": 16,
+  "type_field_offset": 4,
+  "value_field_offset": 5,
+  "laws": 85,
+  "jp_table_discovery": "Scan every 4-byte-aligned offset of the JP image for a 16-byte-stride window whose +4/+5 sequence matches the US table's laws 0..50. Exact match: no candidate. Allowing up to 6 mismatches: exactly one candidate, 0x084FED94, with 1 mismatch (law 25, which is one of the six replaced)."
+ },
+ "authoring_rule": "None of the six US prohibitions exists in the JP law table, so no JP name can be reused verbatim: these six names are project-authored Japanese, written in the JP law family's own register (<thing>禁止, and <element>属性禁止 for elements, as in 炎属性禁止 / 冷属性禁止 / 雷属性禁止 / 聖属性禁止).",
+ "kanji_codes": {
+  "風": {
+   "jp_glyph_code": "0x0A65",
+   "attested_at": "words:content/297",
+   "source": "jp_corpus_attestation"
+  },
+  "属": {
+   "jp_glyph_code": "0x07D1",
+   "attested_at": "words:content/646",
+   "source": "jp_corpus_attestation"
+  },
+  "性": {
+   "jp_glyph_code": "0x0724",
+   "attested_at": "words:content/646",
+   "source": "jp_corpus_attestation"
+  },
+  "闇": {
+   "jp_glyph_code": "0x0208",
+   "attested_at": "words:content/336",
+   "source": "jp_corpus_attestation; this glyph was named by shape (margin 1.146) and its record words:content/336 is the item US retail calls Dark Fiddle"
+  },
+  "杖": {
+   "jp_glyph_code": "0x06B9",
+   "attested_at": "words:content/245",
+   "source": "jp_corpus_attestation"
+  },
+  "素": {
+   "jp_glyph_code": "0x0790",
+   "attested_at": "words:title/46",
+   "source": "jp_corpus_attestation; this glyph was named by shape (margin 3.812) and words:title/46 is 素人"
+  },
+  "手": {
+   "jp_glyph_code": "0x060B",
+   "attested_at": "words:content/473",
+   "source": "jp_corpus_attestation"
+  },
+  "禁": {
+   "jp_glyph_code": "0x0407",
+   "attested_at": "words:content/626",
+   "source": "jp_corpus_attestation"
+  },
+  "止": {
+   "jp_glyph_code": "0x012D",
+   "attested_at": "words:content/626",
+   "source": "jp_corpus_attestation"
+  }
+ },
+ "count": 6,
+ "rows": [
+  {
+   "law_id": 25,
+   "us_index": 650,
+   "us_logical_path": "words:content/650",
+   "original_english_sha256": "d151346fe7eea3c6a0865199579ca6017487dbf981d59cdd1fcadadb03518dc8",
+   "us_law": {
+    "type": 2,
+    "value": 2,
+    "means": "the wind element only"
+   },
+   "jp_law": {
+    "type": 2,
+    "value": 3,
+    "means": "a multi-element law"
+   },
+   "jp_record_now_sha256": "6fe5e5a51090fd5d1e8b6321cbfc6489af3d06db5d4f48e5ccbb11df46cdef64",
+   "jp_record_note": "Rendered with the chain's own JP charset, which has no name for glyph J2B1. A shape comparison matched it to 火 with a weak margin (0.346) and the US law param has been read as a four-element list ending 雷風, so the third element is not settled. It does not have to be: the whole name is replaced, and the claim this row rests on is only that JP's law 25 forbids four elements where US retail's forbids one.",
+   "japanese": "風属性禁止",
+   "line_widths_px": [
+    55
+   ],
+   "lines": 1,
+   "why": "An earlier analysis never listed this one. JP's law 25 forbids four elements; US retail's forbids wind alone, so the transferred name over-states the prohibition by three elements."
+  },
+  {
+   "law_id": 51,
+   "us_index": 676,
+   "us_logical_path": "words:content/676",
+   "original_english_sha256": "60acc53f13a5d1bf115878c4a785e9a43e8286c4139a8402a6ac7d23966f9153",
+   "us_law": {
+    "type": 2,
+    "value": 8,
+    "means": "the dark element"
+   },
+   "jp_law": {
+    "type": 11,
+    "value": 20,
+    "means": "a damage-threshold law"
+   },
+   "jp_record_now_sha256": "b7b39e48cacab744089e60c400558032782388004dc9364783e67436dcdff6b8",
+   "japanese": "闇属性禁止",
+   "line_widths_px": [
+    55
+   ],
+   "lines": 1,
+   "why": "The most harmful of the six: the player reads a damage cap and is carded for casting dark magic."
+  },
+  {
+   "law_id": 52,
+   "us_index": 677,
+   "us_logical_path": "words:content/677",
+   "original_english_sha256": "62105c37e007e4f0a0defafa7df78cb2fc232845eb8b97681343eb4ed60a2266",
+   "us_law": {
+    "type": 10,
+    "value": 10,
+    "means": "the staff weapon class"
+   },
+   "jp_law": {
+    "type": 11,
+    "value": 50,
+    "means": "a damage-threshold law"
+   },
+   "jp_record_now_sha256": "63bde9ca413cf632c8358be7a376aa7d4355d6826c4991673b8d69463b89763e",
+   "japanese": "杖禁止",
+   "line_widths_px": [
+    33
+   ],
+   "lines": 1,
+   "why": "JP retail calls this weapon class 杖 in its own item names (守りの杖 / 裁きの杖 / 力の杖, words:content/245..256)."
+  },
+  {
+   "law_id": 53,
+   "us_index": 678,
+   "us_logical_path": "words:content/678",
+   "original_english_sha256": "24d1185f93100c7883f19411315c3702b4f63ce2debccc36d2eaba5d6edca869",
+   "us_law": {
+    "type": 10,
+    "value": 11,
+    "means": "the rod weapon class"
+   },
+   "jp_law": {
+    "type": 11,
+    "value": 100,
+    "means": "a damage-threshold law"
+   },
+   "jp_record_now_sha256": "688a1f0b725bf0d0ba813818eb180c0ce3defbaeaf51a5010ab12f1d4a898bba",
+   "japanese": "ロッド禁止",
+   "line_widths_px": [
+    53
+   ],
+   "lines": 1,
+   "why": "JP retail calls this weapon class ロッド in its own item names (ロッド / フレイムロッド / ミスリルロッド, words:content/258..270)."
+  },
+  {
+   "law_id": 54,
+   "us_index": 679,
+   "us_logical_path": "words:content/679",
+   "original_english_sha256": "83b4f42ac4713141318e6abead22794f7ce829cb9feb06f4d9e2bd5878845925",
+   "us_law": {
+    "type": 10,
+    "value": 12,
+    "means": "the mace weapon class"
+   },
+   "jp_law": {
+    "type": 12,
+    "value": 20,
+    "means": "a damage-threshold law"
+   },
+   "jp_record_now_sha256": "f9b4f1db704e16269dd54f7a855090f1f98062bc1181dcca17683275800c4261",
+   "japanese": "メイス禁止",
+   "line_widths_px": [
+    52
+   ],
+   "lines": 1,
+   "why": "JP retail calls this weapon class メイス in its own item names (バトルメイス / エナジーメイス / 紅蓮のメイス, words:content/272..279)."
+  },
+  {
+   "law_id": 55,
+   "us_index": 680,
+   "us_logical_path": "words:content/680",
+   "original_english_sha256": "0ace54470a59ba4df1aaa3875a0ff66139bfbcea3fda926572ab38a67930b5d0",
+   "us_law": {
+    "type": 10,
+    "value": 0,
+    "means": "attacking with no weapon equipped"
+   },
+   "jp_law": {
+    "type": 12,
+    "value": 50,
+    "means": "a damage-threshold law"
+   },
+   "jp_record_now_sha256": "e918b8fd1bd2c4627a9630db2fea19ab7d020697f4a1cfdcde14de78e247d426",
+   "japanese": "素手禁止",
+   "line_widths_px": [
+    44
+   ],
+   "lines": 1,
+   "why": "Weapon class 0 is the empty hand. JP retail ships no law for it, so the name is authored: 素手 is the ordinary Japanese for fighting unarmed and the counterpart to ナックル禁止 (law 48). Both glyphs are JP retail's own (素 words:title/46, 手 words:content/473)."
+  }
+ ]
+}

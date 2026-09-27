@@ -1,0 +1,144 @@
+{
+ "_public_note": "Public build manifest. Verbatim retail source strings are stored as SHA-256 digests (fields ending in _sha256); the builder recomputes them from the user's own ROM. Japanese text in this file is written by this project.",
+ "_note": "JP retail glyph codes that an audit needs to print but no editorial manifest attests in kanji_codes. Each is named from the JP retail font bitmap itself (python ffta_jp_charset.py --show <code>) and the JP retail record it appears in -- never from charset_cn.json, whose slots the Chinese build re-assigned. Consumed by ffta_jp_charset.py.",
+ "codes": {
+  "0xB7D": {
+   "char": "予",
+   "bitmap": "top bar with a hooked right end, a diagonal to the centre, a full-width bar, a vertical with a left hook below it -- the shape of 予",
+   "context": "JP words:content/122 = 0xB7D 備(0xA12, attested) 2, the last unconsumed member of the reserve pool the audit's JP_PLACEHOLDER pattern names 予備 (its consumed members were renamed in JP retail: 予備1 -> ボルゾイクラン at content/121, 予約1 -> デプス at content/80)",
+   "needed_by": "ffta_placeholder_transfer_audit (JP_PLACEHOLDER), ffta_jp_us_added_missions (jp_placeholder of words:content/122)"
+  },
+  "0x173": {
+   "char": "貴",
+   "bitmap": "ffta_jp_charset_derive native raster match (+-1 px) against cp932 fonts: 1.00",
+   "context": "JP retail 貴重 / 貴族 contexts",
+   "needed_by": "us_only_s_text_final_remainder retail_us_text_decoded (audit display only)"
+  },
+  "0x19E": {
+   "char": "払",
+   "bitmap": "ffta_jp_charset_derive native raster match (+-1 px) against cp932 fonts: 1.00",
+   "context": "JP retail 支払 contexts",
+   "needed_by": "us_only_s_text_final_remainder retail_us_text_decoded (audit display only)"
+  },
+  "0x3BB": {
+   "char": "救",
+   "bitmap": "ffta_jp_charset_derive native raster match (+-1 px) against cp932 fonts: 0.89 (next 0.76)",
+   "context": "JP s_text/8/68 救出, pages:quest/0/95 息子を救って, 救援 at s_text/35/50",
+   "needed_by": "us_only_s_text_final_remainder retail_us_text_decoded (audit display only)"
+  },
+  "0x275": {
+   "char": "援",
+   "bitmap": "ffta_jp_charset_derive native raster match (+-1 px) against cp932 fonts: 0.70 (tie with 0xA5E; glyph alone inconclusive)",
+   "context": "JP s_text/35/50 救援!?, pages:quest/0/50 救援へむかう, pages:quest/0/309 魔道士支援協会, fx_text/8/58 応援して",
+   "needed_by": "us_only_s_text_final_remainder retail_us_text_decoded (audit display only)"
+  },
+  "0x2AF": {
+   "char": "歌",
+   "bitmap": "ffta_jp_charset_derive native raster match (+-1 px) against cp932 fonts: 0.72 (next 0.69; glyph alone inconclusive)",
+   "context": "JP pages:quest/0/285 すばらしい歌声, s_text/35/25 + fx_text/7/7 + words:content/582 歌姫(0xA26)",
+   "needed_by": "us_only_s_text_final_remainder retail_us_text_decoded (audit display only)"
+  },
+  "0xA26": {
+   "char": "姫",
+   "bitmap": "ffta_jp_charset_derive native raster match (+-1 px) against cp932 fonts: 0.96",
+   "context": "JP pages:quest/0/334 さらわれた姫を助け, 歌姫",
+   "needed_by": "us_only_s_text_final_remainder retail_us_text_decoded (audit display only)"
+  },
+  "0x36F": {
+   "char": "危",
+   "bitmap": "ffta_jp_charset_derive native raster match (+-1 px) against cp932 fonts: 0.85",
+   "context": "JP s_text/5/10 + s_text/35/24 危ない, s_text/14/28 危うく",
+   "needed_by": "us_only_s_text_final_remainder retail_us_text_decoded (audit display only)"
+  },
+  "0x331": {
+   "char": "寒",
+   "bitmap": "ffta_jp_charset_derive native raster match (+-1 px) against cp932 fonts: 0.69 (glyph alone inconclusive)",
+   "context": "JP s_text/35/46 うう、寒いぜ, words:battle/220 悪寒",
+   "needed_by": "us_only_s_text_final_remainder retail_us_text_decoded (audit display only)"
+  },
+  "0x618": {
+   "char": "授",
+   "bitmap": "ffta_jp_charset_derive native raster match (+-1 px) against cp932 fonts: 1.00",
+   "context": "JP s_text/35..59/46 + pages:quest/0/110 教授",
+   "needed_by": "us_only_s_text_final_remainder retail_us_text_decoded (audit display only)"
+  },
+  "0x512": {
+   "char": "号",
+   "bitmap": "ffta_jp_charset_derive native raster match (+-1 px) against cp932 fonts: 1.00",
+   "context": "JP カット番号 markers in s_text",
+   "needed_by": "us_only_s_text_final_remainder retail_us_text_decoded (audit display only)"
+  },
+  "0x517": {
+   "char": "豪",
+   "bitmap": "ffta_jp_charset_derive native raster match (+-1 px) against cp932 fonts: 0.90",
+   "context": "JP 剣豪",
+   "needed_by": "us_only_s_text_final_remainder retail_us_text_decoded (audit display only)"
+  },
+  "0x584": {
+   "char": "殺",
+   "bitmap": "ffta_jp_charset_derive native raster match (+-1 px) against cp932 fonts: 1.00",
+   "context": "JP 必殺技",
+   "needed_by": "us_only_s_text_final_remainder retail_us_text_decoded (audit display only)"
+  },
+  "0xABD": {
+   "char": "放",
+   "bitmap": "ffta_jp_charset_derive native raster match (+-1 px) against cp932 fonts: 1.00",
+   "context": "JP s_text/7/66 + 10/26 + 13/29 解放",
+   "needed_by": "us_only_s_text_final_remainder retail_us_text_decoded (audit display only)"
+  },
+  "0xBAD": {
+   "char": "利",
+   "bitmap": "ffta_jp_charset_derive native raster match (+-1 px) against cp932 fonts: 1.00",
+   "context": "JP s_text/27/61 勝利, s_text/19/32 不利",
+   "needed_by": "us_only_s_text_final_remainder retail_us_text_decoded (audit display only)"
+  },
+  "0x610": {
+   "char": "種",
+   "bitmap": "ffta_jp_charset_derive native raster match (+-1 px) against cp932 fonts: 1.00",
+   "context": "JP 種類",
+   "needed_by": "us_only_s_text_final_remainder retail_us_text_decoded (audit display only)"
+  },
+  "0xBEE": {
+   "char": "類",
+   "bitmap": "ffta_jp_charset_derive native raster match (+-1 px) against cp932 fonts: 1.00",
+   "context": "JP 種類",
+   "needed_by": "us_only_s_text_final_remainder retail_us_text_decoded (audit display only)"
+  },
+  "0x58D": {
+   "char": "三",
+   "bitmap": "ffta_jp_charset_derive native raster match (+-1 px) against cp932 fonts: 1.00",
+   "context": "JP s_text/13/29 三回目, s_text/35/17 ナーガス三姉妹",
+   "needed_by": "us_only_s_text_final_remainder retail_us_text_decoded (audit display only)"
+  },
+  "0x5A5": {
+   "char": "姉",
+   "bitmap": "ffta_jp_charset_derive native raster match (+-1 px) against cp932 fonts: 0.95",
+   "context": "JP s_text/35/17 + 71 + 72 ナーガス三姉妹",
+   "needed_by": "us_only_s_text_final_remainder retail_us_text_decoded (audit display only)"
+  },
+  "0xAFF": {
+   "char": "妹",
+   "bitmap": "ffta_jp_charset_derive native raster match (+-1 px) against cp932 fonts: 1.00",
+   "context": "JP ナーガス三姉妹, pages:quest/0/57 妹が",
+   "needed_by": "us_only_s_text_final_remainder retail_us_text_decoded (audit display only)"
+  },
+  "0xC00": {
+   "char": "歴",
+   "bitmap": "ffta_jp_charset_derive native raster match (+-1 px) against cp932 fonts: 1.00",
+   "context": "JP pages:quest/0/9 学歴不問, 歴史(0x5A2)",
+   "needed_by": "us_only_s_text_final_remainder retail_us_text_decoded (audit display only)"
+  },
+  "0x5A2": {
+   "char": "史",
+   "bitmap": "ffta_jp_charset_derive native raster match (+-1 px) against cp932 fonts: 0.78 (next 0.70)",
+   "context": "JP pages:quest/0/17 + 183 + 329 歴史, s_text/35/17 史上最",
+   "needed_by": "us_only_s_text_final_remainder retail_us_text_decoded (audit display only)"
+  },
+  "0x16F": {
+   "char": "教",
+   "bitmap": "ffta_jp_charset_derive native raster match (+-1 px) against cp932 fonts: 0.86",
+   "context": "JP s_text/7/28 教えて (9 lines), pages:quest/0 教会 (4 lines), s_text/35..59/46 教授; the manifests named it 数 in an earlier build (数 is 0x711)",
+   "needed_by": "us_only_s_text_final_remainder retail_us_text_decoded (audit display only)"
+  }
+ }
+}

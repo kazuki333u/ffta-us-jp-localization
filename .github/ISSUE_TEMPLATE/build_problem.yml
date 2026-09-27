@@ -1,0 +1,86 @@
+name: ビルドできない / Build problem
+description: build.py が失敗する、ROMが認識されない等の報告
+title: "[BUILD] "
+labels: ["build"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ビルドの問題を報告いただきありがとうございます。
+
+        ### ⚠️ 添付についてのお願い
+
+        - **ROMファイル (`.gba`) は絶対に添付しないでください。** リンクも貼らないでください。
+        - `.build/` フォルダも添付しないでください (あなたのROMのコピーが入っています)。
+        - 必要なのは**ハッシュとログの末尾**だけです。
+
+        先に `docs/TROUBLESHOOTING.md` をご確認ください。
+        多くの場合ここで解決します。
+
+  - type: textarea
+    id: command
+    attributes:
+      label: 実行したコマンド
+      render: shell
+      placeholder: "python build.py --us FFTA_US.gba --jp FFTA_JP.gba --output out.gba"
+    validations:
+      required: true
+
+  - type: textarea
+    id: error
+    attributes:
+      label: エラー表示
+      description: 画面に出たメッセージをそのまま貼ってください
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: identify
+    attributes:
+      label: ROMの識別結果
+      description: |
+        次の2つの出力を貼ってください。**ROMそのものは添付しないでください。**
+        ```
+        python build.py --identify <あなたのUS版ROM>
+        python build.py --identify <あなたのJP版ROM>
+        ```
+      render: shell
+    validations:
+      required: true
+
+  - type: input
+    id: python
+    attributes:
+      label: Python のバージョン
+      description: "`python --version` の出力"
+      placeholder: "Python 3.12.4"
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: OS
+      placeholder: "Windows 11 / macOS 14 / Ubuntu 24.04"
+    validations:
+      required: true
+
+  - type: textarea
+    id: log
+    attributes:
+      label: build.log の末尾 (任意)
+      description: |
+        `the build chain failed` が出た場合、`.build/build.log` の
+        **末尾30行程度**を貼ってください。ファイル全体は不要です。
+      render: shell
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 確認
+      options:
+        - label: ROMファイルを添付していません
+          required: true

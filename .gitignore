@@ -1,0 +1,112 @@
+# =====================================================================
+# ROM images and anything derived from them.
+# Nothing in this list may ever enter the repository.
+# tools/public_audit.py enforces this mechanically; see docs/CONTRIBUTING.
+# =====================================================================
+*.gba
+*.gb
+*.gbc
+*.agb
+*.bin
+*.rom
+*.smc
+*.sfc
+*.nds
+
+# Distribution patches are built locally, never committed.
+*.bps
+*.ips
+*.ups
+*.xdelta
+*.vcdiff
+
+# Archives (a ROM in a coat)
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.*
+*.tgz
+*.gz
+*.bz2
+*.xz
+
+# =====================================================================
+# Emulator saves and savestates.
+# These can contain player-entered character and clan names.
+# =====================================================================
+*.sav
+*.srm
+*.sa1
+*.fla
+*.flash
+*.state
+*.ss
+*.ss[0-9]
+*.sps
+*.st[0-9]
+*.nsv
+
+# =====================================================================
+# Build output and scratch space.
+# .build/ holds copies of the user's own ROMs while a build runs.
+# =====================================================================
+.build/
+build/
+# Anchored to the repository root: an unanchored "rom/" also matches
+# tests/rom/, which is a tracked part of the project.
+/dist/
+/out/
+/output/
+/rom/
+/roms/
+*.log
+
+# =====================================================================
+# Local QA artifacts (see docs/LOCAL_ROM_QA.md).
+# These are local-only by design and are not part of the public project.
+# =====================================================================
+qa_runs/
+evidence/
+traces/
+dumps/
+screenshots/
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.gif
+*.mp4
+*.avi
+
+# =====================================================================
+# Python
+# =====================================================================
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# =====================================================================
+# Editors, OS and local configuration
+# =====================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+local.config.json
+*.local
+.env
+.env.*

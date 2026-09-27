@@ -1,0 +1,2284 @@
+{
+ "_public_note": "Public build manifest. Verbatim retail source strings are stored as SHA-256 digests (fields ending in _sha256); the builder recomputes them from the user's own ROM. Japanese text in this file is written by this project.",
+ "milestone": "us_only_s_text_final_remainder",
+ "description": "Final editorial localization of the US-only story lines that live inside JP leaves the leaf-repoint layer already rewrites (s_text tops 0, 1, 19, 26, 34), plus the closed NON_PRODUCTION_INTERNAL class (US top 36, the dead leaf). Depends on three story-leaf align anchors in CONF['text']['align']['s_text'] that move the JP developer cut-index labels of tops 1, 19 and 26 past the dialogue the US ROM inserted before them.",
+ "baseline_production_sha256": "95F587C51A2B5B24AB44C39F7ACF7BEAE66D2C6ACB16CEDE57116CA7956D403B",
+ "count": 166,
+ "translated_count": 69,
+ "no_change_required_count": 0,
+ "non_production_internal_count": 97,
+ "align_hints": [
+  {
+   "jp": [
+    1,
+    118
+   ],
+   "us": [
+    1,
+    171
+   ],
+   "why": "JP 1/118..128 are 11 cut labels; US inserts 53 lines (snowball tutorial, post-fight, Randell at work, tutorial repeat) at 118..170 and carries the same 11 labels at 171..181"
+  },
+  {
+   "jp": [
+    19,
+    101
+   ],
+   "us": [
+    19,
+    107
+   ],
+   "why": "JP 19/101..109 are 9 cut labels; US inserts 6 lines (Cid remembers, the apology rewrite of JP 19/47,53..57) at 101..106 and carries the labels at 107..115"
+  },
+  {
+   "jp": [
+    26,
+    71
+   ],
+   "us": [
+    26,
+    72
+   ],
+   "why": "JP 26/71..76 are 6 cut labels; US 26/71 is a rewritten Mewt line (the rewrite of JP 26/20, read by scene FAT 77) and US 72..77 are empty records"
+  }
+ ],
+ "non_production_internal": {
+  "top": 36,
+  "aliases_sharing_the_leaf": [
+   36,
+   40,
+   41,
+   43,
+   54,
+   56,
+   57,
+   58,
+   59
+  ],
+  "decode_note": "retail_us_text_decoded prints the retail tokens through ffta_jp_charset (charset_us below 0x122, editorial kanji_codes, data/jp_kanji_glyph_reviewed.json -- Japanese sources only); a JP glyph code with no reviewed name prints as 〔JXXX〕. It is a listing for review, not the ROM content",
+  "meaning": "every visible line of US s_text top 36 is Japanese in the retail US ROM; the leaf is a near-verbatim copy of JP top 35 (43 lines differ only by spelling a [51xx] name control out literally), it is shared by root tops 40/41/43/54/56/57/58/59, and no scene-script program of either ROM issues a 0x0F text command against any of those owners (FAT 108 -> script group 35 has no pages; FAT 153..158 own tops 56..58 and contain no text command). Nothing is written; the builder re-proves the dead-leaf claim on every build."
+ },
+ "voice_authorities": {
+  "先生(レスリー, [5111])": "JP s_text 1/14, 1/37, 1/38, 1/40 -- 常体「〜ぞ」「〜しなさい」「〜だ」; 生徒を呼び捨て",
+  "リッツ": "JP s_text 1/7-42, 1/85-107 -- あたし/アンタ, 「〜わよ」「〜でしょ」; 先生には敬語 (1/13 先生、準備できました)",
+  "マーシュ": "JP s_text 1/46, 19/3-36 -- ぼく, 大人には敬語 (はい/〜です)",
+  "ミュート": "JP s_text 1/58, 1/64-68, 19/85-100, 26/18-29 -- ボク(カタカナ), パパ/ママ",
+  "ランデル(現実世界のパパ)": "JP s_text 1/63, 1/116 -- 父さん/「〜だな」「〜か?」; 上司には敬語 (新規: 謝罪と平身低頭)",
+  "上司": "新規 -- 「ランデルくん」呼び, 事務的な常体, 客には敬語",
+  "ビッグス": "新規 -- 元部下, ランデルに敬語, 一人称ぼく",
+  "シド": "JP s_text 19/48-72 -- 私, 「〜のか」「〜だとも」; 19/56-57 が 105-106 の直接の原型",
+  "エゼル": "JP s_text 18/20 (また今度、店で会おう) -- オレ/おまえ, 「〜ぜ」",
+  "バブズ": "JP s_text 12/4, 26/1-16 -- 私, 常体, 宮廷",
+  "シャアラ": "簡潔な常体, 女性語尾なし",
+  "いじめっ子": "JP s_text 1/0-35 -- オレ/おまえ, 「〜だろ」「〜じゃん」"
+ },
+ "terminology": {
+  "move / action / wait": "いどう / アクション / たいき (JP words:battle/8, /9, /10 -- the in-battle command names)",
+  "Snowball (action)": "雪玉を投げる (JP words:battle/13); 雪玉 (JP s_text/1/28, fx_text/16/12)",
+  "snowball fight": "雪合戦 (JP s_text/1/14)",
+  "facing": "向き (JP s_text 26/12 向きあう; the mechanic is described with 向き)",
+  "speed": "スピード (JP pages:battle/22)",
+  "range / panels": "範囲 / パネル (JP fx_text/16/60, fx_text/21)",
+  "waiting makes your next turn come quicker": "JP fx_text/16/9 その場にとどまります。なにも行動していないと次のターンが早くきます",
+  "easier to hit from behind": "JP fx_text/16/7 敵の背後からの攻撃の方があたりやすくなります",
+  "B BUTTON": "Bボタン (JP pages:config/8 Lボタン, fx_text/2/1 SELECTボタン -- Latin letters attested)",
+  "St. Ivalice (the town)": "イヴァリース (JP 1/119 addresses the town by name only; 田舎町 is 19/10)",
+  "shop (Ezel's)": "店 (JP s_text/18/20)",
+  "palace": "宮廷 (JP s_text/19/62)",
+  "clan": "クラン",
+  "company": "会社 (社 attested at JP fx_text/8/19)"
+ },
+ "kanji_codes": {
+  "一": {
+   "jp_glyph_code": "0x0122",
+   "attested_at": "fx_text/1/31",
+   "source": "reused:us_only_fx_text"
+  },
+  "上": {
+   "jp_glyph_code": "0x0135",
+   "attested_at": "fx_text/1/32",
+   "source": "reused:us_only_fx_text"
+  },
+  "下": {
+   "jp_glyph_code": "0x0136",
+   "attested_at": "s_text/7/52",
+   "source": "jp_corpus_attestation"
+  },
+  "中": {
+   "jp_glyph_code": "0x0125",
+   "attested_at": "s_text/1/38",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "事": {
+   "jp_glyph_code": "0x01A5",
+   "attested_at": "fx_text/8/19",
+   "source": "reused:us_only_fx_text"
+  },
+  "二": {
+   "jp_glyph_code": "0x095E",
+   "attested_at": "s_text/10/23",
+   "source": "jp_corpus_attestation"
+  },
+  "人": {
+   "jp_glyph_code": "0x01A9",
+   "attested_at": "fx_text/2/9",
+   "source": "reused:us_only_fx_text"
+  },
+  "仕": {
+   "jp_glyph_code": "0x059D",
+   "attested_at": "fx_text/2/11",
+   "source": "reused:us_only_fx_text"
+  },
+  "以": {
+   "jp_glyph_code": "0x0147",
+   "attested_at": "fx_text/4/2",
+   "source": "reused:us_only_fx_text"
+  },
+  "会": {
+   "jp_glyph_code": "0x02CF",
+   "attested_at": "s_text/2/84",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "伝": {
+   "jp_glyph_code": "0x08DB",
+   "attested_at": "s_text/2/64",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "位": {
+   "jp_glyph_code": "0x020C",
+   "attested_at": "s_text/19/20",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "何": {
+   "jp_glyph_code": "0x014E",
+   "attested_at": "s_text/2/64",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "備": {
+   "jp_glyph_code": "0x0A12",
+   "attested_at": "s_text/1/13",
+   "source": "jp_corpus_attestation"
+  },
+  "働": {
+   "jp_glyph_code": "0x0923",
+   "attested_at": "pages:quest/0/167",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "元": {
+   "jp_glyph_code": "0x0492",
+   "attested_at": "s_text/2/58",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "先": {
+   "jp_glyph_code": "0x075A",
+   "attested_at": "s_text/1/13",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "出": {
+   "jp_glyph_code": "0x013F",
+   "attested_at": "fx_text/1/33",
+   "source": "reused:us_only_fx_text"
+  },
+  "分": {
+   "jp_glyph_code": "0x0126",
+   "attested_at": "s_text/4/8",
+   "source": "reused:us_only_system_battle"
+  },
+  "前": {
+   "jp_glyph_code": "0x01AA",
+   "attested_at": "fx_text/4/88",
+   "source": "reused:us_only_fx_text"
+  },
+  "力": {
+   "jp_glyph_code": "0x0182",
+   "attested_at": "s_text/2/51",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "動": {
+   "jp_glyph_code": "0x018A",
+   "attested_at": "fx_text/4/104",
+   "source": "reused:us_only_fx_text"
+  },
+  "勝": {
+   "jp_glyph_code": "0x0670",
+   "attested_at": "fx_text/4/179",
+   "source": "reused:us_only_fx_text"
+  },
+  "友": {
+   "jp_glyph_code": "0x0B6A",
+   "attested_at": "fx_text/8/76",
+   "source": "reused:us_only_fx_text"
+  },
+  "取": {
+   "jp_glyph_code": "0x0609",
+   "attested_at": "s_text/1/30",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "合": {
+   "jp_glyph_code": "0x0513",
+   "attested_at": "s_text/1/3",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "向": {
+   "jp_glyph_code": "0x04D3",
+   "attested_at": "s_text/13/1",
+   "source": "reused:us_only_system_battle"
+  },
+  "回": {
+   "jp_glyph_code": "0x014A",
+   "attested_at": "fx_text/4/121",
+   "source": "reused:us_only_fx_text"
+  },
+  "困": {
+   "jp_glyph_code": "0x0529",
+   "attested_at": "s_text/8/2",
+   "source": "reused:us_only_s_text_top61_judge_missions"
+  },
+  "囲": {
+   "jp_glyph_code": "0x020F",
+   "attested_at": "fx_text/4/129",
+   "source": "reused:us_only_fx_text"
+  },
+  "場": {
+   "jp_glyph_code": "0x01CD",
+   "attested_at": "s_text/1/56",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "変": {
+   "jp_glyph_code": "0x015E",
+   "attested_at": "s_text/1/3",
+   "source": "reused:us_only_system_battle"
+  },
+  "大": {
+   "jp_glyph_code": "0x0801",
+   "attested_at": "fx_text/4/61",
+   "source": "reused:us_only_fx_text"
+  },
+  "失": {
+   "jp_glyph_code": "0x05E2",
+   "attested_at": "fx_text/1/28",
+   "source": "reused:us_only_fx_text"
+  },
+  "女": {
+   "jp_glyph_code": "0x0669",
+   "attested_at": "s_text/1/6",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "始": {
+   "jp_glyph_code": "0x01C4",
+   "attested_at": "s_text/1/9",
+   "source": "jp_corpus_attestation"
+  },
+  "嫌": {
+   "jp_glyph_code": "0x0479",
+   "attested_at": "s_text/1/31",
+   "source": "jp_corpus_attestation"
+  },
+  "子": {
+   "jp_glyph_code": "0x0132",
+   "attested_at": "s_text/2/75",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "学": {
+   "jp_glyph_code": "0x01B9",
+   "attested_at": "s_text/1/76",
+   "source": "reused:us_only_s_text_top61_judge_missions"
+  },
+  "宮": {
+   "jp_glyph_code": "0x03B8",
+   "attested_at": "s_text/6/27",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "家": {
+   "jp_glyph_code": "0x01B7",
+   "attested_at": "s_text/1/52",
+   "source": "jp_corpus_attestation"
+  },
+  "帰": {
+   "jp_glyph_code": "0x0382",
+   "attested_at": "s_text/1/40",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "店": {
+   "jp_glyph_code": "0x08D6",
+   "attested_at": "s_text/8/60",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "度": {
+   "jp_glyph_code": "0x08F1",
+   "attested_at": "s_text/2/86",
+   "source": "reused:us_only_system_battle"
+  },
+  "廷": {
+   "jp_glyph_code": "0x08B0",
+   "attested_at": "s_text/6/27",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "引": {
+   "jp_glyph_code": "0x019F",
+   "attested_at": "fx_text/4/10",
+   "source": "reused:us_only_fx_text"
+  },
+  "当": {
+   "jp_glyph_code": "0x090D",
+   "attested_at": "s_text/1/30",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "役": {
+   "jp_glyph_code": "0x0B58",
+   "attested_at": "fx_text/4/114",
+   "source": "reused:us_only_fx_text"
+  },
+  "彼": {
+   "jp_glyph_code": "0x09FC",
+   "attested_at": "fx_text/8/42",
+   "source": "reused:us_only_fx_text"
+  },
+  "待": {
+   "jp_glyph_code": "0x01D3",
+   "attested_at": "fx_text/1/31",
+   "source": "reused:us_only_fx_text"
+  },
+  "後": {
+   "jp_glyph_code": "0x01BE",
+   "attested_at": "s_text/17/1",
+   "source": "jp_corpus_attestation"
+  },
+  "悪": {
+   "jp_glyph_code": "0x01F2",
+   "attested_at": "s_text/1/12",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "悲": {
+   "jp_glyph_code": "0x09FD",
+   "attested_at": "s_text/17/42",
+   "source": "jp_corpus_attestation"
+  },
+  "情": {
+   "jp_glyph_code": "0x06B6",
+   "attested_at": "s_text/3/13",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "戦": {
+   "jp_glyph_code": "0x0175",
+   "attested_at": "fx_text/4/117",
+   "source": "reused:us_only_fx_text"
+  },
+  "戻": {
+   "jp_glyph_code": "0x0B4A",
+   "attested_at": "s_text/5/31",
+   "source": "reused:us_only_system_battle"
+  },
+  "所": {
+   "jp_glyph_code": "0x01CB",
+   "attested_at": "s_text/1/25",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "手": {
+   "jp_glyph_code": "0x060B",
+   "attested_at": "fx_text/1/16",
+   "source": "reused:us_only_fx_text"
+  },
+  "投": {
+   "jp_glyph_code": "0x0901",
+   "attested_at": "s_text/1/28",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "敗": {
+   "jp_glyph_code": "0x099A",
+   "attested_at": "fx_text/1/28",
+   "source": "reused:us_only_fx_text"
+  },
+  "数": {
+   "jp_glyph_code": "0x0711",
+   "attested_at": "pages:quest/0/41",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "方": {
+   "jp_glyph_code": "0x013A",
+   "attested_at": "s_text/2/58",
+   "source": "reused:us_only_system_battle"
+  },
+  "旅": {
+   "jp_glyph_code": "0x0BCA",
+   "attested_at": "fx_text/6/2",
+   "source": "jp_corpus_attestation"
+  },
+  "日": {
+   "jp_glyph_code": "0x01D8",
+   "attested_at": "s_text/1/1",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "早": {
+   "jp_glyph_code": "0x01D1",
+   "attested_at": "s_text/8/48",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "来": {
+   "jp_glyph_code": "0x014F",
+   "attested_at": "s_text/1/38",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "校": {
+   "jp_glyph_code": "0x01C1",
+   "attested_at": "s_text/1/5",
+   "source": "jp_corpus_attestation"
+  },
+  "次": {
+   "jp_glyph_code": "0x05CA",
+   "attested_at": "fx_text/4/111",
+   "source": "reused:us_only_fx_text"
+  },
+  "死": {
+   "jp_glyph_code": "0x05AF",
+   "attested_at": "s_text/1/68",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "気": {
+   "jp_glyph_code": "0x0384",
+   "attested_at": "s_text/1/21",
+   "source": "reused:us_only_system_battle"
+  },
+  "決": {
+   "jp_glyph_code": "0x0468",
+   "attested_at": "fx_text/1/8",
+   "source": "reused:us_only_fx_text"
+  },
+  "法": {
+   "jp_glyph_code": "0x0ABF",
+   "attested_at": "fx_text/4/90",
+   "source": "reused:us_only_fx_text"
+  },
+  "準": {
+   "jp_glyph_code": "0x0657",
+   "attested_at": "s_text/1/13",
+   "source": "jp_corpus_attestation"
+  },
+  "点": {
+   "jp_glyph_code": "0x0123",
+   "attested_at": "s_text/1/30",
+   "source": "jp_corpus_attestation"
+  },
+  "無": {
+   "jp_glyph_code": "0x0174",
+   "attested_at": "s_text/4/19",
+   "source": "reused:us_only_system_battle"
+  },
+  "父": {
+   "jp_glyph_code": "0x0138",
+   "attested_at": "s_text/1/63",
+   "source": "jp_corpus_attestation"
+  },
+  "狙": {
+   "jp_glyph_code": "0x0789",
+   "attested_at": "fx_text/6/2",
+   "source": "reused:us_only_fx_text"
+  },
+  "玉": {
+   "jp_glyph_code": "0x03FC",
+   "attested_at": "s_text/1/28",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "生": {
+   "jp_glyph_code": "0x072F",
+   "attested_at": "fx_text/4/127",
+   "source": "reused:us_only_fx_text"
+  },
+  "申": {
+   "jp_glyph_code": "0x06DE",
+   "attested_at": "fx_text/21/186",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "男": {
+   "jp_glyph_code": "0x083F",
+   "attested_at": "s_text/1/31",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "番": {
+   "jp_glyph_code": "0x09F2",
+   "attested_at": "s_text/1/118",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "発": {
+   "jp_glyph_code": "0x09CF",
+   "attested_at": "s_text/1/7",
+   "source": "reused:us_only_system_battle"
+  },
+  "相": {
+   "jp_glyph_code": "0x01AB",
+   "attested_at": "fx_text/4/186",
+   "source": "reused:us_only_fx_text"
+  },
+  "知": {
+   "jp_glyph_code": "0x0842",
+   "attested_at": "fx_text/8/56",
+   "source": "reused:us_only_fx_text"
+  },
+  "礼": {
+   "jp_glyph_code": "0x0BF7",
+   "attested_at": "s_text/7/47",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "社": {
+   "jp_glyph_code": "0x05F5",
+   "attested_at": "fx_text/8/19",
+   "source": "jp_corpus_attestation"
+  },
+  "私": {
+   "jp_glyph_code": "0x05B3",
+   "attested_at": "fx_text/8/68",
+   "source": "reused:us_only_fx_text"
+  },
+  "立": {
+   "jp_glyph_code": "0x0181",
+   "attested_at": "s_text/19/62",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "範": {
+   "jp_glyph_code": "0x09EC",
+   "attested_at": "fx_text/4/129",
+   "source": "reused:us_only_fx_text"
+  },
+  "終": {
+   "jp_glyph_code": "0x0628",
+   "attested_at": "fx_text/1/27",
+   "source": "reused:us_only_fx_text"
+  },
+  "置": {
+   "jp_glyph_code": "0x0849",
+   "attested_at": "fx_text/8/78",
+   "source": "reused:us_only_system_battle"
+  },
+  "考": {
+   "jp_glyph_code": "0x04FB",
+   "attested_at": "s_text/1/98",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "者": {
+   "jp_glyph_code": "0x015B",
+   "attested_at": "fx_text/4/91",
+   "source": "reused:us_only_fx_text"
+  },
+  "背": {
+   "jp_glyph_code": "0x099E",
+   "attested_at": "s_text/35/55",
+   "source": "jp_corpus_attestation"
+  },
+  "自": {
+   "jp_glyph_code": "0x05D3",
+   "attested_at": "s_text/2/42",
+   "source": "reused:us_only_system_battle"
+  },
+  "色": {
+   "jp_glyph_code": "0x06CB",
+   "attested_at": "s_text/1/57",
+   "source": "jp_corpus_attestation"
+  },
+  "行": {
+   "jp_glyph_code": "0x0149",
+   "attested_at": "fx_text/1/37",
+   "source": "reused:us_only_fx_text"
+  },
+  "街": {
+   "jp_glyph_code": "0x02F1",
+   "attested_at": "s_text/2/33",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "見": {
+   "jp_glyph_code": "0x0150",
+   "attested_at": "s_text/1/83",
+   "source": "reused:us_only_system_battle"
+  },
+  "覚": {
+   "jp_glyph_code": "0x01B8",
+   "attested_at": "s_text/4/33",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "言": {
+   "jp_glyph_code": "0x0154",
+   "attested_at": "fx_text/4/180",
+   "source": "reused:us_only_fx_text"
+  },
+  "話": {
+   "jp_glyph_code": "0x0C28",
+   "attested_at": "s_text/2/47",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "負": {
+   "jp_glyph_code": "0x01B0",
+   "attested_at": "s_text/23/58",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "達": {
+   "jp_glyph_code": "0x0171",
+   "attested_at": "fx_text/8/88",
+   "source": "reused:us_only_fx_text"
+  },
+  "降": {
+   "jp_glyph_code": "0x050B",
+   "attested_at": "fx_text/12/35",
+   "source": "jp_corpus_attestation"
+  },
+  "雪": {
+   "jp_glyph_code": "0x0755",
+   "attested_at": "s_text/1/3",
+   "source": "reused:us_only_s_text_special_scenes"
+  },
+  "順": {
+   "jp_glyph_code": "0x065E",
+   "attested_at": "fx_text/2/3",
+   "source": "jp_corpus_attestation"
+  },
+  "頼": {
+   "jp_glyph_code": "0x0180",
+   "attested_at": "s_text/4/6",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "高": {
+   "jp_glyph_code": "0x050E",
+   "attested_at": "s_text/11/3",
+   "source": "reused:us_only_s_text_judge_ezel"
+  },
+  "魔": {
+   "jp_glyph_code": "0x0AFC",
+   "attested_at": "fx_text/4/118",
+   "source": "reused:us_only_fx_text"
+  }
+ },
+ "entries": [
+  {
+   "us_logical_path": "s_text/0/4",
+   "us_top": 0,
+   "us_line": 4,
+   "scene": "clan_leave_jagd",
+   "speaker": "エゼル",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "a3711209bd161b808bc9605bb22ed5874c1d35d2b995b8f9ddb25fead4dfda43",
+   "japanese": "おまえはどうか知らんが、{4D}オレはまだ死ぬ気は{4D}ないぜ!{4F}{42}また店で会おうな!{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/0/5",
+   "us_top": 0,
+   "us_line": 5,
+   "scene": "clan_leave_jagd",
+   "speaker": "バブズ",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "21b6f4ac5add01fdc9831e787ac4c39a2917c3de26f16816292843a86edec8a4",
+   "japanese": "すまない。このケガでは{4D}役に立てそうにない。{4D}{4F}{42}私は宮廷へ戻る。{4D}さらばだ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/0/6",
+   "us_top": 0,
+   "us_line": 6,
+   "scene": "clan_leave_jagd",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "371a0decc69ac916713d7ecff5b85894633465f49af8873f8e582317508f4c20",
+   "japanese": "こんなところで{4D}死ねないわ!{4D}{4F}{42}あたし、自分のクランに{4D}戻るから!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/0/7",
+   "us_top": 0,
+   "us_line": 7,
+   "scene": "clan_leave_jagd",
+   "speaker": "シャアラ",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "5ff6dab6aa0d46ff384f8585b2da08d2caba1556577a85a7980769018be5f591",
+   "japanese": "無事なうちに{4D}引きあげさせてもらう。{4D}それじゃ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/0/8",
+   "us_top": 0,
+   "us_line": 8,
+   "scene": "clan_leave_jagd",
+   "speaker": "シド",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "87048b21a6d14ba3ff7ec9f52333b3ae6b01f8956c14ffffe14e03598f2c45a6",
+   "japanese": "どうも私はクランの仕事に{4D}向いていないようだ。{4D}{4F}{42}これ以上きみたちに{4D}めいわくをかける前に{4D}失礼するとしよう。{4F}{42}また会おう!{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/118",
+   "us_top": 1,
+   "us_line": 118,
+   "scene": "snowball_tutorial",
+   "speaker": "先生",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "fb40b0e6fb7de16952137d6d9cbe022545241e030389137813a9e441a3b5675f",
+   "japanese": "みんな、準備はいいか?{4D}それじゃあ雪合戦を{4D}始めるぞ!{4F}{42}雪玉1発で1点。{4D}先に7点取ったチームの{4D}勝ちだ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/119",
+   "us_top": 1,
+   "us_line": 119,
+   "scene": "snowball_tutorial",
+   "speaker": "先生",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "a7d9722acc385aa1cc04a787f092f1d88005d748acbde14291076f2df03f7792",
+   "japanese": "{400}、イヴァリースの{4D}雪にはもうなれたか?{4D}{4F}{42}前にいたところは、{4D}ずっとあたたかかった{4D}んだろう?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/120",
+   "us_top": 1,
+   "us_line": 120,
+   "scene": "snowball_tutorial",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "8a4da64172d0d823c7dbc96121898a7ff29eff3d1832dd87787f922cd2990655",
+   "japanese": "はい。雪なんて{4D}降らなかったから、{4D}{4F}{42}雪合戦は、ほとんど{4D}はじめてです…。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/121",
+   "us_top": 1,
+   "us_line": 121,
+   "scene": "snowball_tutorial",
+   "speaker": "先生",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "91046d48563341e03e5f936e1daf854c7ebb0a088d72ecda2f7257da0eae3f6a",
+   "japanese": "そうか。なら、先生が{4D}コツをおしえてやろう。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/122",
+   "us_top": 1,
+   "us_line": 122,
+   "scene": "snowball_tutorial",
+   "speaker": "先生",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "0788dcff031457f9e82d280b955aa84d9aec0f04cb11145c8049a2308a76d9b1",
+   "japanese": "{5104}、{4D}手伝ってくれるか?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/123",
+   "us_top": 1,
+   "us_line": 123,
+   "scene": "snowball_tutorial",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "636b690ba5c8fc493b425ff9bc47a35ed9446326bb82b093f2ec4836b66aa5d1",
+   "japanese": "はい、{5111}先生。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/124",
+   "us_top": 1,
+   "us_line": 124,
+   "scene": "snowball_tutorial",
+   "speaker": "先生",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "f803c96266fe9d7e39ed3e11370839dfe0e25fd445a637238b1c1d5186e93833",
+   "japanese": "「スピード」の高い者から{4D}順に動けるんだ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/125",
+   "us_top": 1,
+   "us_line": 125,
+   "scene": "snowball_tutorial",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "1b424e662efeef924ec51c4128b1f546525fbd2dc32b2ba05492eb7d8ad5689e",
+   "japanese": "自分の番が来たら、{4D}まずは「いどう」よ。{4D}{4F}{42}動けるパネルの数は{4D}決まってるから、{4D}よく考えてから動くこと。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/126",
+   "us_top": 1,
+   "us_line": 126,
+   "scene": "snowball_tutorial",
+   "speaker": "先生",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "06dbf20045ab549d8895bd9a911faf2c791c7a7d1c01892b15d8663db983377d",
+   "japanese": "メニューが出ていないときは{4D}Bボタンで、動ける範囲を{4D}見ることができるぞ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/127",
+   "us_top": 1,
+   "us_line": 127,
+   "scene": "snowball_tutorial",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "98102f9cefe3148082ba048c09b37f114843690ee54124c430ede08411c9eb19",
+   "japanese": "いどうは何度でも{4D}やりなおせるわ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/128",
+   "us_top": 1,
+   "us_line": 128,
+   "scene": "snowball_tutorial",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "3b3822fcc22b9dce3cb414069673addd6cada1d33be30818afc28506a0ec67a7",
+   "japanese": "さあ、動いてみて。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/129",
+   "us_top": 1,
+   "us_line": 129,
+   "scene": "snowball_tutorial",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "a4d696be111a18114641bcaa98174b4487d9398e42fc0e298a8288b37659ea17",
+   "japanese": "よし、位置についたら{4D}次は雪玉を投げるのよ。{4D}{4F}{42}「アクション」から{4D}「雪玉を投げる」を{4D}えらんで。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/130",
+   "us_top": 1,
+   "us_line": 130,
+   "scene": "snowball_tutorial",
+   "speaker": "先生",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "5f67535f976fa8530969d9b87f5b7eb42a3095182a0a0f69a969d4b5a778e58e",
+   "japanese": "みどり色のパネルが{4D}雪玉のとどく範囲だ。{4D}{4F}{42}その中から、狙う場所を{4D}えらぶんだ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/131",
+   "us_top": 1,
+   "us_line": 131,
+   "scene": "snowball_tutorial",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "9aa268e128e3c36b0aa695f57270bf2bda654d3e983ee9e4db96079cd59cdc67",
+   "japanese": "範囲の中に相手チームが{4D}いなければ、{4D}「たいき」でいいわ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/132",
+   "us_top": 1,
+   "us_line": 132,
+   "scene": "snowball_tutorial",
+   "speaker": "先生",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "e11f5d54b067e5af53a1e97b87a9fbba87d4a0c646d52ab622bfb6aae55c4d19",
+   "japanese": "「たいき」をすると、{4D}次の番が早く{4D}まわってくるぞ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/133",
+   "us_top": 1,
+   "us_line": 133,
+   "scene": "snowball_tutorial",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "eb381b91e177bd639cb8724589a0e5f1e16ed63386a9270f0b18c90415ff9ad7",
+   "japanese": "いくわよ…!{4D}それっ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/134",
+   "us_top": 1,
+   "us_line": 134,
+   "scene": "snowball_tutorial",
+   "speaker": "先生",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "f5d5de2d65dcb17a4c691aff52e46ec7a5c8a526e222b826a086d1a705496dc5",
+   "japanese": "投げ終わったら、{4D}「向き」を決めるんだ。{4D}{4F}{42}向きを決めたら、{4D}自分の番は終わりだ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/135",
+   "us_top": 1,
+   "us_line": 135,
+   "scene": "snowball_tutorial",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "98e393cc4864353d864c2b11515107bec84fdde638d430591e0bbae2db8e91f2",
+   "japanese": "わかった?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/136",
+   "us_top": 1,
+   "us_line": 136,
+   "scene": "snowball_tutorial",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "3a0128c7041097437386bc382ded9e4e26160e2dbba98b2f4327a49149c8db1a",
+   "japanese": "うん、だいたい。{4D}ありがとう、{5104}、{4D}{5111}先生。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/137",
+   "us_top": 1,
+   "us_line": 137,
+   "scene": "snowball_tutorial",
+   "speaker": "先生",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "fd6f19443c3a70ad23cf0d0bdf78b5ac8c130dec17411b9a15811754193535a8",
+   "japanese": "よし、それじゃあ{4D}雪合戦に戻るぞ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/138",
+   "us_top": 1,
+   "us_line": 138,
+   "scene": "snowball_tutorial",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "8791b87ea4c5835919262cd057f1fa31c699ecca308cd699a2245becac7b50a6",
+   "japanese": "がんばってね、{400}!{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/139",
+   "us_top": 1,
+   "us_line": 139,
+   "scene": "snowball_tutorial",
+   "speaker": "先生",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "810439f8d5169744b5ede1bece3b3d23658d27b5214b9def8cf8933998302984",
+   "japanese": "ああ、雪玉の投げ方にも{4D}コツがあるぞ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/140",
+   "us_top": 1,
+   "us_line": 140,
+   "scene": "snowball_tutorial",
+   "speaker": "先生",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "dd085852ad5dc4de4fe1def81f19b59ed5c859464bb28ab9740454ae56eafa4f",
+   "japanese": "相手の背後や、わきから{4D}狙った方が当てやすい。{4D}{4F}{42}動くときは、相手の向きを{4D}よく見るんだ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/141",
+   "us_top": 1,
+   "us_line": 141,
+   "scene": "snowball_aftermath",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "a0bbd912b61bcb2c1fe4ef82d4f77a5cda21efdf79337a33253ce22716109440",
+   "japanese": "ちょっと、やめなさいよ!{4D}雪合戦はもう{4D}終わったでしょ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/142",
+   "us_top": 1,
+   "us_line": 142,
+   "scene": "snowball_aftermath",
+   "speaker": "いじめっ子",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "d564107651c1d7025a06c2dbfaa08f3dbbc60d80a5eb245985df228ff55b715d",
+   "japanese": "まだ1回しか{4D}やってないだろ!{4D}{4F}{42}2回勝負だ、2回!{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/143",
+   "us_top": 1,
+   "us_line": 143,
+   "scene": "snowball_aftermath",
+   "speaker": "いじめっ子",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "f4d693b0ced0b28e9113e12cc5ea2a9d3d05080d19c3df2c386c6bd3802b66b0",
+   "japanese": "なぁ、{5103}。{4D}おまえもまだ{4D}やりたいよなぁ?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/144",
+   "us_top": 1,
+   "us_line": 144,
+   "scene": "snowball_aftermath",
+   "speaker": "ミュート",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "4ff9f028dcde25b6f57b52f8b901dd0e668bf635c653c2ad03f4f6d4ef9cbd25",
+   "japanese": "ボ、ボクは…。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/145",
+   "us_top": 1,
+   "us_line": 145,
+   "scene": "snowball_aftermath",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "08abacadb5a78e63dbfb43718c55a0be1ec4d9f5f43501b192df3f2441bd8fae",
+   "japanese": "アンタたち、負けたからって{4D}スネてるだけじゃない!{4D}{4F}{42}もう…これだから{4D}男のコって嫌いよ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/146",
+   "us_top": 1,
+   "us_line": 146,
+   "scene": "snowball_aftermath",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "04973d70f033f84f6221456b91ab7fd996468a911accbc91a730a42c65b28aba",
+   "japanese": "勝ったんだから、{4D}もういいでしょ!{4D}{4F}{42}もう…これだから{4D}男のコって嫌いよ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/147",
+   "us_top": 1,
+   "us_line": 147,
+   "scene": "randell_at_work",
+   "speaker": "ランデル",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "813ebbf50fde140d7085462e7fd03034a9cd8c309511e0913fc4d0de858dfe5a",
+   "japanese": "いやぁ、ほんとうに{4D}申しわけない。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/148",
+   "us_top": 1,
+   "us_line": 148,
+   "scene": "randell_at_work",
+   "speaker": "ミュート",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "629059aa0801a11dee2907027fbde0ff60cd44d325816c04209ab23961cb5994",
+   "japanese": "うわ…。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/149",
+   "us_top": 1,
+   "us_line": 149,
+   "scene": "randell_at_work",
+   "speaker": "ランデル",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "3806fee23dd5a27072c12795be5b9b6a90dbf4b7e0733596577f38c4c1708c8d",
+   "japanese": "ほんとうに、ほんとうに{4D}すみません。{4D}どうかおゆるしください…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/150",
+   "us_top": 1,
+   "us_line": 150,
+   "scene": "randell_at_work",
+   "speaker": "上司",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "2c9c6d0253371c1f63f85dcf69f043f712a127e01d886a51e3c1ff3f4961c541",
+   "japanese": "ランデルくん。事情は{4D}どうあれ、仕事はきちんと{4D}やってもらわねば困るよ。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/151",
+   "us_top": 1,
+   "us_line": 151,
+   "scene": "randell_at_work",
+   "speaker": "ランデル",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "8b21626f49dea77ddecd3e53ea73e7d2f0e80d0771c735dd20a977efe8bf05da",
+   "japanese": "二度とこのようなことは…。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/152",
+   "us_top": 1,
+   "us_line": 152,
+   "scene": "randell_at_work",
+   "speaker": "上司",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "cb709f3fb73727c820864792d01676dd787377995c7e29c9e3e03064ba4f7b98",
+   "japanese": "まあいい。{4D}ここは私が{4D}なんとかしておこう。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/153",
+   "us_top": 1,
+   "us_line": 153,
+   "scene": "randell_at_work",
+   "speaker": "ランデル",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "e8f346d9b5ddb02a02cbb177c471cce0224b55205385a459a6f27228d7145751",
+   "japanese": "ああ、すみません、{4D}ありがとうございます!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/154",
+   "us_top": 1,
+   "us_line": 154,
+   "scene": "randell_at_work",
+   "speaker": "上司",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "6a48f5844850acbe3cc518eb9b2924af3bccea52774feebdfdcaf500ac063df2",
+   "japanese": "お待たせしました。{4D}では、まいりましょうか。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/155",
+   "us_top": 1,
+   "us_line": 155,
+   "scene": "randell_at_work",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "b8430928689da376fa2baecbcedb34195e0360bc60d7a0482617668446b95444",
+   "japanese": "見てよ、あの人の{4D}ペコペコぶり。{4D}かっこ悪い…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/156",
+   "us_top": 1,
+   "us_line": 156,
+   "scene": "randell_at_work",
+   "speaker": "ランデル",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "0215b5fe0bb63b125cc635a4df5d4bd08a5c8a43baec5db95bea7a8c088df201",
+   "japanese": "{5103}?{4D}おお、{5103}じゃないか!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/157",
+   "us_top": 1,
+   "us_line": 157,
+   "scene": "randell_at_work",
+   "speaker": "ミュート",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "088b09b0b3e689ed56248d8a77304790e06d549eee4e255e45caccc4ecbf7ddb",
+   "japanese": "…パパ。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/158",
+   "us_top": 1,
+   "us_line": 158,
+   "scene": "randell_at_work",
+   "speaker": "ランデル",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "6888361e18c2acf3fab6e92ac495d3263fbd948e3ff54b19f7468887d4aadf61",
+   "japanese": "もう学校は{4D}終わったのか?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/159",
+   "us_top": 1,
+   "us_line": 159,
+   "scene": "randell_at_work",
+   "speaker": "ミュート",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "b82432bc167492b6eac5a46b33f029993ce3f54dbb9ab91eef59b364b7fac4dd",
+   "japanese": "うん…。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/160",
+   "us_top": 1,
+   "us_line": 160,
+   "scene": "randell_at_work",
+   "speaker": "ランデル",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "874bd93cb6a981818ff3c6d19bc1ca4b007d18b33907388b76ce8430d297a276",
+   "japanese": "友達か?{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/161",
+   "us_top": 1,
+   "us_line": 161,
+   "scene": "randell_at_work",
+   "speaker": "ミュート",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "7020b87357c9bf02c37cd3a6816ef891b8735ee9713c468f9fa57d220ea83d77",
+   "japanese": "パパ、まだ仕事が{4D}あるんじゃないの?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/162",
+   "us_top": 1,
+   "us_line": 162,
+   "scene": "randell_at_work",
+   "speaker": "ランデル",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "10dfcf65bb6599e8880f531cdae8b553292b6ca50ccb77f15e1118f108660b46",
+   "japanese": "ああ…そうだった。{4D}いやぁ、{4D}いそがしくてな!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/163",
+   "us_top": 1,
+   "us_line": 163,
+   "scene": "randell_at_work",
+   "speaker": "ランデル",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "9b5fd156c16038077ed511aa0585811fb7cf325dfdf56bbaa5bc0cbe10403954",
+   "japanese": "みんな、{5103}のこと、{4D}頼んだぞ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/164",
+   "us_top": 1,
+   "us_line": 164,
+   "scene": "randell_at_work",
+   "speaker": "ミュート",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "4c1b5f80b31e5f85be31f3958f320291e9325ebd060f4acdbeb3ac5b90fb92d8",
+   "japanese": "前はもっと大きな{4D}会社にいたんだ。{4D}{4F}{42}でもママが死んでから、{4D}なにもかもどうでも{4D}よくなっちゃって…。{4F}{42}すっかりダメに{4D}なったんだ。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/165",
+   "us_top": 1,
+   "us_line": 165,
+   "scene": "randell_at_work",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "a69d5a29f22cb41562e2eb1652bae7cbb8894f75754f526e3c68f103a1e9d00c",
+   "japanese": "やさしそうなお父さんだね。{4D}あんなふうに子どもに{4D}話しかけてくれる人って、{4F}{42}なかなかいないよ。{4D}旅行とかも、{4D}よく行ってたんじゃない?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/166",
+   "us_top": 1,
+   "us_line": 166,
+   "scene": "randell_at_work",
+   "speaker": "リッツ",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "8f986afa195e203ada774786f77b49f27d4c5e42eca728af1c94eeee7fc14802",
+   "japanese": "アンタの家も{4D}いろいろあったのね…。{4D}{4F}{42}でも、{400}のところは{4D}パパがいないって{4D}きいたけど…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/167",
+   "us_top": 1,
+   "us_line": 167,
+   "scene": "snowball_result",
+   "speaker": "子どもたち",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "c82421426a93ebdee31428c055b3a23f8dbe86e5d35fe86a9b59fd46ac730afa",
+   "japanese": "やったー!{4D}勝ったぞ!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/168",
+   "us_top": 1,
+   "us_line": 168,
+   "scene": "snowball_result",
+   "speaker": "子どもたち",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "9c123b40bc4f5ab3bc7ecac473998634fa3b78018f70e1ebb46eb29ac3ba4aca",
+   "japanese": "ちぇっ、負けちゃった。{4D}いつも勝てるわけ{4D}じゃないもんな。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/169",
+   "us_top": 1,
+   "us_line": 169,
+   "scene": "tutorial_repeat",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "26c26c6226f2ec4a9535d775d32856c9bb291dcd928a1ffed0f18a0404114039",
+   "japanese": "もう一度、{4D}おしえてもらえますか?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/1/170",
+   "us_top": 1,
+   "us_line": 170,
+   "scene": "tutorial_repeat",
+   "speaker": "先生",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "9402765c4c676da76b97f1cefd2f72535b29b4c0d1e4ef6978300ac214368856",
+   "japanese": "ああ、いいとも。{4D}おしえるのが{4D}先生の仕事だからな。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/19/101",
+   "us_top": 19,
+   "us_line": 101,
+   "scene": "cid_remembers",
+   "speaker": "マーシュ",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "6357bd56fdfed94b639a1f667e2adda4084c9c2b174d5d187f463884468d9f92",
+   "japanese": "あの日、ぼくらは街で{4D}おじさんに会った。{4D}{4F}{42}おじさんはあやまって{4D}ばかりで、それを{5103}は{4D}悲しげに見てた。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/19/102",
+   "us_top": 19,
+   "us_line": 102,
+   "scene": "cid_remembers",
+   "speaker": "ランデル",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "813ebbf50fde140d7085462e7fd03034a9cd8c309511e0913fc4d0de858dfe5a",
+   "japanese": "いやぁ、ほんとうに{4D}申しわけない。{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/19/103",
+   "us_top": 19,
+   "us_line": 103,
+   "scene": "cid_remembers",
+   "speaker": "ランデル",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "3806fee23dd5a27072c12795be5b9b6a90dbf4b7e0733596577f38c4c1708c8d",
+   "japanese": "ほんとうに、ほんとうに{4D}すみません。{4D}どうかおゆるしください…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/19/104",
+   "us_top": 19,
+   "us_line": 104,
+   "scene": "cid_remembers",
+   "speaker": "ミュート",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "f27a689ca630b618510eba418daea4c8a90b847eea77df9ebf7c973c76c6d98c",
+   "japanese": "ママが死んじゃってから、{4D}パパはやる気を{4D}なくしちゃって。{4F}{42}失敗ばかりなんだ…。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/19/105",
+   "us_top": 19,
+   "us_line": 105,
+   "scene": "cid_remembers",
+   "speaker": "シド",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "f60c601a28382fbc968a4218c279105eceb2c8c111e7f644c914b16fa25d3e10",
+   "japanese": "あの男が……{4D}ほんとうの私だと{4D}言うのか…?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/19/106",
+   "us_top": 19,
+   "us_line": 106,
+   "scene": "cid_remembers",
+   "speaker": "シド",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "8df54969a7927c56b4377588d0579517ea8765b4a5b1d0c85083fae60469a0f0",
+   "japanese": "…ああ、そうだ。{4D}そうだとも。{4D}あれはたしかに私だ。{4F}{42}彼女が死んでから、{4D}私はなにひとつ{4D}うまくいかず…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/26/71",
+   "us_top": 26,
+   "us_line": 71,
+   "scene": "mewt_refusal",
+   "speaker": "ミュート",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "3448c57b5909dabdc826abb98f2fa4699cf45bc103fb78dbdf3824ba3ce12727",
+   "japanese": "帰ったら、またみんなが{4D}ボクをいじめる!{4D}{4F}{42}パパだって、また{4D}元のダメなパパに{4D}戻っちゃう…。イヤだ!{4F}{42}ボクは帰らない!{4D}魔法の力で、なにもかも{4D}変えてみせるんだ!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/34/22",
+   "us_top": 34,
+   "us_line": 22,
+   "scene": "epilogue_biggs",
+   "speaker": "ビッグス",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "cf101061810606e62a3da9b9b01c4fa0eb7e5a22e8571f60b6d2e87038bddaad",
+   "japanese": "ランデルさん!{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/34/23",
+   "us_top": 34,
+   "us_line": 23,
+   "scene": "epilogue_biggs",
+   "speaker": "ビッグス",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "125e6e86eff10c1eb5ea75d0fbf5c6e1523e50126e33d29fd991ff38cea10513",
+   "japanese": "覚えてますか?{4D}ぼく…前にあなたの下で{4D}働いてたんです!{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/34/24",
+   "us_top": 34,
+   "us_line": 24,
+   "scene": "epilogue_biggs",
+   "speaker": "ランデル",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "42b6f905f3fc2eb3c8feb0e66a2da69b005b78615d838d7d910ce1031e39c96a",
+   "japanese": "おお、ビッグス!{4D}元気そうだな。{4D}{4F}{42}自分の会社を{4D}立ち上げたんだって?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  },
+  {
+   "us_logical_path": "s_text/34/25",
+   "us_top": 34,
+   "us_line": 25,
+   "scene": "epilogue_biggs",
+   "speaker": "ビッグス",
+   "scope": "EDITORIAL_REMAINDER",
+   "original_english_sha256": "02b63ff20f3969b6bf1c9bfae407931092758dc2b24eb60746792e60ad6026a0",
+   "japanese": "ええ。それで、じつは…{4D}大きな仕事の話が{4D}あるんです。{4F}{42}ランデルさんにこそ{4D}やってもらいたくて!{4D}どうですか?{40}{42}",
+   "status": "TRANSLATED_REVIEWED"
+  }
+ ],
+ "internal_entries": [
+  {
+   "us_logical_path": "s_text/36/0",
+   "us_top": 36,
+   "us_line": 0,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "fcb6f45d102662ed0e8135616e98d600a050be815a30f74f364a67b6578e57bd",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/1",
+   "us_top": 36,
+   "us_line": 1,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "8d24e22aec1b7bbeacfc7a8ddaf83018ac31bd456456351231c14c8cd4316b05",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/5",
+   "us_top": 36,
+   "us_line": 5,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "ce6876f2320af4a28e425fb07b92fba5dc091f0de25aa29321fd11f8009567d3",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/6",
+   "us_top": 36,
+   "us_line": 6,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "dfdf9455583997e92ff9798193dbba179be893fc924b9a59f610736e35f819c8",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/7",
+   "us_top": 36,
+   "us_line": 7,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "ab7906e442eaf41e48b0a9bc5ea986d1b16b124d91ac2c77849a4ee25cd562fc",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/8",
+   "us_top": 36,
+   "us_line": 8,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "00da7de40ac39c1d45b513d70e5b3bef92fb7fcb17dff83864ca167266c165ee",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/9",
+   "us_top": 36,
+   "us_line": 9,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "4629e3d9f7719df7a6ced7efeb5c5df2b029517598c3569ba4ca7765fe86b678",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/10",
+   "us_top": 36,
+   "us_line": 10,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "071e5100f7ccc3e405db74df8d534f501140557debc387bc357c3327cc6612e3",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/11",
+   "us_top": 36,
+   "us_line": 11,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "c70c91571266bf44c954257784ebefc506a2d93731f4c63ff4a1c1bb3a74d63d",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/16",
+   "us_top": 36,
+   "us_line": 16,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "4c33f833b2352a470f0e0237f7f5c1fd90e2ae3218a60d1c0be764e0a49c1cbd",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/17",
+   "us_top": 36,
+   "us_line": 17,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "750d057426ff7c9381e8b6aeb352bcd1421d98357c27a349d1a34628dac89727",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/18",
+   "us_top": 36,
+   "us_line": 18,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "064d35c07b803f5547b5df8557d949e7141e076e7be877c0288e88ce528b8072",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/19",
+   "us_top": 36,
+   "us_line": 19,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "adf1919c78b7bb75fc97a93d0619130edc98aa8a17239b3f319d89dc99154664",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/20",
+   "us_top": 36,
+   "us_line": 20,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "9772279935e8eb27162001b8449d7d1414db1d2f7535f877ea4b9c0499c0fd33",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/21",
+   "us_top": 36,
+   "us_line": 21,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "44a8416bbf630613d57d962e0750b7d754e5dca93cf06a762828ac1bed25ea16",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/24",
+   "us_top": 36,
+   "us_line": 24,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "adf870cbfd79fcc27b2a3405f6cd42158487fc421a81c86310566c7998e5498b",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/25",
+   "us_top": 36,
+   "us_line": 25,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "eefbc9f53e4d4050e342168fd545d1b6eae0b8e83ef24d6544d70b02a7ca2a24",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/26",
+   "us_top": 36,
+   "us_line": 26,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "8ffafb7930fd82cf1e72104251ee61339452c43a1dcefdcc2fca2367a8e6748a",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/27",
+   "us_top": 36,
+   "us_line": 27,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "e20df8c49bff2e3f1e7952fce9eecb2254b1515701e5053baa8f0ce46367b3a3",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/28",
+   "us_top": 36,
+   "us_line": 28,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "4cd0743e10ccee14d980d637e673c7d7db0a124c694ab382eda8e7aed05197c6",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/29",
+   "us_top": 36,
+   "us_line": 29,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "861f81892d7ad8bfb3a7b80a21b8b4ba5200f22d632b3e1eea169122719da93a",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/30",
+   "us_top": 36,
+   "us_line": 30,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "ed3667cc89633888cf80f5a8428095fcc5e8777671a4a5c7954b01b5ec560032",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/31",
+   "us_top": 36,
+   "us_line": 31,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "8844cedca38d04544ee4b989c787669fe92c66ba981bfa5ce883bf9b8f0551dd",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/32",
+   "us_top": 36,
+   "us_line": 32,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "ad1da606f9d0a371d6acee4da086f1f86307d5c8dd4b7f94da57b42fe4e61ff8",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/33",
+   "us_top": 36,
+   "us_line": 33,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "6bee30924992d1047c00f0fc66c03830284e54ed9beff0def5d2e85de499dd60",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/34",
+   "us_top": 36,
+   "us_line": 34,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "6a313ff697ca5bc407fc44c92bb63a6291cab92be2faf962064d1bf97c73adf6",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/35",
+   "us_top": 36,
+   "us_line": 35,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "4f40a4289cbd06ac51c931fa4ebaaaa8871a76355086d25518b61a47a9c782a2",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/36",
+   "us_top": 36,
+   "us_line": 36,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "10aa70ce3d178b4c7ba4043f88ca62846ebdf6ad93f75de459fe86d5320eeef2",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/37",
+   "us_top": 36,
+   "us_line": 37,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "0f159cbcb7075c26255382196d03b34dcb06535af70ca43a6314846a41602027",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/38",
+   "us_top": 36,
+   "us_line": 38,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "5199d5687dc580e9599935c4f89c5be728c21ea81fd9ed17c17c64ea0c20152b",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/39",
+   "us_top": 36,
+   "us_line": 39,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "0060e864f3521e4bfbdd90c3a9fc7479ed88dc597a6843a1f41adc3c0e3569bd",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/40",
+   "us_top": 36,
+   "us_line": 40,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "14cb7d0fa53aa8e3e8b54fb29b5360fedc87e002b4541b7bba408274069683e8",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/41",
+   "us_top": 36,
+   "us_line": 41,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "3dafc4a75d95eeed883cd64565810d877fc006b0c88e3fa9a89e71f2a44aca4a",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/42",
+   "us_top": 36,
+   "us_line": 42,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "2ba8f4f770240c3c0ce5043706f367857e6344ca7e552e0ec9fa8d12f3867e86",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/43",
+   "us_top": 36,
+   "us_line": 43,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "933d8a693fa935443b3c940fc171e8f1650b71a279bc91f311a9991f70e5c5a2",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/44",
+   "us_top": 36,
+   "us_line": 44,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "ebf1689150e98a8e91fdaa55689443f6e9939c01b13d44d654c45bf28816e9a8",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/45",
+   "us_top": 36,
+   "us_line": 45,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "0f255b1234fa54f25a523fb336c53e5ac78c22c8e7ba785ba69840f19250643d",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/46",
+   "us_top": 36,
+   "us_line": 46,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "516aff90a990dde8c07b9d13481ee172beaf8116e0e3ffc883cc4426acf5b054",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/47",
+   "us_top": 36,
+   "us_line": 47,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "ebf1689150e98a8e91fdaa55689443f6e9939c01b13d44d654c45bf28816e9a8",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/48",
+   "us_top": 36,
+   "us_line": 48,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "c9a013bf889e7d6d4820652cf8e7c5c261a435f8786a98303bb6014cada6b792",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/49",
+   "us_top": 36,
+   "us_line": 49,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "7cc914f9d1dcfcd685aef728d57a31b3ec878ad8b67d5a5337cc1186adfa4f46",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/50",
+   "us_top": 36,
+   "us_line": 50,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "e7a97e32546f9fab725264cdcbe3f7864cf6124b24ca5bb0b72f251d0d12f7b1",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/51",
+   "us_top": 36,
+   "us_line": 51,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "62c5cfa9c4d0d86e3093270b5abd8858d04789ba597ad18d2bb0d8992fba6dbf",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/52",
+   "us_top": 36,
+   "us_line": 52,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "eb079c688b315389461cf1e1095ceca21ad350bbcc76be53bad3c8bebb29a529",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/53",
+   "us_top": 36,
+   "us_line": 53,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "0d306572762d0cdf0938387caa1ae138458d16a536d984645308ee279d5ed65e",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/54",
+   "us_top": 36,
+   "us_line": 54,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "1ab0fa95cffa2ef5bc7e7ec5c9353d1cde6f45679d1906cb31f2fa9f8b4b4261",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/55",
+   "us_top": 36,
+   "us_line": 55,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "0c2a18e7f00fd75b8b1500bf096c43c9d05dbf80b2d9cbac897504bbd64a2b57",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/56",
+   "us_top": 36,
+   "us_line": 56,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "d08d3bafad7de3eb2aec9a1cb4dc1cbb01156f1de1be5a7ae61f2b35e151cba8",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/57",
+   "us_top": 36,
+   "us_line": 57,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "850f76c956c28212d1147bd0c0b9e37b9451548c66e58c49180d36639249caea",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/58",
+   "us_top": 36,
+   "us_line": 58,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "ba648bbdcd692f235ddfe59e0053d636f2faa2ece643e2d14309cfaa92e39539",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/59",
+   "us_top": 36,
+   "us_line": 59,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "3a2d6a38ef0358fe7d2ecf33b1d7e9722934912fbb4031edfa536d50d02190aa",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/60",
+   "us_top": 36,
+   "us_line": 60,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "21e70d2c87d7d9bf2661f4abcaf5a3d343e6b0b8f0de7be417517dfd2b21c93f",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/61",
+   "us_top": 36,
+   "us_line": 61,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "01f13bb8717cf44db9fe73a34e42f93fa6dc36d071240b1a7372b04f53195897",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/62",
+   "us_top": 36,
+   "us_line": 62,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "6ae39a6b5bc8880ef60443d05aab3fb340cdd5639d0555fde59aaea47feca949",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/63",
+   "us_top": 36,
+   "us_line": 63,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "4e127dd35b03fdf4d154644ebbe4a385d73f77ead6b5b11f4b98270ae94cd08e",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/64",
+   "us_top": 36,
+   "us_line": 64,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "f1347500c743a7a5165f34d96e872a840a98449a213dc54e13d6e4dc62acaa2b",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/65",
+   "us_top": 36,
+   "us_line": 65,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "505637ac156f5946beb9ca6e41095289856fafebf240138ea45f35470750326e",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/66",
+   "us_top": 36,
+   "us_line": 66,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "07bb796e65666c6893656ee6b70faf2e21068878e0ab07e0ebe99488b2ccdd7d",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/67",
+   "us_top": 36,
+   "us_line": 67,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "960ab96e253f35b6a569e060bb79d72017f69809887406bf3355909dcbdc0af2",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/68",
+   "us_top": 36,
+   "us_line": 68,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "18dd801c939ad6296187c8098181d8dc478ef3e0e983f12e7140f6643fe7cf95",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/69",
+   "us_top": 36,
+   "us_line": 69,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "93871a33b396ea87b0d60ae010dcd34408143636a750deda38040835cdc1147b",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/70",
+   "us_top": 36,
+   "us_line": 70,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "d693940fc4a98d8f4a8c23b3c8e336e0f0cdefa41d425402284aad64d12d51b8",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/71",
+   "us_top": 36,
+   "us_line": 71,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "50fbc4df2ae5ceac67e68a8793ed4216f5566c2853673858b8e53a7e44a0a296",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/72",
+   "us_top": 36,
+   "us_line": 72,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "f8a530411f5a2842b63b79babc92c5e4f0710759a598bbd86f707bca85fde097",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/73",
+   "us_top": 36,
+   "us_line": 73,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "93c549827ce966d446d72459fa28822a2f9af8ff1989b685c85489aee19cafb7",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/74",
+   "us_top": 36,
+   "us_line": 74,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "b64f8a83ff90052b30e3a43c80731d8565a523e8a7b9e6ebd187de182b303999",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/75",
+   "us_top": 36,
+   "us_line": 75,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "49d19224d84f5ef1b45b6d1c5f42f3e88af02f73c95944d2dde734d361f3607b",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/76",
+   "us_top": 36,
+   "us_line": 76,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "b1c2dd2a638e15e10e21ba80901c0e87ed4307d222bbfab508b8659a1217bd2d",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/77",
+   "us_top": 36,
+   "us_line": 77,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "db773975be66ad006c593a0c079e974b81abce3d6db18c32baf23acff7f4a326",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/78",
+   "us_top": 36,
+   "us_line": 78,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "717b16556d6a37f3ca655e99734680ff291015315ed8c7c05dd12b1e64293540",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/79",
+   "us_top": 36,
+   "us_line": 79,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "3b19a6f555641ffb872440912eca4a76e042948cb1dbbf19be0c358db7608906",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/80",
+   "us_top": 36,
+   "us_line": 80,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "c5d914b6f9f937970c6308912114f7335ef1eb6e00661a30b5862c3c1dc4c1d7",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/81",
+   "us_top": 36,
+   "us_line": 81,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "358b1f36ec0c558b1571b6e6c6dc084ee6570f8ae566f91a04d8f903e103a137",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/82",
+   "us_top": 36,
+   "us_line": 82,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "2be5d202e81a7290e245d08702c4ebb6407e0f2defadc279670bafe45f71b65c",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/83",
+   "us_top": 36,
+   "us_line": 83,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "ce24c93e490af04a822884b2b302c73a5649058e2c3d35a96e296c8f86ce6d36",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/84",
+   "us_top": 36,
+   "us_line": 84,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "99b3b8ff857a8d9436a776b04cbdbc33b77b3ac0fcc6fd27daf933fb7b4d2d83",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/85",
+   "us_top": 36,
+   "us_line": 85,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "aa01b0c356c6b3824347854a5e1d794dc82c11fe37e9fbbb4149ea76e9bb9b21",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/86",
+   "us_top": 36,
+   "us_line": 86,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "9ddf6a4fd6abbc9c851a5044f04f77345d7005cd558f9a7bd54c1fda33c46b42",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/87",
+   "us_top": 36,
+   "us_line": 87,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "6bf0e300b646e806a258f2ea16ac7a523d420211966bc67b331af1f79e3a0b29",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/88",
+   "us_top": 36,
+   "us_line": 88,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "1f185e37bb5c8feed749a88771abcb33e931ce8dafb8b52c4378d3ecb33b5566",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/89",
+   "us_top": 36,
+   "us_line": 89,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "227847511cc0bd8c82095b98e9aa0bee5bdeaddaf1b97e533ccb6703ac4e8400",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/90",
+   "us_top": 36,
+   "us_line": 90,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "921cfe4818e2b78bb09be8cd0f24ba4b387f3875b87b09fe7402f986d19bd9ef",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/91",
+   "us_top": 36,
+   "us_line": 91,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "3d9ffc42f3c78c12ec408d72d3201657d7bc176493dc939c7de03d5f0a502a55",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/92",
+   "us_top": 36,
+   "us_line": 92,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "f0b9fdc7aa8636377174dec50ced1551f10f7a3c34203f416251f2696b42561d",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/93",
+   "us_top": 36,
+   "us_line": 93,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "9ab27d1e54bcd4faec0b949667069b4eddba586b30403b141f8ca70511da3512",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/94",
+   "us_top": 36,
+   "us_line": 94,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "dd9d5e33f63186f9644820edcdc91e9ce5783659af74dc403bb73a2e8e923643",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/95",
+   "us_top": 36,
+   "us_line": 95,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "0730f84202d96f1a52c651236f90b8f0a0bbb0040888db07d789838f99db4195",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/96",
+   "us_top": 36,
+   "us_line": 96,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "cd237811cb7473f4ccf603bd7cbe7ce8e6be51ca5f5479256c2766248cc183c6",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/97",
+   "us_top": 36,
+   "us_line": 97,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "a52b62c42a6a6e0eeeb1fd98cd87b9e48a417df281253d9ac10bf685446abd04",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/98",
+   "us_top": 36,
+   "us_line": 98,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "4f901a9b26f8c15d24040ebcb35ccb9c8b463c8cfbc9286c2c1960af314f5e43",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/99",
+   "us_top": 36,
+   "us_line": 99,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "144657df52d22404ff3a508246577911c6471901dd6cb87be7bff031f259fe77",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/100",
+   "us_top": 36,
+   "us_line": 100,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "afcbf09023778bac8de7b848206a0252d56537e573949d183519918da09fea96",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/101",
+   "us_top": 36,
+   "us_line": 101,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "961fe8dae99a7423a74fdc2effaf9c7663be3be08f62c717accdb7331c6352e4",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/102",
+   "us_top": 36,
+   "us_line": 102,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "d27ede0257d2088170fb9798ab5d03d2f966425ff25ae900a022dba60c6ba3c3",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/103",
+   "us_top": 36,
+   "us_line": 103,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "c9187d92ddfa31411d8913de37b91b39b8de8c77565aab1f77c6f840465415ed",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/104",
+   "us_top": 36,
+   "us_line": 104,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "6595a3ed9388906098877879705c7cd87616fa4ba0cc292c03edd9c61a340b15",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  },
+  {
+   "us_logical_path": "s_text/36/105",
+   "us_top": 36,
+   "us_line": 105,
+   "scope": "DEAD_LEAF",
+   "retail_us_text_decoded_sha256": "8180b2c0e115d15be3be8bcaad3932ebc9a6a95e64b9848ba641cd72f3164871",
+   "status": "NON_PRODUCTION_INTERNAL",
+   "reason": "already Japanese in the retail US ROM; the leaf is a developer leftover copy of JP top 35 with no scene-script consumer"
+  }
+ ]
+}
