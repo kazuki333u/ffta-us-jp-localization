@@ -4,6 +4,14 @@
 書式は [Keep a Changelog](https://keepachangelog.com/ja/1.1.0/) に倣っています。
 まだ直っていない問題は [`docs/KNOWN_ISSUES.md`](docs/KNOWN_ISSUES.md) にあります。
 
+## [Public Beta 7]
+
+### 変更
+
+- 戦闘開始の目標の見出しを、日本版と同じ「勝利条件」の絵にしました（課外授業の戦闘では「課外授業」）。
+- 戦闘の終わりの帯 4 種（クリア / 失敗、クエスト / バトル）を日本版の絵にしました。
+- セーブの選択画面のクリア表示を、日本版と同じ「CLEAR QUEST」の絵にしました。
+
 ## [Public Beta 6]
 
 ### 修正

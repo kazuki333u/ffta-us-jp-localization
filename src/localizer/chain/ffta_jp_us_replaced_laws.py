@@ -71,7 +71,7 @@ import struct
 from pathlib import Path
 
 import ffta_jp_coverage_audit as coverage
-import ffta_jp_fixed_starting_names as prev
+import ffta_jp_save_slot_sheet as prev
 import ffta_jp_s_text_leaf_repoint as stext
 import ffta_jp_us_added_missions as uam
 import ffta_jp_us_only_fx_text as fxt
@@ -91,10 +91,10 @@ OUTROM = ROOT / "rom/build/ffta_us_jp_us_replaced_laws.gba"
 OUTROM2 = ROOT / "rom/build/ffta_us_jp_us_replaced_laws_repeat.gba"
 
 ROM = 0x08000000
-# Output of ffta_jp_fixed_starting_names.
-BASELINE = "E905AF2E3A4D926341D4713BF23DCC2F85E508B1F41969EF8F03FF680AE1C8CE"
+# Output of ffta_jp_save_slot_sheet, the previous layer.
+BASELINE = "5E611FD2EB7CD7568ACDFAF3AEA28C425C6B60EF3EAB0587F2114CEBC56DB7DA"
 # Pinned after the first deterministic build of this layer.
-EXPECTED_PRODUCTION = "EC5C9717A25078B85C8A510EB897C376191619277EE0179949D6B3E9471C49AD"
+EXPECTED_PRODUCTION = "FD4D249031C27E139FE4316E548FD047A175E5C1005952C0776D38BBFEEFA5FE"
 
 US_CONTENT_ROOT = (0x18DA4, 0x2F2)     # ffta_sect.load_rom_us words:content
 LAW_TABLE_US = 0x00528F34              # US 0x08528F34

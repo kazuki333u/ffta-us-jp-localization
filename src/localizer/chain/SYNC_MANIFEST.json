@@ -185,6 +185,13 @@
    ]
   },
   {
+   "module": "ffta_jp_save_slot_sheet.py",
+   "origin": "project",
+   "rewrites": [
+    "development history x6 -> neutral"
+   ]
+  },
+  {
    "module": "ffta_jp_small_matcher_recovery.py",
    "origin": "project",
    "rewrites": [
@@ -203,6 +210,13 @@
    "origin": "project",
    "rewrites": [
     "development history x10 -> neutral"
+   ]
+  },
+  {
+   "module": "ffta_jp_to_win_header.py",
+   "origin": "project",
+   "rewrites": [
+    "development history x7 -> neutral"
    ]
   },
   {
@@ -307,6 +321,13 @@
     "evidence echo x1 -> digest",
     "evidence echo x1 -> digest",
     "import ffta_us_source"
+   ]
+  },
+  {
+   "module": "ffta_jp_victory_banner.py",
+   "origin": "project",
+   "rewrites": [
+    "development history x6 -> neutral"
    ]
   },
   {

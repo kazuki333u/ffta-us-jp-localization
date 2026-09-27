@@ -23,8 +23,8 @@ body:
     attributes:
       label: バージョン
       description: どのビルドで発生しましたか
-      placeholder: "Public Beta 6"
-      value: "Public Beta 6"
+      placeholder: "Public Beta 7"
+      value: "Public Beta 7"
     validations:
       required: true
 

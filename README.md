@@ -7,7 +7,7 @@
 US版が独自に持つ追加ミッション・システム改善・バグ修正はそのまま維持したまま、
 表示を日本語に置き換えます。
 
-> **Public Beta 6**
+> **Public Beta 7**
 > 現在は公開ベータです。正式版 (1.0) ではありません。
 > 既知の問題は [`docs/KNOWN_ISSUES.md`](docs/KNOWN_ISSUES.md) を必ずお読みください。
 
@@ -63,7 +63,7 @@ python build.py --identify FFTA_US_JP.gba
 ```
 
 完成したROMは必ず SHA-256
-`EC5C9717A25078B85C8A510EB897C376191619277EE0179949D6B3E9471C49AD` になります。
+`FD4D249031C27E139FE4316E548FD047A175E5C1005952C0776D38BBFEEFA5FE` になります。
 一致しない場合、`build.py` は**出力を書かずに停止**します。
 生成されたROMは**あなたのローカル環境にのみ**作られます。
 
@@ -141,7 +141,7 @@ python build.py --us FFTA_US.gba --jp FFTA_JP.gba --output FFTA_US_JP.gba
 ```
 
 Both inputs are gated on exact SHA-256 and the output is verified against the
-pinned hash before it is written. This is **Public Beta 6**, not 1.0 — see
+pinned hash before it is written. This is **Public Beta 7**, not 1.0 — see
 [`docs/KNOWN_ISSUES.md`](docs/KNOWN_ISSUES.md). Code is GPL-3.0
 ([`NOTICE.md`](NOTICE.md)). Final Fantasy Tactics Advance is the property of
 Square Enix; this project is not affiliated with Square Enix.

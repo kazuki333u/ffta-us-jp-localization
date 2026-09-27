@@ -206,7 +206,7 @@ python build.py --us FFTA_US.gba --jp FFTA_JP.gba --output FFTA_US_JP.gba
 進行表示 (5段階):
 
 ```
-FFTA US->JP localization -- Public Beta 6
+FFTA US->JP localization -- Public Beta 7
 
 [1/5] verifying your ROMs
       US  OK  43FC8204C6DCEEE58828AEBC7AF0C72EB807E99F35AD641C8BB0A4FA8B6EDC19
@@ -218,8 +218,8 @@ FFTA US->JP localization -- Public Beta 6
       done in 150s   log: ...\.build\build.log
 
 [4/5] verifying the build
-      SHA-256 EC5C9717A25078B85C8A510EB897C376191619277EE0179949D6B3E9471C49AD
-      CRC32   792A8F2F
+      SHA-256 FD4D249031C27E139FE4316E548FD047A175E5C1005952C0776D38BBFEEFA5FE
+      CRC32   29BB0A59
 
 [5/5] writing the output
       FFTA_US_JP.gba
@@ -254,8 +254,8 @@ and do not attach ROM files to bug reports.
 `[4/5]` に表示される値が次と一致していれば成功です。
 
 ```
-SHA-256  EC5C9717A25078B85C8A510EB897C376191619277EE0179949D6B3E9471C49AD
-CRC32    792A8F2F
+SHA-256  FD4D249031C27E139FE4316E548FD047A175E5C1005952C0776D38BBFEEFA5FE
+CRC32    29BB0A59
 サイズ   16,777,216 バイト
 ```
 
@@ -276,7 +276,7 @@ shasum -a 256 FFTA_US_JP.gba
 ```
 
 `--identify` が
-`-> an already-localized ROM built by this project (Public Beta 6)`
+`-> an already-localized ROM built by this project (Public Beta 7)`
 と表示すれば成功です。
 
 あとはお使いの GBA エミュレータ、またはフラッシュカートで起動してください。
