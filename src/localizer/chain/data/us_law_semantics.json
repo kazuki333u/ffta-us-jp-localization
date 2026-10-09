@@ -1,0 +1,1837 @@
+{
+ "_public_note": "Public build manifest. Verbatim retail source strings are stored as SHA-256 digests (fields ending in _sha256); the builder recomputes them from the user's own ROM. Japanese text in this file is written by this project.",
+ "_authority": "Tracked production authority for the earlier layer's law names and antilaw cards. The builder ffta_jp_us_law_semantics.py derives every row again from the pristine US text and the base image on every build and fails on any difference; nothing here is trusted. Markup: {HEX} is a CTR_FUNC operand; every other character is text.",
+ "milestone": "us_law_semantics",
+ "evidence": "the US law names and antilaw cards (FORBIDDEN / RECOMMEND pairs) compared with the JP rule names, law by law",
+ "authoring_rule": "Law names become the US category: names 1..83 ending in the JP 'forbidden' suffix lose it; the six 'X protection' laws 77..82 (US 'Dmg2: X') become 'against X'. Antilaw cards follow the US pair: page 1 'cancels the following laws / usable in battle', page 2 'forbidden <X>' and 'bonus <Y>' with the US grade. 'Bonus' is the word the recommended laws' own HELP uses; the Japanese characters for 'recommended' are not JP retail glyphs and the Latin I/D for the screen's RECOMMEND/FORBIDDEN are not allocated.",
+ "count_names": 73,
+ "count_cards": 66,
+ "names": [
+  {
+   "law_id": 1,
+   "us_name_sha256": "66d0f523a379b2de6f8d5fba3a817ebc395f7bcaa54cc132ca9dfa665d1e9378",
+   "before_sha256": "cadaff2866b1557adb6dfb9e48d7183d5f3b854da6fbd2410e873ff026526620",
+   "after": "術"
+  },
+  {
+   "law_id": 2,
+   "us_name_sha256": "52551d32e69a6b6a57451e5f7ba8452bc833209f63256930c22f273d23cde816",
+   "before_sha256": "7f8ff30dc205e1f299a7365b502ba51d317df10a714ca58dc61d8ade2cbfb8fe",
+   "after": "技"
+  },
+  {
+   "law_id": 3,
+   "us_name_sha256": "703c3e2d4648ae53ff66baf43a79547631ec5feeb3930bd93132865be470277a",
+   "before_sha256": "39274e8da02babc64e34a0e1db5823315abf28d4a7decd9843c34ab2411e2242",
+   "after": "色魔法"
+  },
+  {
+   "law_id": 4,
+   "us_name_sha256": "410f98ffb3040e961074278ba919e33b0cd19f29cef4586cd17dbbbdbc22a845",
+   "before_sha256": "008aea7c4db92ae0ceac65abcdca5baf8086a9f8d186178f2a82df0433173630",
+   "after": "騎士道"
+  },
+  {
+   "law_id": 5,
+   "us_name_sha256": "6e399f2787a0602f604bd89c19e077a5546c05698b6be5b96baa895cc23a0ec0",
+   "before_sha256": "8e618aabda013b7fb392cc097f1f7b027f78bf99881546b129dcac59c2264238",
+   "after": "祈祷"
+  },
+  {
+   "law_id": 6,
+   "us_name_sha256": "8e2b77617882e02292923215f823f9bcecf697a16e793ad38e172f98c6c64023",
+   "before_sha256": "f9e8b2ffca2427580dddfc468fd3ace3865565523fea687612da6c51696a0ec6",
+   "after": "守護"
+  },
+  {
+   "law_id": 7,
+   "us_name_sha256": "a0572be5849e3aa50dbe9ff18f21454e417aa74acb86ad89d0fb2837dc7e253e",
+   "before_sha256": "b31bcc862bd6739b6e33b190c3b06f1f70e2c71125f83b07f1f81fc07122a18a",
+   "after": "精霊魔法"
+  },
+  {
+   "law_id": 8,
+   "us_name_sha256": "81f16575878f411f316d404008ac7908b58fe71f6cbfc58471036beafd745ff6",
+   "before_sha256": "28418334623bf7c8f45d5559dffc090d391844f9a2925fc3702c6a0de8a760d1",
+   "after": "狩り"
+  },
+  {
+   "law_id": 9,
+   "us_name_sha256": "ff9f88ce353a222860a9f826971a2b2ee3da6b06c696d67537285890506d4bda",
+   "before_sha256": "22a4fe5a2ac8800092f1ee84ea73cf3704285a72f6d18c23e1f0f56a9af297e9",
+   "after": "チャージ"
+  },
+  {
+   "law_id": 10,
+   "us_name_sha256": "96c5ba3d930277d4466d6ea0729be0137c9afb4469aa9b9deb4473438bce29a0",
+   "before_sha256": "41038274077b2f411e45d2882780902323252795bd12540193a74366fa22dafd",
+   "after": "時魔法"
+  },
+  {
+   "law_id": 11,
+   "us_name_sha256": "28427fa78a230e425f39ca571bdb28822b6ad43300a54ad4c1aaa84b232e63b0",
+   "before_sha256": "cf586dbcc0aa23912fb9effd05df76d1d17681cc7b42be79504d049f8ab05244",
+   "after": "狙う"
+  },
+  {
+   "law_id": 12,
+   "us_name_sha256": "62de5d8429aba07e4d4b705f6a470659ee602657a03d93a8cfefc67a1376fa98",
+   "before_sha256": "a2479b22bff10f9b4aceea1be6a1ddf5a0fd71b47c66ce1c278a23d6f8641484",
+   "after": "狙撃"
+  },
+  {
+   "law_id": 13,
+   "us_name_sha256": "f39a15a94621971c6ecf6e8dda07c3593bd367d282abace49c116fef75c4dd3f",
+   "before_sha256": "ad55b148e79067365047e4cf43c79ef1ff931a5c9e8699e4e1a6f192d750f183",
+   "after": "銃撃"
+  },
+  {
+   "law_id": 14,
+   "us_name_sha256": "e2380ed2fb11f5d22c72ff91103478bbc2329bf16fae4243f68fc796904b936f",
+   "before_sha256": "9307a104876a5cea9a9dcc97c886a19fb1a6bbb164be536e1392bf9caf4e104d",
+   "after": "盗む"
+  },
+  {
+   "law_id": 15,
+   "us_name_sha256": "adfde70bdb6803f28a06bd8ee833192841603a836e226b85f61cc8d367e938a3",
+   "before_sha256": "cfc002760900188d310f69b0bd43bb34b77bf21d166baa9427f433241c698328",
+   "after": "仕手"
+  },
+  {
+   "law_id": 16,
+   "us_name_sha256": "32d7e82082479b8cb546187ff0af11e4915e4d17bc28e02dca7425288b79badd",
+   "before_sha256": "a548b2a246c557a13e734bab2bcb9c961d8dedb150c337f7b4c8f56fa933a257",
+   "after": "あやつる"
+  },
+  {
+   "law_id": 17,
+   "us_name_sha256": "61ce25d9ba800a072aec433eec96594a17797694b5e14d9939bb36d9daa01861",
+   "before_sha256": "c696a90d29d313e9d5ae37d932f011f32401db5eedba89bd1e83fe4375cea562",
+   "after": "めたもる"
+  },
+  {
+   "law_id": 18,
+   "us_name_sha256": "d6e645b7d2b2da646d44130464143171935ffa47558b4e36c05df175de7197ba",
+   "before_sha256": "1ec407096757a0c6307d2c697bb394d7983855c2b3e4a313b4a633f23778a0bf",
+   "after": "呼び出す"
+  },
+  {
+   "law_id": 19,
+   "us_name_sha256": "759c226246309ebb2c824bd987a1c074a8bfeefd9ef0ef1dcb629ca5e3831724",
+   "before_sha256": "023bd75267853ec0325f3ac6d9d6f54625f4a45e278a1085ef7b873e509a9eed",
+   "after": "召喚"
+  },
+  {
+   "law_id": 20,
+   "us_name_sha256": "fb8e7a1a3cb7b25d262793159145759e97eb540a2b61dbbdf8f58841a81cf1a8",
+   "before_sha256": "8a98e5f8556302fbf04af358dc24036c1dae66904765bb32a5db8a38a7547f89",
+   "after": "アイテム"
+  },
+  {
+   "law_id": 21,
+   "us_name_sha256": "c141faa80e43a11909f5736d1e767f12e1468aa06dadd446081746934e875fc3",
+   "before_sha256": "4a2f12dede5f35bb910ad2ad27b8d1eeefe45564181dcdd7788b4de6872ad50a",
+   "after": "炎属性"
+  },
+  {
+   "law_id": 22,
+   "us_name_sha256": "2a1a6355ed7e30b0eea3a7967a31e9c42f6afa817fbf6555df3befdf05ae38e0",
+   "before_sha256": "30711e9bb3170026e1a9b75124d77e628abbb4406220087370b2f073f2523d3d",
+   "after": "冷属性"
+  },
+  {
+   "law_id": 23,
+   "us_name_sha256": "41e68f2cdb3806bb899cb2f3c3d80a2171f37c85b60e8e486742234e4e5f5738",
+   "before_sha256": "356ad4fe08ef317aca2665f181692dad90057219236e4a30bbf7c671785aba08",
+   "after": "雷属性"
+  },
+  {
+   "law_id": 24,
+   "us_name_sha256": "56eee6a57925be9e0e0724c3cfb6d7d72b1fe8cdd680e79a437552fc6f07b7a9",
+   "before_sha256": "b4a26f345439adb92bab8518824a5c0b2ad2d043ac2499c6d4950a561a105884",
+   "after": "聖属性"
+  },
+  {
+   "law_id": 25,
+   "us_name_sha256": "d151346fe7eea3c6a0865199579ca6017487dbf981d59cdd1fcadadb03518dc8",
+   "before_sha256": "03b3d665d4126f98a2c3d12a010e98b8e8df3e321b4bbd6742a43f572e33c529",
+   "after": "風属性"
+  },
+  {
+   "law_id": 30,
+   "us_name_sha256": "adbe6c12b1edcf22e49f2a02db8d7e8d2daf619ca5627abaa5ec6abe1f1d3941",
+   "before_sha256": "7381268262b29dcecdcd26da575a4507dbb749fd0736b6d99429b815c8aa3555",
+   "after": "〔J7FB〕だたき"
+  },
+  {
+   "law_id": 31,
+   "us_name_sha256": "6cd12f90f5f83c15d293d86f8992a0cbb63d42eaac16cb8300af7f222dff0da3",
+   "before_sha256": "dd6089700b8466e2556a9e2640d5f058b41975b26e6d40980465e589d3188550",
+   "after": "HP満タン"
+  },
+  {
+   "law_id": 33,
+   "us_name_sha256": "535651699486b8f0bbddea095465f1e480f77567dfcee77c73ef3dbd60217e21",
+   "before_sha256": "b17cadfaa27df5c713d95082ee7044cae2194203a4fc467d2cc2ecccfb443ac1",
+   "after": "まねっこ"
+  },
+  {
+   "law_id": 34,
+   "us_name_sha256": "1ef142c8213e887dc6812fe3147cfeada300cc161799af8d62bf1e165b1a4a6c",
+   "before_sha256": "722ad951c0dcfe29c8c83bc63e34644d76e7146ff4756aadeec9562a3237b2c2",
+   "after": "たたかう"
+  },
+  {
+   "law_id": 35,
+   "us_name_sha256": "42ace8a1b5e1740b1b9379522656927df78af6606e7d5caf7247c6d5a1627ca6",
+   "before_sha256": "2613efeb7cecaf9e387119d116bb0638fcbcca5c25ddcdfb698519c1beaffac3",
+   "after": "範囲"
+  },
+  {
+   "law_id": 36,
+   "us_name_sha256": "6e7381b563090979bfc5fb8346bc17e6778b4eb37a7d916b3c43c245dd6a5055",
+   "before_sha256": "711ac39b457477565847880a7d5692129c6debd9c27b4169eac6f313e4a7cd5d",
+   "after": "全体"
+  },
+  {
+   "law_id": 37,
+   "us_name_sha256": "5919dcd44e227bc472bfa22d325a72c85f4ae5c5d38fb4563d4338715a6d71ec",
+   "before_sha256": "3ddb4d46ede16b6283e0f9e3765b488cf65508c0ea02f9aabb8a781156d675a8",
+   "after": "ソード"
+  },
+  {
+   "law_id": 38,
+   "us_name_sha256": "ec4d6b953cd5b3eb14aa6d8a3ac52bd089043fffcc36b4ba3ca102cb84cd142d",
+   "before_sha256": "e1c3e075c283cc0c14bb54b837b414364afb4a49a147f1a5e3a3bc92bfcd6c89",
+   "after": "ブレード"
+  },
+  {
+   "law_id": 39,
+   "us_name_sha256": "d5928f694f054eb4adebfca87101481e83261e9c097312d826bfcbfa4ae8ed45",
+   "before_sha256": "6990225929a9101358eca717893bf2cd7046c8408b9c7c2a1c21504e5fe5f4e5",
+   "after": "サーベル"
+  },
+  {
+   "law_id": 40,
+   "us_name_sha256": "13c00fe5652adc8e523db592557916d2fce16a83f1958adecabad7175296ea2c",
+   "before_sha256": "3b5331df791296491943f91412a093c25c23720d63428133adbcb5219aab7779",
+   "after": "騎士剣"
+  },
+  {
+   "law_id": 41,
+   "us_name_sha256": "e29ceab0e80bddc9e7a30a3c64e4412f2633f1bad0e9c22789236d7c8898177a",
+   "before_sha256": "afa9dccf79fed71414f55ebf4b0c60f2c727194338c5c9f713f8a48e110fa598",
+   "after": "大剣"
+  },
+  {
+   "law_id": 42,
+   "us_name_sha256": "58ea111efb6d83e3d7b4a32f0d1b1ff2ebdc9c7897e9f45b50722115198f7a4f",
+   "before_sha256": "30d00232a53b99b376f59fb25396f4f51b54f8afc0457fbf39eb5af8bb608c56",
+   "after": "広刃剣"
+  },
+  {
+   "law_id": 43,
+   "us_name_sha256": "8acc99b3a7721f0aa451bc18f5cbc1fb04ef7004599c475f6b99549e9caac8b0",
+   "before_sha256": "2ca4c9683fd3154db2e3a2d8b76e5985b224f1e17d76fd456db529f074b72bfc",
+   "after": "ナイフ"
+  },
+  {
+   "law_id": 44,
+   "us_name_sha256": "90ab15a09a1dbe967cd52c2c4f1b52834162799e2cf9cd63795f2312c7144ef6",
+   "before_sha256": "53abc578131b7860c3d5cc0568bb9ad6aab85c2d1dc59dcfd6b3d666d29043a1",
+   "after": "レイピア"
+  },
+  {
+   "law_id": 45,
+   "us_name_sha256": "3be698d2127f25c70b723cfda857604c3270a97599d483a1fbccdb65f83caa63",
+   "before_sha256": "69a5f4b065b93d869a9c15ea04b19933e9321266489c8f7fec77c93435f2c6b4",
+   "after": "〔J8F8〕"
+  },
+  {
+   "law_id": 46,
+   "us_name_sha256": "5c75e6ba33d31ae0dfbecb8804cf6d96658967c2a5bc66e5ba77850dd7324db7",
+   "before_sha256": "39a4ac1e5466b0e84e6127a732b282d339a5a7726434c122e1cd2fd9b6b2f82e",
+   "after": "槍"
+  },
+  {
+   "law_id": 47,
+   "us_name_sha256": "a81b2bad1f227b6a60753c459455b6f3195db917089d4489c2b8ce900f3a572a",
+   "before_sha256": "b742b34bef441a20e6e7c79421c93bdeaa8d95de8494bb4919ad024eaba6e16a",
+   "after": "楽器"
+  },
+  {
+   "law_id": 48,
+   "us_name_sha256": "1ed50691a5b03525c946841075ff3f9cc95d54cffafd73332e6453c63a6c49c0",
+   "before_sha256": "b16d6ec4d2ad3ae86969a9075fe17b5df021f372bb3ed14122dc675c8eb5d843",
+   "after": "ナックル"
+  },
+  {
+   "law_id": 49,
+   "us_name_sha256": "70629416ece0407f8118ec37871763a520cf5ef56dce2818fd847ed84ea4d483",
+   "before_sha256": "ac6754356bbb50c21aeb4f6f284e87237025c0b1fa54b0dd9625a650728dd01d",
+   "after": "ソウル"
+  },
+  {
+   "law_id": 50,
+   "us_name_sha256": "36f781461d9dff74e9540917b81acc0445abe495b13a57e140394c24bdd26ddb",
+   "before_sha256": "927374bec655e2590acc2c92ac00a344a275dbfc7986b646a8ef8b69f07f8763",
+   "after": "〔JA10〕び道〔J41E〕"
+  },
+  {
+   "law_id": 51,
+   "us_name_sha256": "60acc53f13a5d1bf115878c4a785e9a43e8286c4139a8402a6ac7d23966f9153",
+   "before_sha256": "bbc2775b2d3ce63d803429f8670229d962aeb04f3c1f7b5ccc74200081df12cc",
+   "after": "闇属性"
+  },
+  {
+   "law_id": 52,
+   "us_name_sha256": "62105c37e007e4f0a0defafa7df78cb2fc232845eb8b97681343eb4ed60a2266",
+   "before_sha256": "6da95375bde4215765c2a1c30000b535a8629c992e65804646c13a06738b7eda",
+   "after": "杖"
+  },
+  {
+   "law_id": 53,
+   "us_name_sha256": "24d1185f93100c7883f19411315c3702b4f63ce2debccc36d2eaba5d6edca869",
+   "before_sha256": "89ca1361883ce26f7d7f9ae334835b913d9fe61ab3a3d235bf7b94290fd14753",
+   "after": "ロッド"
+  },
+  {
+   "law_id": 54,
+   "us_name_sha256": "83b4f42ac4713141318e6abead22794f7ce829cb9feb06f4d9e2bd5878845925",
+   "before_sha256": "0c60170e6de94bed0a2871f9fe18d0c6e96d5554dd2536dbff886d01278653f1",
+   "after": "メイス"
+  },
+  {
+   "law_id": 55,
+   "us_name_sha256": "0ace54470a59ba4df1aaa3875a0ff66139bfbcea3fda926572ab38a67930b5d0",
+   "before_sha256": "bf7542d81c82d0a404cf0994bc7a0ad6484b9035ccca848830f10d5f90cc8e54",
+   "after": "素手"
+  },
+  {
+   "law_id": 61,
+   "us_name_sha256": "44bc3799892c50fad1f4f76100cd74ebf28f922da6f977a772352d3291b92fdf",
+   "before_sha256": "d3a661d3e4289c4485b8e771dee11ae40972499970e5551e6aed8a3840ac7024",
+   "after": "HP回〔JA69〕"
+  },
+  {
+   "law_id": 62,
+   "us_name_sha256": "72aa1ad1754de7497b2697353b7a7661f047e0a98e2dd0be88daf2487150cd5a",
+   "before_sha256": "ba3e9b4415b79ec8fdcf1461ef71abbbb1bda643b31bf1db44434b00a8ba3b08",
+   "after": "石化"
+  },
+  {
+   "law_id": 63,
+   "us_name_sha256": "5a9be7ac6d979ce02968a79b705c21c4f57663a1e6b873a61e86fb0441194330",
+   "before_sha256": "76b6395b123fc65ccb7b81bf0dbd9765eec1f3e3dd691d98a37a8ecf7ba9dfee",
+   "after": "カエル"
+  },
+  {
+   "law_id": 64,
+   "us_name_sha256": "d5a78b996fe640a3f9181d71da872b9dfb63bbad0d282edff0a12e4e32074b6e",
+   "before_sha256": "5a74a41befaa6bd77ef69b6f67418beef0e8028dd258a9d8bcebd8e539a57ae8",
+   "after": "毒"
+  },
+  {
+   "law_id": 65,
+   "us_name_sha256": "61d8dfcbae330ec0657b30332817a3f2fa4ddee7db5405356350872b74c0797e",
+   "before_sha256": "82a70bbfc5050a78ade858adcd1d37b4145779af39adb0b2305973c3e6025ade",
+   "after": "混乱"
+  },
+  {
+   "law_id": 66,
+   "us_name_sha256": "08bd7cbf4b138e67be4a5cce28bc717ce3be31615b3daa16bf10cde894de77f9",
+   "before_sha256": "38926cb6507a82de64745334f82ed7ea75f1a11ba559c471bcdcb254616bd1da",
+   "after": "バーサク"
+  },
+  {
+   "law_id": 67,
+   "us_name_sha256": "6c61fe498281f4216fd03973936e6f88b0142654174538f4eb41987dfc4c965a",
+   "before_sha256": "16bd3be31efe19ed39cba29dfbb1a1056711d00af09ca5eae2b912d17772a789",
+   "after": "沈黙"
+  },
+  {
+   "law_id": 68,
+   "us_name_sha256": "cb202ce740ea23b09a039a51724a26f05a05cbd44cb1fb5692f72a7c406b4201",
+   "before_sha256": "0591ccc4093ac2cfff20c6f55d21188f25e1c23e01eb691271baddfadd7c0fa6",
+   "after": "チャーム"
+  },
+  {
+   "law_id": 69,
+   "us_name_sha256": "56b9b63d2831804be5c23a83d6d2e4e19c3124f546890b0628e839c9806c0e00",
+   "before_sha256": "47a34deaa7903fa8ad99b6c39b09b813499c0656be0c42014d658299621aa39c",
+   "after": "ドン"
+  },
+  {
+   "law_id": 70,
+   "us_name_sha256": "3ac7d8972453b9044ee51ff389ca60c0b76402bc951972134911daed0d4a5730",
+   "before_sha256": "c17562a7ac3da0ecbf869ef3f37b3575a9ece6bf748b3073a8dfc80d7d80cae9",
+   "after": "もの忘れ"
+  },
+  {
+   "law_id": 71,
+   "us_name_sha256": "4b2bebbf33aeb7aea11cbab9d95019a647ca038b638f99f593aae85b986ed2e2",
+   "before_sha256": "088f8b7e2948b8a276951c96c95b8077003bd0d3861fd54a325dbc5d4c88a550",
+   "after": "スロウ"
+  },
+  {
+   "law_id": 72,
+   "us_name_sha256": "cae7d57bc067a514b8e34c9589631a95c7dc051638ddd2a190773269279a99df",
+   "before_sha256": "f5c7adc9465aa654276155a8b331c467e7a47cfc7163eda9fcb2f4c2cf8ae6df",
+   "after": "ストップ"
+  },
+  {
+   "law_id": 73,
+   "us_name_sha256": "920e413c7d411b61ef3e8c63b1cb6ad058d5f95f8b481dbafe60248387d8c355",
+   "before_sha256": "7cf076b4e7133090ffd629a31f1fff7132ab6d69e5d8304634393a2d166c740a",
+   "after": "ST異常"
+  },
+  {
+   "law_id": 74,
+   "us_name_sha256": "a733285486d5438327c37af6e6e84a69a6c6f22aae74b94d33cf88c6eeda93cc",
+   "before_sha256": "49ba371a96ad29c8e3382da0e6bdd940acf6ebe63f3af25072b2a8c481344284",
+   "after": "シェル"
+  },
+  {
+   "law_id": 75,
+   "us_name_sha256": "806c20d1d5656602d83acba61b41b5aa42b5301242464d94dc6fefc347a24182",
+   "before_sha256": "8a8ad057c71e437bfc8d2f043a5f601d69c2eb6880719fcb446837e616faff0e",
+   "after": "プロテス"
+  },
+  {
+   "law_id": 76,
+   "us_name_sha256": "de3b46da4da8a98c381a34e6ef1326411f01962e4bb094b007055b41e1d37ce4",
+   "before_sha256": "044ee61283f5018ed1d8f3b6a80a589fe3f731431cff3d104f2414a8e541eb7d",
+   "after": "ヘイスト"
+  },
+  {
+   "law_id": 77,
+   "us_name_sha256": "1fd15330ce5d4e872bfb036742a1f3d00b01fcc9ac9a8ce74d05bd63ebacd323",
+   "before_sha256": "89e47dcdddcba9a65086810916fca80a1db3d633bd2f83be34c3d40c71ff03ef",
+   "after": "対人間"
+  },
+  {
+   "law_id": 78,
+   "us_name_sha256": "cf02edac09651083c8a00a0b32c05d0384de237a1564643e05c2ee6241ff9744",
+   "before_sha256": "978b5e92c7ed277a30f58f925a98e3285999f3a4167ca7bffaa5b43b19af94f7",
+   "after": "対バンガ"
+  },
+  {
+   "law_id": 79,
+   "us_name_sha256": "b44b65101a0c7914b8e06a421931aaa2a0fe684161d7eecc547c5cc90c227d05",
+   "before_sha256": "5c28e5264368161784e3e8bafe0dd224827e3a6816e1fa7cd6c77daf16b7b836",
+   "after": "対ン・モゥ"
+  },
+  {
+   "law_id": 80,
+   "us_name_sha256": "7538312f88eac42ac739102110f4ac46227068f8e695884deae588da34e809c1",
+   "before_sha256": "508f7871b558fda6814943f6965fba1d6cbfc782e6034b2bd83adec7add88c14",
+   "after": "対ヴィエラ"
+  },
+  {
+   "law_id": 81,
+   "us_name_sha256": "7d6e77a2e84e1f2548d39c8e7aa2a1c026d27b889862d0257da530e3766bd0d2",
+   "before_sha256": "1ce2e8cb0a12fa32f106392d3314631632542b15e9501e4cdda860f8c92e6cca",
+   "after": "対モーグリ"
+  },
+  {
+   "law_id": 82,
+   "us_name_sha256": "609e4ed4e7a64e1628dc7cf9a5e8593f23256752537911a1e685d812ca725dbe",
+   "before_sha256": "3c86eacdb7364cbd81d2161d8e0d642fefb017e00043099cb70611d05e04a56b",
+   "after": "対動物"
+  },
+  {
+   "law_id": 83,
+   "us_name_sha256": "4f76cd043276726252c0d403536e00e51cef342dfd446177afc9e7b95c634fc1",
+   "before_sha256": "b099047d2b977438b4c2025242debb30713cc3a4320c0afa5c4dcf9501af6836",
+   "after": "カード使用"
+  }
+ ],
+ "cards": [
+  {
+   "us_logical_path": "fx_text/23/170",
+   "law_id": 1,
+   "recommended_law_id": 2,
+   "us_text_sha256": "706371e9ab96c1e606928c102c7f05f31254e0640b9a7e31434eb1e2e4095a26",
+   "grade": 6,
+   "base_grade": 6,
+   "stale_quote": false,
+   "before_sha256": "99635040e02f15a4a191cc77f9d47b0d6bfa489f57f1f823f6b27531a1afd334",
+   "after": "[R6]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「術」{4D}ボーナス「技」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    54,
+    73
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/171",
+   "law_id": 2,
+   "recommended_law_id": 1,
+   "us_text_sha256": "64fbcbf9cc73220c27f32fd9fc20e409552d453e389cbdba0978894d34bd2698",
+   "grade": 6,
+   "base_grade": 6,
+   "stale_quote": false,
+   "before_sha256": "096958229af2f86d509564af7079b27c384da0f0916b89af779ad9fdd1af426a",
+   "after": "[R6]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「技」{4D}ボーナス「術」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    54,
+    73
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/172",
+   "law_id": 3,
+   "recommended_law_id": 50,
+   "us_text_sha256": "9bdd4fa806dfc0cdc70393d3c2430c2e289852ff8136810d503c24c686464647",
+   "grade": 5,
+   "base_grade": 5,
+   "stale_quote": false,
+   "before_sha256": "6ff529a2718b0ce750c142c03dca75a7ab53de0dcbb54bff1be7833e3de72ecc",
+   "after": "[R5]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「色魔法」{4D}ボーナス「〔JA10〕び道〔J41E〕」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    76,
+    106
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/173",
+   "law_id": 4,
+   "recommended_law_id": 9,
+   "us_text_sha256": "1672bd53d14e47fc674cbb303e74854f258fdd56184451917166b5c4b3174058",
+   "grade": 2,
+   "base_grade": 2,
+   "stale_quote": false,
+   "before_sha256": "7c6b481699d148605098c264e69662f399f9d201df0eb1fbd380e8a82b495bde",
+   "after": "[R2]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「騎士道」{4D}ボーナス「チャージ」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    76,
+    103
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/174",
+   "law_id": 5,
+   "recommended_law_id": 15,
+   "us_text_sha256": "40a9cd6c4fd25dd43b5bc5f2c7ef9a9cd35312e535fe046a8830815101b0573d",
+   "grade": 2,
+   "base_grade": 2,
+   "stale_quote": false,
+   "before_sha256": "e37e0f8ecac3887c065651b93dc3e3984e00d9c3d4439774947cf9d40c2cd8fb",
+   "after": "[R2]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「祈祷」{4D}ボーナス「仕手」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    65,
+    84
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/175",
+   "law_id": 6,
+   "recommended_law_id": 8,
+   "us_text_sha256": "8322d98eef53a74a746b4f28e36b5298de9b091fe3236a4585a0795f5601fff1",
+   "grade": 3,
+   "base_grade": 3,
+   "stale_quote": false,
+   "before_sha256": "110f893447779c0d65157b74f597183209ec1d9870cbc8a07890377f26dbcd5a",
+   "after": "[R3]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「守護」{4D}ボーナス「狩り」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    65,
+    83
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/176",
+   "law_id": 7,
+   "recommended_law_id": 10,
+   "us_text_sha256": "742f2db9a853361741b18a0ffd44b0288a1f47fa33eb6a2bb086dcc574cd75f1",
+   "grade": 5,
+   "base_grade": 5,
+   "stale_quote": false,
+   "before_sha256": "192136661aeec70d9f17389ea83f3b3e1c3c4f0a9f327cc026444f7b1c496ed9",
+   "after": "[R5]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「精霊魔法」{4D}ボーナス「時魔法」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    87,
+    95
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/177",
+   "law_id": 8,
+   "recommended_law_id": 6,
+   "us_text_sha256": "bb3f8753fc5fcbc9d38df70f5ad890b95a70ee8daa58874d02d0b4d051bf2065",
+   "grade": 5,
+   "base_grade": 5,
+   "stale_quote": false,
+   "before_sha256": "950d71155f746ca87320ffd6e57e16f25a70a9f61c037dc5c6e696c3440a6a37",
+   "after": "[R5]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「狩り」{4D}ボーナス「守護」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    64,
+    84
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/178",
+   "law_id": 9,
+   "recommended_law_id": 4,
+   "us_text_sha256": "58df866fe24fbfb9e2a611972f970e6e840d7a3642786dcfb1b153e27d14c9b3",
+   "grade": 3,
+   "base_grade": 3,
+   "stale_quote": false,
+   "before_sha256": "f96722939db474900a9c30e5063048104d2eb0ec1c0a06e1c2304f4994c2007b",
+   "after": "[R3]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「チャージ」{4D}ボーナス「騎士道」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    84,
+    95
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/179",
+   "law_id": 10,
+   "recommended_law_id": 7,
+   "us_text_sha256": "8c4398a69ca280e4e7cb40533b865fd86c4837e071ed01181711fec19bb2a60c",
+   "grade": 4,
+   "base_grade": 4,
+   "stale_quote": false,
+   "before_sha256": "e11c0ad72813c999b88139449522b3cde5d51450eabdb3d291c42b8c3ba8e3c8",
+   "after": "[R4]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「時魔法」{4D}ボーナス「精霊魔法」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    76,
+    106
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/180",
+   "law_id": 11,
+   "recommended_law_id": 14,
+   "us_text_sha256": "151e3dc1233f1e41ef1e2b53493da162571661bec0901fbdc0c5e4554956120c",
+   "grade": 2,
+   "base_grade": 2,
+   "stale_quote": false,
+   "before_sha256": "9850013bca12dba752887f6093a6b95764ac1fdd8f1257236ec79ebefcd2a411",
+   "after": "[R2]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「狙う」{4D}ボーナス「盗む」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    64,
+    83
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/181",
+   "law_id": 12,
+   "recommended_law_id": 18,
+   "us_text_sha256": "b1934e2c73fd4bb19cf6180a639e97388e8c84af3eb13067314371fd0b4a6743",
+   "grade": 4,
+   "base_grade": 4,
+   "stale_quote": false,
+   "before_sha256": "a29f7b918479acc09a26c0315a32f0b585ff4fb6ee325e60371e05a13491eeda",
+   "after": "[R4]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「狙撃」{4D}ボーナス「呼び出す」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    65,
+    105
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/182",
+   "law_id": 13,
+   "recommended_law_id": 19,
+   "us_text_sha256": "5162ee7fe35918404ddd70ee1bce49e544b31aefa4ef486bde1ce36daddcf013",
+   "grade": 4,
+   "base_grade": 4,
+   "stale_quote": false,
+   "before_sha256": "ec82475c481cae83d311f56dd9be7f48950125edaffb83fca7bf22815fe4c6c9",
+   "after": "[R4]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「銃撃」{4D}ボーナス「召喚」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    65,
+    84
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/183",
+   "law_id": 14,
+   "recommended_law_id": 11,
+   "us_text_sha256": "32c885577371f314d94cd5c0bfc488a0d0dd36eb9fd067faf987d822d395e91c",
+   "grade": 3,
+   "base_grade": 3,
+   "stale_quote": false,
+   "before_sha256": "5dfef0dc6fb9157d767a5cd6f5cb5f23990e10e972d68ffeae0614b4046a2263",
+   "after": "[R3]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「盗む」{4D}ボーナス「狙う」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    64,
+    83
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/184",
+   "law_id": 15,
+   "recommended_law_id": 5,
+   "us_text_sha256": "fff0116b060e3cea665166dd5d0f3b3a3a3fa7961e3fca0c9402cd70c0fb9859",
+   "grade": 5,
+   "base_grade": 5,
+   "stale_quote": false,
+   "before_sha256": "4b626852940498f76294a569a269105cfd4d8131b2d5f2999291323a28b490ee",
+   "after": "[R5]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「仕手」{4D}ボーナス「祈祷」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    65,
+    84
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/185",
+   "law_id": 16,
+   "recommended_law_id": 17,
+   "us_text_sha256": "4b8d819ecda1abd55a58381e4556c424bbd91e3e41c9b05dcbbb8e488286d3e1",
+   "grade": 2,
+   "base_grade": 2,
+   "stale_quote": false,
+   "before_sha256": "cffd1f5d8da149002f7625c247c5acac7b3f879a10dd859290c2f16928192878",
+   "after": "[R2]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「あやつる」{4D}ボーナス「めたもる」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    83,
+    102
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/186",
+   "law_id": 17,
+   "recommended_law_id": 16,
+   "us_text_sha256": "fe9109860c71902190fbe003166a202ec7da71ec642c814d6ff06775c59247cb",
+   "grade": 5,
+   "base_grade": 5,
+   "stale_quote": false,
+   "before_sha256": "a63f3e2198b7dffb6850924b8289e837a38cd642b81726748a1f2b4001bb515d",
+   "after": "[R5]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「めたもる」{4D}ボーナス「あやつる」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    83,
+    102
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/187",
+   "law_id": 18,
+   "recommended_law_id": 12,
+   "us_text_sha256": "1145940ea4009dcb0b18c0e6c4d8292f060237a284cda70799945f820498f5ec",
+   "grade": 3,
+   "base_grade": 3,
+   "stale_quote": false,
+   "before_sha256": "d49a41a6fe8b2730a34abdae1333baecb75401b64b255aff6847456c9f2a1233",
+   "after": "[R3]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「呼び出す」{4D}ボーナス「狙撃」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    86,
+    84
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/188",
+   "law_id": 19,
+   "recommended_law_id": 13,
+   "us_text_sha256": "94344c1f0b13cd8e63e583a38ac72862893346b50430f2317509517a8e709027",
+   "grade": 6,
+   "base_grade": 6,
+   "stale_quote": false,
+   "before_sha256": "7ab49e164b5c086ab4fae26e5cc6afd110fc1ea3f009b3c3bc64c6f2093302b6",
+   "after": "[R6]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「召喚」{4D}ボーナス「銃撃」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    65,
+    84
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/189",
+   "law_id": 20,
+   "recommended_law_id": 51,
+   "us_text_sha256": "9545b0e78fc27a6f44a0e944499cf270208decdcd515559333437177f7199e10",
+   "grade": 2,
+   "base_grade": 2,
+   "stale_quote": false,
+   "before_sha256": "bcbb36811e3eff763e81ea364f2c08102fa5100204d0179e01de702a07739873",
+   "after": "[R2]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「アイテム」{4D}ボーナス「闇属性」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    83,
+    95
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/190",
+   "law_id": 21,
+   "recommended_law_id": 22,
+   "us_text_sha256": "5abaa99b8f2ef9006f262e5eea88898928af6ae5b8815a7301551ddc80c70e88",
+   "grade": 1,
+   "base_grade": 1,
+   "stale_quote": false,
+   "before_sha256": "204ce3d99fa9e6334eb3f964b20ca7edbe97a0d335c3babd1f1df51f2f0de68b",
+   "after": "[R1]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「炎属性」{4D}ボーナス「冷属性」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    76,
+    95
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/191",
+   "law_id": 22,
+   "recommended_law_id": 21,
+   "us_text_sha256": "e4f2621a98294df65c51c128e0e1d4c02a9996c07afd4152952e8161b0e79a85",
+   "grade": 1,
+   "base_grade": 1,
+   "stale_quote": false,
+   "before_sha256": "6b13244f91cb8f2aa4dc14e3db3b3d90181c9e98f88ca472e485fb561482be50",
+   "after": "[R1]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「冷属性」{4D}ボーナス「炎属性」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    76,
+    95
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/192",
+   "law_id": 23,
+   "recommended_law_id": 25,
+   "us_text_sha256": "6b2a412516ecc44c192c93f283283d5dce5f97468f5f9bfea32309ccba3f8858",
+   "grade": 1,
+   "base_grade": 1,
+   "stale_quote": false,
+   "before_sha256": "c380e318111d538f69410d9f467b515a4d5a6296e3fac3415911e4b740b7701f",
+   "after": "[R1]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「雷属性」{4D}ボーナス「風属性」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    76,
+    95
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/193",
+   "law_id": 24,
+   "recommended_law_id": 51,
+   "us_text_sha256": "8e74c237a1fa61785687bda4c824847f08cd9973db85f82742fca12766e535c1",
+   "grade": 5,
+   "base_grade": 5,
+   "stale_quote": false,
+   "before_sha256": "6bb30db91f62c9f45a301fc3c99e782bd9a0946c8c8276a4a7582097ea3342cd",
+   "after": "[R5]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「聖属性」{4D}ボーナス「闇属性」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    76,
+    95
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/194",
+   "law_id": 25,
+   "recommended_law_id": 23,
+   "us_text_sha256": "208a9cd6f23bd5d9c3b670327e46ad85df5cb827d3d12c11b577290b6832d235",
+   "grade": 5,
+   "base_grade": 4,
+   "stale_quote": true,
+   "before_sha256": "0a4d2856398ad14beaf6e164ea8d7e15f57d56a9cef9cc2d89fb5b708bcba539",
+   "after": "[R5]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「風属性」{4D}ボーナス「雷属性」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    76,
+    95
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/199",
+   "law_id": 30,
+   "recommended_law_id": 33,
+   "us_text_sha256": "96f0ad37e8b23e0fef32f7037fb2fb5c806a94e320067d69e81ef8e0bcb213b5",
+   "grade": 3,
+   "base_grade": 3,
+   "stale_quote": false,
+   "before_sha256": "66452b9050629246ba47bbf249c11cfc7105c2f6f8491a94afdda90cdaf0428f",
+   "after": "[R3]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「〔J7FB〕だたき」{4D}ボーナス「まねっこ」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    85,
+    103
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/202",
+   "law_id": 33,
+   "recommended_law_id": 30,
+   "us_text_sha256": "98ca9eeea6a846b796c9408f15cf3dfcfcdaf7742700ff2137e41b3537b875df",
+   "grade": 6,
+   "base_grade": 6,
+   "stale_quote": false,
+   "before_sha256": "82e47dd74befb79d9c01259a101dd5b92abd1241961e97aa0d4c864f5eb0be10",
+   "after": "[R6]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「まねっこ」{4D}ボーナス「〔J7FB〕だたき」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    84,
+    104
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/203",
+   "law_id": 34,
+   "recommended_law_id": 3,
+   "us_text_sha256": "84d99bc4c776994c2a4d5652725aac4285a9abee6b3528f2143b1cbab8cb3632",
+   "grade": 2,
+   "base_grade": 2,
+   "stale_quote": false,
+   "before_sha256": "75343ab7670fcff21f1a0b5dd193494c355a89ad72b58d1bf76fd2fcb106dbbe",
+   "after": "[R2]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「たたかう」{4D}ボーナス「色魔法」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    83,
+    95
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/204",
+   "law_id": 35,
+   "recommended_law_id": 36,
+   "us_text_sha256": "834ef81d67204a598065daf34714e4b771ffa838b9b5bd627abbe7208418397a",
+   "grade": 4,
+   "base_grade": 4,
+   "stale_quote": false,
+   "before_sha256": "af157f645047068798650c9faff0c7d17e19824a324fcd39635129ea0e93c13f",
+   "after": "[R4]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「範囲」{4D}ボーナス「全体」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    65,
+    84
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/205",
+   "law_id": 36,
+   "recommended_law_id": 35,
+   "us_text_sha256": "8e60bfad2ca294d1cab36ab87bafdc382dfe54b5b46f418f4bae194625a33341",
+   "grade": 5,
+   "base_grade": 5,
+   "stale_quote": false,
+   "before_sha256": "321c79251044e17b6c810b4444b710945b6820406bf1e347b1ba7e4d8417eb8b",
+   "after": "[R5]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「全体」{4D}ボーナス「範囲」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    65,
+    84
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/206",
+   "law_id": 37,
+   "recommended_law_id": 52,
+   "us_text_sha256": "b25533f79c3ed5134827d75f08920e233541d9152bce596942776180cc4088c1",
+   "grade": 1,
+   "base_grade": 1,
+   "stale_quote": false,
+   "before_sha256": "745a765ca4295df503b9190a5e1bde05f53e5556f82d9cbc5a7dcc6d7c21f983",
+   "after": "[R1]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「ソード」{4D}ボーナス「杖」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    74,
+    73
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/207",
+   "law_id": 38,
+   "recommended_law_id": 53,
+   "us_text_sha256": "3103f37e86bab8587d3cd3184faf5969f3e9220cede371033a69b3227e761bd7",
+   "grade": 3,
+   "base_grade": 3,
+   "stale_quote": false,
+   "before_sha256": "b99d4349ba4c78dd1e570e600aa91dcea2f22228f3db451ec71e583111d1f2e1",
+   "after": "[R3]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「ブレード」{4D}ボーナス「ロッド」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    85,
+    93
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/208",
+   "law_id": 39,
+   "recommended_law_id": 43,
+   "us_text_sha256": "ea5ae980c72ef347cd64875097f632bbe38b4d71681a64a789444f3273f0525d",
+   "grade": 5,
+   "base_grade": 5,
+   "stale_quote": false,
+   "before_sha256": "1b1dc88f97eeef3742bd2c8f65eb39a668cd5f5c91d5737af679abfc3c015afe",
+   "after": "[R5]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「サーベル」{4D}ボーナス「ナイフ」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    84,
+    92
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/209",
+   "law_id": 40,
+   "recommended_law_id": 47,
+   "us_text_sha256": "00485ecff030674262f94eec90c82bd2b40ce2010c08322fb3ceba21d047a9f8",
+   "grade": 5,
+   "base_grade": 5,
+   "stale_quote": false,
+   "before_sha256": "f07491c541aac04a69dcaaefc9c5cc41ba8bec0e6b3f1f1b186e4c7fe6e92c61",
+   "after": "[R5]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「騎士剣」{4D}ボーナス「楽器」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    76,
+    84
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/210",
+   "law_id": 41,
+   "recommended_law_id": 44,
+   "us_text_sha256": "914a77ff5db8959620f2ec7db9866cb5cc2ea8502e1a753ab3f9d350d7d82924",
+   "grade": 2,
+   "base_grade": 2,
+   "stale_quote": false,
+   "before_sha256": "6efd6a9804ab03caa6f3d914a3d7bc87ca2d5b625f08e5b28d6d0abc398a9a45",
+   "after": "[R2]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「大剣」{4D}ボーナス「レイピア」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    65,
+    103
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/211",
+   "law_id": 42,
+   "recommended_law_id": 46,
+   "us_text_sha256": "01ec982cc2826b65508e3abe5e3353f022d2c8f3358b6ff87655463c65fd3676",
+   "grade": 4,
+   "base_grade": 4,
+   "stale_quote": false,
+   "before_sha256": "018e32e891b152fc46469c42dbd649d2554fbe442ee4bb7af46bf249d16704cb",
+   "after": "[R4]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「広刃剣」{4D}ボーナス「槍」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    76,
+    73
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/212",
+   "law_id": 43,
+   "recommended_law_id": 39,
+   "us_text_sha256": "96ff537c4e8fd465d45585664baee57bf31bfba4a7d104b7c310eb64e9fedc8d",
+   "grade": 1,
+   "base_grade": 1,
+   "stale_quote": false,
+   "before_sha256": "2a7fc0d2728679e4c7724f83a714fb8ea0d7f9423dcdccc7258fd24ab3fe5531",
+   "after": "[R1]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「ナイフ」{4D}ボーナス「サーベル」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    73,
+    103
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/213",
+   "law_id": 44,
+   "recommended_law_id": 41,
+   "us_text_sha256": "755653c158f3584b5cd377c71ccabb1d23389be016384f6237a174c1e753e37b",
+   "grade": 2,
+   "base_grade": 2,
+   "stale_quote": false,
+   "before_sha256": "afb7587f51a81fed4aad2b4505919f5973870fdf55b6f69d6e6a2b76decc567a",
+   "after": "[R2]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「レイピア」{4D}ボーナス「大剣」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    84,
+    84
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/214",
+   "law_id": 45,
+   "recommended_law_id": 54,
+   "us_text_sha256": "ea869c517f332a6b6c63706522a4c6792836959c30720f228a2759c4ea8cc87a",
+   "grade": 4,
+   "base_grade": 4,
+   "stale_quote": false,
+   "before_sha256": "c9311dd699a2ff0cfbc179743073825c52cfaeed7e948cb50d1be16155058e0f",
+   "after": "[R4]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「〔J8F8〕」{4D}ボーナス「メイス」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    54,
+    92
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/215",
+   "law_id": 46,
+   "recommended_law_id": 42,
+   "us_text_sha256": "a42bb815e4faa8f6582ddcf02da4d202b0e45205d00e78afcd0ba8216e544dc6",
+   "grade": 3,
+   "base_grade": 3,
+   "stale_quote": false,
+   "before_sha256": "4405f5bdc9545d647e7ed15dad3a46fa8c31d6e174639ecbe9a2996dd48c6d7d",
+   "after": "[R3]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「槍」{4D}ボーナス「広刃剣」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    54,
+    95
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/216",
+   "law_id": 47,
+   "recommended_law_id": 40,
+   "us_text_sha256": "3d0fbd7a007b88cc237be7ae2d51bd06cc755b53055aee87f6f3079c9be5e30e",
+   "grade": 3,
+   "base_grade": 3,
+   "stale_quote": false,
+   "before_sha256": "8c892437306197548e3fadc967f2b009b8b58021d09433c0279b35a24a8318bd",
+   "after": "[R3]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「楽器」{4D}ボーナス「騎士剣」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    65,
+    95
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/217",
+   "law_id": 48,
+   "recommended_law_id": 49,
+   "us_text_sha256": "6435757259794657e7d5c3f0a5f19a1f20453c440fcb43782378b17977d5094a",
+   "grade": 4,
+   "base_grade": 4,
+   "stale_quote": false,
+   "before_sha256": "b68cb0f798ec82151396316626fa4796ff03725f774ea8a682a9bec5f7eda1d1",
+   "after": "[R4]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「ナックル」{4D}ボーナス「ソウル」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    83,
+    92
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/218",
+   "law_id": 49,
+   "recommended_law_id": 48,
+   "us_text_sha256": "66caf415b1c2e422beab0f1af7fa3a9035fe7c84fefe0586b139b86a08c571ba",
+   "grade": 5,
+   "base_grade": 5,
+   "stale_quote": false,
+   "before_sha256": "93f14c5a7aa1644691e0f70970ad06a5d6690928c37bf14dd0bc86c2e6f9a21d",
+   "after": "[R5]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「ソウル」{4D}ボーナス「ナックル」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    73,
+    102
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/219",
+   "law_id": 50,
+   "recommended_law_id": 37,
+   "us_text_sha256": "e9e0ca900e08ca99ff39c200f80dea9d63afa24792697ed872351d57a1ec3e25",
+   "grade": 2,
+   "base_grade": 2,
+   "stale_quote": false,
+   "before_sha256": "0541763498f3da39ffdfdd35654a92868ab912d7ed31c5eba1b0c69f0a5ea9fe",
+   "after": "[R2]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「〔JA10〕び道〔J41E〕」{4D}ボーナス「ソード」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    87,
+    93
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/230",
+   "law_id": 61,
+   "recommended_law_id": 73,
+   "us_text_sha256": "fcc968fc38a30a798110c80080138bca043728e07243328531dbbcef547d1c0f",
+   "grade": 6,
+   "base_grade": 6,
+   "stale_quote": false,
+   "before_sha256": "b867779ea831821d9abd1fc5f1b7a000cd63b5f65da4f19c20d41858184b0949",
+   "after": "[R6]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「HP回〔JA69〕」{4D}ボーナス「ST異常」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    85,
+    104
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/231",
+   "law_id": 62,
+   "recommended_law_id": 63,
+   "us_text_sha256": "3f37db53190fb978d94bf58d38b07e5f270212718f1139bc6cd0be99e9ab960d",
+   "grade": 5,
+   "base_grade": 5,
+   "stale_quote": false,
+   "before_sha256": "55f50a81cf860c594310ba10f2cfd6daa4c6bd67afc2042574084aac9f38d727",
+   "after": "[R5]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「石化」{4D}ボーナス「カエル」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    65,
+    92
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/232",
+   "law_id": 63,
+   "recommended_law_id": 62,
+   "us_text_sha256": "7f2e2333b7540f71c261cacb3c6b758484bce720659999888821131ea000ef78",
+   "grade": 4,
+   "base_grade": 4,
+   "stale_quote": false,
+   "before_sha256": "77abc871d16ab7f04975a3201786c94cf69ca83156ab58bbf0e0d46963cd37d5",
+   "after": "[R4]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「カエル」{4D}ボーナス「石化」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    73,
+    84
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/233",
+   "law_id": 64,
+   "recommended_law_id": 69,
+   "us_text_sha256": "5efbff012044ee99d61e72bbc3f3fa85dce8cf381af0bce6cc8055ade1b26671",
+   "grade": 1,
+   "base_grade": 1,
+   "stale_quote": false,
+   "before_sha256": "a4633df8bb3bd943217a1a05aa1c0e17f304c55026927df77df9806382261892",
+   "after": "[R1]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「毒」{4D}ボーナス「ドン」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    54,
+    83
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/234",
+   "law_id": 65,
+   "recommended_law_id": 66,
+   "us_text_sha256": "4f525f57679accf557107bbec96f12aa06828d70a0d79ee83764bb7e0f795973",
+   "grade": 1,
+   "base_grade": 1,
+   "stale_quote": false,
+   "before_sha256": "6af18cc76798c1513b0064c1ef65c1af8d90e0bd0b1c9f4d506a4d95a929ecfa",
+   "after": "[R1]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「混乱」{4D}ボーナス「バーサク」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    65,
+    103
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/235",
+   "law_id": 66,
+   "recommended_law_id": 68,
+   "us_text_sha256": "5e3972989d83bd7c5b53e6db7de60845ebbd19ec907fb6390c5297b5880e3686",
+   "grade": 2,
+   "base_grade": 2,
+   "stale_quote": false,
+   "before_sha256": "6d75c5d96013769845bd034b3d38e3b44681e067958c07d85d403cb97d63f304",
+   "after": "[R2]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「バーサク」{4D}ボーナス「チャーム」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    84,
+    102
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/236",
+   "law_id": 67,
+   "recommended_law_id": 70,
+   "us_text_sha256": "86573a67abbf789c08abdcd5494b70a81631eb8c43e03ef9caf57369792debf1",
+   "grade": 3,
+   "base_grade": 3,
+   "stale_quote": false,
+   "before_sha256": "bb80a6fb90c9340aaa7ab38971bca181766ae3cfedf32ca5ef462bc2567e1227",
+   "after": "[R3]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「沈黙」{4D}ボーナス「もの忘れ」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    65,
+    103
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/237",
+   "law_id": 68,
+   "recommended_law_id": 65,
+   "us_text_sha256": "de872a1a71d3adc1928735b28f6a94b4a33a61f823fcb93fa2dbf52908b9325c",
+   "grade": 3,
+   "base_grade": 3,
+   "stale_quote": false,
+   "before_sha256": "0ecc62fd44d2f15a5daa4e091f5a7fedb63c95fed10f21b856735ebe555cec8c",
+   "after": "[R3]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「チャーム」{4D}ボーナス「混乱」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    83,
+    84
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/238",
+   "law_id": 69,
+   "recommended_law_id": 71,
+   "us_text_sha256": "4139b940a51a24b1a30c0a4c13a931ae428a37e65f8032d2a5a660b66aea5c1b",
+   "grade": 2,
+   "base_grade": 2,
+   "stale_quote": false,
+   "before_sha256": "0e809ba7fffd62fcd0b70dd606f08223a519b771a944b87c2b7996a05e6c3302",
+   "after": "[R2]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「ドン」{4D}ボーナス「スロウ」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    64,
+    92
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/239",
+   "law_id": 70,
+   "recommended_law_id": 72,
+   "us_text_sha256": "4494a523d20bc9d4924d57d24a2c83a7c64d336c220da4945cc6e6c8fcd8fd23",
+   "grade": 4,
+   "base_grade": 4,
+   "stale_quote": false,
+   "before_sha256": "5d6ebb7c19f466814e206c87aacef06540525cfdd8c08ada76843cfb505f01da",
+   "after": "[R4]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「もの忘れ」{4D}ボーナス「ストップ」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    84,
+    103
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/240",
+   "law_id": 71,
+   "recommended_law_id": 64,
+   "us_text_sha256": "abadfb223e97fd1451f00fdcb42a7af498fbf71bfcc22c8d1a9c85aceca538ff",
+   "grade": 3,
+   "base_grade": 3,
+   "stale_quote": false,
+   "before_sha256": "876a7f49fd4fe59864d840fdfb9144e93a84b21c61acd330f363b91e29c190ac",
+   "after": "[R3]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「スロウ」{4D}ボーナス「毒」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    73,
+    73
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/241",
+   "law_id": 72,
+   "recommended_law_id": 67,
+   "us_text_sha256": "5d432b67578e29ad0222633d8916cbd3ea08f1acaeada337f72168ee431be672",
+   "grade": 5,
+   "base_grade": 5,
+   "stale_quote": false,
+   "before_sha256": "59589c3158abf74f852111e33578336c139d7f7ca26d6ccf493cf2c47750a5b8",
+   "after": "[R5]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「ストップ」{4D}ボーナス「沈黙」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    84,
+    84
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/242",
+   "law_id": 73,
+   "recommended_law_id": 82,
+   "us_text_sha256": "eba818c6116100a1d763deb0dd528e752d76688fc29f9894f733bd1856d9fb3c",
+   "grade": 5,
+   "base_grade": 6,
+   "stale_quote": false,
+   "before_sha256": "81b7ac99a9ef3495d72eb981e7f94e011662a15ed7db5e8cb447660f0294cf48",
+   "after": "[R5]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「ST異常」{4D}ボーナス「対動物」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    85,
+    95
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/243",
+   "law_id": 74,
+   "recommended_law_id": 67,
+   "us_text_sha256": "3d998d4758ae3d133d06191b50fb96ddff121c2119f1901610093937212466e4",
+   "grade": 1,
+   "base_grade": 1,
+   "stale_quote": false,
+   "before_sha256": "7bec69c4189fac5227c9cc321b7eb31e1fc0450c7abf308047836dd0868e62ba",
+   "after": "[R1]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「シェル」{4D}ボーナス「沈黙」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    73,
+    84
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/244",
+   "law_id": 75,
+   "recommended_law_id": 64,
+   "us_text_sha256": "3e33d821aab0a618d50ab4f4b227063aa7cd5bd37f60eb3c948832bf87a955e1",
+   "grade": 1,
+   "base_grade": 1,
+   "stale_quote": false,
+   "before_sha256": "b9d26399f3590cb0365ba20bc9205c58f9ed386b4e4f5dfb1097d1a926fbb44f",
+   "after": "[R1]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「プロテス」{4D}ボーナス「毒」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    84,
+    73
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/245",
+   "law_id": 76,
+   "recommended_law_id": 71,
+   "us_text_sha256": "208a60402f47298e1a31ff331f5bc679890dacada8e05bc0593ec389daa4874c",
+   "grade": 6,
+   "base_grade": 6,
+   "stale_quote": false,
+   "before_sha256": "40fa46deaf3d6d6d850156b06aaae5ac6d5d97252000480266f109f6b0b4f0a4",
+   "after": "[R6]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「ヘイスト」{4D}ボーナス「スロウ」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    83,
+    92
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/246",
+   "law_id": 77,
+   "recommended_law_id": 78,
+   "us_text_sha256": "3d67c2a54d2d2f53ddb0cd6b2771663fa0b2ac65a355dde6babf248c67976ed0",
+   "grade": 6,
+   "base_grade": 6,
+   "stale_quote": false,
+   "before_sha256": "faa239d0da23fb0fcb95b0915c9d996569b1e6fb8b721663a1e13c4ff0cdbb08",
+   "after": "[R6]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「対人間」{4D}ボーナス「対バンガ」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    76,
+    105
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/247",
+   "law_id": 78,
+   "recommended_law_id": 79,
+   "us_text_sha256": "4c6302e95262ae25a40b409be94fc509e4f5e4f9fbb75ef9164357f0dd387f3d",
+   "grade": 6,
+   "base_grade": 6,
+   "stale_quote": false,
+   "before_sha256": "d874becf3381c0c49a6d42b1e551aa0e073a8a5088ecae658dbda17afd0df9cd",
+   "after": "[R6]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「対バンガ」{4D}ボーナス「対ン・モゥ」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    86,
+    111
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/248",
+   "law_id": 79,
+   "recommended_law_id": 80,
+   "us_text_sha256": "0c0c7f90943d9a4b70ed8a2868a4dc37aff353587395d5c9e149ed9fc14a14b7",
+   "grade": 6,
+   "base_grade": 6,
+   "stale_quote": false,
+   "before_sha256": "319694f99eab47ab4a1272866015f2d73d229fd52c821becdade32b5e3ca1ed5",
+   "after": "[R6]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「対ン・モゥ」{4D}ボーナス「対ヴィエラ」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    92,
+    114
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/249",
+   "law_id": 80,
+   "recommended_law_id": 81,
+   "us_text_sha256": "5918a1a1b8d2fac8c2773df9cbf5f978ad8832ae89201d9405999cab6c7f4d5b",
+   "grade": 6,
+   "base_grade": 6,
+   "stale_quote": false,
+   "before_sha256": "54be9593a53984456d0f761c5be673cea92acfee88c862f0681c940761aec284",
+   "after": "[R6]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「対ヴィエラ」{4D}ボーナス「対モーグリ」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    95,
+    114
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/250",
+   "law_id": 81,
+   "recommended_law_id": 77,
+   "us_text_sha256": "c80abc658417fd2c2a33917dd2ff62ad043f57c4d780fbfdee9e1943d133041b",
+   "grade": 6,
+   "base_grade": 6,
+   "stale_quote": false,
+   "before_sha256": "d9f4b6727a02c3e018f33204ddd020eb3c236c5ceaa33c0cd3034fa9a99f392f",
+   "after": "[R6]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「対モーグリ」{4D}ボーナス「対人間」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    95,
+    95
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  },
+  {
+   "us_logical_path": "fx_text/23/251",
+   "law_id": 82,
+   "recommended_law_id": 73,
+   "us_text_sha256": "36841d6473b9aebd4fa94b51b6a4978e1fab623a3a38feff38336c4b503e80ea",
+   "grade": 6,
+   "base_grade": 6,
+   "stale_quote": false,
+   "before_sha256": "1e4b857a60537787d95ada74967d5604565d71ae68a733effc6224878d9461f1",
+   "after": "[R6]つぎのロウをうち消す。{4D}バトル中に使うことができる。{4F}{42}禁止「対動物」{4D}ボーナス「ST異常」{40}{42}",
+   "line_widths_px": [
+    151,
+    142,
+    76,
+    104
+   ],
+   "lines_per_page": [
+    2,
+    2
+   ]
+  }
+ ]
+}

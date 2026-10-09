@@ -37,9 +37,9 @@ for _s in (sys.stdout, sys.stderr):
 
 REPO = Path(__file__).resolve().parent
 CHAIN = REPO / "src/localizer/chain"
-TERMINAL = "ffta_jp_us_replaced_laws.py"
+TERMINAL = "ffta_jp_us_law_semantics.py"
 
-RELEASE = "Public Beta 7"
+RELEASE = "Public Beta 8"
 
 # --- the only ROMs this build supports --------------------------------------
 
@@ -47,8 +47,8 @@ PRISTINE_US = "43FC8204C6DCEEE58828AEBC7AF0C72EB807E99F35AD641C8BB0A4FA8B6EDC19"
 PRISTINE_JP = "B13DD536808EF5D0FD4494386A9499F6FEB8310835D3F867CD17CC340D82BF9A"
 
 # The localized ROM this project produces from those two.
-EXPECTED_OUTPUT = "FD4D249031C27E139FE4316E548FD047A175E5C1005952C0776D38BBFEEFA5FE"
-EXPECTED_OUTPUT_CRC32 = "29BB0A59"
+EXPECTED_OUTPUT = "ED4AA7261AAD5B5D684185D1BE91240F3D4FC4D294E0B2E6F5C28D7A235C87F0"
+EXPECTED_OUTPUT_CRC32 = "28592873"
 
 ROM_SIZE = 16 * 1024 * 1024
 
@@ -58,9 +58,11 @@ ROM_SIZE = 16 * 1024 * 1024
 KNOWN = {
     PRISTINE_US: "pristine US ROM (correct --us input)",
     PRISTINE_JP: "pristine JP ROM (correct --jp input)",
-    EXPECTED_OUTPUT: "an already-localized ROM built by this project (Public Beta 7)",
+    EXPECTED_OUTPUT: "an already-localized ROM built by this project (Public Beta 8)",
+    "FD4D249031C27E139FE4316E548FD047A175E5C1005952C0776D38BBFEEFA5FE":
+        "an already-localized ROM from the previous public beta (Public Beta 7)",
     "EC5C9717A25078B85C8A510EB897C376191619277EE0179949D6B3E9471C49AD":
-        "an already-localized ROM from the previous public beta (Public Beta 6)",
+        "an already-localized ROM from an earlier public beta (Public Beta 6)",
     "847F34F3A3AF4AB5FDB954C49862666356708C4B0D91F3A259D0094C9E82F70C":
         "an already-localized ROM from an earlier public beta (Public Beta 5)",
     "D5184AF6253C267B2FC7EC071D476556D4FAD04557194132D8EBA63D8B4A3178":
@@ -252,7 +254,7 @@ def main() -> int:
     run_chain(chain, log)
     print(f"      done in {time.time() - started:.0f}s   log: {log}")
 
-    produced = work / "rom/build/ffta_us_jp_us_replaced_laws.gba"
+    produced = work / "rom/build/ffta_us_jp_us_law_semantics.gba"
     if not produced.is_file():
         raise BuildError(f"the build chain produced no ROM at {produced}")
 

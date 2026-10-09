@@ -1513,7 +1513,7 @@
    "us_leaf": 23,
    "us_entry": 277,
    "original_english_sha256": "403595defc2b7229f410b9a0f9fbdd0d761b45bf48fb5093e853dda25d43b7e9",
-   "japanese": "「めたもる」のAアビリティを{4D}実行すると{4F}{42}{5117}ポイントボーナス。{40}{42}",
+   "japanese": "「めたもる」のAアビリティを{4D}成功させると{4F}{42}{5117}ポイントボーナス。{40}{42}",
    "status": "TRANSLATED_REVIEWED",
    "source": "EDITORIAL"
   },

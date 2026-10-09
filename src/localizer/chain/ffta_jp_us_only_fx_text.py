@@ -91,7 +91,7 @@ BASELINE = "307B3064B9F5366375BCAB0782DCEE4719C54B2F463419CCA8C278CE4E28E228"
 # ffta_jp_us_only_s_text.py is the terminal layer and owns EXPECTED_PRODUCTION,
 # the single canonical final-SHA authority.  Never quote the value below as
 # "the production SHA".
-EXPECTED_PRODUCTION = "D5DC4D7BF20973338486BF240B8E8D86CB9A26524DE1D03A94C158E2DEBEBEB8"
+EXPECTED_PRODUCTION = "E2E050DE3CB78C2B675CBDC33BED54D251DA6CDB3A9D787A65E0700AABEBE143"
 
 # Address of the 4-byte pointer that locates the fx_text leaf-pointer table,
 # as declared by ffta_sect.load_rom_us; and the table itself, whose entry L is

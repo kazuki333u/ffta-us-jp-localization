@@ -2,7 +2,7 @@
  "_public_note": "Public build manifest. Verbatim retail source strings are stored as SHA-256 digests (fields ending in _sha256); the builder recomputes them from the user's own ROM. Japanese text in this file is written by this project.",
  "milestone": "us_only_s_text_top61_judge_missions",
  "description": "Editorial localization of s_text 61/16, the six US-only judge missions of the top-61 mission-battle dialogue table (JP 61/16 holds 150 empty records). 144 lines: 54 with no aligned JP entry (visible editorial scope) and 90 that the index-based transfer had overwritten with an empty JP record. Every other top-61 sub-page has JP originals and is produced by source transfer after the stride correction in CONF['text']['align']['s_text'].",
- "baseline_production_sha256": "8989065EF9D43C951D46DDDA03DD54EED646F2BEA872D4D7C3136958A54B891F",
+ "baseline_production_sha256": "83DC5728C27930AD150A99C169CC6B5324454E26E00922DDBB3F39F5C9CCA0DA",
  "count": 144,
  "translated_count": 144,
  "no_change_required_count": 0,
@@ -835,7 +835,7 @@
    "speaker": "シド",
    "scope": "EMPTY_JP_RECORD_TRANSFER",
    "original_english_sha256": "4d96f676807d3dacfe35fc4a03d915f932d2026c2c76829bd9e71ca93e7ede00",
-   "japanese": "きみに味方する{4D}ジャッジはいない。{4D}わかっているのかね?{40}{42}",
+   "japanese": "きみに味方するジャッジは{4D}いない。わかっているのかね?{4D}きみはひとりで動いているのだ。{40}{42}",
    "status": "TRANSLATED_REVIEWED"
   },
   {
@@ -2371,7 +2371,7 @@
    "speaker": "エゼル",
    "scope": "EDITORIAL_557",
    "original_english_sha256": "f2470c8d5ab991e1915427ce4b290725738150cfcbdb5e0fe17c927acf23a781",
-   "japanese": "力を好むヤツほど、{4D}力を使いこなせない{4D}もんだ。{4F}{42}もちろん、{4D}オレは別だがな。{4D}{40}{42}",
+   "japanese": "力を好むヤツほど、{4D}力を使いこなせない{4D}もんだ。{4F}{42}もちろん、{4D}そうでないヤツもいるがな。{4D}{40}{42}",
    "status": "TRANSLATED_REVIEWED"
   },
   {

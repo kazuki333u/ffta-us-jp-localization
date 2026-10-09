@@ -2,7 +2,7 @@
  "_public_note": "Public build manifest. Verbatim retail source strings are stored as SHA-256 digests (fields ending in _sha256); the builder recomputes them from the user's own ROM. Japanese text in this file is written by this project.",
  "milestone": "us_only_s_text_special_scenes",
  "description": "Editorial localization of the US-only special-character sidequest scenes: s_text tops 44 (Babus keepsake), 45 (Ritz snow mission), 46 (Shara rescue), 48 (Ritz & Shara pub), 49 (Cid & Babus). Whole leaves: 182 entries of the exact 958 editorial scope plus the 5 line-0 scene openers, which the aligner excludes only because the JP side at those tops is a page-level repeat marker (alias of the JP top-35 cut-label page) -- they have no JP original either.",
- "baseline_production_sha256": "D5DC4D7BF20973338486BF240B8E8D86CB9A26524DE1D03A94C158E2DEBEBEB8",
+ "baseline_production_sha256": "E2E050DE3CB78C2B675CBDC33BED54D251DA6CDB3A9D787A65E0700AABEBE143",
  "count": 187,
  "translated_count": 187,
  "no_change_required_count": 0,
@@ -1230,7 +1230,7 @@
    "speaker": "バブズ",
    "scope": "EDITORIAL_958",
    "original_english_sha256": "80b7ca40821fd8125b7a2cc1c2bb3e45404cc21ffc53fb5533e00253c1986241",
-   "japanese": "友達、か。だが…{4D}なれなれしくは{4D}しないでもらおう。{4F}{42}では、さらばだ。{4D}{4D}{40}{42}",
+   "japanese": "友達、か。だが…{4D}そこまでの仲では{4D}ないぞ。{4F}{42}では、さらばだ。{4D}{4D}{40}{42}",
    "status": "TRANSLATED_REVIEWED"
   },
   {
@@ -1813,7 +1813,7 @@
    "speaker": "ドネッド",
    "scope": "EDITORIAL_958",
    "original_english_sha256": "544075dbe1e0f082fb5359af34b18664f5c60f891081da809467bbdbb1500a20",
-   "japanese": "あー、あの白くて{4D}ぶっとくて大きい{4D}イモムシ…。{40}{42}",
+   "japanese": "あー、あの白くて{4D}うでくらい大きい{4D}イモムシ…。{40}{42}",
    "status": "TRANSLATED_REVIEWED"
   },
   {

@@ -3,7 +3,7 @@
  "_note": "Editorial localization of the US-added mission-item family: the mission item US retail added in slot 0x48 (words:content/570 name, fx_text/25/71 description). JP retail's aligned slot holds a real, shipped, non-placeholder item -- a time-magic tome that no JP mission requires -- so the JP bytes are not a translation of this object; this manifest is. Consumed and revalidated on every build by ffta_jp_us_added_items.py. Markup: {HEX} is a CTR_FUNC operand; every other character is text.",
  "milestone": "us_added_items",
  "description": "US-added item identity over a real JP slot: the two records the JP base would otherwise carry as JP retail's unrelated same-slot item, localized from the US retail originals.",
- "baseline_production_sha256": "429114CCEFD865754EFCE70A1D62EA4BB1C4B26D1AC9C702F68958C3B8C6CC8E",
+ "baseline_production_sha256": "91EF5587B8D06754435B351E95BEA30D3137655C2BEEC994DB2D040FA88ED52B",
  "count": 2,
  "translated_count": 2,
  "no_change_required_count": 0,

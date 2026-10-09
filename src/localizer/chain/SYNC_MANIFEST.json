@@ -248,6 +248,15 @@
    ]
   },
   {
+   "module": "ffta_jp_us_law_semantics.py",
+   "origin": "project",
+   "rewrites": [
+    "development history x9 -> neutral",
+    "source-gate -> digest",
+    "import ffta_us_source"
+   ]
+  },
+  {
    "module": "ffta_jp_us_only_fx_text.py",
    "origin": "project",
    "rewrites": [
@@ -427,6 +436,10 @@
    "digested_fields": 42
   },
   {
+   "file": "us_law_semantics.json",
+   "digested_fields": 278
+  },
+  {
    "file": "us_only_fx_text_translations.json",
    "digested_fields": 164
   },
@@ -469,7 +482,7 @@
   "ffta_parser.py",
   "ffta_sect.py"
  ],
- "redacted_fields": 1585,
+ "redacted_fields": 1863,
  "skipped_outputs": [
   "us_added_placeholder_transfer.json"
  ]

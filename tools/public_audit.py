@@ -47,7 +47,7 @@ for _s in (sys.stdout, sys.stderr):
 REPO = Path(__file__).resolve().parent.parent
 CHAIN = REPO / "src/localizer/chain"
 DATA = CHAIN / "data"
-TERMINAL = "ffta_jp_us_replaced_laws"
+TERMINAL = "ffta_jp_us_law_semantics"
 
 # --------------------------------------------------------------- policy ---
 
@@ -110,14 +110,14 @@ REQUIRED_DOCS = [
 # (an audit that imported the list from the tool it audits would go blind the
 # moment that tool lost an entry).
 REDACTED_FIELDS = ("original_english", "retail_us_text_decoded",
-                   "jp_record_now")
+                   "jp_record_now", "us_name", "us_text", "before")
 # ...except where the builder writes the value back unchanged and it carries no
 # natural language.  Kept explicit so a new exception cannot appear silently.
 LITERAL_EXCEPTIONS = {("words:ico/8", "/"), ("words:ico/9", "-\u25b3\u25b3\u25cb\u25cb\u25ce")}
 
 # Row lists a build manifest may carry.  A manifest that invents a new list
 # name would otherwise skip the row checks entirely.
-ROW_LISTS = ("entries", "rows", "non_production_internal")
+ROW_LISTS = ("entries", "rows", "non_production_internal", "names", "cards")
 
 # Every field a manifest row is allowed to carry.  This is a white list on
 # purpose: the redaction that keeps retail text out of this repository is
@@ -129,12 +129,14 @@ KNOWN_ROW_FIELDS = frozenset((
     # identity of the record being written
     "us_logical_path", "us_index", "us_top", "us_sub", "us_line", "us_entry",
     "us_leaf", "jp_index", "family", "scope", "mission", "scene", "speaker",
-    "context", "source", "item_id", "law_id",
+    "context", "source", "item_id", "law_id", "recommended_law_id",
     # the project's own Japanese and its metrics
     "japanese", "lines", "line_widths_px", "rendered_width_px",
     "line_widths_px_reference_expanded", "pages_retained_from_base",
+    "after", "lines_per_page", "grade", "base_grade", "stale_quote",
     # digests standing in for retail text
     "original_english_sha256", "jp_reading_sha256", "jp_record_now_sha256",
+    "us_name_sha256", "us_text_sha256", "before_sha256",
     # editorial notes written by the project
     "note", "why", "status", "terminology_note", "jp_record_note",
     "jp_placeholder", "jp_same_slot_is_placeholder",
@@ -259,7 +261,8 @@ def check_manifests(a: Audit) -> None:
                     a.fail("manifest-schema",
                            f"{f.name}.{key}[{i}] is not an object")
                     continue
-                if "us_logical_path" not in row:
+                # Law-name rows are keyed by law id; every other row by path.
+                if "us_logical_path" not in row and not (key == "names" and "law_id" in row):
                     a.fail("manifest-schema",
                            f"{f.name}.{key}[{i}] has no us_logical_path")
                 for field in row:

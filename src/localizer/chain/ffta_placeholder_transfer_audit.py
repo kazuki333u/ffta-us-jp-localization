@@ -78,7 +78,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 JP_ROM = ROOT / "rom/original/FFTA_JP.gba"
 US_ROM = ROOT / "rom/original/FFTA_US.gba"
-PRODUCTION = ROOT / "rom/build/ffta_us_jp_us_replaced_laws.gba"   # the chain's terminal layer
+PRODUCTION = ROOT / "rom/build/ffta_us_jp_us_law_semantics.gba"   # the chain's terminal layer
 # tracked, because it is the editorial specification of the next milestone: the
 # US original of every record production still ships as a JP placeholder
 DEFAULT_JSON = HERE / "data/us_added_placeholder_transfer.json"

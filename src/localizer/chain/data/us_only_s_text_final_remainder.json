@@ -2,7 +2,7 @@
  "_public_note": "Public build manifest. Verbatim retail source strings are stored as SHA-256 digests (fields ending in _sha256); the builder recomputes them from the user's own ROM. Japanese text in this file is written by this project.",
  "milestone": "us_only_s_text_final_remainder",
  "description": "Final editorial localization of the US-only story lines that live inside JP leaves the leaf-repoint layer already rewrites (s_text tops 0, 1, 19, 26, 34), plus the closed NON_PRODUCTION_INTERNAL class (US top 36, the dead leaf). Depends on three story-leaf align anchors in CONF['text']['align']['s_text'] that move the JP developer cut-index labels of tops 1, 19 and 26 past the dialogue the US ROM inserted before them.",
- "baseline_production_sha256": "95F587C51A2B5B24AB44C39F7ACF7BEAE66D2C6ACB16CEDE57116CA7956D403B",
+ "baseline_production_sha256": "55A0E8D97278EF86475A97E96AD8E0D009C3AE37E003D44C257D56AED77DDAFF",
  "count": 166,
  "translated_count": 69,
  "no_change_required_count": 0,

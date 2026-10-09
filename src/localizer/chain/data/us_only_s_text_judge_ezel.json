@@ -2,7 +2,7 @@
  "_public_note": "Public build manifest. Verbatim retail source strings are stored as SHA-256 digests (fields ending in _sha256); the builder recomputes them from the user's own ROM. Japanese text in this file is written by this project.",
  "milestone": "us_only_s_text_judge_ezel",
  "description": "Editorial localization of the US-only judge-corruption arc and the Ezel mediator scene: s_text tops 47 (Cid and the corrupt judge, Cid recruit), 51 (Cyril judge, seals of immunity), 52 (Baguba judge, donations), 53 (Sprohm judge assembly, the prison judge), 55 (Ezel mediates the resistance/palace talks, Ezel recruit). Whole leaves: 219 entries of the exact 776 editorial scope plus the 5 line-0 scene openers, which the aligner excludes only because the JP side at those tops is a page-level repeat marker -- they have no JP original either.",
- "baseline_production_sha256": "2F34A58891CECD7CE18A5CF0451148C0C55535E23B8BDFBA0014B897A3C2C212",
+ "baseline_production_sha256": "C5E67C5817C37C78F045E1A4FD1221A92B04355B0D81668E9D14F81FF8A955D9",
  "count": 224,
  "translated_count": 224,
  "no_change_required_count": 0,

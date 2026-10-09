@@ -85,12 +85,12 @@ OUTROM2 = ROOT / "rom/build/ffta_us_jp_s_text_scenes_repeat.gba"
 
 # Output of ffta_jp_us_only_fx_text, the previous production layer.  That
 # module's EXPECTED_PRODUCTION is now a private per-layer drift gate.
-BASELINE = "D5DC4D7BF20973338486BF240B8E8D86CB9A26524DE1D03A94C158E2DEBEBEB8"
+BASELINE = "E2E050DE3CB78C2B675CBDC33BED54D251DA6CDB3A9D787A65E0700AABEBE143"
 # Output of this layer.  Superseded as the terminal layer by
 # ffta_jp_us_only_s_text_judge_ezel (which asserts this value as its BASELINE);
 # this constant is now a private per-layer drift gate, never "the production
 # SHA".
-EXPECTED_PRODUCTION = "2F34A58891CECD7CE18A5CF0451148C0C55535E23B8BDFBA0014B897A3C2C212"
+EXPECTED_PRODUCTION = "C5E67C5817C37C78F045E1A4FD1221A92B04355B0D81668E9D14F81FF8A955D9"
 
 S_TEXT_TABLE_POINTER = 0x009A88
 TARGET_TOPS = (44, 45, 46, 48, 49)

@@ -88,7 +88,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 JP_ROM = ROOT / "rom/original/FFTA_JP.gba"
 US_ROM = ROOT / "rom/original/FFTA_US.gba"
-PRODUCTION = ROOT / "rom/build/ffta_us_jp_us_replaced_laws.gba"
+PRODUCTION = ROOT / "rom/build/ffta_us_jp_us_law_semantics.gba"
 DEFAULT_CSV = HERE / "data/us_added_item_identity_audit.csv"
 
 ROM = 0x08000000

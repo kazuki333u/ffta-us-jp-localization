@@ -37,6 +37,12 @@ DIGEST_FIELD = "original_english_sha256"
 JP_FIELD = "jp_record_now"
 JP_DIGEST_FIELD = "jp_record_now_sha256"
 
+# The law-semantics layer derives whole rows from the two ROMs and compares
+# them with its manifest.  These fields of those rows are retail text (the US
+# law name, the US card, the JP record being replaced); the public manifest
+# holds "<field>_sha256" in their place.
+ROW_FIELDS = ("us_name", "us_text", "before")
+
 
 def of(text: str) -> str:
     """The digest of one decoded record."""
@@ -69,6 +75,15 @@ def jp_digest(row) -> str:
 def jp_matches(row, actual: str) -> bool:
     """Does the JP ROM still hold the record this row was authored against?"""
     return jp_digest(row) == of(actual)
+
+
+def redacted(rows):
+    """Derived rows with their retail fields replaced by digests."""
+    out = []
+    for row in rows:
+        out.append({(k + "_sha256" if k in ROW_FIELDS else k):
+                    (of(v) if k in ROW_FIELDS else v) for k, v in row.items()})
+    return out
 
 
 def literal(row):

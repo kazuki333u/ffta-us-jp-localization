@@ -76,7 +76,8 @@ def test_translated_rows_have_japanese(path):
 # ------------------------------------------------------------ retail text ---
 
 ALLOWED_LITERALS = {("words:ico/8", "/"), ("words:ico/9", "-△△○○◎")}
-REDACTED = ("original_english", "retail_us_text_decoded")
+REDACTED = ("original_english", "retail_us_text_decoded", "jp_record_now",
+            "us_name", "us_text", "before")
 
 
 @pytest.mark.parametrize("path", manifest_files(), ids=lambda p: p.name)
@@ -234,7 +235,7 @@ def test_every_chain_module_parses():
 def test_chain_is_closed_under_import():
     """Nothing the terminal builder imports may be missing from this repo."""
     local = {p.stem for p in CHAIN.glob("*.py")}
-    seen, stack = set(), ["ffta_jp_us_replaced_laws"]
+    seen, stack = set(), ["ffta_jp_us_law_semantics"]
     external = set()
     while stack:
         name = stack.pop()
