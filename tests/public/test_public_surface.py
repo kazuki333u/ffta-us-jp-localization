@@ -354,7 +354,7 @@ def test_correct_rom_is_accepted(tmp_path, monkeypatch):
 
 def test_builder_cli_runs_without_a_rom():
     out = subprocess.run([sys.executable, str(REPO / "build.py"), "--print-hashes"],
-                         capture_output=True, text=True, cwd=str(REPO))
+                         stdin=subprocess.DEVNULL, capture_output=True, text=True, cwd=str(REPO))
     assert out.returncode == 0
     assert builder.EXPECTED_OUTPUT in out.stdout
 
