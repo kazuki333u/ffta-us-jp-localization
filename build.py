@@ -35,8 +35,12 @@ for _s in (sys.stdout, sys.stderr):
     except (AttributeError, ValueError):
         pass
 
-REPO = Path(__file__).resolve().parent
+# A frozen Windows release (see packaging/windows/) carries the chain as data
+# next to the executable instead of beside this file.
+FROZEN = bool(getattr(sys, "frozen", False))
+REPO = Path(getattr(sys, "_MEIPASS", Path(__file__).resolve().parent))
 CHAIN = REPO / "src/localizer/chain"
+RUN_CHAIN_FLAG = "--run-chain"
 TERMINAL = "ffta_jp_us_law_semantics.py"
 
 RELEASE = "Public Beta 9"
@@ -168,11 +172,50 @@ def stage(work: Path) -> Path:
     return chain
 
 
+def chain_command() -> list[str]:
+    """The command that runs the chain's terminal layer in a fresh process.
+
+    Frozen, sys.executable is the release executable itself; it re-enters
+    run_chain_entry() below instead of acting as a Python interpreter.
+    """
+    if FROZEN:
+        return [sys.executable, RUN_CHAIN_FLAG, TERMINAL]
+    return [sys.executable, TERMINAL]
+
+
+def run_chain_entry(script: str) -> int:
+    """Frozen only: run one chain script from the staged chain directory.
+
+    The chain resolves the build root from its own file location, so it must
+    run from the staged copy (the current directory), never from the bundle.
+    """
+    import os
+    import runpy
+    for name in ("stdout", "stderr"):
+        stream = getattr(sys, name)
+        if stream is None:  # a windowed executable started without handles
+            setattr(sys, name, open(os.devnull, "w", encoding="utf-8"))
+        else:
+            try:
+                stream.reconfigure(encoding="utf-8", errors="replace")
+            except (AttributeError, ValueError):
+                pass
+    here = Path.cwd()
+    sys.path.insert(0, str(here))
+    sys.argv = [str(here / script)]
+    try:
+        runpy.run_path(str(here / script), run_name="__main__")
+    except SystemExit as e:
+        return e.code if isinstance(e.code, int) else (0 if e.code is None else 1)
+    return 0
+
+
 def run_chain(chain: Path, log: Path) -> None:
+    flags = getattr(subprocess, "CREATE_NO_WINDOW", 0)
     with log.open("w", encoding="utf-8") as fh:
         proc = subprocess.run(
-            [sys.executable, TERMINAL], cwd=str(chain),
-            stdout=fh, stderr=subprocess.STDOUT, text=True)
+            chain_command(), cwd=str(chain), stdin=subprocess.DEVNULL,
+            stdout=fh, stderr=subprocess.STDOUT, text=True, creationflags=flags)
     if proc.returncode != 0:
         tail = "\n".join(log.read_text(encoding="utf-8", errors="replace")
                          .splitlines()[-25:])
@@ -225,6 +268,20 @@ def main() -> int:
     if missing:
         ap.error("missing required argument(s): " + ", ".join(missing))
 
+    build(args.us, args.jp, args.output, args.work_dir, args.keep_work)
+    print("\nDone.  This is a public beta: please read docs/KNOWN_ISSUES.md,\n"
+          "and do not attach ROM files to bug reports.")
+    return 0
+
+
+def build(us: Path, jp: Path, output: Path, work_dir: Path,
+          keep_work: bool = False, say=print) -> str:
+    """Verify both ROMs, run the chain, verify and write the output.
+
+    Shared by the command line and the Windows window (gui.py).  Raises
+    BuildError on any failure; nothing is written to `output` unless the
+    finished ROM matches EXPECTED_OUTPUT.  Returns the output's SHA-256.
+    """
     if not CHAIN.is_dir() or not (CHAIN / TERMINAL).is_file():
         raise BuildError(f"the build chain is missing from {CHAIN}")
 
@@ -235,32 +292,32 @@ def main() -> int:
             "Pillow is required.  Install the dependencies first:\n"
             "           python -m pip install -r requirements.txt")
 
-    print(f"FFTA US->JP localization -- {RELEASE}\n")
+    say(f"FFTA US->JP localization -- {RELEASE}\n")
 
-    print("[1/5] verifying your ROMs")
-    verify_input(args.us, PRISTINE_US, "us")
-    print(f"      US  OK  {PRISTINE_US}")
-    verify_input(args.jp, PRISTINE_JP, "jp")
-    print(f"      JP  OK  {PRISTINE_JP}")
+    say("[1/5] verifying your ROMs")
+    verify_input(us, PRISTINE_US, "us")
+    say(f"      US  OK  {PRISTINE_US}")
+    verify_input(jp, PRISTINE_JP, "jp")
+    say(f"      JP  OK  {PRISTINE_JP}")
 
-    work = args.work_dir.resolve()
-    print(f"\n[2/5] staging the build in {work}")
+    work = work_dir.resolve()
+    say(f"\n[2/5] staging the build in {work}")
     chain = stage(work)
-    shutil.copyfile(args.us, work / "rom/original/FFTA_US.gba")
-    shutil.copyfile(args.jp, work / "rom/original/FFTA_JP.gba")
+    shutil.copyfile(us, work / "rom/original/FFTA_US.gba")
+    shutil.copyfile(jp, work / "rom/original/FFTA_JP.gba")
 
-    print("\n[3/5] building (this rebuilds every layer from your ROMs; "
-          "expect a few minutes)")
+    say("\n[3/5] building (this rebuilds every layer from your ROMs; "
+        "expect a few minutes)")
     started = time.time()
     log = work / "build.log"
     run_chain(chain, log)
-    print(f"      done in {time.time() - started:.0f}s   log: {log}")
+    say(f"      done in {time.time() - started:.0f}s   log: {log}")
 
     produced = work / "rom/build/ffta_us_jp_us_law_semantics.gba"
     if not produced.is_file():
         raise BuildError(f"the build chain produced no ROM at {produced}")
 
-    print("\n[4/5] verifying the build")
+    say("\n[4/5] verifying the build")
     got = sha256_file(produced)
     if got != EXPECTED_OUTPUT:
         raise BuildError(
@@ -270,24 +327,21 @@ def main() -> int:
             "       Nothing was written to the output path.  Please open an issue\n"
             "       and include this hash and the tail of the build log.\n"
             f"       Do not attach {work}: it holds copies of your ROMs.")
-    print(f"      SHA-256 {got}")
-    print(f"      CRC32   {crc32_file(produced)}")
+    say(f"      SHA-256 {got}")
+    say(f"      CRC32   {crc32_file(produced)}")
 
-    print("\n[5/5] writing the output")
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(produced, args.output)
-    print(f"      {args.output}")
+    say("\n[5/5] writing the output")
+    output.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(produced, output)
+    say(f"      {output}")
 
-    if not args.keep_work:
+    if not keep_work:
         shutil.rmtree(work, ignore_errors=True)
-        print(f"\n      removed the scratch directory ({work})")
+        say(f"\n      removed the scratch directory ({work})")
     else:
-        print(f"\n      kept the scratch directory ({work}) -- it contains ROM data,\n"
-              "      never commit it or attach it to an issue.")
-
-    print("\nDone.  This is a public beta: please read docs/KNOWN_ISSUES.md,\n"
-          "and do not attach ROM files to bug reports.")
-    return 0
+        say(f"\n      kept the scratch directory ({work}) -- it contains ROM data,\n"
+            "      never commit it or attach it to an issue.")
+    return got
 
 
 if __name__ == "__main__":

@@ -1,0 +1,6 @@
+# Tools for building the Windows release folder (packaging/windows/).
+# Not needed to build the ROM with build.py or gui.py: see requirements.txt.
+# Pinned so a release is made from known versions; the finished ROM is still
+# verified against the pinned SHA-256 on the user's machine.
+Pillow==12.3.0
+pyinstaller==6.22.2

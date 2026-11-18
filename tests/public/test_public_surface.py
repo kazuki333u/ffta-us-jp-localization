@@ -359,14 +359,39 @@ def test_builder_cli_runs_without_a_rom():
     assert builder.EXPECTED_OUTPUT in out.stdout
 
 
-def test_builder_mentions_no_rom_source():
+@pytest.mark.parametrize("rel", ["build.py", "gui.py"])
+def test_builder_mentions_no_rom_source(rel):
     """The tool must never point anyone at a place to get a ROM."""
-    text = (REPO / "build.py").read_text(encoding="utf-8").lower()
+    text = (REPO / rel).read_text(encoding="utf-8").lower()
     for word in ("http://", "https://", "download", "torrent", "romsite"):
         if word in ("http://", "https://"):
-            assert word not in text, f"build.py contains a URL ({word})"
+            assert word not in text, f"{rel} contains a URL ({word})"
         else:
             assert f"{word} a rom" not in text
+
+
+def test_chain_command_from_source_runs_the_terminal():
+    assert not builder.FROZEN
+    assert builder.chain_command() == [sys.executable, builder.TERMINAL]
+
+
+def test_window_places_files_by_hash(tmp_path, monkeypatch):
+    import gui
+    rom = tmp_path / "picked.gba"
+    rom.write_bytes(b"\0" * 16)
+    assert gui.describe(rom) == (None, gui.UNKNOWN)
+    monkeypatch.setattr(gui.build, "sha256_file", lambda p: builder.PRISTINE_JP)
+    assert gui.describe(rom)[0] == "jp"
+    monkeypatch.setattr(gui.build, "sha256_file", lambda p: builder.EXPECTED_OUTPUT)
+    assert gui.describe(rom)[0] is None
+
+
+def test_release_bundle_carries_no_rom():
+    """The Windows release ships code only; nothing in it names a ROM file."""
+    spec = (REPO / "packaging/windows/ffta_us_jp.spec").read_text(encoding="utf-8")
+    flow = (REPO / ".github/workflows/release-windows.yml").read_text(encoding="utf-8")
+    for text in (spec, flow):
+        assert ".gba" not in text.lower()
 
 
 # ------------------------------------------------------------------ docs ---

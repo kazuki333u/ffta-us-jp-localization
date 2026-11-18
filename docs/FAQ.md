@@ -43,6 +43,17 @@ US版をベースにして日本語を移植するのが現実的な方法です
 
 **ビルドには不要**です。生成したROMを遊ぶときにだけ必要です。
 
+### Q. Windows 版の実行ファイル (exe) には何が入っていますか
+
+このリポジトリのプログラム (`gui.py`・`build.py`・`src/localizer/chain`)、Python 本体、
+Pillow だけです。**ROM・日本語の文章・フォント・画像は入っていません。**
+それらはコマンド版と同じく、作るときにあなたのJP版ROMから読み出します。
+
+exe は GitHub Actions がこのリポジトリのソースから作り (`.github/workflows/release-windows.yml`)、
+Release に zip の SHA-256 とビルドの証明 (build provenance) を付けています。
+コードの署名はないため、初回に Windows の警告が出ることがあります。
+信用できない場合は、コマンド版 (`python gui.py` または `python build.py`) で同じROMが作れます。
+
 ---
 
 ## ビルド

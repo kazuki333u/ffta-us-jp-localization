@@ -20,6 +20,8 @@ Windows / macOS / Linux で同じ手順です。
   指定した2本のROMを読み、作業ディレクトリ (既定 `./.build`) と出力パスにだけ書き込みます。
 - 出力ROMは**必ず同じハッシュ**になります (再現性があります)。
 - エミュレータは**不要**です。
+- Windows で Python を入れずに使うなら、README の「Windows でいちばん簡単な方法」の
+  実行ファイル版が同じことをします。ソースから同じ画面を出すには `python gui.py` です。
 
 ### なぜリポジトリにROMが入っていないのか
 
@@ -335,3 +337,14 @@ python -m pytest tests/public -q
 ```
 
 ROM が必要な検証については [`LOCAL_ROM_QA.md`](LOCAL_ROM_QA.md) を参照してください。
+
+Windows 版の実行ファイルを手元で作る (配布物は CI の `release-windows` が作ります):
+
+```
+python -m pip install -r requirements-build.txt
+python -m PyInstaller --noconfirm --clean packaging/windows/ffta_us_jp.spec
+```
+
+`dist/FFTA_JP_Builder/` にフォルダができます。chain は凍結せずデータとして同梱し、
+実行時に作業ディレクトリへ展開して同じ exe (`--run-chain`) で動かします
+(chain は自分のファイルの位置からビルドの root を決めるため)。

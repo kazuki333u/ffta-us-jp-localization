@@ -4,6 +4,12 @@
 書式は [Keep a Changelog](https://keepachangelog.com/ja/1.1.0/) に倣っています。
 まだ直っていない問題は [`docs/KNOWN_ISSUES.md`](docs/KNOWN_ISSUES.md) にあります。
 
+## [未リリース]
+
+### 追加
+
+- Windows 向けの実行ファイル版 (`FFTA_JP_Builder`)。Python もコマンドも使わずに、ROMを選んでボタンを押すだけで作れます。ROMの版を日本語で判定して表示します。ソースからは `python gui.py` で同じ画面が出ます。作るROMとそのハッシュは `build.py` と同じです。
+
 ## [Public Beta 9]
 
 ### 修正
