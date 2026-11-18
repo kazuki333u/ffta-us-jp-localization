@@ -40,12 +40,20 @@ jobs:
         run: python -m pytest tests/public -q
 
   compile:
-    name: syntax and import surface
-    runs-on: ubuntu-latest
+    name: syntax and import surface (${{ matrix.python-version }})
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.9", "3.11", "3.13"]
+        include:
+          # 3.9 is the documented minimum.  ubuntu-latest (Ubuntu 26.04) ships
+          # no 3.9 build for setup-python, so that leg stays on 24.04.
+          - python-version: "3.9"
+            os: ubuntu-24.04
+          - python-version: "3.11"
+            os: ubuntu-latest
+          - python-version: "3.13"
+            os: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
 
