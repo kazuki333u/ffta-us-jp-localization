@@ -104,10 +104,10 @@ OUTROM2 = ROOT / "rom/build/ffta_us_jp_ui_graphics_repeat.gba"
 ROM = 0x08000000
 
 # Output of ffta_jp_name_entry.
-BASELINE = "9830C14F2AEEE0DCAEEBFDE1CC73D7BA9AC4B04A8745C1E175471958CA6F7B39"
+BASELINE = "04EDD6EC6B4CDE2CD26A59922BA21FB5C1475BA87BA0A86416E2F7E6288AB244"
 # Terminal artifact of the production chain: the single canonical final-SHA
 # authority once this layer is in the chain.
-EXPECTED_PRODUCTION = "39222DEF2F59D989B594D0FD7408EB6E6B5B0D6F31EF236B7192B4994AAF2D0B"
+EXPECTED_PRODUCTION = "460B7B67E56DBE35EF4ED33172C8C4291EDA6A6EE874D5E78385DB6ECD302C1D"
 
 # The codec-block dictionary the A7 loader addresses.  ``shift`` is 5 for both
 # ROMs' banner containers, so the mask is 0x3FF and the block is 4 + 1024

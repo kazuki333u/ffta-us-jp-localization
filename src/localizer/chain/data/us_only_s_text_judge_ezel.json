@@ -2,7 +2,7 @@
  "_public_note": "Public build manifest. Verbatim retail source strings are stored as SHA-256 digests (fields ending in _sha256); the builder recomputes them from the user's own ROM. Japanese text in this file is written by this project.",
  "milestone": "us_only_s_text_judge_ezel",
  "description": "Editorial localization of the US-only judge-corruption arc and the Ezel mediator scene: s_text tops 47 (Cid and the corrupt judge, Cid recruit), 51 (Cyril judge, seals of immunity), 52 (Baguba judge, donations), 53 (Sprohm judge assembly, the prison judge), 55 (Ezel mediates the resistance/palace talks, Ezel recruit). Whole leaves: 219 entries of the exact 776 editorial scope plus the 5 line-0 scene openers, which the aligner excludes only because the JP side at those tops is a page-level repeat marker -- they have no JP original either.",
- "baseline_production_sha256": "C5E67C5817C37C78F045E1A4FD1221A92B04355B0D81668E9D14F81FF8A955D9",
+ "baseline_production_sha256": "1ACED254A43F691832C3D2EB5CA3E877B06BBC4DC3BE0B1299B01B2F6C40F741",
  "count": 224,
  "translated_count": 224,
  "no_change_required_count": 0,
@@ -14,7 +14,11 @@
   "エゼル": "JP s_text 8/17-62, 18/2-20, 28/27 -- 一人称オレ, 「〜だぜ」「〜さ」「〜な」「〜だろ」, マーシュを「おまえ」, 軽妙で自称天才",
   "ジャッジの部下": "JP s_text 18/38-40, 19/84 -- ジャッジマスターへは「〜様」敬語 (report register)",
   "悪徳ジャッジ": "新規 -- 部下にはぞんざいな常体、シドには慇懃な敬語に切り替える",
-  "プリズンのジャッジ": "新規 -- 冷徹な常体「〜までだ」「〜ぞ?」"
+  "プリズンのジャッジ": "新規 -- 冷徹な常体「〜までだ」「〜ぞ?」",
+  "ジャッジ": "新規 -- 会議のジャッジ（汎用の顔。場面ごとに顔が違う）は同僚とジャッジマスターに丁寧語「〜です」「〜ですな」",
+  "レジスタンスの代表": "新規 -- 元レジスタンスの交渉役。率直な常体「〜んだな」",
+  "宮廷の使者": "新規 -- 王宮の代理。改まった常体「〜のだな」「〜うけ入れる」",
+  "シリルのジャッジ": "新規 -- シドには「ジャッジマスター〜様」と敬語"
  },
  "terminology": {
   "Judgemaster": "ジャッジマスター (JP s_text/19/48) / [5117]マスター (JP s_text/28/1, 8/44)",
@@ -1441,11 +1445,12 @@
    "us_top": 47,
    "us_line": 16,
    "scene": "judge_corruption_cid_recruit",
-   "speaker": "悪徳ジャッジ",
+   "speaker": "マーシュ",
    "scope": "EDITORIAL_776",
    "original_english_sha256": "99dcc6e9459a3a568b8b14bcf9200136e6f1f95911b7b3025b1ecc3556373828",
-   "japanese": "私は不正を{4D}あばくよう{4D}頼まれたのです…。{4F}{42}{5117}ウォッチの{4D}役人からの{4D}依頼だったのです!{40}{42}",
-   "status": "TRANSLATED_REVIEWED"
+   "japanese": "ぼくは不正を{4D}あばくよう{4D}頼まれたんです…。{4F}{42}{5117}ウォッチの{4D}役人からの{4D}依頼だったんです!{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "speaker_source": "scene_face_issue1"
   },
   {
    "us_logical_path": "s_text/47/17",
@@ -1496,11 +1501,12 @@
    "us_top": 47,
    "us_line": 21,
    "scene": "judge_corruption_cid_recruit",
-   "speaker": "悪徳ジャッジ",
+   "speaker": "シド",
    "scope": "EDITORIAL_776",
    "original_english_sha256": "302a1aecb53645bfa4d92d9ee9ad4f228485ccee18bdc8f5ed76754d85d644e2",
    "japanese": "それが答えか?{4D}{4D}{40}{42}",
-   "status": "TRANSLATED_REVIEWED"
+   "status": "TRANSLATED_REVIEWED",
+   "speaker_source": "scene_face_issue1"
   },
   {
    "us_logical_path": "s_text/47/22",
@@ -1617,11 +1623,12 @@
    "us_top": 47,
    "us_line": 32,
    "scene": "judge_corruption_cid_recruit",
-   "speaker": "シド",
+   "speaker": "マーシュ",
    "scope": "EDITORIAL_776",
    "original_english_sha256": "d4384879fbc15d502f5c495b61243da252181e5331002c62295aaa5c1743fcda",
-   "japanese": "宮廷のおさえが{4D}なくなったぶん、{4D}力を持ちすぎたのだ。{40}{42}",
-   "status": "TRANSLATED_REVIEWED"
+   "japanese": "宮廷のおさえが{4D}なくなったぶん、{4D}力を持ちすぎたんですね。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "speaker_source": "scene_face_issue1"
   },
   {
    "us_logical_path": "s_text/47/33",
@@ -2024,11 +2031,12 @@
    "us_top": 51,
    "us_line": 17,
    "scene": "judge_corruption_cyril",
-   "speaker": "マーシュ",
+   "speaker": "シリルのジャッジ",
    "scope": "EDITORIAL_776",
    "original_english_sha256": "7140fc99336f9cc85470bdc2046c375061f2b564275930081b627a8193638960",
-   "japanese": "ジャッジマスター{4D}{5106}!{4D}{40}{42}",
-   "status": "TRANSLATED_REVIEWED"
+   "japanese": "ジャッジマスター{4D}{5106}様!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "speaker_source": "scene_face_issue1"
   },
   {
    "us_logical_path": "s_text/51/18",
@@ -2486,11 +2494,12 @@
    "us_top": 52,
    "us_line": 26,
    "scene": "judge_corruption_baguba",
-   "speaker": "シド",
+   "speaker": "マーシュ",
    "scope": "EDITORIAL_776",
    "original_english_sha256": "ddf771fdd4e05a271260a9c3d8f4592118b2c40eac059d83fd627f4002dce2bd",
-   "japanese": "{5117}は法の番人だ。{4D}えこひいきなど{4D}ゆるされん!{4F}{42}プリズンの中で{4D}自分のしたことを{4D}考えるのだな!{40}{42}",
-   "status": "TRANSLATED_REVIEWED"
+   "japanese": "{5117}は法の番人です。{4D}えこひいきなんて{4D}ゆるされません!{4F}{42}プリズンの中で{4D}自分のしたことを{4D}考えてください!{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "speaker_source": "scene_face_issue1"
   },
   {
    "us_logical_path": "s_text/53/0",
@@ -2530,11 +2539,12 @@
    "us_top": 53,
    "us_line": 3,
    "scene": "judge_corruption_sprohm",
-   "speaker": "シド",
+   "speaker": "ジャッジ",
    "scope": "EDITORIAL_776",
    "original_english_sha256": "2bb0789b73f85543c8d01201fe1153006177cd7cae4714bec36ac164e694d186",
-   "japanese": "そのとおりだ。{4D}{4D}{4F}{42}宮廷からの独立は{4D}あやまった判断{4D}だったようだな。{40}{42}",
-   "status": "TRANSLATED_REVIEWED"
+   "japanese": "まったくです。{4D}{4D}{4F}{42}宮廷からの独立は{4D}あやまった判断{4D}だったようですな。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "speaker_source": "scene_face_issue1"
   },
   {
    "us_logical_path": "s_text/53/4",
@@ -2552,11 +2562,12 @@
    "us_top": 53,
    "us_line": 5,
    "scene": "judge_corruption_sprohm",
-   "speaker": "シド",
+   "speaker": "ジャッジ",
    "scope": "EDITORIAL_776",
    "original_english_sha256": "3ca0d2cb18634cfef8000a729694a87d99fb95577d04e692ee4bc3c46db5debc",
-   "japanese": "時期の問題ではない。{4D}{4D}{4F}{42}ジャッジ自身の{4D}品性の問題なのだ!{4D}{40}{42}",
-   "status": "TRANSLATED_REVIEWED"
+   "japanese": "時期の問題では{4D}ありません。{4D}{4F}{42}ジャッジ自身の{4D}品性の問題です!{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "speaker_source": "scene_face_issue1"
   },
   {
    "us_logical_path": "s_text/53/6",
@@ -2629,11 +2640,12 @@
    "us_top": 53,
    "us_line": 12,
    "scene": "judge_corruption_sprohm",
-   "speaker": "シド",
+   "speaker": "ジャッジ",
    "scope": "EDITORIAL_776",
    "original_english_sha256": "25f9ec045f45de8dfeb265724c982f14a54b4653cdc84252b9c9ab29383b11ac",
-   "japanese": "ジャッジとロウ、{4D}そしてプリズンを{4D}しりつくした者だ。{40}{42}",
-   "status": "TRANSLATED_REVIEWED"
+   "japanese": "ジャッジとロウ、{4D}そしてプリズンを{4D}しりつくした者ですな。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "speaker_source": "scene_face_issue1"
   },
   {
    "us_logical_path": "s_text/53/13",
@@ -2684,11 +2696,12 @@
    "us_top": 53,
    "us_line": 17,
    "scene": "judge_corruption_sprohm",
-   "speaker": "シド",
+   "speaker": "マーシュ",
    "scope": "EDITORIAL_776",
    "original_english_sha256": "136c30dfbc35c927f5b85f400f5e200f47ab2a116b55f448a165847aedd6637e",
    "japanese": "プリズンを{4D}まかされている{4D}ジャッジが!?{40}{42}",
-   "status": "TRANSLATED_REVIEWED"
+   "status": "TRANSLATED_REVIEWED",
+   "speaker_source": "scene_face_issue1"
   },
   {
    "us_logical_path": "s_text/53/18",
@@ -2893,11 +2906,12 @@
    "us_top": 53,
    "us_line": 36,
    "scene": "judge_corruption_sprohm",
-   "speaker": "シド",
+   "speaker": "マーシュ",
    "scope": "EDITORIAL_776",
    "original_english_sha256": "3376a8a7f1a54b60560ba9368005735f2fc961318f27ccfdf46734d4471eabd6",
-   "japanese": "終わりだ。{4D}{4D}{40}{42}",
-   "status": "TRANSLATED_REVIEWED"
+   "japanese": "終わった。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "speaker_source": "scene_face_issue1"
   },
   {
    "us_logical_path": "s_text/53/37",
@@ -3014,11 +3028,12 @@
    "us_top": 55,
    "us_line": 0,
    "scene": "ezel_mediator",
-   "speaker": "エゼル",
+   "speaker": "マーシュ",
    "scope": "SCENE_COMPLETION",
    "original_english_sha256": "bf92b7a2a006d34779916bdbf396df824ca119eb8947816b04a7558b478e5031",
-   "japanese": "よぉ。{4D}{4D}{40}{42}",
-   "status": "TRANSLATED_REVIEWED"
+   "japanese": "こんにちは。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "speaker_source": "scene_face_issue1"
   },
   {
    "us_logical_path": "s_text/55/1",
@@ -3311,22 +3326,24 @@
    "us_top": 55,
    "us_line": 27,
    "scene": "ezel_mediator",
-   "speaker": "エゼル",
+   "speaker": "宮廷の使者",
    "scope": "EDITORIAL_776",
    "original_english_sha256": "45f56e69e84fe9753198ad9775c893e8f47db578cba8e83e131df5fc2eb9ccba",
-   "japanese": "で、不干渉の協定に{4D}サインするんだな?{4D}{40}{42}",
-   "status": "TRANSLATED_REVIEWED"
+   "japanese": "では、不干渉の協定に{4D}サインするのだな?{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "speaker_source": "scene_face_issue1"
   },
   {
    "us_logical_path": "s_text/55/28",
    "us_top": 55,
    "us_line": 28,
    "scene": "ezel_mediator",
-   "speaker": "エゼル",
+   "speaker": "レジスタンスの代表",
    "scope": "EDITORIAL_776",
    "original_english_sha256": "70c0905436dd399daa7d49766a3489c81499dfe5da2e71cda04bc5e9d9916354",
    "japanese": "一部のアンチロウの{4D}使用も{4D}認めるんだな…{4F}{42}元レジスタンスを{4D}追わないとも{4D}約束するんだな?{40}{42}",
-   "status": "TRANSLATED_REVIEWED"
+   "status": "TRANSLATED_REVIEWED",
+   "speaker_source": "scene_face_issue1"
   },
   {
    "us_logical_path": "s_text/55/29",
@@ -3355,11 +3372,12 @@
    "us_top": 55,
    "us_line": 31,
    "scene": "ezel_mediator",
-   "speaker": "マーシュ",
+   "speaker": "エゼル",
    "scope": "EDITORIAL_776",
    "original_english_sha256": "fb549610ae45ecc1d6b776b87550f152949ec9c898295ef0f65985b7ca5c3851",
-   "japanese": "来た。{4D}{4D}{40}{42}",
-   "status": "TRANSLATED_REVIEWED"
+   "japanese": "来たぜ。{4D}{4D}{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "speaker_source": "scene_face_issue1"
   },
   {
    "us_logical_path": "s_text/55/32",
@@ -3443,11 +3461,12 @@
    "us_top": 55,
    "us_line": 39,
    "scene": "ezel_mediator",
-   "speaker": "エゼル",
+   "speaker": "ジャッジ",
    "scope": "EDITORIAL_776",
    "original_english_sha256": "b53d95d89600eb88fb7581622e4266e2e4f27e64f2637e8d4691d87488530e31",
    "japanese": "ここで交わした言葉が{4D}永遠に守られんことを。{4D}{40}{42}",
-   "status": "TRANSLATED_REVIEWED"
+   "status": "TRANSLATED_REVIEWED",
+   "speaker_source": "scene_face_issue1"
   },
   {
    "us_logical_path": "s_text/55/40",

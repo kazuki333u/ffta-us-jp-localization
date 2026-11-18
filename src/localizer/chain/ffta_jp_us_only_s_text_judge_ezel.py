@@ -59,11 +59,11 @@ OUTROM2 = ROOT / "rom/build/ffta_us_jp_s_text_judge_ezel_repeat.gba"
 
 # Output of ffta_jp_us_only_s_text, the previous production layer.  That
 # module's EXPECTED_PRODUCTION is now a private per-layer drift gate.
-BASELINE = "C5E67C5817C37C78F045E1A4FD1221A92B04355B0D81668E9D14F81FF8A955D9"
+BASELINE = "1ACED254A43F691832C3D2EB5CA3E877B06BBC4DC3BE0B1299B01B2F6C40F741"
 # Terminal artifact of the production chain after this layer.  This module is
 # now the last layer, so its output IS the canonical production ROM and this is
 # the single canonical final-SHA authority.
-EXPECTED_PRODUCTION = "83DC5728C27930AD150A99C169CC6B5324454E26E00922DDBB3F39F5C9CCA0DA"
+EXPECTED_PRODUCTION = "EB3095386FB6C79A73C8DA940AEAB4E1088E173A6EDC66DE844F2C9C2D46EB84"
 
 S_TEXT_TABLE_POINTER = 0x009A88
 TARGET_TOPS = (47, 51, 52, 53, 55)

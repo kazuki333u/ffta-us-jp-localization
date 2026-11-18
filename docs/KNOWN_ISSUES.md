@@ -1,4 +1,4 @@
-# 既知の問題 (Public Beta 8)
+# 既知の問題 (Public Beta 9)
 
 現時点で把握している、**プレイヤーから見える**未解決の事項です。
 直った項目は [`../CHANGELOG.md`](../CHANGELOG.md) にあります。

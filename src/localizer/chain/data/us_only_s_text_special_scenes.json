@@ -853,11 +853,12 @@
    "us_top": 44,
    "us_line": 12,
    "scene": "babus_keepsake",
-   "speaker": "ドネッド",
+   "speaker": "マーシュ",
    "scope": "EDITORIAL_958",
    "original_english_sha256": "fe8f4bde20bb27d5fa4ec41a57cb345e40079319f2e47882ef5bb0f74603cd5d",
    "japanese": "{5103}の忘れ物、{4D}見つかるといいね。{4D}{40}{42}",
-   "status": "TRANSLATED_REVIEWED"
+   "status": "TRANSLATED_REVIEWED",
+   "speaker_source": "scene_face_issue1"
   },
   {
    "us_logical_path": "s_text/44/13",
@@ -1304,11 +1305,12 @@
    "us_top": 45,
    "us_line": 1,
    "scene": "ritz_snow_mission",
-   "speaker": "リッツ",
+   "speaker": "マーシュ",
    "scope": "EDITORIAL_958",
    "original_english_sha256": "0b07212176fbaf1945b702646d2efecea4f8d13548514945f4d42f795dbef653",
-   "japanese": "そうよね、このへんの人は{4D}雪になれてないものね。{4D}{4F}{42}あたしも、引っこしてきた{4D}ばかりのころは{4D}大変だったわ…。{40}{42}",
-   "status": "TRANSLATED_REVIEWED"
+   "japanese": "そうですよね、このへんの人は{4D}雪になれてないですもんね。{4D}{4F}{42}ぼくも、引っこしてきた{4D}ばかりのころは{4D}大変でした…。{40}{42}",
+   "status": "TRANSLATED_REVIEWED",
+   "speaker_source": "scene_face_issue1"
   },
   {
    "us_logical_path": "s_text/45/2",

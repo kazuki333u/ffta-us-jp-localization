@@ -139,7 +139,7 @@ KNOWN_ROW_FIELDS = frozenset((
     "us_name_sha256", "us_text_sha256", "before_sha256",
     # editorial notes written by the project
     "note", "why", "status", "terminology_note", "jp_record_note",
-    "jp_placeholder", "jp_same_slot_is_placeholder",
+    "jp_placeholder", "jp_same_slot_is_placeholder", "speaker_source",
     # structured facts read out of the ROMs
     "us_law", "jp_law",
     # the two symbol-only literals the retail-text audit allows by exception
