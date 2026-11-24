@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FFTA 日本語化（北米版・US版ベース）｜ファイナルファンタジータクティクスアドバンス 非公式ファンプロジェクト</title>
+<meta name="description" content="FFTA（ファイナルファンタジータクティクスアドバンス）の北米版・英語版を日本語化する非公式ファンツール。US版の追加ミッションや修正はそのまま、日本語はあなた自身の日本版ROMから手元で作ります。ROM・パッチは配布しません。">
+<link rel="canonical" href="https://kazuki333u.github.io/ffta-us-jp-localization/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="FFTA 日本語化（北米版・US版ベース）">
+<meta property="og:description" content="北米版 FFTA を、US版の追加ミッションを残したまま日本語で遊ぶための非公式ビルダー。ROM・パッチは配布しません。">
+<meta property="og:url" content="https://kazuki333u.github.io/ffta-us-jp-localization/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "FFTA 日本語化（北米版・US版ベース）",
+  "alternateName": ["FFTA US JP Localization", "ファイナルファンタジータクティクスアドバンス 北米版 日本語化"],
+  "description": "Final Fantasy Tactics Advance の北米版（US版）ROMを、ユーザー自身の日本版ROMから読み出した日本語で日本語化する非公式のビルダー。ROMは含みません。",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Windows, macOS, Linux",
+  "inLanguage": "ja",
+  "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+  "isAccessibleForFree": true,
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "JPY"},
+  "url": "https://kazuki333u.github.io/ffta-us-jp-localization/",
+  "downloadUrl": "https://github.com/kazuki333u/ffta-us-jp-localization/releases",
+  "codeRepository": "https://github.com/kazuki333u/ffta-us-jp-localization"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "FFTA の北米版（英語版）を日本語で遊べますか？",
+     "acceptedAnswer": {"@type": "Answer", "text": "このビルダーで、あなた自身の北米版ROMと日本版ROMから、北米版の内容を日本語で表示するROMを手元で作れます。ROMは配布しません。"}},
+    {"@type": "Question", "name": "日本語化パッチは配布していますか？",
+     "acceptedAnswer": {"@type": "Answer", "text": "いいえ。パッチもROMも配布しません。日本語のテキスト・フォント・画像は、ビルド時にあなた自身の日本版ROMから読み出します。"}},
+    {"@type": "Question", "name": "北米版だけの追加ミッションはどうなりますか？",
+     "acceptedAnswer": {"@type": "Answer", "text": "北米版の追加ミッション・システム改善・バグ修正はそのまま残ります。日本版に無い文章は、このプロジェクトが新しく日本語に訳しています。"}},
+    {"@type": "Question", "name": "何が必要ですか？",
+     "acceptedAnswer": {"@type": "Answer", "text": "対応版の北米版ROMと日本版ROMの2本です。Windows なら配布している実行ファイルで、Python なしで作れます。エミュレータはビルドには不要です。"}}
+  ]
+}
+</script>
+<style>
+:root {
+  --bg: #fbfaf7; --fg: #1f1d1a; --muted: #5f5a52; --line: #e3ded4;
+  --accent: #8a4b14; --card: #ffffff; --code: #f2efe8;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #171614; --fg: #ece8e1; --muted: #a59f94; --line: #34312c;
+    --accent: #e0a868; --card: #201f1c; --code: #2a2824;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #171614; --fg: #ece8e1; --muted: #a59f94; --line: #34312c;
+  --accent: #e0a868; --card: #201f1c; --code: #2a2824;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Meiryo", system-ui, sans-serif;
+  line-height: 1.8; font-size: 16px;
+}
+main { max-width: 760px; margin: 0 auto; padding: 40px 16px 64px; }
+h1 { font-size: 1.75rem; line-height: 1.4; margin: 0 0 8px; }
+.lead { color: var(--muted); margin: 0 0 24px; }
+h2 { font-size: 1.2rem; margin: 40px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+h3 { font-size: 1rem; margin: 20px 0 4px; }
+a { color: var(--accent); }
+.buttons { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; }
+.btn {
+  display: inline-block; padding: 10px 18px; border-radius: 8px; text-decoration: none;
+  border: 1px solid var(--accent); font-weight: 600;
+}
+.btn.primary { background: var(--accent); color: var(--bg); }
+.note { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 12px 16px; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+th, td { text-align: left; padding: 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+code { background: var(--code); padding: 1px 5px; border-radius: 4px; font-size: 0.9em; overflow-wrap: anywhere; }
+ol li, ul li { margin: 4px 0; }
+footer { margin-top: 48px; color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<main>
+<h1>FFTA 日本語化（北米版・US版ベース）</h1>
+<p class="lead">ファイナルファンタジータクティクスアドバンスの北米版（US版・英語版）を、US版の追加ミッションを残したまま日本語で遊ぶための、非公式のファンプロジェクトです。</p>
+
+<div class="buttons">
+  <a class="btn primary" href="https://github.com/kazuki333u/ffta-us-jp-localization/releases">Windows 版をダウンロード</a>
+  <a class="btn" href="https://github.com/kazuki333u/ffta-us-jp-localization">GitHub のリポジトリ</a>
+</div>
+
+<p class="note">ROMもパッチも配布しません。ROMの入手先の案内もしません。日本語の文章・フォント・画像は、ビルドのときに<strong>あなた自身の日本版ROM</strong>から読み出します。</p>
+
+<h2>どんなものか</h2>
+<ul>
+  <li>海外版（北米版）の FFTA は、日本版に無い追加ミッション・システムの改善・バグ修正を持っています。</li>
+  <li>このビルダーは、北米版の中身はそのままに、表示を日本版の日本語に置き換えた ROM をあなたの PC の中で作ります。</li>
+  <li>日本版に無い北米版だけの文章は、このプロジェクトが新しく日本語に訳しています。</li>
+  <li>現在は公開ベータです。本編を通してプレイできる状態ですが、正式版ではありません。既知の問題は <a href="https://github.com/kazuki333u/ffta-us-jp-localization/blob/main/docs/KNOWN_ISSUES.md">KNOWN_ISSUES</a> にあります。</li>
+</ul>
+
+<h2>使い方（Windows）</h2>
+<ol>
+  <li><a href="https://github.com/kazuki333u/ffta-us-jp-localization/releases">Releases</a> から <code>FFTA_JP_Builder_windows.zip</code> をダウンロードして展開します。</li>
+  <li><code>FFTA_JP_Builder.exe</code> を起動し、北米版と日本版の ROM を選びます。</li>
+  <li>両方に「OK」と出たら「日本語化ROMを作る」を押します。</li>
+</ol>
+<p>Python とコマンドで作る方法（Windows / macOS / Linux）は <a href="https://github.com/kazuki333u/ffta-us-jp-localization/blob/main/docs/BUILD.md">BUILD.md</a> にあります。</p>
+
+<h2>対応する ROM</h2>
+<p>次の2本だけに対応します。SHA-256 の完全一致で判定し、違うファイルでは何も書き出しません。</p>
+<table>
+  <tr><th>版</th><th>SHA-256</th></tr>
+  <tr><td>北米版 <code>AGB-AFXE-0</code></td><td><code>43FC8204C6DCEEE58828AEBC7AF0C72EB807E99F35AD641C8BB0A4FA8B6EDC19</code></td></tr>
+  <tr><td>日本版 <code>AGB-AFXJ-0</code></td><td><code>B13DD536808EF5D0FD4494386A9499F6FEB8310835D3F867CD17CC340D82BF9A</code></td></tr>
+</table>
+
+<h2>よくある質問</h2>
+<h3>FFTA の北米版（英語版）を日本語で遊べますか？</h3>
+<p>はい。あなた自身の北米版 ROM と日本版 ROM から、北米版の内容を日本語で表示する ROM を手元で作れます。</p>
+<h3>日本語化パッチは配布していますか？</h3>
+<p>いいえ。パッチも ROM も配布しません。配っているのは、2本の ROM から日本語化 ROM を作るプログラムだけです。</p>
+<h3>北米版だけの追加ミッションはどうなりますか？</h3>
+<p>そのまま残ります。日本版に無い文章は、このプロジェクトが新しく訳しています。</p>
+<h3>エミュレータは要りますか？</h3>
+<p>ビルドには要りません。出来上がった ROM を遊ぶときに、お使いの環境が必要です。</p>
+<h3>不具合を見つけたら？</h3>
+<p><a href="https://github.com/kazuki333u/ffta-us-jp-localization/issues/new/choose">Issues</a> から報告してください。ROM ファイルは添付しないでください。</p>
+
+<footer>
+  <p>Final Fantasy Tactics Advance および同作の ROM・テキスト・フォント・グラフィック等の一切は株式会社スクウェア・エニックスの著作物です。本プロジェクトはスクウェア・エニックスおよびその関連会社とは一切関係のない、非公式のファンプロジェクトです。公式の日本語版ではありません。プログラムのライセンスは GPL-3.0 です。</p>
+  <p lang="en">Unofficial fan project that localizes the US release of Final Fantasy Tactics Advance into Japanese from your own ROMs. No ROM or patch is distributed. Not affiliated with Square Enix.</p>
+</footer>
+</main>
+</body>
+</html>
