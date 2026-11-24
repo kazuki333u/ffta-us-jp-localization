@@ -235,7 +235,7 @@ def test_every_chain_module_parses():
 def test_chain_is_closed_under_import():
     """Nothing the terminal builder imports may be missing from this repo."""
     local = {p.stem for p in CHAIN.glob("*.py")}
-    seen, stack = set(), ["ffta_jp_us_law_semantics"]
+    seen, stack = set(), ["ffta_jp_filler_record_text"]
     external = set()
     while stack:
         name = stack.pop()

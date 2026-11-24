@@ -98,10 +98,10 @@ OUTROM2 = ROOT / "rom/build/ffta_us_jp_job_badges_repeat.gba"
 ROM = 0x08000000
 
 # Output of ffta_jp_visual_defects.
-BASELINE = "A549DC7A01CD264DA1C471B6D44C2567F0419246E1A848ECDB1EFCE577EE0E75"
+BASELINE = "57A4A8482233B8B583FA39DE9F85B65A01378B78E6B92C774D828371E945BB0E"
 # Terminal artifact of the production chain: this layer is now the last one, so
 # its output IS the canonical production ROM.
-EXPECTED_PRODUCTION = "70CAFFB72053AECE7895B8932F475E4B431D2049C9C817AF11580ACE6C43D02D"
+EXPECTED_PRODUCTION = "0E468FABB51A54245FA18DFB3569FC4EE9E723AB0E79B7383ACF16013AA4BE78"
 
 # The codec block the A7 loader addresses as ``base + declared_size``:
 # four descriptor bytes plus the back-reference dictionary.  shift is 5 in both

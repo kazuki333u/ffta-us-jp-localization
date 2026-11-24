@@ -95,6 +95,15 @@
    "rewrites": []
   },
   {
+   "module": "ffta_jp_filler_record_text.py",
+   "origin": "project",
+   "rewrites": [
+    "development history x6 -> neutral",
+    "source-gate -> digest",
+    "import ffta_us_source"
+   ]
+  },
+  {
    "module": "ffta_jp_fixed_starting_names.py",
    "origin": "project",
    "rewrites": [
@@ -416,6 +425,10 @@
  ],
  "manifests": [
   {
+   "file": "filler_record_text.json",
+   "digested_fields": 6
+  },
+  {
    "file": "jp_kanji_glyph_reviewed.json",
    "digested_fields": 0
   },
@@ -482,7 +495,7 @@
   "ffta_parser.py",
   "ffta_sect.py"
  ],
- "redacted_fields": 1863,
+ "redacted_fields": 1869,
  "skipped_outputs": [
   "us_added_placeholder_transfer.json"
  ]

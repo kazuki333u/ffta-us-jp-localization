@@ -41,9 +41,9 @@ FROZEN = bool(getattr(sys, "frozen", False))
 REPO = Path(getattr(sys, "_MEIPASS", Path(__file__).resolve().parent))
 CHAIN = REPO / "src/localizer/chain"
 RUN_CHAIN_FLAG = "--run-chain"
-TERMINAL = "ffta_jp_us_law_semantics.py"
+TERMINAL = "ffta_jp_filler_record_text.py"
 
-RELEASE = "Public Beta 9"
+RELEASE = "Public Beta 10"
 
 # --- the only ROMs this build supports --------------------------------------
 
@@ -51,8 +51,8 @@ PRISTINE_US = "43FC8204C6DCEEE58828AEBC7AF0C72EB807E99F35AD641C8BB0A4FA8B6EDC19"
 PRISTINE_JP = "B13DD536808EF5D0FD4494386A9499F6FEB8310835D3F867CD17CC340D82BF9A"
 
 # The localized ROM this project produces from those two.
-EXPECTED_OUTPUT = "B5E6A405366AF8D21948878825E08A71E1F0470EB5DB5B6F3B421C5EDF392927"
-EXPECTED_OUTPUT_CRC32 = "93742A78"
+EXPECTED_OUTPUT = "0A3C9C5A07D458A84163D0EA3816273A343D15126328E7653B9E5B1C1177D47D"
+EXPECTED_OUTPUT_CRC32 = "73F5CB61"
 
 ROM_SIZE = 16 * 1024 * 1024
 
@@ -62,9 +62,11 @@ ROM_SIZE = 16 * 1024 * 1024
 KNOWN = {
     PRISTINE_US: "pristine US ROM (correct --us input)",
     PRISTINE_JP: "pristine JP ROM (correct --jp input)",
-    EXPECTED_OUTPUT: "an already-localized ROM built by this project (Public Beta 9)",
+    EXPECTED_OUTPUT: "an already-localized ROM built by this project (Public Beta 10)",
+    "B5E6A405366AF8D21948878825E08A71E1F0470EB5DB5B6F3B421C5EDF392927":
+        "an already-localized ROM from the previous public beta (Public Beta 9)",
     "ED4AA7261AAD5B5D684185D1BE91240F3D4FC4D294E0B2E6F5C28D7A235C87F0":
-        "an already-localized ROM from the previous public beta (Public Beta 8)",
+        "an already-localized ROM from an earlier public beta (Public Beta 8)",
     "FD4D249031C27E139FE4316E548FD047A175E5C1005952C0776D38BBFEEFA5FE":
         "an already-localized ROM from an earlier public beta (Public Beta 7)",
     "EC5C9717A25078B85C8A510EB897C376191619277EE0179949D6B3E9471C49AD":
@@ -313,7 +315,7 @@ def build(us: Path, jp: Path, output: Path, work_dir: Path,
     run_chain(chain, log)
     say(f"      done in {time.time() - started:.0f}s   log: {log}")
 
-    produced = work / "rom/build/ffta_us_jp_us_law_semantics.gba"
+    produced = work / "rom/build/ffta_us_jp_filler_record_text.gba"
     if not produced.is_file():
         raise BuildError(f"the build chain produced no ROM at {produced}")
 

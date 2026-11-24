@@ -691,6 +691,11 @@
    "jp_glyph_code": "0x0AFC",
    "attested_at": "fx_text/4/118",
    "source": "reused:us_only_fx_text"
+  },
+  "返": {
+   "jp_glyph_code": "0x0A9A",
+   "attested_at": "s_text/1/6",
+   "source": "reused:us_only_s_text_special_scenes"
   }
  },
  "entries": [
@@ -1867,7 +1872,7 @@
    "speaker": "マーシュ",
    "scope": "EMPTY_JP_RECORD_TRANSFER",
    "original_english_sha256": "99c4a69a125d998b0133e61e83383231bcee701b7c4820f3e8f578d358b5b129",
-   "japanese": "……。{4D}(あ、ロウは{4D}「答え禁止」だった!){40}{42}",
+   "japanese": "……。{4D}(あ、ロウは{4D}「返事禁止」だった!){40}{42}",
    "status": "TRANSLATED_REVIEWED"
   },
   {
@@ -1915,7 +1920,7 @@
    "speaker": "ヴィエラ",
    "scope": "EMPTY_JP_RECORD_TRANSFER",
    "original_english_sha256": "53fdfb1978425537245ec335df3e8b29cdcaced1f1da4e9a63efc013a6777b53",
-   "japanese": "ごめんなさい…{4D}ここって「答え禁止」{4D}じゃなかった?{40}{42}",
+   "japanese": "ごめんなさい…{4D}ここって「返事禁止」{4D}じゃなかった?{40}{42}",
    "status": "TRANSLATED_REVIEWED"
   },
   {

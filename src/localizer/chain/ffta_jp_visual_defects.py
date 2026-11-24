@@ -89,9 +89,9 @@ OUTROM2 = ROOT / "rom/build/ffta_us_jp_visual_defects_repeat.gba"
 
 ROM = 0x08000000
 # Output of ffta_jp_us_added_missions.
-BASELINE = "1644C197599CE4E5D5A2F3A0077CFB448E208AE7F326871D9136F0D5A2BCDE0B"
+BASELINE = "E1B60742589B3BCF3B9C1EB5B50F7775E7CB988E01B0D78DB297D135A28D8B5A"
 # Pinned after the first deterministic build of this layer.
-EXPECTED_PRODUCTION = "A549DC7A01CD264DA1C471B6D44C2567F0419246E1A848ECDB1EFCE577EE0E75"
+EXPECTED_PRODUCTION = "57A4A8482233B8B583FA39DE9F85B65A01378B78E6B92C774D828371E945BB0E"
 
 # ---- defect 1: the deadline / skills substitution contract --------------
 NEW_LEAF = 0x00B10000            # the earlier layer's mission-panel leaf (rebuilt in place)

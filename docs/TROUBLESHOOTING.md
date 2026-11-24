@@ -254,7 +254,7 @@ Get-Content .\.build\build.log -Tail 20 -Wait
 
 ```
 ERROR: the finished ROM does not match this release.
-       expected B5E6A405...
+       expected 0A3C9C5A...
        got      ........
        Nothing was written to the output path.
 ```
@@ -282,7 +282,7 @@ ERROR: the finished ROM does not match this release.
 ## 11. 生成したROMがエミュレータで動かない
 
 - まず `python build.py --identify <出力ROM>` でハッシュを確認してください。
-  `an already-localized ROM built by this project (Public Beta 9)`
+  `an already-localized ROM built by this project (Public Beta 10)`
   と出るなら、ビルドは正常です。
 - セーブデータ (`.sav`) は US版と互換です。
   ただし他のパッチを当てたROMのセーブとは混在させないでください。

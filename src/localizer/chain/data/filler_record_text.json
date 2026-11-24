@@ -1,0 +1,50 @@
+{
+ "_public_note": "Public build manifest. Verbatim retail source strings are stored as SHA-256 digests (fields ending in _sha256); the builder recomputes them from the user's own ROM. Japanese text in this file is written by this project.",
+ "milestone": "filler_record_text",
+ "description": "pages:choice/39, pages:condi/15 and fx_text/16/48 are type-0x11 filler records in JP retail; an earlier layer re-encoded their bytes as glyphs. The two visible records are translated from the US record; fx_text/16/48 gets the US record's own bytes back.",
+ "evidence": "the three records' bytes in the US and JP ROMs and in the base image; the builder counts every pages family and fx_text leaf for filler re-encoded as glyphs",
+ "count": 3,
+ "records": [
+  {
+   "us_logical_path": "fx_text/16/48",
+   "route": "US_RETAIL_RECORD_BYTES",
+   "us_text_sha256": "b7ee0cf4f6f94cebb3ac5416b912dd5af8242430a5755e27f060428c5471fb9e",
+   "us_record_flags": "0x1818",
+   "jp_record": "YA filler (type 0x11)",
+   "japanese": null,
+   "before_sha256": "f470db286263e764dd49232f382aa68548aab4f269aae50e2af615543bc29dea",
+   "after": null,
+   "widths_px": [],
+   "family_bound_px": null
+  },
+  {
+   "us_logical_path": "pages:choice/39",
+   "route": "TRANSLATED_US_RECORD",
+   "us_text_sha256": "73eef0f9f3567eaa60ef95a5a05caeb05e957e1dd3513a3e196bde52d0bac066",
+   "us_record_flags": "0x0010",
+   "jp_record": "YA filler (type 0x11)",
+   "japanese": "とりひきする{42}力ずくでうばう{42}",
+   "before_sha256": "7fa86efccc7a14d85f0ef5a6eb9dd793f97477c73e9e750a99216ab8ee16ba68",
+   "after": "とりひきする{42}力ずくでうばう{42}",
+   "widths_px": [
+    61,
+    74
+   ],
+   "family_bound_px": 92
+  },
+  {
+   "us_logical_path": "pages:condi/15",
+   "route": "TRANSLATED_US_RECORD",
+   "us_text_sha256": "4356a2da4f24942197a6722bb1121b2744ab00d2969069439f5af4091dd96fd0",
+   "us_record_flags": "0x1818",
+   "jp_record": "YA filler (type 0x11)",
+   "japanese": "{453}をたおせ{42}",
+   "before_sha256": "2d0657b014aa1386ddc730c8d307b10698e2d75ba2ad691b0b79d9df6aa98529",
+   "after": "{453}をたおせ{42}",
+   "widths_px": [
+    40
+   ],
+   "family_bound_px": 184
+  }
+ ]
+}
