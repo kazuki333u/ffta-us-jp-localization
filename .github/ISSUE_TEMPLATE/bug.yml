@@ -35,7 +35,7 @@ body:
       description: |
         `python build.py --identify <出力したROM>` の SHA-256 行を貼ってください。
         分からない場合は空欄で構いません。
-      placeholder: "6C78CDEE7914056CEBF6A39354A6A82C8DA132C2D6A0D88928B4B6A2CDB717E6"
+      placeholder: "0A3C9C5A07D458A84163D0EA3816273A343D15126328E7653B9E5B1C1177D47D"
     validations:
       required: false
 

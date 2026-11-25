@@ -73,6 +73,7 @@ Git を使わない場合は、**Code → Download ZIP** から取得し、
 ```
 ffta-us-jp-localization/
   build.py                  ← 実行するのはこれ
+  gui.py                    ← 画面で操作したい場合はこちら
   requirements.txt
   README.md
   LICENSE

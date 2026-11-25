@@ -121,8 +121,8 @@ GPL は著作物全体の再配布を強制しないため、これは許容さ�
 
 以下は本プロジェクトが新規に作成したものであり、GPL-3.0 で提供します。
 
-- `build.py`、`tools/`、`tests/`
-- `src/localizer/chain/` のうち上流由来 8 モジュールを除く 44 モジュール
+- `build.py`、`gui.py`、`tools/`、`tests/`、`packaging/`、`site/`
+- `src/localizer/chain/` のうち上流由来 8 モジュールを除く 54 モジュール
   (`ffta_jp_*.py`、`ffta_us_source.py`、`ffta_placeholder_transfer_audit.py`、
   `ffta_qa_glyphs.py`、`ffta_name_entry_kbd.py`、`ffta_gfx_codec.py`)
 - `src/localizer/chain/data/` 内マニフェストの **日本語訳文**、および

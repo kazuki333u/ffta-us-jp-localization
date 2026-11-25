@@ -76,13 +76,15 @@ KNOWN = {
     "D5184AF6253C267B2FC7EC071D476556D4FAD04557194132D8EBA63D8B4A3178":
         "an already-localized ROM from an earlier public beta (Public Beta 4)",
     "F1D673A1966C6C42B6F2CEF157F11EF984BB61E6A2184D7F0F47AC17EE2CA695":
-        "an already-localized ROM from the previous public beta (Public Beta 3)",
+        "an already-localized ROM from an earlier public beta (Public Beta 3)",
+    "6C78CDEE7914056CEBF6A39354A6A82C8DA132C2D6A0D88928B4B6A2CDB717E6":
+        "an already-localized ROM from an earlier public beta (Public Beta 2)",
     "6A9A686F1D281AEF0B5F81A337EE6339C8B862EC7732A23329B08F9EF8969D3D":
         "an already-localized ROM from an earlier internal build",
     "F3B0F990B416C0AEFBEB44EE468A16B2D7FA0FDDDA19F9E7CF5E99F91EEEE49B":
         "an already-localized ROM from an earlier internal build",
     "9F5EBA6C4408CAA419DE1DC96AE20B6B8A43785230C1B14C21BA14D9C5D4195E":
-        "an already-localized ROM from the previous public beta (Public Beta 1)",
+        "an already-localized ROM from an earlier public beta (Public Beta 1)",
     "9098F025FDDD00119E0FD833199F5E9BBD1F66DCBEAD865D60749C3C4E652532":
         "an already-localized ROM from an earlier internal build",
     "66FB6EFEDB7A7832C2E6DFBF0802190C217A840423B82E0E9AEDD2C95EA5EB1F":
